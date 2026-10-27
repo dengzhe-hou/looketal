@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browse · Look et al.</title><meta name="description" content="Design research for academic pages">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css"></head>
+<body><div class="shell"><aside class="side"><a class="brand" href="index.html"><span class="mark">et<br>al.</span><span>Look et al.</span></a>
+<nav><a href="index.html">Home</a><a href="browse.html?kind=project">Project pages</a><a href="browse.html?kind=researcher">Researcher pages</a><a href="browse.html" aria-current=page>All styles</a><a href="collections.html">Collections</a><a href="prompts.html">Design prompts</a><a href="about.html">About</a></nav><div class="side-foot">Links only, no screenshots.<br>Styles measured from public HTML/CSS.</div></aside><main class="main"><header class="phead"><h1 id="btitle">All styles</h1><p class="lede" id="bcount"></p></header>
+<div class="filters" id="filters">
+<input type="search" id="q" placeholder="Search…" aria-label="Search">
+<div class="seg" id="kind" role="group" aria-label="Kind"><button data-v="">All</button><button data-v="project">Project pages</button><button data-v="researcher">Researchers</button></div>
+<select id="conf" aria-label="Venue"><option value="">All venues</option></select>
+<select id="year" aria-label="Year"><option value="">All years</option></select>
+<select id="tpl" aria-label="Template"><option value="">All templates</option></select>
+<select id="theme" aria-label="Theme"><option value="">Any theme</option><option value="light">Light</option><option value="dark">Dark</option><option value="both">Light + dark</option></select>
+</div><div class="chips mods" id="mods"></div>
+<div class="grid" id="grid"></div></main></div>
+<script src="assets/data.js"></script><script src="assets/site.js"></script></body></html>

@@ -1,0 +1,120 @@
+(() => {
+  const D = window.LOOKETAL;
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  function toast(msg) {
+    let t = document.querySelector(".toast");
+    if (!t) { t = document.createElement("div"); t.className = "toast"; document.body.append(t); }
+    t.textContent = msg; t.classList.add("on"); setTimeout(() => t.classList.remove("on"), 1300);
+  }
+  async function copy(text) {
+    try { await navigator.clipboard.writeText(text); toast("Copied"); } catch { toast("Copy failed"); }
+  }
+
+  function specimen(e) {
+    const [bg, text, accent] = e.specimen;
+    const pills = (e.kind === "project" ? ["Paper", "Code", "Video"] : ["CV", "Scholar", "Email"])
+      .map(t => `<i style="background:${esc(accent)}">${t}</i>`).join("");
+    const sub = e.kind === "project" ? e.venue : (e.field || e.venue);
+    const font = e.fonts[0] ? `'${esc(e.fonts[0])}',` : "";
+    return `<div class="spec" style="background:${esc(bg)};color:${esc(text)};font-family:${font}system-ui,sans-serif" aria-hidden="true">
+      <b>${esc(e.title.slice(0, 90))}</b><span style="color:${esc(accent)}">${esc(sub)}</span><div class="pills">${pills}</div>
+      <div class="strip">${e.palette.slice(0, 6).map(p => `<em style="background:${esc(p.hex)}"></em>`).join("")}</div></div>`;
+  }
+  function card(e) {
+    const meta = e.kind === "project" ? e.venue : `Researcher · ${e.venue}`;
+    return `<a class="card" href="s/${esc(e.slug)}.html">${specimen(e)}<div class="cbody"><div class="meta">${esc(meta)}</div>
+      <div class="name">${esc(e.title)}</div><div class="mood">${esc(e.mood)}</div></div></a>`;
+  }
+
+  // ---- browse page ----
+  if ($("grid") && $("filters")) {
+    const P = new URLSearchParams(location.search);
+    const st = { q: (P.get("q") || "").toLowerCase(), kind: P.get("kind") || "", conf: P.get("conf") || "", year: P.get("year") || "",
+      tpl: P.get("tpl") || "", theme: P.get("theme") || "", collection: P.get("collection") || "",
+      mods: new Set(P.getAll("module")) };
+    const uniq = (f, s) => [...new Set(D.entries.map(f).filter(Boolean))].sort(s);
+    uniq(e => e.conf).forEach(v => $("conf").add(new Option(v, v)));
+    uniq(e => e.year, (a, b) => b - a).forEach(v => $("year").add(new Option(v, v)));
+    uniq(e => e.template_group).forEach(v => $("tpl").add(new Option(v, v)));
+    const counts = {};
+    D.entries.forEach(e => e.modules.forEach(m => counts[m] = (counts[m] || 0) + 1));
+    Object.keys(counts).sort((a, b) => counts[b] - counts[a]).forEach(m => {
+      const b = document.createElement("button"); b.className = "chip"; b.innerHTML = `${esc(m)} <span>${counts[m]}</span>`;
+      b.setAttribute("aria-pressed", st.mods.has(m));
+      b.onclick = () => { st.mods.has(m) ? st.mods.delete(m) : st.mods.add(m); b.setAttribute("aria-pressed", st.mods.has(m)); render(); };
+      $("mods").append(b);
+    });
+    $("q").value = P.get("q") || "";
+    for (const k of ["conf", "year", "tpl", "theme"]) $(k).value = st[k];
+    const syncSeg = () => [...$("kind").children].forEach(x => x.setAttribute("aria-pressed", x.dataset.v === st.kind));
+    syncSeg();
+    const inColl = st.collection && D.collections[st.collection] ? new Set(D.collections[st.collection]) : null;
+
+    function match(e) {
+      if (inColl && !inColl.has(e.slug)) return false;
+      if (st.kind && e.kind !== st.kind) return false;
+      if (st.conf && e.conf !== st.conf) return false;
+      if (st.year && String(e.year) !== st.year) return false;
+      if (st.tpl && e.template_group !== st.tpl) return false;
+      if (st.theme && e.theme !== st.theme) return false;
+      for (const m of st.mods) if (!e.modules.includes(m)) return false;
+      if (st.q) {
+        const h = [e.title, e.person, e.field, e.mood, e.venue, e.template, e.style_name, e.fonts.join(" ")].join(" ").toLowerCase();
+        if (!h.includes(st.q)) return false;
+      }
+      return true;
+    }
+    function writeUrl() {
+      const p = new URLSearchParams();
+      for (const k of ["kind", "conf", "year", "tpl", "theme", "collection"]) if (st[k]) p.set(k, st[k]);
+      if (st.q) p.set("q", st.q);
+      st.mods.forEach(m => p.append("module", m));
+      history.replaceState(null, "", "?" + p.toString());
+    }
+    function render() {
+      const list = D.entries.filter(match);
+      const title = inColl ? D.collectionTitles[st.collection]
+        : st.kind === "project" ? "Project pages" : st.kind === "researcher" ? "Researcher pages" : "All styles";
+      $("btitle").textContent = title;
+      $("bcount").textContent = `${list.length} of ${D.entries.length} styles`;
+      $("grid").innerHTML = list.length ? list.map(card).join("") : `<div class="empty">No pages match these filters.</div>`;
+      document.querySelectorAll('.side nav a').forEach(a => {
+        const h = a.getAttribute("href");
+        const k = h.includes("kind=project") ? "project" : h.includes("kind=researcher") ? "researcher" : h === "browse.html" ? "all" : null;
+        if (k) a.toggleAttribute("aria-current", (st.kind || "all") === k && !inColl);
+      });
+      writeUrl();
+    }
+    $("q").oninput = ev => { st.q = ev.target.value.trim().toLowerCase(); render(); };
+    for (const k of ["conf", "year", "tpl", "theme"]) $(k).onchange = ev => { st[k] = ev.target.value; render(); };
+    $("kind").onclick = ev => { const b = ev.target.closest("button"); if (!b) return; st.kind = b.dataset.v; syncSeg(); render(); };
+    render();
+  }
+
+  // ---- style page ----
+  const dataEl = document.getElementById("style-data");
+  if (dataEl) {
+    const S = JSON.parse(dataEl.textContent);
+    document.querySelectorAll(".mdx[data-block]").forEach(el => {
+      const src = S.blocks[el.dataset.block] || "";
+      el.innerHTML = window.marked ? marked.parse(src) : `<p>${esc(src)}</p>`;
+    });
+    let tab = "md", mode = "extended";
+    const body = $("pbody");
+    const text = () => tab === "md" ? (mode === "compact" ? S.compact : S.md) : tab === "css" ? S.css : tab === "tw" ? S.tw : S.tokens;
+    const show = () => { body.textContent = text() || "Not available for this style."; $("mode").style.visibility = tab === "md" ? "visible" : "hidden"; };
+    document.querySelector(".ptabs").onclick = ev => {
+      const b = ev.target.closest("button"); if (!b) return; tab = b.dataset.tab;
+      document.querySelectorAll(".ptabs button").forEach(x => x.setAttribute("aria-selected", x === b)); show();
+    };
+    $("mode").onclick = ev => {
+      const b = ev.target.closest("button"); if (!b) return; mode = b.dataset.v;
+      [...$("mode").children].forEach(x => x.setAttribute("aria-pressed", x === b)); show();
+    };
+    $("pcopy").onclick = () => copy(text());
+    document.querySelectorAll(".sw[data-copy]").forEach(b => b.onclick = () => copy(b.dataset.copy));
+    show();
+  }
+})();
