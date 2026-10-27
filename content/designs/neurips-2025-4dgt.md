@@ -1,147 +1,212 @@
-# 4DGT Jost Jumbotron — Style Reference
+# 4DGT Mist Band — Style Reference
 
-> A geometric-sans cover card in pale sea-glass gray, two-tone title, black buttons.
+> A lab notebook bound in pale blue-grey cloth, its title stamped in copper and denim ink.
 
 **Theme:** light
 
-Values come from a locally modified `css/bootstrap-4.4.1.css` (the authors edited several Bootstrap defaults and left the originals in comments), an inline `<style>` block, and inline `style` attributes on the title, venue and citation. Jost is loaded from Google Fonts; KaTeX is loaded for math. Roles are interpreted. Rendered output was not viewed.
+Measured from the rendered page at 1440×900 in headless Chrome (`computed_style.py`, screenshot and tall capture), then checked against the inline `<style>` block and the page's locally edited `css/bootstrap-4.4.1.css` (Zhen Xu's longvolcap template). Where the stylesheet and the render disagree, the render is reported. Pixel values are at the 1440px viewport unless a breakpoint is named.
 
 ## Overview
 
-4DGT (Meta Reality Labs and Zhejiang University) uses the ZJU3DV "longvolcap" template by Zhen Xu, built on a customized Bootstrap 4.4.1. Everything is set in Jost at weight 500 and 1.25em base size. The cover is a Bootstrap jumbotron recolored to `#ebf0f1`, holding a three-line h1: a gray `#6c6c6c` 800-weight "4DGT", then "Learning a" plus a copper `#c68b5b` phrase, then "Using" plus a steel-blue `#6589bf` phrase. A bold `#5a6268` h4 reads "NeurIPS 2025 (Spotlight)", followed by a hairline, author links, and near-black `#090f15` buttons with light text (arXiv, Code, 🤗 Demo Coming Soon). Below, gray-blue `#8899a5` bold captions introduce a full-width teaser video (radius 1.1em, enlarges 1.25× on hover) and a Bootstrap carousel of result videos with round translucent black controls. Each later section is a left-aligned h3 with an `hr` directly beneath, and "Click to Expand" primary buttons reveal more result grids. The citation sits in a 20px-rounded `#e9eeef` block.
+A Bootstrap 4 jumbotron page set entirely in Jost 500 at a large 20px base. The hero is a full-width pale blue-grey band (`#ebf0f1`) holding a three-line centred title: a grey "4DGT" wordmark at 56px/800, then two 40px/700 lines in near-black where the key phrases are tinted copper (`#c68b5b`) and denim (`#6589bf`). A slate venue line, a hairline rule, Bootstrap-blue author links and two black arXiv/Code buttons close the band. Below, on white, a bold grey-blue caption introduces a rounded 16:9 pipeline teaser video, then a second caption and a carousel of six-panel result videos with round translucent arrows. The abstract repeats the copper and denim colours on the same phrases as the title, which ties text to title. The rest is short: Method and Results heads with hairline rules, Bootstrap-blue "Click to Expand" collapse buttons for extra video grids, a rounded grey BibTeX block and a plain text footer. Document height is about 3,855px with the collapses closed.
+
+## First Viewport
+
+Color share of the first 1440×900 viewport: `#ebf0f1` 45.4% (hero band), `#fcfdfd` 16.7% (white page), `#616367` 15.3% (dark frames in the teaser video), `#d9dce0` 9.9% (teaser panel greys), `#ebf0ef` 6.2%, `#edf0f1` 3.1%, `#ebf0f2` 2.3% (teaser light-grey panel backgrounds), `#e6f2ed` 1.1%.
+
+Anatomy in DOM order (all centred):
+
+1. Hero band `div.jumbotron`, full width, `#ebf0f1`, padding 64px 32px; content starts at y=64. 
+2. Wordmark "4DGT", `span` inside `h1`, Jost 56px/800, `#6c6c6c`, line-height 67px. Gap 0 (line break).
+3. Title line 1 "Learning a 4D Gaussian Transformer", 40px/700, `#212529` with "4D Gaussian Transformer" in `#c68b5b`; line-height 48px.
+4. Title line 2 "Using Real-World Monocular Videos", 40px/700, `#212529` with the phrase in `#6589bf`. Gap 8px.
+5. Venue `h4` "NeurIPS 2025 (Spotlight)", 24px/700, `#5a6268`. Gap 16px to the rule.
+6. `hr`, 1px `rgba(0,0,0,0.1)`, the width of the 1110px column. Gap 16px.
+7. Authors, six `a` links in one line, 20px/500, `#007bff`, numeric superscripts.
+8. Affiliations `p`, 20px/500, `#212529`; second line footnote "*Work done during internship at Meta." at 0.9em (18px) `#5a6268`. Gap 16px.
+9. Buttons row: "arXiv" and "Code" black buttons, 107×38px, 6px apart, centred. Band ends about 32px below them (y≈473).
+10. Gap 16px (jumbotron margin), then teaser caption in bold `#8899a5`, 20px, centred (y≈520).
+11. Teaser video `video.a16x9`, 1090×488px at x=175, radius 22px, autoplay pipeline animation; it fills the rest of the viewport.
 
 ## Tokens — Colors
 
-| Name | Value | Token | Role |
+| Name | Value | Token | Applies to (rendered elements) |
 |---|---|---|---|
-| Paper White | `#fff` | `--bg` | Page background (Bootstrap body) |
-| Sea-glass Card | `#ebf0f1` | `--cover` | Jumbotron cover (Bootstrap default `#e9ecef` replaced) |
-| Bootstrap Ink | `#212529` | `--text` | Body text |
-| Ash Mark | `#6c6c6c` | `--mark` | "4DGT" name in the title |
-| Copper Phrase | `#c68b5b` | `--title-a` | First highlighted title phrase |
-| Steel Phrase | `#6589bf` | `--title-b` | Second highlighted title phrase |
-| Venue Slate | `#5a6268` | `--venue` | "NeurIPS 2025 (Spotlight)" |
-| Caption Mist | `#8899a5` | `--caption` | Bold teaser and carousel captions |
-| Night Button | `#090f15` | `--btn` | `btn-light` link buttons (recolored) |
-| Button Text | `#e2e2e2` | `--btn-text` | Button label |
-| Button Hover | `#bec3c7` | `--btn-hover` | Hover fill (text turns `#212529`) |
-| Bootstrap Blue | `#007bff` | `--link` | Links, "Click to Expand" primary buttons |
-| Citation Panel | `#e9eeef` | `--code` | BibTeX `pre` |
-| Hairline | `rgba(0,0,0,.1)` | `--line` | `hr` under section headings |
-| Control Shade | `rgba(0,0,0,.5)` | `--overlay` | Carousel arrows and dots |
+| Mist Band | `#ebf0f1` | `.jumbotron` background | Hero band behind title, authors and buttons |
+| Bootstrap Ink | `#212529` | Bootstrap body color | Title lines, affiliations, body text, headings, BibTeX text |
+| Wordmark Grey | `#6c6c6c` | inline style | "4DGT" in the title and every "4DGT" mention in the abstract and method text (800 weight) |
+| Copper | `#c68b5b` | inline style | "4D Gaussian Transformer" in the title; "4D Gaussian-based Transformer model" in the abstract |
+| Denim | `#6589bf` | inline style | "Real-World Monocular Videos" in the title; "real-world monocular posed videos" in the abstract |
+| Slate | `#5a6268` | inline style | Venue `h4`, internship footnote |
+| Caption Blue-Grey | `#8899a5` | inline style on `b` | Bold captions above the teaser and the carousel |
+| Link Blue | `#007bff` | Bootstrap `a`, `.btn-primary` | Author names, dataset links, footer links; "Click to Expand" button fill |
+| Link Hover | `#0056b3` | Bootstrap `a:hover` | Link hover colour (with underline) |
+| Button Black | `#090f15` | `.btn-light` (edited) | arXiv and Code button fill |
+| Button Label | `#e2e2e2` | `.btn-light` (edited) | arXiv and Code button text and icons |
+| Button Edge | `#f8f9fa` | `.btn-light` border | 1px border of arXiv and Code buttons |
+| Button Hover | `#bec3c7` | `.btn-light:hover` | Hero button hover fill (label turns `#212529`) |
+| Button Hover Edge | `#dae0e5` | `.btn-light:hover` border | Hero button hover border |
+| Unrendered Ring | `rgba(52,58,64,0.5)` (`#343a40` at 50%) | `.btn` box-shadow | Declared on all buttons, not visible in the render |
+| Code Grey | `#e9eeef` | inline style on `pre` | BibTeX block |
+| Rule | `rgba(0,0,0,0.1)` | Bootstrap `hr` | Hero rule, rules under section heads |
+| Control Scrim | `rgba(0,0,0,0.5)` | `.carousel-control-*`, `.indicator-dot` | Round carousel arrows and dots |
+| Page | `#ffffff` | `body` | Everything below the hero |
 
 ## Tokens — Typography
 
-- **Family:** `Jost` (Google Fonts 300–900) for everything; the modified Bootstrap base names Source Sans Pro, overridden by the inline `body` rule.
-- **Mono:** Bootstrap `code` stack, `white-space: pre-wrap`.
-- **Math:** KaTeX 0.13.18.
-- **Weights:** 500 body, `bolder` headings, 800 for the "4DGT" mark and `bold` venue.
+- **Declared:** `body { font-family: 'Jost'; font-weight: 500; font-size: 1.25em }` from Google Fonts (weights 300–900 requested). Bootstrap's own stack is overridden.
+- **Rendered:** Jost 400, 500, 700, 800, 900 loaded (`fonts_loaded`); icons from FontAwesome 4.7 and Academicons. Substitute: Futura PT, or Outfit for a free geometric sans with the same round "o" and short x-height.
+- **Mono:** Bootstrap `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace` in the BibTeX block (Consolas on Windows).
 
-| Role | Size | Weight | Notes |
-|---|---|---|---|
-| Body | 1.25em | 500 | Jost |
-| h1 (cover) | inline 2.0em | bold | three lines with `<br>` |
-| "4DGT" mark | 1.4em of h1 | 800 | `#6c6c6c` |
-| h4 venue | Bootstrap h4 (1.5rem) relative to 1.25em body (inferred) | bold | `#5a6268` |
-| h3 section | 1.5em | bolder | left-aligned, `hr` below |
-| h5 results header | Bootstrap h5 | bolder | 30px bottom padding |
-| Citation | 0.75em | 500 | |
+| Role | Selector | Size | Weight | Line height | Colour |
+|---|---|---|---|---|---|
+| Wordmark | `h1 > span` (inline 1.4em) | 56px | 800 | 67.2px | `#6c6c6c` |
+| Title lines | `h1` (inline 2.0em) | 40px | 700 | 48px | `#212529` + tinted spans |
+| Venue | `h4` | 24px | 700 | 28.8px | `#5a6268` |
+| Section head | `h3` (1.5em) | 30px | 700 | 36px | `#212529`, 30px padding-top |
+| Collapse row label | `h5` | 20px (Bootstrap 1.25rem, root-relative) | 700 | 1.2 | `#212529` |
+| Body, authors, abstract | `body`, `p` | 20px | 500 | 30px | `#212529`; abstract justified |
+| Caption | `b[style*=8899a5]` | 20px | 700 (bolder) | 30px | `#8899a5`, centred |
+| Footnote | inline 0.9em | 18px | 500 | 30px | `#5a6268` |
+| Buttons | `.btn` | 16px | 400 (label in `b`, 700) | 24px | see Components |
+| BibTeX | `pre` (inline 0.75em) | 15px | 500 | 22.5px | `#212529` |
 
 ## Tokens — Spacing & Shapes
 
 | Element | Radius |
 |---|---|
-| Citation `pre` | 20px |
-| Teaser video | 1.1em |
-| Videos, iframes, comparison canvas | 10px |
-| Indicator dots | 10px (15px dots) |
-| Buttons (`.btn`) | 0.5rem (modified from Bootstrap .25rem) |
-| Jumbotron | 0.3rem |
-| Carousel arrows | 50% (50px circles) |
+| Hero band `.jumbotron` | 0.3rem (4.8px), visible only as softened corners at the band's bottom |
+| Hero buttons and "Click to Expand" | 8px (Bootstrap `.btn` edited to 0.5rem) |
+| Teaser video | 22px (inline 1.1em) |
+| Other videos, comparison canvases | 10px |
+| BibTeX `pre` | 20px |
+| Carousel arrows | 50% (50px circles); dots 10px radius on 15px squares |
 
-- **Shadows:** none.
-- **Layout:** Bootstrap `.container` (1140px at xl, inferred from Bootstrap 4 defaults); `.sm-gutters` rows with 5px padding around each video column; aspect-ratio helper classes (16:9, 4:3, 1:1, 3:2 and several custom ratios).
-- **Rhythm:** h3 sections gain 30px top padding; results sections 30px bottom padding.
+- **Shadows:** none rendered. The edited `.btn` rule declares `box-shadow: 0 0 0 0.2rem rgba(52,58,64,0.5)`, but the computed style shows none on the hero buttons (see Declared but not visible under Components).
+- **Borders:** hero buttons 1px `#f8f9fa`; `hr` 1px `rgba(0,0,0,0.1)`.
+- **Motion:** `.zoom-element` rows scale to 1.25 on hover with a 0.2s ease-in-out transform. This applies to the teaser and to the expandable video grids.
+
+## Layout Metrics
+
+- **Container:** Bootstrap `.container`, `max-width: 1140px` at ≥1200px with 15px side padding, so text columns are 1110px wide (x=165 to 1275 at 1440px).
+- **Hero:** full-bleed `.jumbotron` (not inside the container), padding 64px 32px at ≥576px, margin-bottom 16px; band height about 473px at 1440px.
+- **Sections:** no section padding; section heads get 30px top padding from `.col-12 > h3` and an `hr` with `margin-top: 0` beneath. Collapse rows (`.results-section`) have 30px bottom padding. Two `<br>` precede the Citation head.
+- **Video grids:** `.row.sm-gutters` with 5px margins and 5px column padding, so tiles sit 10px apart; teaser 1090px wide (column minus 10px), result grids in `col-md-6` (two up) or `col-md-4` (three up), aspect ratios fixed by classes (`.a16x9`, `.a32`, `.a4x3` …).
+- **Carousel:** full column width; arrows 50px circles 25px in from each side, vertically centred; indicator dots at 10% from the bottom, 90% from the left.
+
+| Breakpoint | Container | Hero padding | Body size | Title size | Grid change |
+|---|---|---|---|---|---|
+| ≥1200px | 1140px | 64px 32px | 20px | 40px (wordmark 56px) | `col-md-*` grids side by side |
+| 992–1199px | 960px | 64px 32px | 20px | 40px | same |
+| 768–991px | 720px | 64px 32px | 20px | 40px | same |
+| 576–767px | 540px | 64px 32px | 20px | 40px | `col-md-*` tiles stack to one column; mobile video sources (`_x0.5.mp4`) swapped in by script |
+| <576px | fluid, 15px gutters | 0 (the template commented out Bootstrap's 2rem 1rem) | 20px | 40px | one column |
 
 ## Components
 
-- **Cover jumbotron.** `#ebf0f1`, centered, 0.3rem radius, title, venue, `hr`, authors, buttons.
-- **Two-tone title.** Plain text interleaved with two colored phrases (copper and steel) that name the method and the data.
-- **Link buttons.** `btn btn-large btn-light` recolored to `#090f15` with `#e2e2e2` text, 1.5rem side padding, 0.5rem radius; hover `#bec3c7`.
-- **Teaser.** Autoplay video at 16:9 with `zoom-element` (scale 1.25 on hover, 0.2s).
-- **Carousel.** Bootstrap carousel; 50px round `rgba(0,0,0,.5)` prev/next controls 25px from the edges; 15px dot indicators placed bottom-right.
-- **Expand sections.** h5 with a blue `btn-primary` "Click to Expand" toggling a Bootstrap collapse of more video grids.
-- **Citation block.** `#e9eeef`, 1.5em padding, 20px radius, 0.75em text.
+- **Two-tone title.** `h1` at 2.0em/700 with a `<br>`-split structure: grey 1.4em/800 wordmark, then two lines whose key phrases carry `#c68b5b` and `#6589bf`. Use exactly two accent hues and repeat them on the same phrases in the abstract.
+- **Black hero button.** `a.btn.btn-large.btn-light`: `#090f15` fill, `#e2e2e2` label, 1px `#f8f9fa` border, 8px radius, padding 6px 24px, Jost 16px with the label in bold; icon left (Academicons `ai-arxiv`, FontAwesome `fa-github`). Hover: fill `#bec3c7`, label `#212529`, border `#dae0e5`. Each button sits in its own `.column > p.mb-5`.
+- **Caption line.** Bold 20px `#8899a5` centred sentence above a figure; dataset names inside it are italic bold `#007bff` links.
+- **Zoom video row.** `video` in a `.row.sm-gutters.zoom-element`, autoplay muted loop, `img/spinner.svg` poster, 10px radius (22px for the teaser), whole row scales 1.25× on hover.
+- **Result carousel.** Bootstrap `.carousel.slide`, 100s interval; 50px round `rgba(0,0,0,0.5)` arrows with white chevrons; 15px `rgba(0,0,0,0.5)` dots. Each slide is a six-panel video (Normal, Render, Reference over flow, motion and depth).
+- **Expand button.** `button.btn.btn-primary` "Click to Expand" (text switches by script): `#007bff` fill and border, white 16px label, 8px radius, padding 6px 12px, inline at the start of an `h5` that names the datasets.
+- **Section head.** `h3` 30px/700 `#212529` with 30px top padding, immediately followed by an `hr` (`margin-top: 0`).
+- **BibTeX block.** `pre` with `#e9eeef` fill, 22.5px padding, 20px radius, 15px mono `#212529`, `white-space: pre-wrap`.
+- **Footer.** Plain `footer` text at 20px/500 in the container: template credit (Zhen Xu, longvolcap) and acknowledgements, links in `#007bff`.
+- **Declared but not visible.** `.btn` box-shadow `0 0 0 0.2rem rgba(52,58,64,0.5)` (computed none); `.bibtexsection` Courier 16px style (unused class).
 
 ## Page Modules
 
-| Module | Present | Styling |
+| Module | Present | How it is styled |
 |---|---|---|
-| Title / author block | Yes | Jumbotron cover, two-tone title |
-| Venue badge | Bold slate h4 "NeurIPS 2025 (Spotlight)" | |
-| Link buttons | arXiv, Code, 🤗 Demo (Coming Soon) | Near-black buttons |
-| Teaser | Full-width zooming video | |
-| Abstract | Justified paragraph in cover (inferred from `text-align: justify` blocks) | |
-| Method figure | Pipeline JPG under h3 + hr | |
-| Results videos | Carousel and collapsible grids (ADT, HOT3D, Nymeria) | |
-| Comparisons | "Baseline Comparisons & Ablations" with comparison canvases | 10px radius |
-| Math | KaTeX | |
-| HF demo | Button only, marked coming soon | |
-| BibTeX | "Citation" block | |
-| Acknowledgements | Footer thanks (template author, discussion, Project Aria) | |
+| Title / author block | Yes | Mist band, two-tone title, blue author links, affiliations and footnote |
+| Venue badge | Yes, as text | Slate bold `h4` "NeurIPS 2025 (Spotlight)" |
+| Link buttons | arXiv, Code | Black 8px-radius buttons; a Demo button is commented out in the source |
+| Teaser | Yes | 16:9 autoplay pipeline video, 22px radius, zoom on hover |
+| Result carousel | Yes | Six-panel videos with round translucent controls |
+| Abstract | Yes, no heading | Justified 20px paragraph with copper and denim emphasis |
+| Method | Yes | `h3` + rule, justified text, method video |
+| Extra results | Yes | Four "Click to Expand" collapses with two- or three-up video grids |
+| Results table | Absent from the source | |
+| BibTeX | Yes | Rounded `#e9eeef` `pre` |
+| Footer | Yes | Plain text acknowledgements |
+| Navbar, sliders, 3D viewer, math | Absent (KaTeX is loaded but no formula renders on the page) | |
+
+## Adapting to Other Content
+
+- **More authors:** keep one centred run of 20px `#007bff` links and let it wrap; move affiliations to a second line and keep the 0.9em `#5a6268` footnote under them.
+- **More buttons:** add more `.column > p.mb-5` black buttons; they stay 6px apart and wrap as a centred row.
+- **A results table:** place it under an `h3` + `hr` head, 20px Jost body, bold header row in `#212529`, best scores in `#c68b5b`, second-best in `#6589bf`, so the table reuses the title's two accents; put it on white, not on the band.
+- **Long galleries:** follow the page's own pattern of collapsed sections behind `#007bff` "Click to Expand" buttons with `sm-gutters` two- or three-up video rows.
+- **News or updates:** a short list just above the teaser caption, 20px/500 `#212529` with bold dates in `#5a6268`, no card.
 
 ## Do's and Don'ts
 
-- Do color exactly two title phrases, one warm and one cool.
-- Do keep every section heading left-aligned with an `hr` directly under it.
-- Do round videos at 10px and the teaser slightly more.
-- Don't use Bootstrap's stock light button; this template inverts it to near-black.
-- Don't add shadows; the page relies on the gray cover and rounded media.
+- Do keep the hero as one flat `#ebf0f1` band and the rest of the page white.
+- Do limit accent colour to `#c68b5b` and `#6589bf`, and repeat each on the same phrase in title and abstract.
+- Do keep Jost at 500 for body text; the medium weight is part of the look.
+- Do round all media (10px, teaser 22px) and keep 10px gaps between tiles.
+- Don't give the black hero buttons a coloured fill; the only coloured buttons are the blue expand toggles.
+- Don't add section bands or cards below the hero; separation comes from `h3` + hairline rules.
 
 ## Surfaces
 
-White page, sea-glass `#ebf0f1` cover, `#e9eeef` citation panel.
+One flat `#ebf0f1` hero band across the full width, then white for the whole page. The only other surface is the `#e9eeef` BibTeX block with a 20px radius. Media carry their own colour; light-grey panels inside the teaser video account for much of the first-viewport grey.
 
 ## Imagery
 
-Egocentric and multi-view reconstruction videos (Aria datasets) in 16:9, comparison canvases, one pipeline diagram.
+Autoplay MP4 videos of egocentric scenes (Ego-Exo4D, AEA, Aria datasets): a pipeline teaser animation, six-panel normal/render/reference/flow/mask/depth composites, and two- or three-up comparison videos. A spinner SVG is used as the poster while each video loads.
 
 ## Layout
 
-Bootstrap container with 12-column rows; video grids use `col-md-4`, `col-md-6` or `col-md-12` with 5px gutters.
+Single 1110px centred column inside a Bootstrap container. The hero band is full-bleed; everything else is in the column, with media spanning its full width and grids splitting it into halves or thirds.
 
 ## Agent Prompt Guide
 
-**Quick colors:** bg `#fff`, cover `#ebf0f1`, text `#212529`, mark `#6c6c6c`, copper `#c68b5b`, steel `#6589bf`, venue `#5a6268`, caption `#8899a5`, button `#090f15`, code `#e9eeef`.
+Quick colors: band `#ebf0f1`, text `#212529`, wordmark `#6c6c6c`, accents `#c68b5b` and `#6589bf`, venue `#5a6268`, caption `#8899a5`, link `#007bff`, button `#090f15` with `#e2e2e2` label, code `#e9eeef`.
 
-1. "Create a centered cover card `#ebf0f1` with 0.3rem radius: a Jost h1 with a gray 800-weight project name, then two lines where one phrase is `#c68b5b` and another `#6589bf`, and a bold `#5a6268` 'NeurIPS 2025 (Spotlight)' line."
-2. "Make link buttons `#090f15` with `#e2e2e2` text, 0.5rem radius, 1.5rem horizontal padding; hover fill `#bec3c7` with `#212529` text."
-3. "Add a section heading: left-aligned Jost h3 at 1.5em bolder, an `hr` with zero top margin, then a full-width 10px-rounded video."
+1. "Build a full-width hero band in `#ebf0f1` with 64px 32px padding: a centred 56px/800 Jost wordmark in `#6c6c6c`, then two 40px/700 title lines in `#212529` with one phrase coloured `#c68b5b` and one `#6589bf`, a 24px/700 venue line in `#5a6268`, a 1px `rgba(0,0,0,0.1)` rule, and 20px/500 author links in `#007bff`."
+2. "Make hero buttons: `#090f15` fill, `#e2e2e2` bold Jost 16px label with a left icon, 1px `#f8f9fa` border, 8px radius, padding 6px 24px; hover fill `#bec3c7` with `#212529` label."
+3. "Add a figure block: a bold 20px `#8899a5` centred caption, then a 16:9 autoplay video at full column width with 22px radius that scales to 1.25 on hover over 0.2s."
 
 ## Similar Pages
 
-ZJU3DV project pages built from the same longvolcap template (e.g. Zhen Xu's EasyVolcap and LongVolCap pages).
+Other pages on Zhen Xu's longvolcap template (ZJU 3DV group) share the jumbotron band, Jost type and black buttons. Within this NeurIPS 2025 batch, BlurDM also uses a coloured full-width hero band, but with a gradient and white type.
 
 ## Quick Start
 
 ```css
 :root {
-  --bg: #ffffff; --cover: #ebf0f1; --text: #212529;
-  --mark: #6c6c6c; --title-a: #c68b5b; --title-b: #6589bf;
-  --venue: #5a6268; --caption: #8899a5;
-  --btn: #090f15; --btn-text: #e2e2e2; --btn-hover: #bec3c7;
-  --link: #007bff; --code: #e9eeef;
-  --font: 'Jost', Helvetica, Arial, sans-serif;
-  --radius-media: 10px; --radius-code: 20px; --radius-btn: 0.5rem;
+  --band: #ebf0f1;
+  --ink: #212529;
+  --wordmark: #6c6c6c;
+  --accent-1: #c68b5b;
+  --accent-2: #6589bf;
+  --venue: #5a6268;
+  --caption: #8899a5;
+  --link: #007bff;
+  --link-hover: #0056b3;
+  --btn: #090f15;
+  --btn-label: #e2e2e2;
+  --btn-hover: #bec3c7;
+  --code-bg: #e9eeef;
+  --rule: rgba(0, 0, 0, 0.1);
+  --font: 'Jost', 'Outfit', sans-serif;
+  --fs-body: 20px;
+  --radius-btn: 8px;
+  --radius-media: 10px;
+  --radius-teaser: 22px;
+  --radius-code: 20px;
 }
-body { font-family: var(--font); font-weight: 500; font-size: 1.25em; }
+body { font-family: var(--font); font-weight: 500; font-size: var(--fs-body); color: var(--ink); }
+.hero { background: var(--band); padding: 64px 32px; text-align: center; }
 ```
 
 ## Provenance
 
 - **URL:** https://4dgt.github.io/
-- **Paper:** 4DGT: Learning a 4D Gaussian Transformer Using Real-World Monocular Videos (arXiv 2506.08015), Zhen Xu et al., Meta Reality Labs and Zhejiang University.
-- **Venue:** NeurIPS 2025 Spotlight
-- **Selection reason:** arXiv comment states NeurIPS 2025 (Spotlight) acceptance and links this page.
-- **Template credit:** footer thanks Zhen Xu for the template, linked to `zju3dv/zju3dv.github.io/tree/master/longvolcap`; built on a locally modified Bootstrap 4.4.1.
-- **Measurement method:** static HTML (inline styles and style block), the modified Bootstrap file fetched and searched for edited rules, and `extract_style.py` frequencies. Not viewed in a browser; container width and h4 size are inferred from Bootstrap defaults.
+- **Paper:** 4DGT: Learning a 4D Gaussian Transformer Using Real-World Monocular Videos (arXiv 2506.08015), Zhen Xu, Zhengqin Li, Zhao Dong, Xiaowei Zhou, Richard Newcombe, Zhaoyang Lv (Reality Labs Research, Meta; Zhejiang University).
+- **Venue:** NeurIPS 2025 Spotlight (shown on the page as "NeurIPS 2025 (Spotlight)").
+- **Selection reason:** existing entry; the arXiv comment states acceptance at NeurIPS 2025 and links the project page.
+- **Template credit:** footer thanks Zhen Xu for the template (zju3dv longvolcap).
+- **Evidence used:** `computed_style.py` render at 1440×900 with first-viewport color share, the 1440 screenshot and tall capture, the inline `<style>` block and the edited `css/bootstrap-4.4.1.css`. Captured 2026-10-28.

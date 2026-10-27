@@ -1,0 +1,788 @@
+{
+ "checked_at": "2026-10-27T18:45:18+00:00",
+ "total": 130,
+ "broken": [],
+ "blocked": [],
+ "results": [
+  {
+   "slug": "neurips-2025-4dgt",
+   "url": "https://4dgt.github.io/",
+   "status": 200,
+   "final_url": "https://4dgt.github.io/"
+  },
+  {
+   "slug": "neurips-2025-seeing-the-wind-from-a-falli",
+   "url": "https://chaoren2357.github.io/seeingthewind/",
+   "status": 200,
+   "final_url": "https://chaoren2357.github.io/seeingthewind/"
+  },
+  {
+   "slug": "neurips-2025-rectified-point-flow",
+   "url": "https://rectified-pointflow.github.io/",
+   "status": 200,
+   "final_url": "https://rectified-pointflow.github.io/"
+  },
+  {
+   "slug": "neurips-2025-zpressor",
+   "url": "https://lhmd.top/zpressor",
+   "status": 200,
+   "final_url": "https://lhmd.top/zpressor/"
+  },
+  {
+   "slug": "neurips-2025-in-the-eye-of-mllm",
+   "url": "https://taiyi98.github.io/projects/EgoGazeVQA",
+   "status": 200,
+   "final_url": "https://taiyi98.github.io/projects/EgoGazeVQA/"
+  },
+  {
+   "slug": "neurips-2025-fast-data-attribution-for-te",
+   "url": "https://peterwang512.github.io/FastGDA",
+   "status": 200,
+   "final_url": "https://peterwang512.github.io/FastGDA/"
+  },
+  {
+   "slug": "neurips-2025-time",
+   "url": "https://blacksnail789521.github.io/time-imm-project-page/",
+   "status": 200,
+   "final_url": "https://blacksnail789521.github.io/time-imm-project-page/"
+  },
+  {
+   "slug": "neurips-2025-blurdm",
+   "url": "https://jin-ting-he.github.io/BlurDM/",
+   "status": 200,
+   "final_url": "https://jin-ting-he.github.io/BlurDM/"
+  },
+  {
+   "slug": "neurips-2025-goatex",
+   "url": "https://goatex3d.github.io/",
+   "status": 200,
+   "final_url": "https://goatex3d.github.io/"
+  },
+  {
+   "slug": "neurips-2025-thermalgen",
+   "url": "https://xjh19971.github.io/ThermalGen/",
+   "status": 200,
+   "final_url": "https://xjh19971.github.io/ThermalGen/"
+  },
+  {
+   "slug": "neurips-2026-change",
+   "url": "https://jiaming.im/CROSS/",
+   "status": 200,
+   "final_url": "https://jiaming.im/CROSS/"
+  },
+  {
+   "slug": "neurips-2026-aeon",
+   "url": "https://weiqi-zhang.github.io/AEON/",
+   "status": 200,
+   "final_url": "https://weiqi-zhang.github.io/AEON/"
+  },
+  {
+   "slug": "neurips-2026-m",
+   "url": "https://dsilvavinicius.github.io/m-plicits/",
+   "status": 200,
+   "final_url": "https://dsilvavinicius.github.io/m-plicits/"
+  },
+  {
+   "slug": "neurips-2026-authority-bias-in-language-m",
+   "url": "https://authority-bias.vercel.app/",
+   "status": 200,
+   "final_url": "https://authority-bias.vercel.app/"
+  },
+  {
+   "slug": "neurips-2026-clean-data-can-still-carry-b",
+   "url": "https://junhoo.me/backdoor",
+   "status": 200,
+   "final_url": "https://junhoo.me/backdoor"
+  },
+  {
+   "slug": "neurips-2026-misspath",
+   "url": "https://zgp110.github.io/misspath-fm/",
+   "status": 200,
+   "final_url": "https://zgp110.github.io/misspath-fm/"
+  },
+  {
+   "slug": "neurips-2026-sparse-planning-in-visual-wo",
+   "url": "https://ycxuyingchen.github.io/costgrad/",
+   "status": 200,
+   "final_url": "https://ycxuyingchen.github.io/costgrad/"
+  },
+  {
+   "slug": "neurips-2026-brain",
+   "url": "https://hanningguo.github.io/BrainOF",
+   "status": 200,
+   "final_url": "https://hanningguo.github.io/BrainOF/"
+  },
+  {
+   "slug": "neurips-2026-remind",
+   "url": "https://remind-applied.github.io/",
+   "status": 200,
+   "final_url": "https://remind-applied.github.io/"
+  },
+  {
+   "slug": "neurips-2026-ram",
+   "url": "https://muoncat.github.io/ramnet_web/",
+   "status": 200,
+   "final_url": "https://muoncat.github.io/ramnet_web/"
+  },
+  {
+   "slug": "icml-2025-direct-discriminative-optimi",
+   "url": "https://research.nvidia.com/labs/cosmos-lab/ddo/",
+   "status": 200,
+   "final_url": "https://research.nvidia.com/labs/cosmos-lab/ddo/"
+  },
+  {
+   "slug": "icml-2025-flextok",
+   "url": "https://flextok.epfl.ch/",
+   "status": 200,
+   "final_url": "https://flextok.epfl.ch/"
+  },
+  {
+   "slug": "icml-2025-cellflux",
+   "url": "https://yuhui-zh15.github.io/CellFlux/",
+   "status": 200,
+   "final_url": "https://yuhui-zh15.github.io/CellFlux/"
+  },
+  {
+   "slug": "icml-2025-fql",
+   "url": "https://seohong.me/projects/fql/",
+   "status": 200,
+   "final_url": "https://seohong.me/projects/fql/"
+  },
+  {
+   "slug": "icml-2025-vlm-cross-modal-reps",
+   "url": "https://vlm-cross-modal-reps.github.io/",
+   "status": 200,
+   "final_url": "https://vlm-cross-modal-reps.github.io/"
+  },
+  {
+   "slug": "icml-2025-core-knowledge-deficits-in-m",
+   "url": "https://grow-ai-like-a-child.github.io/core-knowledge/",
+   "status": 200,
+   "final_url": "https://grow-ai-like-a-child.github.io/core-knowledge/"
+  },
+  {
+   "slug": "icml-2025-eq-vae",
+   "url": "https://eq-vae.github.io/",
+   "status": 200,
+   "final_url": "https://eq-vae.github.io/"
+  },
+  {
+   "slug": "icml-2025-how-far-is-video-generation",
+   "url": "https://phyworld.github.io/",
+   "status": 200,
+   "final_url": "https://phyworld.github.io/"
+  },
+  {
+   "slug": "icml-2025-smpo",
+   "url": "https://jaydenlyh.github.io/SmPO-project-page/",
+   "status": 200,
+   "final_url": "https://jaydenlyh.github.io/SmPO-project-page/"
+  },
+  {
+   "slug": "icml-2025-qt",
+   "url": "https://saqibjaved1.github.io/QT_DoG/",
+   "status": 200,
+   "final_url": "https://saqibjaved1.github.io/QT_DoG/"
+  },
+  {
+   "slug": "icml-2026-foca",
+   "url": "https://focavla.github.io/",
+   "status": 200,
+   "final_url": "https://focavla.github.io/"
+  },
+  {
+   "slug": "icml-2026-infoflow-kv",
+   "url": "https://infoflow-kv.github.io",
+   "status": 200,
+   "final_url": "https://infoflow-kv.github.io"
+  },
+  {
+   "slug": "icml-2026-counterfactual-residual-data",
+   "url": "https://crda-project.github.io",
+   "status": 200,
+   "final_url": "https://crda-project.github.io"
+  },
+  {
+   "slug": "icml-2026-miro",
+   "url": "https://nicolas-dufour.github.io/miro",
+   "status": 200,
+   "final_url": "https://nicolas-dufour.github.io/miro/"
+  },
+  {
+   "slug": "icml-2026-photoagent",
+   "url": "https://mdyao.github.io/PhotoAgent/",
+   "status": 200,
+   "final_url": "https://mdyao.github.io/PhotoAgent/"
+  },
+  {
+   "slug": "icml-2026-scenesmith",
+   "url": "https://scenesmith.github.io/",
+   "status": 200,
+   "final_url": "https://scenesmith.github.io/"
+  },
+  {
+   "slug": "icml-2026-dual-mechanisms-of-value-exp",
+   "url": "https://holi-lab.github.io/ValueMechanism/",
+   "status": 200,
+   "final_url": "https://holi-lab.github.io/ValueMechanism/"
+  },
+  {
+   "slug": "icml-2026-ssi-bench",
+   "url": "https://ssi-bench.github.io/",
+   "status": 200,
+   "final_url": "https://ssi-bench.github.io/"
+  },
+  {
+   "slug": "icml-2026-modus",
+   "url": "https://modus-multimodal.epfl.ch",
+   "status": 200,
+   "final_url": "https://modus-multimodal.epfl.ch"
+  },
+  {
+   "slug": "icml-2026-poet",
+   "url": "https://spherelab.ai/poetx/",
+   "status": 200,
+   "final_url": "https://spherelab.ai/poetx/"
+  },
+  {
+   "slug": "iclr-2025-dice",
+   "url": "https://raiden-zhu.github.io/blog/2025/DICE/",
+   "status": 200,
+   "final_url": "https://raiden-zhu.github.io/blog/2025/DICE/"
+  },
+  {
+   "slug": "iclr-2025-protosnap",
+   "url": "https://tau-vailab.github.io/ProtoSnap/",
+   "status": 200,
+   "final_url": "https://tau-vailab.github.io/ProtoSnap/"
+  },
+  {
+   "slug": "iclr-2025-ogbench",
+   "url": "https://seohong.me/projects/ogbench/",
+   "status": 200,
+   "final_url": "https://seohong.me/projects/ogbench/"
+  },
+  {
+   "slug": "iclr-2025-cubediff",
+   "url": "https://cubediff.github.io/",
+   "status": 200,
+   "final_url": "https://cubediff.github.io/"
+  },
+  {
+   "slug": "iclr-2025-delta",
+   "url": "https://snap-research.github.io/DELTA/",
+   "status": 200,
+   "final_url": "https://snap-research.github.io/DELTA/"
+  },
+  {
+   "slug": "iclr-2025-dataenvgym",
+   "url": "https://DataEnvGym.github.io/",
+   "status": 200,
+   "final_url": "https://DataEnvGym.github.io/"
+  },
+  {
+   "slug": "iclr-2025-vd3d",
+   "url": "https://snap-research.github.io/vd3d/",
+   "status": 200,
+   "final_url": "https://snap-research.github.io/vd3d/"
+  },
+  {
+   "slug": "iclr-2025-representation-alignment-for",
+   "url": "https://sihyun.me/REPA/",
+   "status": 200,
+   "final_url": "https://sihyun.me/REPA/"
+  },
+  {
+   "slug": "iclr-2025-dextrack",
+   "url": "https://meowuu7.github.io/DexTrack/",
+   "status": 200,
+   "final_url": "https://meowuu7.github.io/DexTrack/"
+  },
+  {
+   "slug": "iclr-2025-agentstudio",
+   "url": "https://ltzheng.github.io/agent-studio/",
+   "status": 200,
+   "final_url": "https://ltzheng.github.io/agent-studio/"
+  },
+  {
+   "slug": "iclr-2026-pa3ff",
+   "url": "https://pa3ff.github.io/",
+   "status": 200,
+   "final_url": "https://pa3ff.github.io/"
+  },
+  {
+   "slug": "iclr-2026-spacer",
+   "url": "https://terra-applied.github.io/SPACeR/",
+   "status": 200,
+   "final_url": "https://terra-applied.github.io/SPACeR/"
+  },
+  {
+   "slug": "iclr-2026-evolutionary-caching-to-acce",
+   "url": "https://research.aniaggarwal.com/ecad",
+   "status": 200,
+   "final_url": "https://research.aniaggarwal.com/ecad"
+  },
+  {
+   "slug": "iclr-2026-trace",
+   "url": "https://shjo-april.github.io/TRACE/",
+   "status": 200,
+   "final_url": "https://shjo-april.github.io/TRACE/"
+  },
+  {
+   "slug": "iclr-2026-egoworld",
+   "url": "https://redorangeyellowy.github.io/EgoWorld/",
+   "status": 200,
+   "final_url": "https://redorangeyellowy.github.io/EgoWorld/"
+  },
+  {
+   "slug": "iclr-2026-streamsplat",
+   "url": "https://streamsplat3d.github.io/",
+   "status": 200,
+   "final_url": "https://streamsplat3d.github.io/"
+  },
+  {
+   "slug": "iclr-2026-text",
+   "url": "https://gohyojun15.github.io/VIST3A/",
+   "status": 200,
+   "final_url": "https://gohyojun15.github.io/VIST3A/"
+  },
+  {
+   "slug": "iclr-2026-monocular-normal-estimation",
+   "url": "https://xinhua694.github.io/RoSE.github.io/",
+   "status": 200,
+   "final_url": "https://xinhua694.github.io/RoSE.github.io/"
+  },
+  {
+   "slug": "iclr-2026-uniedit-flow",
+   "url": "https://uniedit-flow.github.io/",
+   "status": 200,
+   "final_url": "https://uniedit-flow.github.io/"
+  },
+  {
+   "slug": "iclr-2026-factuality-matters",
+   "url": "https://structvisuals.github.io/",
+   "status": 200,
+   "final_url": "https://structvisuals.github.io/"
+  },
+  {
+   "slug": "cvpr-2025-stereo4d",
+   "url": "https://stereo4d.github.io",
+   "status": 200,
+   "final_url": "https://stereo4d.github.io"
+  },
+  {
+   "slug": "cvpr-2025-category",
+   "url": "https://guangzhaohe.com/canor",
+   "status": 200,
+   "final_url": "https://www.guangzhaohe.com/canor/"
+  },
+  {
+   "slug": "cvpr-2025-long-video-diffusion-generat",
+   "url": "https://presto-video.github.io/",
+   "status": 200,
+   "final_url": "https://presto-video.github.io/"
+  },
+  {
+   "slug": "cvpr-2025-mirrorverse",
+   "url": "https://mirror-verse.github.io/",
+   "status": 200,
+   "final_url": "https://mirror-verse.github.io/"
+  },
+  {
+   "slug": "cvpr-2025-salad",
+   "url": "https://seokhyeonhong.github.io/projects/salad/",
+   "status": 200,
+   "final_url": "https://seokhyeonhong.github.io/projects/salad/"
+  },
+  {
+   "slug": "cvpr-2025-recovering-dynamic-3d-sketch",
+   "url": "https://jaeah.me/liv3stroke_web",
+   "status": 200,
+   "final_url": "https://jaeah.me/liv3stroke_web/"
+  },
+  {
+   "slug": "cvpr-2025-semanticdraw",
+   "url": "https://jaerinlee.com/research/semantic-draw",
+   "status": 200,
+   "final_url": "https://jaerinlee.com/research/semantic-draw"
+  },
+  {
+   "slug": "cvpr-2025-discovering-hidden-visual-co",
+   "url": "https://kexueyi.github.io/webpage-discover-hidden-visual-concepts",
+   "status": 200,
+   "final_url": "https://kexueyi.github.io/webpage-discover-hidden-visual-concepts/"
+  },
+  {
+   "slug": "cvpr-2025-spatialllm",
+   "url": "https://3d-spatial-reasoning.github.io/spatial-llm/",
+   "status": 200,
+   "final_url": "https://3d-spatial-reasoning.github.io/spatial-llm/"
+  },
+  {
+   "slug": "cvpr-2025-perturb-and-revise",
+   "url": "https://susunghong.github.io/Perturb-and-Revise",
+   "status": 200,
+   "final_url": "https://susunghong.github.io/Perturb-and-Revise/"
+  },
+  {
+   "slug": "cvpr-2026-building-a-precise-video-lan",
+   "url": "https://linzhiqiu.github.io/papers/chai/",
+   "status": 200,
+   "final_url": "https://linzhiqiu.github.io/papers/chai/"
+  },
+  {
+   "slug": "cvpr-2026-reflection-separation",
+   "url": "https://brian90709.github.io/diff-reflection-separation/",
+   "status": 200,
+   "final_url": "https://brian90709.github.io/diff-reflection-separation/"
+  },
+  {
+   "slug": "cvpr-2026-streamavatar",
+   "url": "https://streamavatar.github.io/",
+   "status": 200,
+   "final_url": "https://streamavatar.github.io/"
+  },
+  {
+   "slug": "cvpr-2026-unipixie",
+   "url": "https://unipixie.github.io/",
+   "status": 200,
+   "final_url": "https://unipixie.github.io/"
+  },
+  {
+   "slug": "cvpr-2026-egosound",
+   "url": "https://groolegend.github.io/EgoSound/",
+   "status": 200,
+   "final_url": "https://groolegend.github.io/EgoSound/"
+  },
+  {
+   "slug": "cvpr-2026-archon",
+   "url": "https://zju3dv.github.io/archon/",
+   "status": 200,
+   "final_url": "https://zju3dv.github.io/archon/"
+  },
+  {
+   "slug": "cvpr-2026-autogaze",
+   "url": "https://autogaze.github.io/",
+   "status": 200,
+   "final_url": "https://autogaze.github.io/"
+  },
+  {
+   "slug": "cvpr-2026-pano3dcomposer",
+   "url": "https://qiuzidian.github.io/pano3dcomposer-page/",
+   "status": 200,
+   "final_url": "https://qiuzidian.github.io/pano3dcomposer-page/"
+  },
+  {
+   "slug": "cvpr-2026-pixel-motion-diffusion-is-wh",
+   "url": "https://eronguyen.me/DAWN/",
+   "status": 200,
+   "final_url": "https://eronguyen.me/DAWN/"
+  },
+  {
+   "slug": "cvpr-2026-multimodal-distribution-matc",
+   "url": "https://andyj1.github.io/mdm/",
+   "status": 200,
+   "final_url": "https://andyj1.github.io/mdm/"
+  },
+  {
+   "slug": "acl-2025-os",
+   "url": "https://qiushisun.github.io/OS-Genesis-Home/",
+   "status": 200,
+   "final_url": "https://qiushisun.github.io/OS-Genesis-Home/"
+  },
+  {
+   "slug": "acl-2025-cosyn",
+   "url": "https://yueyang.ai/cosyn/",
+   "status": 200,
+   "final_url": "https://yueyang.ai/cosyn/"
+  },
+  {
+   "slug": "acl-findings-2025-afrobench",
+   "url": "https://mcgill-nlp.github.io/AfroBench/",
+   "status": 200,
+   "final_url": "https://mcgill-nlp.github.io/AfroBench/"
+  },
+  {
+   "slug": "acl-2025-gamebot",
+   "url": "https://visual-ai.github.io/gamebot/",
+   "status": 200,
+   "final_url": "https://visual-ai.github.io/gamebot/"
+  },
+  {
+   "slug": "acl-2025-dice",
+   "url": "https://hcc.snu.ac.kr/DICE-Bench/",
+   "status": 200,
+   "final_url": "https://hcc.snu.ac.kr/DICE-Bench/"
+  },
+  {
+   "slug": "acl-2025-instructpart",
+   "url": "https://zifuwan.github.io/InstructPart/",
+   "status": 200,
+   "final_url": "https://zifuwan.github.io/InstructPart/"
+  },
+  {
+   "slug": "acl-findings-2025-slamming",
+   "url": "https://pages.cs.huji.ac.il/adiyoss-lab/slamming/",
+   "status": 200,
+   "final_url": "https://pages.cs.huji.ac.il/adiyoss-lab/slamming/"
+  },
+  {
+   "slug": "acl-2025-songcomposer",
+   "url": "https://pjlab-songcomposer.github.io/",
+   "status": 200,
+   "final_url": "https://pjlab-songcomposer.github.io/"
+  },
+  {
+   "slug": "acl-2025-symmetrical-visual-contrasti",
+   "url": "https://s-vco.github.io/",
+   "status": 200,
+   "final_url": "https://s-vco.github.io/"
+  },
+  {
+   "slug": "acl-2025-tuna",
+   "url": "https://friedrichor.github.io/projects/TUNA/",
+   "status": 200,
+   "final_url": "https://friedrichor.github.io/projects/TUNA/"
+  },
+  {
+   "slug": "acl-2026-figma",
+   "url": "https://nishitanand.github.io/figma-website/",
+   "status": 200,
+   "final_url": "https://nishitanand.github.io/figma-website/"
+  },
+  {
+   "slug": "acl-findings-2026-edu",
+   "url": "https://gt-learning-innovation.github.io/CIRCUIT_EDU_HW_ACL/",
+   "status": 200,
+   "final_url": "https://gt-learning-innovation.github.io/CIRCUIT_EDU_HW_ACL/"
+  },
+  {
+   "slug": "acl-2026-guidedog",
+   "url": "https://jun297.github.io/GuideDog/",
+   "status": 200,
+   "final_url": "https://jun297.github.io/GuideDog/"
+  },
+  {
+   "slug": "acl-2026-unleashing-spatial-reasoning",
+   "url": "https://trace-reasoning.github.io/",
+   "status": 200,
+   "final_url": "https://trace-reasoning.github.io/"
+  },
+  {
+   "slug": "acl-2026-craft",
+   "url": "https://coral-lab-asu.github.io/CRAFT/",
+   "status": 200,
+   "final_url": "https://coral-lab-asu.github.io/CRAFT/"
+  },
+  {
+   "slug": "acl-2026-paircoder",
+   "url": "https://yisuanwang.github.io/PairCoder/",
+   "status": 200,
+   "final_url": "https://yisuanwang.github.io/PairCoder/"
+  },
+  {
+   "slug": "acl-2026-progresslm",
+   "url": "https://progresslm.github.io/ProgressLM/",
+   "status": 200,
+   "final_url": "https://progresslm.github.io/ProgressLM/"
+  },
+  {
+   "slug": "acl-2026-lami",
+   "url": "https://guyyariv.github.io/LaMI/",
+   "status": 200,
+   "final_url": "https://guyyariv.github.io/LaMI/"
+  },
+  {
+   "slug": "acl-2026-the-stackelberg-speaker",
+   "url": "https://3dagentworld.github.io/leader_follower/",
+   "status": 200,
+   "final_url": "https://3dagentworld.github.io/leader_follower/"
+  },
+  {
+   "slug": "acl-2026-dise",
+   "url": "https://zhongzero.github.io/DiSE/",
+   "status": 200,
+   "final_url": "https://zhongzero.github.io/DiSE/"
+  },
+  {
+   "slug": "researcher-yaodong-yang",
+   "url": "https://yangyaodong.com/",
+   "status": 200,
+   "final_url": "https://yangyaodong.com/"
+  },
+  {
+   "slug": "researcher-junyang-lin",
+   "url": "https://justinlin610.github.io/",
+   "status": 200,
+   "final_url": "https://justinlin610.github.io/"
+  },
+  {
+   "slug": "researcher-nathan-c-frey",
+   "url": "https://ncfrey.com/",
+   "status": 200,
+   "final_url": "https://ncfrey.com/"
+  },
+  {
+   "slug": "researcher-niklas-muennighoff",
+   "url": "https://muennighoff.com/",
+   "status": 200,
+   "final_url": "https://muennighoff.com/"
+  },
+  {
+   "slug": "researcher-matt-deitke",
+   "url": "https://mattdeitke.com/",
+   "status": 200,
+   "final_url": "https://mattdeitke.com/"
+  },
+  {
+   "slug": "researcher-tim-rockt-schel",
+   "url": "https://rockt.ai/",
+   "status": 200,
+   "final_url": "https://rockt.ai/"
+  },
+  {
+   "slug": "researcher-tiago-pimentel",
+   "url": "https://tpimentelms.github.io/",
+   "status": 200,
+   "final_url": "https://tpimentelms.github.io/"
+  },
+  {
+   "slug": "researcher-yoshua-bengio",
+   "url": "https://yoshuabengio.org/en",
+   "status": 200,
+   "final_url": "https://yoshuabengio.org/en"
+  },
+  {
+   "slug": "researcher-aleksander-holynski",
+   "url": "https://holynski.org/",
+   "status": 200,
+   "final_url": "https://holynski.org/"
+  },
+  {
+   "slug": "researcher-jonathan-shafer",
+   "url": "http://shaferjo.com/",
+   "status": 200,
+   "final_url": "http://shaferjo.com/"
+  },
+  {
+   "slug": "researcher-david-novotny",
+   "url": "https://d-novotny.github.io/",
+   "status": 200,
+   "final_url": "https://d-novotny.github.io/"
+  },
+  {
+   "slug": "researcher-daniel-roy",
+   "url": "https://danroy.org/",
+   "status": 200,
+   "final_url": "https://danroy.org/"
+  },
+  {
+   "slug": "researcher-nicholas-carlini",
+   "url": "https://nicholas.carlini.com/",
+   "status": 200,
+   "final_url": "https://nicholas.carlini.com/"
+  },
+  {
+   "slug": "researcher-amir-bar",
+   "url": "https://www.amirbar.net/",
+   "status": 200,
+   "final_url": "https://www.amirbar.net/"
+  },
+  {
+   "slug": "researcher-david-b-lindell",
+   "url": "https://davidlindell.com/",
+   "status": 200,
+   "final_url": "https://davidlindell.com/"
+  },
+  {
+   "slug": "researcher-anagh-malik",
+   "url": "https://anaghmalik.com/",
+   "status": 200,
+   "final_url": "https://anaghmalik.com/"
+  },
+  {
+   "slug": "researcher-jaeyeon-kim",
+   "url": "https://jaeyeonkim01.github.io/",
+   "status": 200,
+   "final_url": "https://jaeyeonkim01.github.io/"
+  },
+  {
+   "slug": "researcher-erik-wijmans",
+   "url": "https://wijmans.xyz/",
+   "status": 200,
+   "final_url": "https://wijmans.xyz/"
+  },
+  {
+   "slug": "researcher-emmanuel-abbe",
+   "url": "https://sma.epfl.ch/~abbe/",
+   "status": 200,
+   "final_url": "https://sma.epfl.ch/~abbe/"
+  },
+  {
+   "slug": "researcher-shangbin-feng",
+   "url": "https://bunsenfeng.github.io/",
+   "status": 200,
+   "final_url": "https://bunsenfeng.github.io/"
+  },
+  {
+   "slug": "researcher-ioannis-gkioulekas",
+   "url": "https://imaging.cs.cmu.edu/igkioule/",
+   "status": 200,
+   "final_url": "https://imaging.cs.cmu.edu/igkioule/"
+  },
+  {
+   "slug": "researcher-michal-valko",
+   "url": "https://misovalko.github.io/",
+   "status": 200,
+   "final_url": "https://misovalko.github.io/"
+  },
+  {
+   "slug": "researcher-nataniel-ruiz",
+   "url": "https://natanielruiz.github.io/",
+   "status": 200,
+   "final_url": "https://natanielruiz.github.io/"
+  },
+  {
+   "slug": "researcher-tanmay-gupta",
+   "url": "https://tanmaygupta.info/",
+   "status": 200,
+   "final_url": "https://tanmaygupta.info/"
+  },
+  {
+   "slug": "researcher-aaron-defazio",
+   "url": "https://www.aarondefazio.com/",
+   "status": 200,
+   "final_url": "https://www.aarondefazio.com/"
+  },
+  {
+   "slug": "researcher-christoph-feichtenhofer",
+   "url": "https://feichtenhofer.github.io/",
+   "status": 200,
+   "final_url": "https://feichtenhofer.github.io/"
+  },
+  {
+   "slug": "researcher-sara-hooker",
+   "url": "https://www.sarahooker.me/",
+   "status": 200,
+   "final_url": "https://www.sarahooker.me/"
+  },
+  {
+   "slug": "researcher-liwei-jiang",
+   "url": "https://liweijiang.github.io/",
+   "status": 200,
+   "final_url": "https://liweijiang.github.io/"
+  },
+  {
+   "slug": "researcher-nikhila-ravi",
+   "url": "https://www.nikhilaravi.com/",
+   "status": 200,
+   "final_url": "https://www.nikhilaravi.com/"
+  },
+  {
+   "slug": "researcher-richard-socher",
+   "url": "https://www.socher.org/",
+   "status": 200,
+   "final_url": "https://www.socher.org/"
+  }
+ ]
+}

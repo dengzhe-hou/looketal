@@ -1,173 +1,210 @@
-# Terracotta Field Journal — Style Reference
+# PA3FF Terracotta Editorial — Style Reference
 
-> An engineering monograph printed on warm paper, with section numbers in terracotta mono.
+> A design-annual spread on warm paper: Fraunces headlines, rust italics, and a faded robot drifting behind the masthead.
 
 **Theme:** light
 
-*Measurements are normalized from static HTML and CSS (frequency-ranked by a script, then filtered by reading the page's own stylesheet and inline styles). Roles are interpreted, not declared by the authors.*
+Values come from a headless Chrome render at 1440×900 (computed styles, loaded fonts, first-viewport color share), the 1440-wide screenshots, and the page's own inline `<style>` block (about 800 lines, with CSS custom properties), layered over a local Bulma build. The authors' variables are reported where the render confirms them. Color share is measured on the first 1440×900 viewport.
 
-The most fully authored design in this batch. Bulma is still loaded, but a 19KB inline stylesheet replaces nearly every visible rule with an editorial-technical system: warm paper #faf8f3 under a 22px dot grid and an SVG noise grain, Fraunces variable serif for display (optical size 96-144, SOFT axis), IBM Plex Sans for body and IBM Plex Mono for every label. Terracotta #c2410c is the single accent, used on italic words in headings, superscripts, section numbers and button hover. Links are square, ink-filled, uppercase mono buttons that lift with a hard 4px offset shadow on hover. A floating pill navbar, numbered section indices, labeled figure plates and an ink-black footer complete it.
+## Overview
+
+A custom editorial theme on top of Bulma. The page background is warm paper #faf8f3 with a 22px dot grid and a faint noise grain. A frosted pill navigation floats at the top in lowercase IBM Plex Mono. The hero is left aligned: a mono uppercase meta line with a pulsing rust dot ("PA3FF — PART-AWARE 3D FEATURE FIELD — ICLR 2026"), then a 70.4px Fraunces headline at light weight 380 with the second half in rust #c2410c italics, authors in Plex Sans with rust superscripts, mono affiliations, a black "Accepted to ICLR 2026" pill with a green dot, and three square mono buttons (one solid ink, two ghost). A greyed photo of the robot fills the right half of the hero and fades into the paper. Each section has a two-column layout: a mono "§ 01 ABSTRACT" marker in the left quarter, and on the right a 48px Fraunces headline sentence with a rust italic phrase, then prose, figure plates with mono labels, numbered contribution lists, hairline-grid metric cards, and black insight boxes with amber kickers. Sections alternate between paper and a tinted #f3efe6 band; the footer is a solid ink colophon.
+
+## First Viewport
+
+Color share (1440×900, 8-color quantize): the screen is almost all warm neutrals: #eeece7 35.8%, #d8d4cf 18.4%, #dddbd7 13.1%, #eae8e3 11.4%, #e4e1dd 10.5%, #f0efea 5.4% (paper plus the faded robot photo on the right), and a warm taupe #ac9c94 5.2% from the photo's wood tones. Ink type and rust italics are each under 1% by area, yet they carry the screen.
+
+Anatomy in DOM order (Bulma `container is-max-desktop`, 960px, x=240):
+
+1. **Floating nav** — `nav.navbar-float`, fixed 20px from the top, centred, 551×51, rgba(250,248,243,0.82) with 14px backdrop blur, 1px rgba(15,17,21,0.08) border, 9999px radius, soft shadow. Links: IBM Plex Mono 13.12px / 500, lowercase, #4a4d55, padding 8px 15.2px, pill hover rgba(15,17,21,0.06); "code" and "paper" carry small icons.
+2. **Meta line** — `.hero-meta` at y=176: 6px #c2410c dot with a pulsing ring, "PA3FF — PART-AWARE 3D FEATURE FIELD" in Plex Mono 11.52px / 400, letter-spacing 0.12em, uppercase, #4a4d55; a 40px #e3dccd rule; "ICLR 2026". Margin-bottom 28px.
+3. **Headline** — `h1.publication-title`, Fraunces 70.4px / 380 / line-height 1.02, letter-spacing -0.025em, #0f1115, max-width 18ch (743px), left aligned, four lines (y=223–510); "Generalizable Articulated Object Manipulation" in `<em>`: italic, weight 360, #c2410c. Margin-bottom 28px.
+4. **Authors** — `.publication-authors`, Plex Sans 16px / 400 / 1.75, #0f1115; first three names bold 600; superscripts 600 #c2410c; wraps at 44rem.
+5. **Affiliations** — `.author-affil`, Plex Mono 11.52px, letter-spacing 0.06em, #4a4d55, rust superscripts, separated by middots.
+6. **Notes** — `.author-note`, Plex Mono 10.88px uppercase, letter-spacing 0.08em, #7c7f87: "* Equal contribution · † Corresponding author".
+7. **Venue pill** — `.venue-badge` at y≈740: #0f1115 fill, #faf8f3 Plex Mono 12.48px text, padding 0.45rem 0.9rem, 999px radius, 6px #22c55e dot. Gap 36px.
+8. **Buttons** — `.publication-links` (gap 0.6rem) at y=807: "READ PAPER →" solid #0f1115 with #faf8f3 text; "VIEW CODE" and "WATCH DEMO" ghost (transparent, #0f1115 text); all Plex Mono 12.48px / 500 uppercase, letter-spacing 0.06em, height 2.6rem (42px), padding 0 20px, 1px #0f1115 border, square corners.
+9. **Hero photo** — `.hero-face`, absolute right 52% of the hero, robot photo at 0.55 opacity, grayscale 0.15, faded by a left-to-right paper gradient. Hero bottom at y=978 with a 1px #e3dccd rule.
 
 ## Tokens — Colors
 
-| Name | Value | Token | Role |
+| Name | Value | Token | Applies to |
 |---|---|---|---|
-| Warm Paper | `#faf8f3` | `--paper` | Page background, under a dot grid of rgba(15,17,21,0.045) |
-| Paper Tint | `#f3efe6` | `--paper-tint` | Alternate surface and pillar hover |
-| Surface White | `#ffffff` | `--bg-surface` | Figure plates, pillars, video cards |
-| Field Ink | `#0f1115` | `--ink` | Text, button fill, footer background, positive compare column |
-| Ink Soft | `#1d2025` | `--ink-soft` | Secondary dark |
-| Rule Dark | `#2a2d33` | `--rule` | Footer top border |
-| Rule Sand | `#e3dccd` | `--rule-soft` | Hairlines, grid gaps, plate borders |
-| Terracotta | `#c2410c` | `--primary` | Accent: italic heading words, sup, section numbers, button hover |
-| Burnt Terracotta | `#9a330a` | `--primary-dark` | Accent hover/pressed |
-| Deep Teal | `#0f766e` | `--secondary` | Secondary accent |
-| Amber | `#b45309` | `--accent` | Gradient end (`--gradient-brand` #c2410c to #b45309) |
-| Muted Graphite | `#4a4d55` | `--text-muted` | Mono labels, affiliations |
-| Light Graphite | `#7c7f87` | `--text-light` | Plate labels, notes |
-| Signal Gold | `#fbbf24` | `--star` | Inline color on small superscript glyphs at 0.5em (7 uses; role inferred) |
-| Venue Green | `#22c55e` | `--live-dot` | Dot inside the venue badge |
-
-Bulma's palette appears in raw counts but is overridden; the page's own palette is fully declared in `:root`. #15803d appears twice inline (inferred: positive-result marker).
+| Paper | #faf8f3 | `--paper` | page background, hero, button text on ink, nav glass tint |
+| Paper Tint | #f3efe6 | `--paper-tint` | alternate section bands (§ 02, § 05, § 07), callout fill, tag fill |
+| Ink | #0f1115 | `--ink` | headlines, body text, solid button, venue pill, insight boxes, footer |
+| Muted | #4a4d55 | `--text-muted` | nav links, meta line, affiliations, section markers, pillar text |
+| Light | #7c7f87 | `--text-light` | author notes, figure-plate labels |
+| Terracotta | #c2410c | `--primary` | italic headline phrases, links, superscripts, § numbers, figure labels, list numerals, button hover fill |
+| Terracotta Dark | #9a330a | `--primary-dark` | link hover, accent metric card hover |
+| Rule Soft | #e3dccd | `--rule-soft` | hairlines, hero bottom border, grid gaps, figure-plate border, meta rule |
+| Rule | #2a2d33 | `--rule` | footer top border |
+| Surface | #ffffff | `--bg-surface` | figure plates, metric cards, pillars, video cards |
+| Amber | #fbbf24 | (literal) | insight-box kicker, bold numbers in insights and the positive compare column |
+| Live Green | #22c55e | (literal) | dot in the venue pill |
+| Teal | #0f766e | `--secondary` | secondary tag text in the generalization table |
+| Photo Taupe | #ac9c94 | (image) | warm tone of the faded hero photo |
 
 ## Tokens — Typography
 
-**Families.** `--font-display: 'Fraunces', ui-serif, Georgia`; `--font-body: 'IBM Plex Sans', system-ui`; `--font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo`. All three from Google Fonts. Body sets `font-feature-settings: "ss01", "cv11"`, line-height 1.65, antialiased. Substitutes: Newsreader or Source Serif 4 for Fraunces; Inter for Plex Sans; JetBrains Mono for Plex Mono.
+- **Display:** declared `'Fraunces', ui-serif, Georgia, 'Times New Roman', serif` with `font-variation-settings` ("opsz" 96–144, "SOFT" 20–80). Rendered: Fraunces variable 300–900 (Google Fonts). Substitute: Newsreader (variable, similar optical sizing).
+- **Body:** declared `'IBM Plex Sans', system-ui, …`. Rendered: IBM Plex Sans 400 and 600. Substitute: Inter.
+- **Mono:** declared `'IBM Plex Mono', ui-monospace, …`. Rendered: IBM Plex Mono 400, 500, 600. Substitute: JetBrains Mono.
+- **Icons:** Font Awesome 6.4, Academicons.
 
-| Role | Size | Weight | Family / settings |
-|---|---|---|---|
-| Paper title | clamp(2.4rem, 5.4vw, 4.4rem), line-height 1.02, letter-spacing -0.025em, max 18ch | 380 | Fraunces, opsz 120, SOFT 40 |
-| Title emphasis (`em`) | inherit, italic | 360 | Fraunces, SOFT 80, #c2410c |
-| Section title | clamp(2rem, 3.6vw, 3rem), line-height 1.05, max 28ch | 380 | Fraunces, opsz 96, SOFT 50 |
-| Big metric | 3.4rem, line-height 1, letter-spacing -0.03em | 400 | Fraunces, opsz 144, SOFT 20 |
-| Prose | 1.05rem, line-height 1.75, max 68ch | 400 | IBM Plex Sans |
-| Authors | 1rem, line-height 1.75 | 400 (names 600) | IBM Plex Sans |
-| Section index / hero meta | 0.72rem, uppercase, letter-spacing 0.12-0.18em | 500-600 | IBM Plex Mono |
-| Button label | 0.78rem, uppercase, letter-spacing 0.06em | 500 | IBM Plex Mono |
-| Plate label | 0.62rem, uppercase, letter-spacing 0.2em | 400 | IBM Plex Mono |
+| Role | Selector | Size / weight / line-height |
+|---|---|---|
+| Hero headline | `.publication-title` (`clamp(2.4rem, 5.4vw, 4.4rem)`) | 70.4px / 380 / 1.02, ls -0.025em; `em` 360 italic |
+| Section headline | `.section-title` (`clamp(2rem, 3.6vw, 3rem)`) | 48px / 380 / 1.05, ls -0.02em, max 28ch |
+| Metric number | `.result-card .metric` | Fraunces 54.4px (3.4rem) / 400 / 1 |
+| Insight sentence | `.insight p` | Fraunces 21.6px / 360 italic / 1.4 |
+| Pillar / callout heads | `.pillar h4`, `.callout h5` | Fraunces 21.6px / 19.2px, 420 italic |
+| Footer title | `.footer h4` | Fraunces 32px / 400 |
+| Prose | `.prose` | Plex Sans 16.8px (1.05rem) / 400 / 1.75, max 68ch |
+| Body | `body` | Plex Sans 16px / 400 / 1.65 |
+| Figure caption | `.figure-caption` | Plex Sans 15.2px / 1.6 |
+| Section marker | `.section-index` | Plex Mono 11.52px uppercase, ls 0.18em; `.num` 600 #c2410c |
+| Buttons | `.publication-links .button` | Plex Mono 12.48px / 500 uppercase, ls 0.06em |
+| Nav | `.navbar-float a` | Plex Mono 13.12px / 500 lowercase |
+| Labels | `.figure-plate::before`, `.fc-label`, `.video-caption` | Plex Mono 9.9–11.5px uppercase, ls 0.08–0.2em |
 
 ## Tokens — Spacing & Shapes
 
-| Token | Value | Used on |
-|---|---|---|
-| --radius-none | 0 | link buttons, content boxes, video cards |
-| --radius-sm | 4px | small controls |
-| --radius-md | 6px | inline panels |
-| --radius-lg | 10px | larger panels |
-| --radius-pill | 9999px / 999px | floating navbar, nav links, venue badge |
+| Element | Value |
+|---|---|
+| Buttons, cards, plates, tables | radius 0 (square) |
+| Nav, venue pill | radius 9999px / 999px |
+| Radius scale (declared) | 4px, 6px, 10px (`--radius-sm/md/lg`), barely used |
+| Shadow small | `0 1px 2px 0 rgba(15,17,21,0.06)` on figure plates |
+| Shadow medium | `0 2px 6px -2px rgba(15,17,21,0.08), 0 8px 24px -12px rgba(15,17,21,0.08)` on the nav |
+| Shadow large | `0 12px 32px -8px rgba(15,17,21,0.12), 0 24px 48px -16px rgba(15,17,21,0.10)` on plate and video hover |
+| Button hover | `transform: translate(-2px,-2px)`, `box-shadow: 4px 4px 0 #0f1115`, fill #c2410c |
+| Hairline grids | 1px gap on #e3dccd background with a 1px #e3dccd border (metrics, pillars, videos) |
+| Callout | left border 2px #c2410c, padding 1.5rem 1.5rem 1.5rem 2.75rem, vertical rotated kicker |
+| Body texture | dot grid `radial-gradient(rgba(15,17,21,0.045) 1px, transparent 1px)` at 22px, noise overlay at 0.35 opacity |
 
-**Shadows.** `--shadow-sm: 0 1px 2px 0 rgba(15,17,21,0.06)` on figure plates; `--shadow-md: 0 2px 6px -2px rgba(15,17,21,0.08), 0 8px 24px -12px rgba(15,17,21,0.08)` on the navbar; `--shadow-lg: 0 12px 32px -8px rgba(15,17,21,0.12), 0 24px 48px -16px rgba(15,17,21,0.10)` on plate hover; button hover uses a hard `4px 4px 0 var(--ink)`.
+## Layout Metrics
 
-**Layout width.** Sections pad 6rem 1.5rem (4rem 1.25rem under 900px); hero 8rem top, 5rem bottom; prose capped at 68ch; Bulma container widths remain (1152px / 1344px).
+- **Container:** Bulma `.container.is-max-desktop`, 960px max at ≥1024px (x=240–1200 at 1440).
+- **Hero:** padding 8rem top (128px) / 5rem bottom (80px); content left aligned; title capped at 18ch; photo covers the right 52%.
+- **Sections:** `.section` padding 96px 24px; Bulma `columns` with `column is-3` (marker, 240px) and `column is-9` (content, 714px at x=486).
+- **Section headline:** margin-bottom 44px; prose max 68ch.
+- **Figure plate:** padding 20px inside a 1px #e3dccd border on #ffffff; caption grid `80px 1fr` with a 20px gap.
+- **Grids:** `.results-grid` and `.pillar-grid` 3 equal columns; `.compare-grid` 2 columns; `.video-grid` `repeat(auto-fill, minmax(280px, 1fr))`.
+- **Footer:** padding 80px 24px on #0f1115.
+
+| Breakpoint | Gutter | Body | Title | Grid change |
+|---|---|---|---|---|
+| ≥1024px | (viewport − 960)/2 | 16px (prose 16.8px) | 70.4px | marker column + 9-column content |
+| 901–1023px | 24px | 16px | 5.4vw (49–55px) | same split, container fluid |
+| 769–900px | 20px | 16px | 5.4vw | section padding 64px 20px; metrics, pillars, compare stack to 1 column; caption label above body; hero photo full width at 0.18 opacity |
+| ≤768px | 20px | 16px | 36px (2.25rem) | hero padding 96px / 48px; Bulma columns stack (marker above headline); nav max 94% wide, scrolls horizontally |
 
 ## Components
 
-- **Floating navbar.** `.navbar-float`: fixed pill (9999px radius), white, 1px rgba(15,17,21,0.08) border, shadow-md; links Plex Mono 0.82rem lowercase, #4a4d55, pill hover rgba(15,17,21,0.06).
-- **Hero meta line.** Mono 0.72rem uppercase row with a pulsing 6px terracotta dot and a 40px #e3dccd rule.
-- **Venue badge.** Inline-flex pill, Plex Mono 0.78rem, padding 0.45rem 0.9rem, ink fill with paper text, 6px green #22c55e dot.
-- **Link button.** Square (radius 0), 2.6rem high, padding 0 1.25rem, ink fill and border, paper text, mono 0.78rem uppercase; `.is-ghost` transparent with ink text; hover terracotta fill, translate(-2px,-2px), shadow `4px 4px 0 #0f1115`. Labels: View Code, Watch Demo.
-- **Section index.** Mono 0.72rem uppercase, letter-spacing 0.18em, terracotta number, flexible 1px sand rule to the right.
-- **Figure plate.** White, 1px #e3dccd border, padding 1.25rem, shadow-sm, `data-label` printed top-left in 0.62rem mono; hover shadow-lg and image scale 1.015.
-- **Figure caption.** Two-column grid (80px label, body), label in terracotta mono 0.68rem.
-- **Pillar grid / video grid.** 1px-gap grids on a sand background so gaps read as hairlines; pillars white, hover #f3efe6; video cards square, ink video background, hover scale 1.02.
-- **Metric card.** Fraunces 3.4rem number over a mono uppercase label; `.is-accent` variant inverts to ink.
-- **Compare columns.** Negative column white, positive column ink with paper text, mono 0.72rem column heads.
-- **Generalization table.** `.gen-table`: full width, collapsed, 0.85rem vertical padding, 1px sand top borders, 58px tag cell.
-- **Footer colophon.** Ink background, paper text, 5rem padding, Fraunces 2rem heading, links underlined with rgba(250,248,243,0.3).
+- **Floating pill nav:** fixed, centred, translucent paper with 14px blur, 9999px radius, 1px faint border, medium shadow; lowercase mono links in #4a4d55 that gain a 6% ink pill on hover.
+- **Meta line:** mono uppercase kicker with a 6px rust dot pulsing via a 4px → 8px ring, a 40px #e3dccd rule, then the venue.
+- **Editorial headline:** Fraunces light 380, tight negative tracking, with one clause set as rust italic `em`.
+- **Square mono button:** height 2.6rem, padding 0 1.25rem, 1px #0f1115 border, Plex Mono 12.48px uppercase; solid variant #0f1115 / #faf8f3, ghost variant transparent / #0f1115; hover fills #c2410c, shifts up-left 2px and drops a hard 4px ink shadow (ghost hover fills ink instead).
+- **Section marker:** "§ 01" in rust 600 mono plus the label in muted mono, letter-spacing 0.18em, in the left quarter column.
+- **Figure plate:** #ffffff, 1px #e3dccd border, 20px padding, small shadow, a mono "FIG. 01 — FRAMEWORK" label pinned top-left; on hover large shadow and image scales 1.015. Caption below in a two-column grid with a rust mono "FIGURE 01" label.
+- **Numbered list:** `.contrib-list` items separated by #e3dccd hairlines, rust mono "01", "02" numerals at the left, 56px text indent, inside a callout with a vertical rotated kicker "KEY CONTRIBUTIONS".
+- **Metric card:** white cell in a 1px hairline grid, 2rem 1.5rem padding, Fraunces 54.4px number above a mono uppercase label; a 2px top bar turns rust on hover; accent variant is ink with paper text.
+- **Insight box:** #0f1115 block, amber #fbbf24 mono kicker, Fraunces italic 21.6px sentence with bold numbers in Plex Sans amber.
+- **Video card:** in a 1px hairline grid; mono uppercase caption bar with a rust "→" that slides 4px on hover; card scales 1.02 with a large shadow.
+- **Underline tabs:** mono uppercase tabs, active tab ink with a 2px #c2410c underline.
 
 ## Page Modules
 
-- **Title/author block.** Left-aligned Fraunces title with terracotta italic word, Plex Sans authors with terracotta superscripts, mono affiliations and notes, a faded face image covering the right 52% of the hero.
-- **Venue badge.** Ink pill "ICLR 2026" with green dot.
-- **Link buttons.** View Code and Watch Demo (no Paper or arXiv button in the link row).
-- **Teaser video.** Eight videos across the page in a square-cornered video grid.
-- **Narrative sections.** Numbered: motivation, pipeline, three-stage training, feature properties, experiments, real-world tasks, beyond policies.
-- **Results.** Metric cards, a component-analysis comparison, one results table (`gen-table`).
-- **Footer colophon.** Title, copyright, venue, template credit.
-- Not present: BibTeX block, abstract heading, slider, 3D viewer, HF demo.
+| Module | Present | How it is styled |
+|---|---|---|
+| Floating nav | Yes | frosted pill, mono lowercase links |
+| Meta kicker + venue | Yes | mono line with pulsing dot; black venue pill |
+| Title / authors / affiliations | Yes | left-aligned Fraunces headline, mono affiliations |
+| Link buttons | Yes | square mono buttons, one solid two ghost |
+| Hero imagery | Present but non-standard | faded robot photo behind the right half, no teaser figure |
+| Abstract | Yes | § 01 with headline sentence and prose |
+| Overview figure + contributions | Yes | figure plate, numbered list in a callout |
+| Method | Yes | pillars grid and figure plates |
+| Comparison | Yes | two-column compare grid (white vs ink) |
+| Results | Yes | metric cards, tabs, figure plates, generalization table with tags |
+| Demo videos | Yes | hairline video grid with mono captions |
+| Applications | Yes | figures on a tinted band |
+| BibTeX | No (absent from the source) | |
+| Footer | Yes | ink colophon with Fraunces title |
+
+## Adapting to Other Content
+
+- **More authors:** keep them inline in Plex Sans 16px with rust superscripts; bold only equal-first authors; let the block wrap at 44rem.
+- **Results table:** use the `.gen-table` recipe: no outer border, rows separated by 1px #e3dccd, Plex Sans 15.2px cells, mono tag chips (#f3efe6 fill, 1px #e3dccd border, rust text) for categories, best numbers bold #0f1115.
+- **News:** a `.contrib-list`-style list where the numeral is replaced by a mono date in #c2410c.
+- **BibTeX:** add a § section with a #ffffff figure-plate box holding Plex Mono 13px text and a mono "BIBTEX" plate label.
+- **Without a hero photo:** keep the left-aligned headline and let the dot-grid paper show; do not centre the hero.
 
 ## Do's and Don'ts
 
-**Do**
-
-- Use one accent (terracotta) and put it on italic words, numbers and superscripts.
-- Set every label, index and button in uppercase IBM Plex Mono with wide tracking.
-- Draw grid lines with 1px gaps over a sand background rather than borders on each cell.
-- Number each section and give each figure a printed plate label.
-
-**Don't**
-
-- Don't round the link buttons; they are square with a hard offset shadow.
-- Don't use pure white as the page background; it is warm paper #faf8f3.
-- Don't mix in Bulma's blue links or dark pill buttons.
-- Don't drop the BibTeX block if you reuse this system (this page omits it).
+- Do open every section with a single headline sentence in Fraunces, one clause in rust italic.
+- Do keep corners square except the nav and venue pill.
+- Do set all labels, markers and buttons in uppercase Plex Mono with generous tracking.
+- Do alternate paper and #f3efe6 bands rather than adding cards with shadows.
+- Don't use rust for large fills; it is for italics, numerals and hover.
+- Don't add more than one accent beyond rust; amber appears only inside ink insight boxes.
+- Don't centre body sections; the left marker column is part of the rhythm.
 
 ## Surfaces
 
-Warm paper page with dot grid and grain, white figure plates, paper-tint hover states, ink-black inverted cards and footer.
+Warm paper #faf8f3 with a 22px dot grid and grain; tinted #f3efe6 bands for alternate sections; #ffffff plates and cards on hairline grids; solid #0f1115 for insight boxes, the positive comparison column and the footer.
 
 ## Imagery
 
-Point-cloud feature fields rendered as colored parts, robot task videos on ink backgrounds, a desaturated face photo (grayscale 0.15, contrast 0.95, opacity 0.55) fading into the hero.
+A faded photograph of a robot arm behind the hero; white-plated research figures (feature-field visualisations, bar charts, pipeline diagrams); real-world manipulation videos in a hairline grid.
 
 ## Layout
 
-Left-aligned editorial layout: hero text left with image right, then long numbered sections with 3-column pillar grids and auto-fill video grids (min 280px). Collapses to one column under 900px.
+Left-aligned editorial hero with a photo on the right, then 960px sections split 3/9 between a section marker and content. Rendered height about 9,700px.
 
 ## Agent Prompt Guide
 
-**Quick color reference**
+Quick colors: paper #faf8f3, tint #f3efe6, ink #0f1115, muted #4a4d55, light #7c7f87, rust #c2410c (hover #9a330a), hairline #e3dccd, surface #ffffff, amber #fbbf24, live dot #22c55e.
 
-- Paper #faf8f3
-- Ink #0f1115
-- Terracotta #c2410c
-- Sand rule #e3dccd
-- Muted #4a4d55
-
-**Example component prompts**
-
-1. Create a square link button: 2.6rem tall, fill #0f1115, text #faf8f3, IBM Plex Mono 0.78rem uppercase with 0.06em tracking; on hover fill #c2410c, shift up-left 2px, hard shadow 4px 4px 0 #0f1115.
-2. Create a section index row: '02' in #c2410c Plex Mono 0.72rem weight 600, a label in #4a4d55 uppercase with 0.18em tracking, then a 1px #e3dccd rule filling the remaining width.
-3. Create a figure plate: white, 1px #e3dccd border, 1.25rem padding, a 0.62rem mono label 'FIG. 3' at top-left, soft shadow that deepens on hover.
+1. "Build a hero on #faf8f3 with a 22px dot grid: a mono uppercase kicker (IBM Plex Mono 11.52px, letter-spacing 0.12em, #4a4d55) led by a 6px #c2410c dot; a left-aligned Fraunces headline at 70.4px, weight 380, line-height 1.02, letter-spacing -0.025em, max 18ch, #0f1115, with the second clause in italic #c2410c; then a #0f1115 pill reading 'Accepted to …' with a #22c55e dot."
+2. "Create square mono buttons: height 2.6rem, padding 0 1.25rem, 1px solid #0f1115, IBM Plex Mono 12.48px / 500 uppercase, letter-spacing 0.06em; primary filled #0f1115 with #faf8f3 text, others transparent; on hover fill #c2410c, translate(-2px,-2px) and box-shadow 4px 4px 0 #0f1115."
+3. "Lay out a section: padding 96px 24px in a 960px container; left quarter shows '§ 03' in #c2410c Plex Mono 600 beside a muted uppercase label; right three quarters hold a 48px Fraunces headline (weight 380, one italic #c2410c phrase), then a figure plate: #ffffff, 1px #e3dccd border, 20px padding, mono label top-left in #7c7f87."
 
 ## Similar Pages
 
-- Nerfies (credited base, heavily overridden).
-- Editorial-style research pages that use Fraunces with IBM Plex.
+- Editorial-style research pages that use a variable serif display with mono metadata (for example, SPACeR in this collection for the Swiss counterpart).
+- Magazine-like project pages with section numbering and a left marker column.
 
 ## Quick Start
 
 ```css
 :root {
-  --ink: #0f1115;
   --paper: #faf8f3;
   --paper-tint: #f3efe6;
-  --rule: #2a2d33;
-  --rule-soft: #e3dccd;
+  --ink: #0f1115;
+  --muted: #4a4d55;
+  --light: #7c7f87;
   --primary: #c2410c;
   --primary-dark: #9a330a;
-  --secondary: #0f766e;
-  --accent: #b45309;
-  --text-muted: #4a4d55;
-  --text-light: #7c7f87;
-  --shadow-sm: 0 1px 2px 0 rgba(15,17,21,0.06);
-  --shadow-md: 0 2px 6px -2px rgba(15,17,21,0.08), 0 8px 24px -12px rgba(15,17,21,0.08);
-  --shadow-lg: 0 12px 32px -8px rgba(15,17,21,0.12), 0 24px 48px -16px rgba(15,17,21,0.10);
-  --radius-sm: 4px; --radius-md: 6px; --radius-lg: 10px;
-  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --rule-soft: #e3dccd;
+  --surface: #ffffff;
+  --amber: #fbbf24;
+  --live: #22c55e;
+  --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'IBM Plex Sans', system-ui, sans-serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --title-size: clamp(2.4rem, 5.4vw, 4.4rem);
+  --section-title-size: clamp(2rem, 3.6vw, 3rem);
+  --container: 960px;
 }
-body { font-family: var(--font-body); background: var(--paper);
-  background-image: radial-gradient(rgba(15,17,21,0.045) 1px, transparent 1px); background-size: 22px 22px;
-  color: var(--ink); line-height: 1.65; }
 ```
 
 ## Provenance
 
-- URL: https://pa3ff.github.io/
-- Paper: Learning Part-Aware Dense 3D Feature Field for Generalizable Articulated Object Manipulation (Yue Chen et al.), arXiv 2602.14193.
-- Venue: ICLR 2026 (per the arXiv comment, and stated in the footer colophon). Field: robot manipulation.
-- Selection reason: arXiv comment states acceptance at ICLR 2026 and links the project page.
-- Template credit: footer says "Template adapted from NeRFies"; the visible design is a custom inline system on top of Bulma.
-- Measurement: Measured from static HTML and CSS only (tools/extract_style.py plus a direct read of the page's own stylesheets and inline styles). The page was not rendered in a browser for this entry, so computed styles, actual font fallback, and video framing are not verified. All palette values come from the page's own `:root` declaration.
+- **URL:** https://pa3ff.github.io/
+- **Paper:** Learning Part-Aware Dense 3D Feature Field for Generalizable Articulated Object Manipulation (arXiv 2602.14193), Yue Chen et al.
+- **Venue:** ICLR 2026 (stated on the page).
+- **Selection reason:** existing verified entry; arXiv 2602.14193 comment: Accept to ICLR 2026, project page https://pa3ff.github.io.
+- **Template credit:** none stated; custom inline theme over Bulma.
+- **Evidence used:** `tools/computed_style.py` render at 1440×900 with screenshot color share and loaded-font list, 1440 screenshots (first viewport and tall), the page's inline style block and HTML; 2026-10-28.

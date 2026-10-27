@@ -12,19 +12,29 @@
     try { await navigator.clipboard.writeText(text); toast("Copied"); } catch { toast("Copy failed"); }
   }
 
+  // theme: auto (follows the OS) -> light -> dark; remembered per browser when storage is available
+  const themes = ["auto", "light", "dark"];
+  const applyTheme = t => { if (t === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", t);
+    const b = $("theme"); if (b) b.textContent = `Theme: ${t}`; };
+  let theme = "auto";
+  try { theme = localStorage.getItem("looketal-theme") || "auto"; } catch {}
+  applyTheme(theme);
+  if ($("theme")) $("theme").onclick = () => { theme = themes[(themes.indexOf(theme) + 1) % 3]; applyTheme(theme);
+    try { localStorage.setItem("looketal-theme", theme); } catch {} };
+
+  const strip = e => `<div class="strip">${e.palette.slice(0, 6).map(p => `<em style="background:${esc(p.hex)}"></em>`).join("")}</div>`;
   function specimen(e) {
     const [bg, text, accent] = e.specimen;
     const pills = (e.kind === "project" ? ["Paper", "Code", "Video"] : ["CV", "Scholar", "Email"])
       .map(t => `<i style="background:${esc(accent)}">${t}</i>`).join("");
-    const sub = e.kind === "project" ? e.venue : (e.field || e.venue);
     const font = e.fonts[0] ? `'${esc(e.fonts[0])}',` : "";
     return `<div class="spec" style="background:${esc(bg)};color:${esc(text)};font-family:${font}system-ui,sans-serif" aria-hidden="true">
-      <b>${esc(e.title.slice(0, 90))}</b><span style="color:${esc(accent)}">${esc(sub)}</span><div class="pills">${pills}</div>
-      <div class="strip">${e.palette.slice(0, 6).map(p => `<em style="background:${esc(p.hex)}"></em>`).join("")}</div></div>`;
+      <b class="aa">Aa</b><span style="color:${esc(accent)}">${esc(e.fonts[0] || "system font")}</span><div class="pills">${pills}</div>${strip(e)}</div>`;
   }
+  const thumb = e => e.shot ? `<div class="shot"><img src="assets/shots/${esc(e.slug)}.card.webp" alt="" loading="lazy" width="640" height="400">${strip(e)}</div>` : specimen(e);
   function card(e) {
     const meta = e.kind === "project" ? e.venue : `Researcher · ${e.venue}`;
-    return `<a class="card" href="s/${esc(e.slug)}.html">${specimen(e)}<div class="cbody"><div class="meta">${esc(meta)}</div>
+    return `<a class="card" href="s/${esc(e.slug)}.html">${thumb(e)}<div class="cbody"><div class="meta">${esc(meta)}</div>
       <div class="name">${esc(e.title)}</div><div class="mood">${esc(e.mood)}</div></div></a>`;
   }
 
@@ -62,8 +72,12 @@
       for (const m of st.mods) if (!e.modules.includes(m)) return false;
       if (st.q) {
         const h = [e.title, e.person, e.field, e.mood, e.venue, e.template, e.style_name, e.fonts.join(" ")].join(" ").toLowerCase();
-        if (!h.includes(st.q)) return false;
+        if (h.includes(st.q)) { e._rank = 0; return true; }
+        const t = window.LOOKETAL_TEXT && window.LOOKETAL_TEXT[e.slug];
+        if (t && t.includes(st.q)) { e._rank = 1; return true; }
+        return false;
       }
+      e._rank = 0;
       return true;
     }
     function writeUrl() {
@@ -74,11 +88,12 @@
       history.replaceState(null, "", "?" + p.toString());
     }
     function render() {
-      const list = D.entries.filter(match);
+      const list = D.entries.filter(match).sort((a, b) => a._rank - b._rank);
       const title = inColl ? D.collectionTitles[st.collection]
         : st.kind === "project" ? "Project pages" : st.kind === "researcher" ? "Researcher pages" : "All styles";
       $("btitle").textContent = title;
-      $("bcount").textContent = `${list.length} of ${D.entries.length} styles`;
+      $("bcount").textContent = `${list.length} of ${D.entries.length} styles` +
+        (st.q ? (window.LOOKETAL_TEXT ? " · searching titles, metadata and DESIGN.md text" : " · loading full-text index…") : "");
       $("grid").innerHTML = list.length ? list.map(card).join("") : `<div class="empty">No pages match these filters.</div>`;
       document.querySelectorAll('.side nav a').forEach(a => {
         const h = a.getAttribute("href");
@@ -87,7 +102,14 @@
       });
       writeUrl();
     }
-    $("q").oninput = ev => { st.q = ev.target.value.trim().toLowerCase(); render(); };
+    let textLoading = false;
+    function needText() {
+      if (window.LOOKETAL_TEXT || textLoading || !st.q) return;
+      textLoading = true;
+      const sc = document.createElement("script"); sc.src = "assets/search.js"; sc.onload = render; document.body.append(sc);
+    }
+    $("q").oninput = ev => { st.q = ev.target.value.trim().toLowerCase(); needText(); render(); };
+    needText();
     for (const k of ["conf", "year", "tpl", "theme"]) $(k).onchange = ev => { st[k] = ev.target.value; render(); };
     $("kind").onclick = ev => { const b = ev.target.closest("button"); if (!b) return; st.kind = b.dataset.v; syncSeg(); render(); };
     render();

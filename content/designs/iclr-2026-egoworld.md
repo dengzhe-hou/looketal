@@ -1,134 +1,177 @@
-# Prism Title Docs — Style Reference
+# EgoWorld Paper Tabs — Style Reference
 
-> A clean product documentation site whose title catches light through a rotating prism.
+> A well-kept lab notebook with a sticky index: hairline rules, one blue thread, and a teal margin note.
 
 **Theme:** light
 
-*Measurements are normalized from static HTML and CSS (frequency-ranked by a script, then filtered by reading the page's own stylesheet and inline styles). Roles are interpreted, not declared by the authors.*
+Values come from a headless Chrome render at 1440×900 (computed styles, loaded fonts), the 1440-wide tall screenshot, the page's `static/css/index.css` and `static/css/spoqa-han-sans-neo.css`, and Bulma (loaded first, then overridden). The first-viewport snap came out blank white (the page had not painted when it was taken), so the color share below is measured on the top 900px of the tall screenshot instead. Spoqa Han Sans Neo loads at 400 and 700 only; rules asking for 600 and 800 render with the 700 face.
 
-Bulma is loaded but the page runs on its own token sheet (`:root` with --bg, --line, --text, --link, --accent, --radius 16px). Spoqa Han Sans Neo, self-hosted in 400/500/700, sets every word. A sticky translucent nav bar with section links sits on top. The title is the showpiece: a conic gradient (navy, royal blue, sand, peach, coral, raspberry, back to navy) rotates behind it every 8s, masked so it shows only on selection-like highlight. Below, the page reads like docs: uppercase blue venue line, TL;DR with a 3px blue left rule, hairline-separated sections, wide scrollable comparison tables with a sticky first column, and a BibTeX block with a copy button that turns green.
+## Overview
+
+A white, quiet, centered 960px column under a sticky translucent tab bar. The bar holds a bold uppercase "EGOWORLD" wordmark on the left and six text tabs on the right, the active one underlined in near-black. The hero is a blue uppercase "ICLR 2026" kicker over a large light-weight (400) four-line title in near-black, blue author links, grey affiliations, and three soft-tinted 12px-radius buttons: arXiv in red on a blush fill, Code in ink on a slate fill, Citation in blue on an ice fill. A TL;DR sits behind a 3px blue rule, then the teaser: exocentric photo, a stack of observation panels and the egocentric result, linked by dashed red arrows with monospace labels under each part. Sections are separated by 1px hairlines, not bands. The Method section pairs Stage 1 and Stage 2 text blocks around an animated pale-blue arrow, then a teal "FORMULATION" label (the only teal card label) over a pale grey equation strip.
+
+## First Viewport
+
+Color share (top 1440×900 of the tall capture, 8-color quantize): white #ffffff 77.9%, near-black #141316 5.2% (title and the dark teaser panels), mid grey #838185 4.2% (teaser photos), cool off-whites #fafcfd 3.8% and #ececed 3.2%, near-whites 5.7%. Blue text and button tints are each under 1%.
+
+Anatomy in DOM order (column x=240–1200):
+
+1. **Nav bar** — `nav.site-nav`, sticky, 70px tall, fill rgba(255,255,255,0.96) with 10px backdrop blur, 1px #e3e5e8 bottom border. Wordmark `a.site-brand` 16px, rendered 700, uppercase, letter-spacing 0.03em, #1f2937 at x=260. Tabs `a.nav-link` 14.72px rendered 700, #4b5563, padding 7.2px 8.8px, 2px transparent bottom border; active "Overview" #1f2937 with #1f2937 underline (tabs y=15–53).
+2. **Venue** — `p.publication-venue`, "ICLR 2026", 15.2px rendered 700, uppercase, letter-spacing 0.08em, #2563eb, centered (y=122–145). Hero top padding 52px. Gap 12px.
+3. **Title** — `h1.publication-title`, Spoqa Han Sans Neo 51.2px / 400, line-height 1.28 (65.5px), letter-spacing −0.03em, #121212, centered, max-width 24ch (732px), four lines (y=157–425). Gap 26px.
+4. **Authors** — `.publication-authors`, 16.64px, links #2563eb without underline, superscripts, line-height 1.9 (y=451–474). Gap about 16px.
+5. **Affiliations** — `.publication-affiliations`, 15.68px, #4b5563, line-height 1.9, superscript numbers.
+6. **Note** — `p.publication-note`, "† Corresponding author", 14.88px, #4b5563 (y=538–560). Gap 24px.
+7. **Buttons** — `.publication-links`, three `a.pub-btn` 50px tall with 12px gaps (y=584–634): arXiv #b91c1c on #fff3f2, Code #1f2937 on #f8fafc, Citation #1d4ed8 on #eef4ff; each 15.2px rendered 700, padding 12.8px 16px, 12px radius, 1px #d4d8de border, icon left. Hero bottom padding 24px.
+8. **TL;DR** — `p.tldr`, 16.48px, line-height 1.85, #1f2937, bold "TL;DR." lead, 3px #2563eb left border with 16px padding (y=662–723). Gap 21.6px.
+9. **Teaser** — `figure.paper-figure img`, 960×335px (y=744–1079): three panels joined by dashed red arrows, captions "Exocentric View", "Observations", "Egocentric View" in a typewriter mono baked into the image.
 
 ## Tokens — Colors
 
-| Name | Value | Token | Role |
+| Name | Value | Token | Applies to |
 |---|---|---|---|
-| Paper White | `#ffffff` | `--bg` | Page background |
-| Soft Well | `#f7f7f8` | `--bg-soft` | Formula box and BibTeX `pre` |
-| Hairline | `#e3e5e8` | `--line` | Section dividers, table rows, BibTeX border |
-| Strong Hairline | `#d4d8de` | `--line-strong` | Button borders, table top/bottom |
-| Slate Ink | `#1f2937` | `--text` | Body text |
-| Title Black | `#121212` | `--title` | Paper title color |
-| Muted Slate | `#4b5563` | `--muted` | Affiliations, captions, nav links |
-| Royal Link | `#2563eb` | `--link` | Venue line, author links, TL;DR rule |
-| Deep Teal | `#0f766e` | `--accent` | `.card-label` uppercase labels |
-| Paper Button Blue | `#1d4ed8` | `--btn-paper` | Paper button text on #eef4ff |
-| arXiv Brick | `#b91c1c` | `--btn-arxiv` | arXiv button text on #fff3f2 |
-| Copied Green | `#166534` | `--ok` | Copy button after copy (#f0fdf4 fill, #86efac border) |
-| Prism Navy | `#1d243a` | `--prism-0` | Conic gradient start and end |
-| Prism Coral | `#f46e5a` | `--prism-mid` | Conic gradient middle (with #3757cf, #ffd06b, #c03764 and others) |
+| Paper | #ffffff | `--bg` | page, nav fill (96%), sticky table column, copy button, carousel buttons |
+| Mist | #f7f7f8 | `--bg-soft` | formula strip, BibTeX `pre`, carousel button hover |
+| Hairline | #e3e5e8 | `--line` | nav bottom border, section header rules, stage/result/formula rules, table row rules, `pre` border |
+| Rule Strong | #d4d8de | `--line-strong` | button borders, table top/bottom rules, sticky column edge, carousel dots |
+| Ink Slate | #1f2937 | `--text` | body, section titles, wordmark, active tab and underline, Code button text |
+| Slate Grey | #4b5563 | `--muted` | tabs, affiliations, note, captions, section subtitles, second header row |
+| Title Black | #121212 | (literal) | paper title |
+| Link Blue | #2563eb | `--link` | venue kicker, author links, TL;DR rule, active carousel dot, flow arrow base (20%), footer links |
+| Citation Blue | #1d4ed8 | (literal) | Citation button text |
+| Ice | #eef4ff | (literal) | Citation button fill, "ours" table rows |
+| Brick | #b91c1c | (literal) | arXiv button text |
+| Blush | #fff3f2 | (literal) | arXiv button fill |
+| Slate Fill | #f8fafc | (literal) | Code button fill |
+| Teal Note | #0f766e | `--accent` | the uppercase "FORMULATION" label and the carousel numerals |
+| Shadow Slate | rgba(15,23,42,0.05) | `--shadow` | button hover shadow `0 8px 24px` |
 
-The conic gradient runs #1d243a, #3757cf, #768fde, #f4e4bb, #ffd06b, #ffb269, #fe8b71, #f46e5a, #c03764, #fdedf7, #f9e17e, #c6d6fb, #5156b9, #1d243a. A blurred inset glow #6e6eff sits in the selection overlay.
+Declared but not visible on load: the title's rotating conic-gradient selection effect (#3757cf, #ffd06b, #f46e5a and others) shows only when the title text is selected; the copied state of the copy button (#166534 on #f0fdf4) shows only after a click.
 
 ## Tokens — Typography
 
-**Families.** "Spoqa Han Sans Neo" (self-hosted woff2, 400/500/700/800 in use) for everything; monospace for BibTeX; MathJax for symbols in headings. Substitutes: Pretendard or Inter.
+- **Family:** declared `"Spoqa Han Sans Neo", sans-serif` on `body`; renders Spoqa Han Sans Neo 400 and 700 (self-hosted). Weights 600 and 800 in the CSS fall to 700. Substitute: Pretendard or Noto Sans KR, which keep the same open, slightly wide Latin.
+- **Tables:** `"Times New Roman", Times, serif` on `.comparison-table`, a deliberate paper-table look. Substitute: Tinos.
+- **Code:** browser `monospace` (Consolas on Windows) in the BibTeX block.
+- **Math:** MathJax CHTML fonts for Φ and the formulation.
 
-| Role | Size | Weight | Notes |
-|---|---|---|---|
-| Paper title | clamp(2.05rem, 3.7vw, 3.2rem), line-height 1.28, letter-spacing -0.03em, max 24ch | 700 (inferred) | #121212 |
-| Venue line | 0.95rem, uppercase, letter-spacing 0.08em | 800 | #2563eb |
-| Section title | clamp(1.6rem, 2.3vw, 2.1rem), line-height 1.15, letter-spacing -0.02em | 700 (inferred) | |
-| Sub-heading (`h3`) | 1.15rem, line-height 1.35 | 700 (inferred) | |
-| Authors | 1.04rem, line-height 1.9 | 400 | links #2563eb |
-| Body | 1rem, line-height 1.82 | 400 | |
-| TL;DR | 1.03rem, line-height 1.85 | 400 | 3px left rule |
-| Nav link | 0.92rem | 600 | |
-| Card label | 0.8rem, uppercase, letter-spacing 0.08em | 800 | #0f766e |
-| BibTeX code | 0.95rem, line-height 1.7 | 400 | monospace |
+| Role | Selector | Size / weight / line-height |
+|---|---|---|
+| Paper title | `.publication-title` | clamp(2.05rem, 3.7vw, 3.2rem) → 51.2px / 400 / 1.28, −0.03em |
+| Section title | `.section-title` | clamp(1.6rem, 2.3vw, 2.1rem) → 33.12px / 400 / 1.15, −0.02em |
+| Analysis slide title | `.analysis-slide h3` | 21.6px / 400 / 1.3 |
+| Block heading | `.stage-block h3`, `.result-block h3` | 18.4px / 400 / 1.35 |
+| TL;DR | `.tldr` | 16.48px / 400 / 1.85 |
+| Body | `.text-block p` etc. | 16px / 400 / 1.82 |
+| Authors / affiliations | `.publication-authors` / `-affiliations` | 16.64px / 15.68px, line-height 1.9 |
+| Venue kicker | `.publication-venue` | 15.2px / 700 rendered, uppercase, 0.08em |
+| Buttons | `.pub-btn` | 15.2px / 700 |
+| Nav tab | `.nav-link` | 14.72px / 700 rendered |
+| Card label | `.card-label` | 12.8px / 700 rendered, uppercase, 0.08em |
+| Table | `.comparison-table` | Times 14.72px, header 16px bold, metric row 14.4px #4b5563 |
 
 ## Tokens — Spacing & Shapes
 
-| Token | Value | Used on |
-|---|---|---|
-| --radius | 16px | declared base radius (large panels) |
-| --radius-btn | 12px | `.pub-btn` link buttons |
-| --radius-sm | 10px | copy button, BibTeX `pre` |
-| --radius-select | 12px | title selection overlay |
+| Element | Value |
+|---|---|
+| Buttons | 12px radius, 1px #d4d8de border, padding 0.8rem 1rem; hover lift 1px and shadow `0 8px 24px rgba(15,23,42,0.05)` |
+| BibTeX `pre`, copy button | 10px radius |
+| Carousel nav buttons | 56px circles, 1px #d4d8de |
+| Carousel dots | 8px circles #d4d8de; active is a 26×8px #2563eb pill |
+| Section rules | 1px #e3e5e8 above every section header and inner block |
+| TL;DR rule | 3px solid #2563eb left border |
+| Figures | square corners, no shadow |
 
-**Shadows.** `--shadow: 0 8px 24px rgba(15, 23, 42, 0.05)`, shown on link button hover with a 1px lift.
+## Layout Metrics
 
-**Layout width.** Hero pads 3.25rem top, 1.5rem bottom; sections 1.25rem top, 1.75rem bottom; text blocks capped at 54rem; authors 48rem; affiliations 52rem; comparison tables min-width 2200px inside a horizontal scroller.
+- **Container:** Bulma `.container.is-max-desktop`, 960px (x=240–1200 at 1440); no extra padding inside sections (`.section` padding is 1.25rem 0).
+- **Nav:** inner padding 15.2px 20px inside the same 960px container; sticky at top 0; `scroll-padding-top` 5rem for anchor jumps.
+- **Hero:** padding 52px top, 24px bottom.
+- **Sections:** padding 20px top, 28px bottom; header has a 1px rule and 19.2px top padding; header margin-bottom 18.4px.
+- **Text measure:** `.text-block` max-width 54rem (864px); the abstract runs the full 960px.
+- **Method flow:** grid `1fr 120px 1fr`, 24px gap, animated arrow in the middle column.
+- **Teaser and figures:** 100% of the column (960px).
+- **Tables:** scroll horizontally; min-width 2200px (H2O) and 1700px (benchmarks), sticky first column.
+
+| Breakpoint | Gutter | Body | Title | Grid change |
+|---|---|---|---|---|
+| ≥1024px | (viewport − 960)/2 | 16px | 37.9–51.2px (3.7vw, capped at 51.2) | two-column media grid, three-column method flow, carousel with side buttons |
+| 901–1023px | none (Bulma container goes full width; no side padding is added) | 16px | 33.3–37.8px | none |
+| 721–900px | none | 16px | 32.8–33.3px | media grid and method flow stack; arrow rotates 90° in a 56×110px box; carousel buttons hidden, meta centered |
+| ≤720px | none (nav keeps 20px) | 16px | 32.8px | nav stacks, tabs wrap left-aligned; hero top padding 32px; section padding 16px / 22.4px; BibTeX header stacks |
 
 ## Components
 
-- **Sticky nav.** `.site-nav`: sticky top, rgba(255,255,255,0.96) with 10px backdrop blur, 1px #e3e5e8 bottom border; brand uppercase 1rem weight 800; links 0.92rem 600 #4b5563 with a 2px underline that turns #1f2937 when active.
-- **Prism title.** Title wrapped in `.publication-title-highlight` with an absolutely placed 960px conic gradient rotating 8s linear infinite, masked; selection overlay blurred 12px with hard-light blend.
-- **Link button.** `.pub-btn`: inline-flex, gap 0.55rem, padding 0.8rem 1rem, radius 12px, 1px #d4d8de, 0.95rem weight 700; Paper #1d4ed8 on #eef4ff, arXiv #b91c1c on #fff3f2, Code #1f2937 on #f8fafc. Labels: arXiv, Code, Citation.
-- **TL;DR.** 1rem left padding, 3px solid #2563eb left border.
-- **Section header.** 1.2rem top padding with a 1px #e3e5e8 top border; no card.
-- **Method flow.** Grid `1fr 120px 1fr` with an animated SVG arrow (base fill rgba(37,99,235,0.2)).
-- **Formula box.** #f7f7f8 strip with hairline top and bottom borders, horizontal scroll.
-- **Comparison table.** Separate borders, #d4d8de top/bottom, cells 0.62rem 0.72rem padding centered, header 700, second header row muted 0.9rem, sticky first column with a 1px right shadow line.
-- **BibTeX block.** Header row with copy button (white, 1px #d4d8de, 10px radius, weight 700); `pre` #f7f7f8, 1px #e3e5e8, 10px radius, 1rem padding.
+- **Sticky tab bar:** white at 96% with blur, 1px #e3e5e8 bottom; uppercase bold wordmark left; text tabs right with a 2px bottom border that turns #1f2937 on hover and for the active section.
+- **Tinted link button:** inline-flex, padding 0.8rem 1rem, 12px radius, 1px #d4d8de border, 15.2px bold label with icon; each link has its own pale fill and dark text (arXiv #b91c1c on #fff3f2, Code #1f2937 on #f8fafc, Citation #1d4ed8 on #eef4ff); hover lifts 1px with a faint shadow.
+- **TL;DR bar:** paragraph with a 3px #2563eb left border and 16px left padding, line-height 1.85, bold lead word.
+- **Stage block:** 1px #e3e5e8 top rule, stage label ("Stage 1") at 16px in #1f2937 (the teal 0.8rem `.card-label` rule is overridden inside `.stage-block`), 18.4px heading with an inline math symbol, 16px body at 1.82.
+- **Flow arrow:** SVG arrow filled rgba(37,99,235,0.2) with a lighter sweep animating along it; rotates vertical under 900px.
+- **Formulation strip:** teal label, then a full-width #f7f7f8 band with 1px #e3e5e8 rules top and bottom, 16px vertical padding, centered MathJax.
+- **Comparison table:** Times New Roman, 1px #d4d8de rules top and bottom, #e3e5e8 row rules, centered cells, sticky white first column with a 1px edge shadow, "ours" rows #eef4ff and bold.
+- **Analysis carousel:** 56px round prev/next buttons, sliding track, counter text in 14.72px #4b5563, dots that stretch to a blue pill when active.
+- **BibTeX block:** header row with title and a 10px-radius outline Copy button; `pre` on #f7f7f8 with 1px #e3e5e8 border and 10px radius.
 
 ## Page Modules
 
-- **Title/author block.** Uppercase blue venue line above a centered prism title, authors, affiliations, a note line.
-- **Link buttons.** arXiv, Code, Citation (tinted rounded-rectangle buttons, not pills).
-- **Teaser figure.** Figure with muted caption under a TL;DR.
-- **Abstract.** Full-width text block.
-- **Method.** Two-stage flow (exocentric observation to egocentric reconstruction) with MathJax symbols in headings and a formula box.
-- **Results tables.** Two wide comparison tables (H2O; TACO, Assembly101, Ego-Exo4D, inferred from heading) with sticky first column.
-- **Qualitative results and analysis.** Real-world scenarios, conditioning modalities, backbone, pose strategies, consistency, wrong-text guidance, failure cases.
-- **BibTeX.** With copy button.
-- Not present: video, slider, 3D viewer, demo, template credit.
+| Module | Present | How it is styled |
+|---|---|---|
+| Sticky nav with tabs | Yes | wordmark plus six section tabs, active underline |
+| Venue kicker | Yes | blue uppercase "ICLR 2026" |
+| Title / authors / affiliations | Yes | light-weight large title, blue author links |
+| Link buttons | Yes | three individually tinted 12px-radius buttons |
+| TL;DR | Yes | blue rule-bar paragraph |
+| Teaser | Yes | three-part composite figure with labels |
+| Abstract | Yes | full-width 16px paragraphs |
+| Method | Yes | overview figure, two stage blocks with an animated arrow, formulation strip |
+| Qualitative results | Yes | image grids per dataset under hairline-ruled blocks |
+| Results tables (HTML) | Yes | serif, horizontally scrolling, sticky first column |
+| Analysis carousel | Yes | slides with round nav buttons and pill dots |
+| BibTeX | Yes | grey `pre` with copy button |
+| Video | No (absent from the source) | |
+| Footer | No (absent from the source) | the page ends after BibTeX |
+
+## Adapting to Other Content
+
+- **More authors:** keep inline author blocks with 0.35rem side margins and blue links; the 1.9 line-height already handles three or four lines.
+- **Results table:** reuse the serif comparison table; keep #eef4ff for your rows and mark best values in bold rather than with color, to match the restraint.
+- **Long publication or news list:** list items separated by 1px #e3e5e8 rules, dates as teal #0f766e uppercase 12.8px labels above 16px titles.
+- **Video teaser:** place it in the teaser slot at 960px with square corners and keep the TL;DR bar above it.
+- **Mobile:** add a 16px side gutter to `.container` below 1024px; the source leaves text flush to the screen edge.
 
 ## Do's and Don'ts
 
-**Do**
-
-- Separate sections with a single top hairline instead of cards or bands.
-- Give each link button its own soft tint keyed to the destination.
-- Keep wide tables scrollable with a sticky row-label column.
-
-**Don't**
-
-- Don't animate anything except the title prism and the flow arrow.
-- Don't use pill buttons; the radius is 12px.
-- Don't color body text pure black; it is #1f2937.
+- Do use hairlines (#e3e5e8) instead of tinted bands to separate sections.
+- Do keep the title at weight 400; the lightness against the bold kicker is the hierarchy.
+- Do give each link button a different pale tint with matching dark text.
+- Don't add shadows to figures; the only shadow is the button hover.
+- Don't use teal for anything but small uppercase labels.
+- Don't let the sticky nav hide anchors; keep `scroll-padding-top` at least as tall as the bar.
 
 ## Surfaces
 
-White page, translucent sticky nav, #f7f7f8 wells for formulas and code, tinted link buttons.
+All white, with a 96%-white blurred nav, a #f7f7f8 formula strip and BibTeX block, and #eef4ff rows in tables. No dark or colored bands.
 
 ## Imagery
 
-Exocentric and egocentric frame pairs, hand-object pose renders, comparison grids, failure-case images. Images are block-level with no frame.
+Exocentric and egocentric photographs of hand-object interaction, point-cloud and hand-pose observation panels, a method pipeline diagram with green and blue blocks, and comparison grids across H2O, TACO, Assembly101 and Ego-Exo4D.
 
 ## Layout
 
-Centered narrow docs layout with sticky nav and anchor scrolling (`scroll-padding-top: 5rem`). Method uses a three-column flow; results use 2-up media grids and scrolling tables.
+One 960px centered column under a sticky bar; sections divided by hairlines; tables break the column with horizontal scroll. Rendered height about 6,300px.
 
 ## Agent Prompt Guide
 
-**Quick color reference**
+Quick colors: page #ffffff, text #1f2937, muted #4b5563, title #121212, link #2563eb, hairline #e3e5e8, strong rule #d4d8de, soft #f7f7f8, teal label #0f766e, tints #fff3f2 / #f8fafc / #eef4ff.
 
-- Background #ffffff
-- Text #1f2937
-- Link #2563eb
-- Hairline #e3e5e8
-- Accent label #0f766e
-
-**Example component prompts**
-
-1. Create a sticky top nav: white at 96% opacity with 10px backdrop blur, 1px #e3e5e8 bottom border, uppercase 800-weight brand left, 0.92rem 600-weight #4b5563 links right with a 2px underline on active.
-2. Create three link buttons with 12px radius and 1px #d4d8de border: Paper (#1d4ed8 on #eef4ff), arXiv (#b91c1c on #fff3f2), Code (#1f2937 on #f8fafc); hover lifts 1px with shadow 0 8px 24px rgba(15,23,42,.05).
-3. Create a wide comparison table: horizontal scroll, sticky first column on white with a 1px right line, centered cells 0.62rem 0.72rem padding, bold header and a muted 0.9rem sub-header row.
+1. "Build a sticky nav: 70px tall, rgba(255,255,255,0.96) with 10px backdrop blur and a 1px #e3e5e8 bottom border; inside a 960px container, a bold uppercase 16px #1f2937 wordmark left and 14.72px bold #4b5563 tabs right with padding 7.2px 8.8px and a 2px bottom border that becomes #1f2937 for the active tab."
+2. "Create three link buttons: inline-flex, padding 0.8rem 1rem, 12px radius, 1px #d4d8de border, 15.2px bold label with icon; arXiv #b91c1c on #fff3f2, Code #1f2937 on #f8fafc, Citation #1d4ed8 on #eef4ff; hover translateY(-1px) with box-shadow 0 8px 24px rgba(15,23,42,0.05)."
+3. "Make a method stage pair: two columns with a 120px middle track holding a pale rgba(37,99,235,0.2) arrow; each column starts with a 1px #e3e5e8 rule, a 12.8px bold uppercase #0f766e label with 0.08em tracking, an 18.4px heading and 16px #1f2937 text at line-height 1.82; below, a full-width #f7f7f8 formula strip with 1px #e3e5e8 rules top and bottom."
 
 ## Similar Pages
 
-- Documentation-style research pages with a sticky section nav.
-- Exocentric-to-egocentric view synthesis pages.
+- Hand-built Bulma-based pages that replace the Nerfies hero with a sticky section nav.
+- Korean-lab project pages set in Spoqa Han Sans Neo or Pretendard.
 
 ## Quick Start
 
@@ -140,22 +183,25 @@ Centered narrow docs layout with sticky nav and anchor scrolling (`scroll-paddin
   --line-strong: #d4d8de;
   --text: #1f2937;
   --muted: #4b5563;
+  --title: #121212;
   --link: #2563eb;
   --accent: #0f766e;
   --shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
-  --radius: 16px;
-  --font-body: 'Spoqa Han Sans Neo', sans-serif;
+  --radius-btn: 12px;
+  --radius-code: 10px;
+  --font: "Spoqa Han Sans Neo", "Pretendard", sans-serif;
+  --font-table: "Times New Roman", Tinos, serif;
+  --container: 960px;
+  --title-size: clamp(2.05rem, 3.7vw, 3.2rem);
+  --body-size: 16px;
 }
-body { margin: 0; font-family: var(--font-body); color: var(--text); background: var(--bg); }
-.pub-btn { display: inline-flex; gap: .55rem; padding: .8rem 1rem; border-radius: 12px;
-  border: 1px solid var(--line-strong); font-weight: 700; font-size: .95rem; }
 ```
 
 ## Provenance
 
-- URL: https://redorangeyellowy.github.io/EgoWorld/
-- Paper: EgoWorld: Translating Exocentric View to Egocentric View using Rich Exocentric Observations (Junho Park et al.), arXiv 2506.17896.
-- Venue: ICLR 2026 (per the arXiv comment). Field: egocentric vision.
-- Selection reason: arXiv comment states acceptance at ICLR 2026 and links the project page.
-- Template credit: none on the page; no Nerfies footer. Bulma is loaded but the visible system is custom.
-- Measurement: Measured from static HTML and CSS only (tools/extract_style.py plus a direct read of the page's own stylesheets and inline styles). The page was not rendered in a browser for this entry, so computed styles, actual font fallback, and video framing are not verified. Raw HTML color counts include numeric character references (for example `&#8595;` arrows) that are not colors; they were ignored.
+- **URL:** https://redorangeyellowy.github.io/EgoWorld/
+- **Paper:** EgoWorld: Translating Exocentric View to Egocentric View using Rich Exocentric Observations (arXiv 2506.17896), Junho Park, Andrew Sangwoo Ye, Taein Kwon.
+- **Venue:** ICLR 2026 (kicker on the page).
+- **Selection reason:** existing verified entry; the arXiv comment reads "Accepted by ICLR 2026" and links the page. Chosen for its sticky tab nav, TL;DR rule-bar, labeled three-part teaser and the Stage 1 → Stage 2 arrow with a shaded formulation block.
+- **Template credit:** none stated; Bulma is loaded but nearly every component is custom.
+- **Evidence used:** `tools/computed_style.py` render at 1440×900 with loaded-font list (its own color share was taken from a blank snap and was replaced by a measurement on the tall screenshot), 1440 tall screenshot, `static/css/index.css`, page HTML; 2026-10-28.

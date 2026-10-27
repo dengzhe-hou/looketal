@@ -15,8 +15,9 @@ from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs"
-RAW = sorted((ROOT / "data" / "raw").glob("workflow_*.json"))[-1]
+CATALOG = ROOT / "data" / "catalog.json"  # one record per included page; DESIGN.md text lives in content/designs/
 SITE = "Look et al."
+REMOVAL = "contact us"  # set to the removal channel (e.g. a mailto link) before publishing
 TAGLINE = "Design research for academic pages"
 esc = html.escape
 
@@ -110,9 +111,8 @@ def pick_roles(palette):
 
 
 def load_entries():
-    raw = json.loads(RAW.read_text(encoding="utf-8"))
     entries = []
-    for it in raw["items"]:
+    for it in json.loads(CATALOG.read_text(encoding="utf-8")):
         if not it["md_path"]:
             continue
         slug = it["slug"]
@@ -128,9 +128,10 @@ def load_entries():
             "fonts": [re.split(r"\s*[(|,]", f)[0].strip() for f in it["fonts"][:3]],
             "palette": [p for p in it["palette"][:8] if CSS_COLOR.match(p["hex"].strip())],
             "modules": module_tags(it["modules"]), "layout": it["layout"],
-            "rendered_check": it["rendered_check"], "issues": it["issues"],
+            "rendered_check": it["rendered_check"], "issues": it["issues"], "selection": it.get("selection", {}),
         }
         e["specimen"] = pick_roles(e["palette"])
+        e["shot"] = (ROOT / "content" / "shots" / f"{slug}.card.webp").exists()
         entries.append((e, md, pre, sections))
     entries.sort(key=lambda x: (x[0]["kind"], x[0]["conf"], -(x[0]["year"] or 0), x[0]["slug"]))
     return entries
@@ -146,7 +147,8 @@ def nav(prefix, active):
     links = "".join(f'<a href="{prefix}{h}"{" aria-current=page" if k == active else ""}>{esc(t)}</a>'
                     for h, t, k in items)
     return f"""<aside class="side"><a class="brand" href="{prefix}index.html"><span class="mark">et<br>al.</span><span>{SITE}</span></a>
-<nav>{links}</nav><div class="side-foot">Links only, no screenshots.<br>Styles measured from public HTML/CSS.</div></aside>"""
+<nav>{links}</nav><button class="theme-toggle" id="theme" type="button" aria-label="Color theme">Theme: auto</button>
+<div class="side-foot">Screenshots link to the original pages.<br>Styles measured from public HTML/CSS.</div></aside>"""
 
 
 def page(title, body, prefix, active, desc=TAGLINE, extra_head=""):
@@ -161,22 +163,30 @@ def page(title, body, prefix, active, desc=TAGLINE, extra_head=""):
 
 
 def specimen(e, big=False):
+    """Token specimen: type sample and buttons drawn from measured palette and fonts (no page content)."""
     bg, text, accent = e["specimen"]
     font = esc(e["fonts"][0]) if e["fonts"] else "inherit"
-    if e["kind"] == "project":
-        head, sub = e["title"], e["venue"]
-        pills = "".join(f'<i style="background:{esc(accent)}">{t}</i>' for t in ("Paper", "Code", "Video"))
-    else:
-        head, sub = e["title"], e["field"] or e["venue"]
-        pills = "".join(f'<i style="background:{esc(accent)}">{t}</i>' for t in ("CV", "Scholar", "Email"))
+    labels = ("Paper", "Code", "Video") if e["kind"] == "project" else ("CV", "Scholar", "Email")
+    pills = "".join(f'<i style="background:{esc(accent)}">{t}</i>' for t in labels)
     return f"""<div class="spec{' big' if big else ''}" style="background:{esc(bg)};color:{esc(text)};font-family:'{font}',system-ui,sans-serif" aria-hidden="true">
-<b>{esc(head[:90])}</b><span style="color:{esc(accent)}">{esc(sub)}</span><div class="pills">{pills}</div>
+<b class="aa">Aa</b><span style="color:{esc(accent)}">{esc(e['fonts'][0] if e['fonts'] else 'system font')}</span><div class="pills">{pills}</div>
 <div class="strip">{''.join(f'<em style="background:{esc(p["hex"])}"></em>' for p in e["palette"][:6])}</div></div>"""
+
+
+def strip(e):
+    return '<div class="strip">' + "".join(f'<em style="background:{esc(p["hex"])}"></em>' for p in e["palette"][:6]) + "</div>"
+
+
+def thumb(e, prefix):
+    if e.get("shot"):
+        return (f'<div class="shot"><img src="{prefix}assets/shots/{e["slug"]}.card.webp" alt="" loading="lazy" '
+                f'width="640" height="400">{strip(e)}</div>')
+    return specimen(e)
 
 
 def card(e, prefix):
     meta = e["venue"] if e["kind"] == "project" else f'Researcher · {e["venue"]}'
-    return f"""<a class="card" href="{prefix}s/{e['slug']}.html">{specimen(e)}
+    return f"""<a class="card" href="{prefix}s/{e['slug']}.html">{thumb(e, prefix)}
 <div class="cbody"><div class="meta">{esc(meta)}</div><div class="name">{esc(e['title'])}</div>
 <div class="mood">{esc(e['mood'])}</div></div></a>"""
 
@@ -268,10 +278,12 @@ def build_style(e, md, pre, sections, entries):
 <div class="crumbs">{crumbs}</div>
 <h1 class="sname">{esc(e['title'])}</h1>
 <p class="smood">{esc(e['mood'])}</p>
+{f'<figure class="bigshot"><a href="{esc(e["url"])}" target="_blank" rel="noopener"><img src="../assets/shots/{e["slug"]}.webp" alt="Screenshot of {esc(e["title"])}" width="1200" height="750"></a><figcaption>Screenshot of <a href="{esc(e["url"])}" target="_blank" rel="noopener">{esc(e["url"])}</a>, © the authors. Shown for reference.</figcaption></figure>' if e["shot"] else ""}
 {specimen(e, big=True)}
 <div class="sactions"><a class="btn primary" href="{esc(e['url'])}" target="_blank" rel="noopener">Visit page ↗</a>
 <a class="btn" href="../designs/{e['slug']}.md" download>Download DESIGN.md</a></div>
 <dl class="smeta">{meta}</dl><p class="status">{esc(status)} {esc(e['issues'])}</p>
+{f'<section><h2>Why it is here</h2><p>{esc(e["selection"]["why"])}</p></section>' if e.get("selection", {}).get("why") else ""}
 <section><h2>Overview</h2><div class="mdx" data-block="Overview"></div></section>
 <section><h2>Color Palette</h2><div class="swatches">{swatches}</div></section>
 <section><h2>Typography</h2>{type_rows}</section>
@@ -356,14 +368,17 @@ def build_about(entries):
     body = f"""<header class="phead"><div class="eyebrow">About</div><h1>About {SITE}</h1>
 <p class="lede">A reference library of academic web pages, in the spirit of Refero Styles, for researchers and their coding agents.</p></header>
 <section class="prose"><h2>What is included</h2>
-<p><b>{n_proj} paper project pages.</b> Papers accepted at NeurIPS, ICML, ICLR, CVPR and ACL in 2025 and 2026, twenty per venue, ten per year. Candidates come from arXiv comments that state the acceptance and link a project page, taken in arXiv relevance order and kept only if the page loads. Workshop papers are excluded.</p>
-<p><b>{n_res} researcher homepages.</b> Fixed rule: ACM Turing Award laureates (2018–2025) for computing/AI work who keep a personal page, then first and last authors of Best/Outstanding Paper awards at the same five venues in 2024–2025 who keep a personal page. Institutional directory pages, Google Scholar and LinkedIn profiles do not count. Pages that could not be loaded from our network were skipped.</p>
+<p><b>{n_proj} paper project pages</b> from papers accepted at NeurIPS, ICML, ICLR, CVPR and ACL in 2025 and 2026, ten per venue and year. Candidates come from arXiv comments that state the acceptance and link a project page; a page had to load, and workshop papers were left out. That gave a pool of 505 pages, at least 40 per venue and year.</p>
+<p><b>{n_res} researcher homepages</b> from a pool of 138: ACM Turing Award laureates (2018–2025) and first or last authors of Best Paper, Outstanding Paper and Test of Time awards at the same five venues (2023–2025) who keep a personal page. ACL Outstanding Papers are not yet in the pool. Institutional directory pages, Google Scholar and LinkedIn profiles do not count.</p>
+<h2>How pages were chosen</h2>
+<p>By visual design only, in two rounds. Every candidate was screenshotted at 1440×900. In the first round a model reviewer looked at every first screen in a pool and kept 20 (60 for researchers); in the second it looked at a 2700px-tall capture of each and kept 10 (30 for researchers). The criteria were typography, a look of its own beyond template defaults, layout and rhythm, how the work is presented, and polish. Research content, venue and fame were ignored, and near-ties went to the page that added a style not yet picked. Pages that showed a loader, a blank screen or a bot wall could not be judged and were dropped. The reason for each pick is on its style page.</p>
 <h2>How a DESIGN.md is made</h2>
-<p>A script reads the page's public HTML and linked CSS and counts colors, font families, sizes, radii and widths. A writer then separates the page's own choices from unused framework defaults (for example Bulma's palette) and writes the DESIGN.md in Refero's structure, adding Page Modules and Provenance sections. Values not measured directly are marked “inferred”. {n_rend} of {len(es)} entries were also checked against the rendered page; each style page says which.</p>
-<h2>What is not stored</h2>
-<p>No screenshots. Cards show a synthetic specimen drawn from the measured palette and fonts, and every entry links back to the original page. DESIGN.md files describe visual style; they are not official guides of the authors.</p>
+<p>From the rendered page first. A headless browser reports the computed styles of the title, headings, body, buttons and containers, the fonts that actually loaded, the first-viewport anatomy in DOM order, and the color share of the first screen. The page's stylesheet and markup then supply selectors, hover and responsive rules. When the CSS and the render disagree, the render wins. Each file follows a fixed section order (Overview, First Viewport, color, type and spacing tokens, Layout Metrics, Components, Page Modules, guidance for other content, an agent prompt guide and a Quick Start) and passes an automatic check that every color used in the prompts appears in the token table. {n_rend} of {len(es)} entries were checked against the rendered page.</p>
+<p>The method was revised after a reconstruction test. Builders given only a DESIGN.md and different content rebuilt five pages, a blind judge tried to match each rebuild to its original, and an analyst scored similarity from 1 to 5 against the live page. With the first version, written from CSS alone, the judge matched all five, but overall similarity averaged 3.0 (2 to 4), mostly because of values the CSS declared and the page never showed. With the current version, the same test on the same five pages again matched all five and averaged 4.0 (all five scored 4). A separate audit of ten other files found 4 wrong values in about 129 checked claims; those were corrected.</p>
+<h2>Screenshots</h2>
+<p>Each entry shows an above-the-fold screenshot of the original page, reduced to 1200×750, credited to the authors and linked back to the live page. Screenshots are shown for reference and comparison, the same way design reference libraries such as Refero do. DESIGN.md files describe visual style; they are not official guides of the authors.</p>
 <h2>Removal</h2>
-<p>If you are an author and want your page removed or corrected, open an issue in the project repository and it will be taken down.</p></section>"""
+<p>If you are an author and want your page or screenshot removed or corrected, {REMOVAL} and it will be taken down.</p></section>"""
     return page(f"About · {SITE}", body, "", "about")
 
 
@@ -376,6 +391,14 @@ def main():
     (OUT / "assets").mkdir()
     for f in ("site.css", "site.js"):
         shutil.copy(ROOT / "tools" / "assets" / f, OUT / "assets" / f)
+    (OUT / "assets" / "shots").mkdir()
+    for e, *_ in entries:
+        if e["shot"]:
+            for suf in (".webp", ".card.webp"):
+                shutil.copy(ROOT / "content" / "shots" / f"{e['slug']}{suf}", OUT / "assets" / "shots" / f"{e['slug']}{suf}")
+    # full-text index for search, loaded lazily by the browse page
+    idx = {e["slug"]: re.sub(r"```.*?```", " ", md, flags=re.S).lower() for e, md, *_ in entries}
+    (OUT / "assets" / "search.js").write_text("window.LOOKETAL_TEXT=" + json.dumps(idx, ensure_ascii=False) + ";", encoding="utf-8")
     es = [e for e, *_ in entries]
     coll = {cid: [e["slug"] for e in es if pred(e)] for cid, _, _, pred, _ in COLLECTIONS}
     coll_titles = {cid: t for cid, t, *_ in COLLECTIONS}

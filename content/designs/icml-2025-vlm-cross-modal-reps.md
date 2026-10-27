@@ -1,156 +1,198 @@
-# Cross-Modal Readout — Style Reference
+# Hairline Geometric Column — Style Reference
 
-> A reading-group handout typed in DM Sans, with one sticky note in Georgia.
+> A museum wall label: one clean typeface, generous air, and diagrams that move when you touch them.
 
 **Theme:** light
 
-*Measurements are normalized from static HTML and CSS (frequency-ranked by a script, then filtered by reading the page's own stylesheet and inline styles). Roles are interpreted, not declared by the authors.*
+Measured on 2026-10-28 from a headless Chrome render at 1440×900 (computed styles of the hero, buttons, TLDR, teaser video, section titles, dividers, dropdown selects, table and footer, plus a first-viewport color quantization), the first-viewport screenshot and a scaled full-page capture, and the page's own `static/css/custom.css` and `fonts.css` over Bulma (Nerfies template) with Bootstrap 4.0 also loaded for its carousel. Positions are document coordinates at 1440px wide.
 
-A Nerfies-derived page that has been quietly rebuilt around DM Sans (self-hosted) and a 12pt root size. Bootstrap 4 is loaded alongside Bulma only for its carousel and select-row behavior, so the visible chrome stays Bulma: dark pill buttons, centered title block, white sections separated by a thin #ededed rule that spans 90vw. Body text is forced to pure black. The one signature element is the `.finding-box`, a cream note card with a 2px black border and Georgia type that states each key finding like a margin annotation. Interactive figures use underlined `<select>` controls set inline in a sentence, so the reader changes the task by editing the prose.
+## Overview
+
+This page strips the Nerfies template down to a quiet single column set entirely in DM Sans. The white hero carries a two-line 40px title in #363636, three sky-blue author links (#209cee), a black "UC Berkeley" line, a bold "ICML 2025", and two dark rounded pills (arXiv, Code). A centered TLDR line and an italic note about the previous title follow, then the teaser, a custom vector diagram rendered as a video that animates when clicked, with a small hand-icon "Click to animate figure" button beneath. Every section after that is separated by a 2px #ededed full-width (90vw) divider, opens with a centered 24px title and sets its text left-aligned in a 739px column. Interactivity is understated. Underlined native `<select>` menus are written inline ("Task: Country-Capital"), with a pale grey hint, and they swap the rows of a small bordered table or the result figures. Body text is black, not grey, which keeps the page crisp.
+
+## First Viewport
+
+Color share of the 1440×900 first viewport (median-cut quantization of the render): white #ffffff 85.3%, diagram blue-grey #d9dee8 4.6%, mid grey #b4b5b7 2.9%, dark grey #646064 2.8% (title and diagram ink), diagram pink #f4e8e8 2.3%, remainder under 2.2%. The page is almost all white; the only tints come from the diagram's pale blue and pale red panels.
+
+Anatomy in DOM order (y = top of element box):
+
+1. **Title** (`h1.title.is-2.publication-title`), y 48, two centered lines broken by `<br>`, DM Sans 40px/600, line-height 45px, #363636. Gap 26px.
+2. **Authors** (`.publication-authors a`), y 164, one centered line, 20px/400, #209cee, three names 16px apart. Gap 0.
+3. **Affiliation**, y 192, "UC Berkeley", 20px/400 #000000, centered. Gap 32px (a `<br>`).
+4. **Venue**, y 254, "ICML 2025", 20px/700 #000000, centered. Gap 19px.
+5. **Link pills** (`a.button.is-rounded.is-dark`), y 299, height 40px, arXiv (Academicons) and Code (Font Awesome GitHub), #363636 fill, white 16px text, icon left. Hero ends at y 364.
+6. **TLDR** (`section p`), y 380, centered 16px/24px #000000: bold "TLDR:" then the sentence; second line italic "Previous Title: …". Gap 24px.
+7. **Teaser** (`video#teaser` in `.max-width-content`, max 720px), y 452, 720×420, a vector diagram with blue and red task panels over a grey latent-space ribbon; click to play. Gap 7px.
+8. **Animate button** (`button.button.is-white.btn-teaser`), y 879, left-aligned under the video at x 360, hand SVG icon then "Click to animate figure" in the system sans 16px #0a0a0a; hover underlines. The fold cuts through it.
 
 ## Tokens — Colors
 
-| Name | Value | Token | Role |
+| Name | Value | Token | Applies to |
 |---|---|---|---|
-| Paper White | `#ffffff` | `--bg` | Page background |
-| Ink Black | `#000000` | `--text` | `body { color: black }` in custom.css |
-| Graphite Heading | `#363636` | `--text-strong` | Bulma titles and `is-dark` button fill |
-| Byline Gray | `#555555` | `--venue` | `.publication-venue` |
-| Author Sky | `#3298dc` | `--author-link` | `.publication-authors a` (hsl(204, 86%, 53%)) |
-| Finding Cream | `#fff2d9` | `--note-bg` | `.finding-box` background (written #fff2d9ff) |
-| Rule Mist | `#ededed` | `--rule` | `hr` background, 90vw wide |
-| Icon Fog | `#C7C7C7` | `--icon-muted` | Inline `color` on small header icons (padding-top 5px) |
-| Award Coral | `#ff3860` | `--award` | `.publication-awards` (template rule, not visibly used, inferred) |
-
-Bootstrap 4 contributes its palette variables (#007bff, #6c757d, #212529) to the raw frequency counts, but the page's own markup does not use Bootstrap color utilities; treat them as unused framework residue.
+| Title Charcoal | #363636 | Bulma `$text-strong` | Paper title, section titles, table text |
+| Ink | #000000 | `body { color: black }` | Body text, TLDR, affiliation, venue, select menus |
+| Author Sky | #209cee | Nerfies `.publication-authors a` | Author names |
+| Link Blue | #3273dc | Bulma `$link` | Inline body links (Hendel et al., Todd et al.), footer links |
+| Pill Dark | #363636 | Bulma `.button.is-dark` | arXiv and Code pill fill |
+| Pill Dark Hover | #2f2f2f | Bulma `.is-dark:hover` | Pill fill on hover |
+| Button Ink | #0a0a0a | Bulma `.button.is-white` | "Click to animate figure" label |
+| Divider | #ededed | `hr { background-color: #edededff }` | 2px section dividers (90vw) |
+| Hint Grey | #c7c7c7 | inline style | "Click the underlined text for dropdown menu" hint |
+| Table Border | #dbdbdb | Bulma `$border` | Task-table cell borders |
+| Code Grey | #f5f5f5 | Bulma `pre` | BibTeX block background |
+| Code Ink | #4a4a4a | Bulma `pre` | BibTeX text |
+| Footer Haze | #fafafa | Bulma footer | Footer band |
+| White | #ffffff | page | Page, hero, table background, animate button |
 
 ## Tokens — Typography
 
-**Families.** DM Sans 400 for everything (`body { font-family: 'DM Sans', sans-serif !important }`, woff2 self-hosted in `static/fonts`), DM Mono 400 for code, Georgia serif for `.finding-box` and `.method-setting`. Substitutes: Inter or IBM Plex Sans for DM Sans, IBM Plex Mono for DM Mono. Root size is `html { font-size: 12pt }` (16px), so Bulma rem sizes render as usual.
+- **Text and headings**: `fonts.css` sets `body { font-family: 'DM Sans', sans-serif !important }` with self-hosted woff2. Only the 400 face is declared and loaded (`fonts_loaded`: DM Sans 400), so the 600 title and 700 venue are browser-synthesized bold. Substitute: DM Sans from Google Fonts with real 600 and 700 weights (same design; if DM Sans is unavailable, Manrope).
+- **Controls**: Bulma buttons and native selects keep the system stack (`BlinkMacSystemFont, -apple-system, "Segoe UI", …`), so "Click to animate figure" and the select values render in Segoe UI on Windows.
+- **Mono**: DM Mono 400 is declared in `fonts.css`; the BibTeX `pre` renders in the browser monospace.
+- **Root size**: `html { font-size: 12pt }`, which equals 16px.
 
-| Role | Size | Weight | Family |
-|---|---|---|---|
-| Paper title (`title is-2`) | 2.5rem | 600 | DM Sans |
-| Section heading (`title is-3`) | 2rem | 600 | DM Sans |
-| Author line | 1.25rem | 400 | DM Sans |
-| Body / abstract | 1rem, line-height 1.5 | 400 | DM Sans |
-| Finding note | 1.1em, line-height 1.4 | 400 | Georgia |
-| Code / task labels | .875rem | 400 | DM Mono |
+| Role | Selector | Size / line-height | Weight | Color |
+|---|---|---|---|---|
+| Paper title | `h1.title.is-2.publication-title` | 40px / 45px | 600 | #363636 |
+| Authors, affiliation | `.publication-authors` (`.is-size-5`) | 20px / 30px | 400 | #209cee names, #000000 affiliation |
+| Venue | `.publication-authors b` | 20px / 30px | 700 | #000000 |
+| Section title | `h2.title.is-4` | 24px / 27px | 600 | #363636 |
+| Body | `.content p` | 16px / 24px | 400 | #000000 |
+| Pill label | `.button.is-dark` | 16px / 24px | 400 | #ffffff |
+| Inline select | `select` | 16px / 24px | 400, underlined | #000000 |
+| Hint | inline div | 16px / 24px | 400 | #c7c7c7 |
+| Table header | `th` | 16px / 24px | 700 | #363636 |
+| BibTeX | `pre` | 14px / 21px | 400 | #4a4a4a |
 
 ## Tokens — Spacing & Shapes
 
-| Token | Value | Used on |
-|---|---|---|
-| --radius-pill | 290486px | `is-rounded` link buttons |
-| --radius-sm | 4px | Bulma default controls, tags |
-| --radius-md | 6px | Bulma boxes, cards |
-| --radius-media | 10px | `.publication-video`, carousel items |
-| --radius-note | 12px | `.finding-box` |
+| Element | Radius | Border | Shadow |
+|---|---|---|---|
+| Link pill | 9999px (Bulma `is-rounded`) | 1px solid transparent | none |
+| Animate button | 4px | 1px solid transparent | none |
+| Section divider (`hr`) | 0 | none (2px #ededed fill) | none |
+| Task table | 0 | 1px solid #dbdbdb on every cell (`is-bordered`) | none |
+| BibTeX `pre` | 0 | none | none |
+| Inline select | 0 | none, underline only | none (focus ring removed) |
 
-**Shadows.** Shadows are almost absent. The only framework shadow that appears in practice is Bulma's card/box shadow `0 .5em 1em -.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02)`; focus rings use `0 0 0 .125em rgba(50,115,220,.25)`.
+## Layout Metrics
 
-**Layout width.** Main content is wrapped in `.max-width-content { max-width: 70vw }`; result figures use `.max-width-results { max-width: min(600px, 80vw) }`; one inline block sets `max-width: 720px`. The hero uses an inline padding of `3rem 1.5rem 0.5rem 1.5rem`.
+- **Container**: Bulma `.container.is-max-desktop`, 960px max at ≥1024px. The hero column uses the full width (title box 930px); body sections use `.column.is-four-fifths`, giving a 739px text column at x 350.
+- **Hero**: inline `padding: 3rem 1.5rem 0.5rem`, so 48px top and 8px bottom; hero height 364px at 1440px.
+- **Teaser section**: `padding-top: 1rem` (16px) then Bulma's 48px bottom; teaser capped by `.max-width-content` at 720px (inline) and 70vw.
+- **Sections**: `section.section` padding 48px 24px. Section titles have 24px bottom margin.
+- **Dividers**: `hr` 2px tall, `width: 90vw` (1296px at 1440px), `margin: auto`, so it overhangs the text column on both sides.
+- **Result videos**: `.max-width-results`, `max-width: min(600px, 80vw)`, centered in the 739px column.
+- **Table**: `min-width: 480px`, full column width, scrollable in `.task-examples` (max-height 75vh).
+- **Carousel**: Bootstrap 4 carousel with 550px cards and arrows offset 50px outside the card.
+- **Footer**: #fafafa, padding 48px 24px 96px.
+
+| Breakpoint | Gutter | Body size | Title size | Grid change |
+|---|---|---|---|---|
+| ≥1024px | container 960px centered | 16px | 40px | text column 4/5 of the container |
+| 769–1023px | 24px section padding | 16px | 40px | container becomes fluid; text column still 4/5 |
+| ≤768px | 24px | 16px | 40px (Bulma `is-2` is not reduced by this page) | columns stack to full width; `.max-width-content` limits media to 70vw; result videos 80vw |
 
 ## Components
 
-- **Link button (Paper / arXiv / Code ...).** `a.external-link.button.is-normal.is-rounded.is-dark`: fill #363636, white label, pill radius 290486px, Font Awesome or Academicons glyph in a `span.icon` before a `span` label, 5px vertical margin from `.link-block a`. Only two are present: arXiv and Code.
-- **Finding box.** `.finding-box`: background #fff2d9, `2px solid black`, radius 12px, padding 10px 14px, Georgia 1.1em, line-height 1.4, max-width 600px, `display: inline-block`, left-aligned text.
-- **Inline select.** Native `<select>` stripped of borders and arrows, underlined, transparent background, cursor pointer; sits inside a sentence (`.select-row span { padding: 5px }`).
-- **Teaser toggle.** `button.is-white.btn-teaser`: zero padding, left-justified, underline on hover with transparent background.
-- **Task carousel.** Bootstrap carousel with cards capped at 550px and arrows pushed 50px outside the card, arrow icons inverted to black via `filter: invert(1) grayscale(100%) brightness(200%)`.
-- **Rule.** `hr` 90vw wide, #ededed, centered.
-- **BibTeX block.** `section#BibTeX` with `h2.title` "BibTeX" above a Bulma `pre > code`; background #f5f5f5, text #4a4a4a, padding 1.25em 1.5em, no border, left-aligned monospace.
+- **Dark link pill**: `a.external-link.button.is-normal.is-rounded.is-dark`, 40px tall, padding 7px 20px, margin 5px, #363636 fill, white DM Sans 16px/400 label, icon left (Academicons arXiv, Font Awesome 6 GitHub), fully rounded. Hover fill #2f2f2f.
+- **Click-to-animate figure**: a `<video muted playsinline>` without autoplay showing a vector figure; clicking the video or the button below plays it. The button is `.button.is-white.btn-teaser`, padding 0, left-aligned flex, 20px hand SVG with 5px right margin, label in the system sans 16px #0a0a0a; hover keeps a transparent background and underlines.
+- **Hairline section divider**: `hr` with #ededed fill, 2px tall, 90vw wide, centered between sections.
+- **Inline dropdown selector**: `select` with `appearance: none`, no border, no background, underlined text inside a sentence ("Model: Idefics2   Task: Average"), each `span` padded 5px; on change it shows the matching table row or figure. A hint line beneath in #c7c7c7 with a 20px info icon.
+- **Task table**: `table.table.is-bordered.is-hoverable`, 1px #dbdbdb cell borders, header 16px/700, cells 16px/400 #363636 with italic instructions and bold answers, padding 8px 12px, small 50px flag images.
+- **BibTeX**: Bulma `pre`, #f5f5f5, padding 17.5px 21px, 14px monospace #4a4a4a, in the full 930px hero-width column.
 
 ## Page Modules
 
-- **Title/author block.** Centered `title is-2 publication-title`, author blocks with 5px side margins, affiliation line, venue line in bold #555.
-- **Link buttons.** arXiv and Code only, dark pills.
-- **Teaser video.** Three `<video>` elements, clickable (`video { cursor: pointer }`), some layered absolutely over a figure (`.layered-video`).
-- **Abstract.** Standard centered `h2` and justified paragraph.
-- **Method figures.** Cross-Modal Patching diagrams set at 30-35% inline widths beside text.
-- **Interactive task explorer.** Scrollable `.task-examples` table (max-height 75vh) with 50px thumbnails and select-driven rows.
-- **Results table.** One table in the task explorer; no dedicated benchmark table styling.
-- **Relevant Readings.** A short reference list section before Acknowledgements (counted as a publication list by the extractor).
-- **Acknowledgements and BibTeX.** Plain sections at the end.
-- Not present: HF demo, image-comparison slider, 3D viewer, dataset button.
+| Module | Present | How it is styled |
+|---|---|---|
+| Title, authors, affiliation, venue | yes | centered DM Sans on white |
+| Link buttons | yes | two dark fully rounded pills |
+| TLDR | yes | centered line with bold lead-in |
+| Teaser | yes | click-to-animate vector video at 720px |
+| Abstract | yes | left-aligned 16px black paragraph in the 739px column |
+| Method figure | yes | click-to-animate video at 600px |
+| Interactive selectors | yes | underlined native selects that swap table rows and figures |
+| Results table | yes | small bordered example table |
+| Results figures | yes | per-model, per-task images switched by selects; one Bootstrap carousel |
+| Navigation | absent from the source | none |
+| BibTeX | yes | #f5f5f5 `pre` |
+| Footer | yes | #fafafa band with Nerfies and Readout Guidance credits |
+
+## Adapting to Other Content
+
+- **More authors**: keep them on centered 20px lines in #209cee; add superscript numbers and a second black affiliation line only if there are several institutions.
+- **A larger results table**: keep `is-bordered` with #dbdbdb hairlines, 16px DM Sans, bold best values, no fills; let `.table-container` scroll horizontally on phones instead of shrinking type.
+- **Many result variants**: use more inline selects in the same sentence pattern rather than tabs or buttons.
+- **Long publication lists**: a left-aligned list in the 739px column, 16px black text, titles as #3273dc links.
+- **News**: a few dated lines under the TLDR, centered, 16px, the date in bold; keep it above the teaser only if short.
+- **Static figures**: drop the animate button and keep the figure at 600–720px, centered, with no frame.
 
 ## Do's and Don'ts
 
-**Do**
-
-- Keep body text pure black and the type single-family (DM Sans) so the Georgia notes stand out.
-- State each finding in a `.finding-box` directly under the figure it summarizes.
-- Let readers switch conditions with inline underlined selects instead of tab bars.
-
-**Don't**
-
-- Don't add colored section bands; the page relies on white space and the #ededed rule.
-- Don't use Bootstrap's blue buttons; links stay Bulma dark pills.
-- Don't widen prose beyond 70vw.
+- Do use one typeface (DM Sans) for all reading text, with black body copy.
+- Do separate sections with the 2px #ededed divider spanning 90vw.
+- Do keep figures as clean vector graphics, animated on click rather than autoplay.
+- Do write controls into sentences (underlined selects) instead of adding UI chrome.
+- Don't add colored backgrounds or cards; the diagrams supply the only color.
+- Don't use more than the two dark pills in the hero.
+- Don't widen the text column past 739px at desktop.
 
 ## Surfaces
 
-Two surfaces only: white page and the cream finding card. No elevated cards, no tinted hero.
+White page, a #f5f5f5 BibTeX block and a #fafafa footer. The table is white with hairline borders. No shadows.
 
 ## Imagery
 
-Diagrams of patching between text and image tokens, small 50px task thumbnails, and looping videos. Figures sit on white with no frame.
+Custom vector diagrams with a restrained palette: navy and crimson markers, pale blue and pale pink task panels, a grey latent-space ribbon, token boxes with lavender highlights. They are delivered as short videos that animate on click. Result plots and example tables use small flag and food images.
 
 ## Layout
 
-Single centered column, 70vw cap, figures sometimes split 30/70 with text. Sections stack: header, teaser, abstract, five method/result sections, readings, acknowledgements, BibTeX.
+One centered column: a 930px hero, a 720px teaser, then 739px text sections divided by 90vw hairlines. Text is left-aligned under centered section titles. Rendered height about 6,440px at 1440px.
 
 ## Agent Prompt Guide
 
-**Quick color reference**
+Quick colors: title #363636, body #000000, authors #209cee, links #3273dc, pills #363636 with white text (hover #2f2f2f), divider #ededed, hint #c7c7c7, table border #dbdbdb, code #f5f5f5, footer #fafafa.
 
-- Background #ffffff
-- Text #000000
-- Buttons #363636 with white label
-- Author links #3298dc
-- Finding note #fff2d9 with 2px #000 border
-
-**Example component prompts**
-
-1. Create a finding callout: inline-block card, background #fff2d9, 2px solid black border, 12px radius, 10px 14px padding, Georgia 1.1em, max-width 600px.
-2. Create an inline task selector: a sentence in DM Sans 16px where the task name is a borderless underlined native select with transparent background.
-3. Create a Nerfies header in DM Sans: centered 40px title weight 600, author names in #3298dc, two dark pill buttons (arXiv, Code) with icons.
+1. "Build a quiet hero on white: DM Sans throughout; centered two-line 40px/600 title in #363636 (line-height 45px); authors 20px #209cee; affiliation 20px #000000; venue 20px/700 #000000; two fully rounded #363636 pills (40px tall, padding 7px 20px, white 16px label, icon left, hover #2f2f2f)."
+2. "Separate sections with an hr that is 2px tall, background #ededed, width 90vw, margin auto. Each section has 48px vertical padding, a centered 24px/600 #363636 title with 24px bottom margin, and left-aligned 16px/24px #000000 text in a 739px column."
+3. "Make an inline selector: a sentence like 'Task: <select>' where the select has no border, no background, `appearance: none`, underlined text; under it a #c7c7c7 hint with a 20px info icon; on change, swap the visible row of a bordered table (1px #dbdbdb cells, padding 8px 12px, 16px text)."
 
 ## Similar Pages
 
-- Nerfies (nerfies.github.io), the stated base template.
-- Readout Guidance project page, the second credited source.
-- Other interpretability pages built on Nerfies with a single custom font.
+- Nerfies-template pages restyled with a single geometric sans and no colored bands.
+- Readout Guidance (same first author), credited in the footer, with the same select-driven figures.
 
 ## Quick Start
 
 ```css
 :root {
-  --bg: #ffffff;
-  --text: #000000;
-  --text-strong: #363636;
-  --venue: #555555;
-  --author-link: #3298dc;
-  --note-bg: #fff2d9;
-  --rule: #ededed;
-  --font-body: 'DM Sans', sans-serif;
+  --title: #363636;
+  --ink: #000000;
+  --author: #209cee;
+  --link: #3273dc;
+  --pill: #363636;
+  --pill-hover: #2f2f2f;
+  --divider: #ededed;
+  --hint: #c7c7c7;
+  --border: #dbdbdb;
+  --code-bg: #f5f5f5;
+  --code-ink: #4a4a4a;
+  --footer: #fafafa;
+  --font: 'DM Sans', sans-serif;
   --font-mono: 'DM Mono', monospace;
-  --font-note: Georgia, serif;
-  --radius-pill: 290486px;
-  --radius-note: 12px;
-  --content-max: 70vw;
+  --container: 960px;
+  --text-col: 739px;
+  --teaser: 720px;
+  --figure: 600px;
 }
-html { font-size: 12pt; }
-body { font-family: var(--font-body); color: var(--text); }
-.finding-box { background: var(--note-bg); border: 2px solid #000; border-radius: var(--radius-note);
-  padding: 10px 14px; font-family: var(--font-note); font-size: 1.1em; line-height: 1.4; max-width: 600px; }
 ```
 
 ## Provenance
 
-- URL: https://vlm-cross-modal-reps.github.io/
-- Paper: Vision-Language Models Create Cross-Modal Task Representations (Grace Luo et al.), arXiv 2410.22330.
-- Venue: ICML 2025 (per the arXiv comment). Field: VLM interpretability.
-- Selection reason: arXiv comment states acceptance at ICML 2025; project page linked in the arXiv abstract.
-- Template credit: footer says the template is based on the Nerfies and Readout Guidance project pages.
-- Measurement: Measured from static HTML and CSS only (tools/extract_style.py plus a direct read of the page's own stylesheets and inline styles). The page was not rendered in a browser for this entry, so computed styles, actual font fallback, and video framing are not verified.
+- **URL**: https://vlm-cross-modal-reps.github.io/
+- **Paper**: Vision-Language Models Create Cross-Modal Task Representations (arXiv 2410.22330; previous title "Task Vectors are Cross-Modal"), Grace Luo, Trevor Darrell, Amir Bar (UC Berkeley).
+- **Venue**: ICML 2025.
+- **Selection reason**: existing verified entry in entries.json; the arXiv 2410.22330 comment says ICML 2025. Chosen for the geometric sans, narrow centered column, full-width hairline dividers, click-to-animate vector teasers and inline dropdown tables.
+- **Template credit**: footer says the site is based on the Nerfies website and Readout Guidance.
+- **Evidence used**: `tools/computed_style.py` render at 1440×900 with color share, targeted computed-style probes of dividers, columns, selects, video and footer links, the first-viewport screenshot and scaled full-page capture, `custom.css`, `fonts.css` and the HTML. Date 2026-10-28.
