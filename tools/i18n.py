@@ -91,6 +91,7 @@ S = {
     "more_like": ("More like this", "似たスタイル", "相似风格"),
     "shot_caption": ("Screenshot of {link}, © the authors. Shown for reference.", "{link} のスクリーンショット。著作権は著者にあり、参考として掲載しています。", "{link} 的截图，版权归作者所有，仅作参考展示。"),
     "request_removal": ("Request removal", "削除を依頼", "申请删除"),
+    "feedback": ("Feedback or bug report", "フィードバック・不具合の報告", "反馈或报告问题"),
     "md_in_english": ("", "以下の説明と DESIGN.md 本文は英語です。コーディングエージェントが同じ一つの版を読めるよう、翻訳していません。",
                       "下面的说明和 DESIGN.md 正文是英文。为了让编程 agent 读同一个版本，这部分没有翻译。"),
     "compact": ("Compact", "簡易版", "精简"),

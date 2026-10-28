@@ -18,6 +18,7 @@ OUT = ROOT / "docs"
 CATALOG = ROOT / "data" / "catalog.json"  # one record per included page; DESIGN.md text lives in content/designs/
 SITE = "Look et al."
 ISSUES = "https://github.com/dengzhe-hou/looketal/issues/new?template=removal.yml"
+FEEDBACK = "https://github.com/dengzhe-hou/looketal/issues/new?title=Feedback:+"
 esc = html.escape
 # Cloudflare Web Analytics: cookieless visit counts; the token is the public site tag
 ANALYTICS = """<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "55748c54d6a94a47bafac800c01c5e81"}'></script>"""
@@ -180,6 +181,7 @@ def nav(prefix, active, path):
     return f"""<aside class="side"><a class="brand" href="{prefix}index.html"><span class="mark">et<br>al.</span><span>{SITE}</span></a>
 <nav>{links}</nav><button class="theme-toggle" id="theme" type="button" aria-label="{esc(T('theme'))}">{esc(T('theme'))}: {esc(T('theme_auto'))}</button>
 <div class="langs" role="group" aria-label="{esc(T('lang_label'))}">{lang_links(prefix, path)}</div>
+<a class="feedback" href="{FEEDBACK}{quote(path)}" target="_blank" rel="noopener">{esc(T('feedback'))}</a>
 <div class="side-foot">{T('side_foot')}</div></aside>"""
 
 

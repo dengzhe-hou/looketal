@@ -207,3 +207,5 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -.01em; }
   --serif: Newsreader, "Songti SC", "Noto Serif SC", SimSun, Georgia, serif; }
 :lang(ja) .prose p, :lang(zh-Hans) .prose p { line-height: 1.85; }
 :lang(ja) { line-break: strict; }
+.feedback { display: block; margin: 10px 0 0; font-size: 12.5px; color: var(--faint); }
+.feedback:hover { color: var(--ink); }
