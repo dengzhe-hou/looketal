@@ -19,6 +19,8 @@ CATALOG = ROOT / "data" / "catalog.json"  # one record per included page; DESIGN
 SITE = "Look et al."
 ISSUES = "https://github.com/dengzhe-hou/looketal/issues/new?template=removal.yml"
 esc = html.escape
+# Cloudflare Web Analytics: cookieless visit counts; the token is the public site tag
+ANALYTICS = """<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "55748c54d6a94a47bafac800c01c5e81"}'></script>"""
 
 import sys  # noqa: E402
 sys.path.insert(0, str(Path(__file__).resolve().parent))  # the build runs with python -I, which drops the script dir
@@ -190,7 +192,8 @@ def page(title, body, prefix, active, path, desc=None, extra_head=""):
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
 {extra_head}<link rel="stylesheet" href="{A(prefix)}assets/site.css"></head>
 <body><div class="shell">{nav(prefix, active, path)}<main class="main">{body}</main></div>
-<script src="{A(prefix)}assets/data.{LANG}.js"></script><script src="{A(prefix)}assets/site.js"></script></body></html>"""
+<script src="{A(prefix)}assets/data.{LANG}.js"></script><script src="{A(prefix)}assets/site.js"></script>
+{ANALYTICS}</body></html>"""
 
 
 def specimen(e, big=False):
