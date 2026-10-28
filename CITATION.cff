@@ -5,6 +5,7 @@ type: dataset
 authors:
   - family-names: Hou
     given-names: Dengzhe
+    orcid: "https://orcid.org/0000-0002-1036-7979"
 url: "https://dengzhe-hou.github.io/looketal/"
 repository-code: "https://github.com/dengzhe-hou/looketal"
 license: CC-BY-NC-4.0
