@@ -1,7 +1,7 @@
 {
   "title": "Look et al.: A Design Library of Academic Web Pages for Humans and AI Agents",
   "upload_type": "dataset",
-  "description": "130 paper project pages and researcher homepages selected for visual design, each with a DESIGN.md written from the rendered page (colors, typography, spacing, layout metrics, components, page modules and agent prompts), plus the tools and the reconstruction test used to check them. Site: https://dengzhe-hou.github.io/looketal/",
+  "description": "270 paper project pages, researcher homepages and code READMEs selected for visual design, each with a DESIGN.md written from the rendered page (colors, typography, spacing, layout metrics, components, page modules and agent prompts), plus the tools and the reconstruction test used to check them. Site: https://looketal.com/",
   "creators": [
     {
       "name": "Hou, Dengzhe",

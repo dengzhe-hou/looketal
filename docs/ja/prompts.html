@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>デザインプロンプト · Look et al.</title><meta name="description" content="学術ページのデザイン資料集"><link rel="alternate" hreflang="en" href="../prompts.html"><link rel="alternate" hreflang="ja" href="../ja/prompts.html"><link rel="alternate" hreflang="zh-Hans" href="../zh/prompts.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css"></head>
+<body><div class="shell"><aside class="side"><a class="brand" href="index.html"><span class="mark">et<br>al.</span><span>Look et al.</span></a>
+<nav><a href="index.html">ホーム</a><a href="browse.html?kind=project">論文プロジェクトページ</a><a href="browse.html?kind=researcher">研究者ページ</a><a href="browse.html?kind=readme">コード README</a><a href="browse.html">すべてのスタイル</a><a href="collections.html">コレクション</a><a href="prompts.html" aria-current=page>デザインプロンプト</a><a href="about.html">概要</a></nav><button class="theme-toggle" id="theme" type="button" aria-label="テーマ">テーマ: 自動</button>
+<div class="langs" role="group" aria-label="言語"><a href="../prompts.html" hreflang="en" lang="en">English</a><a href="../ja/prompts.html" hreflang="ja" lang="ja" aria-current=true>日本語</a><a href="../zh/prompts.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></div>
+<div class="side-foot">スクリーンショットの著作権は各ページの著者にあり、元ページにリンクしています。<br>DESIGN.md の文章は <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>、コードは MIT です。</div></aside><main class="main"><header class="phead"><div class="eyebrow">コレクション</div><h1>実在の学術ページから作るデザインプロンプト</h1>
+<p class="lede">DESIGN.md はコーディングエージェントに見た目のルールを渡し、内容はあなたの論文から入れます。括弧の中を埋め、選んだ DESIGN.md を添付してください。</p></header>
+<section><h2>プロジェクトページを作る</h2><pre class="prompt">私たちの論文「[タイトル]」([会議名])のプロジェクトページを作ってください。添付の DESIGN.md は色、文字、余白、部品の見た目にだけ使ってください。
+内容は論文から取ります。著者と所属、[ティーザー図または動画]、アブストラクト、[手法の図]、[結果として表、動画、比較スライダー]、BibTeX。
+リンクボタンは [Paper] [arXiv] [Code] [Data] [Demo]。
+GitHub Pages で動く静的ページにしてください。見た目の判断のうち、参考ページから取ったものと変えたものを書き出してください。</pre><p>参考例: <a href="s/acl-2026-craft.html">CRAFT: Training-Free Cascaded Retrieval for Tabular QA</a></p></section>
+<section><h2>研究者ページを作る</h2><pre class="prompt">私の研究者ページを作ってください。添付の DESIGN.md は見た目のルールにだけ使ってください。
+内容は、名前、[職位と所属]、写真、短い紹介文、[ニュース]、[サムネイルや会議名バッジ付きの]主要論文、[受賞]、連絡先リンクです。
+論文リストは [publications.bib] から生成してください。静的でアクセシブルなページにし、参考ページにダークモードがある場合だけ対応してください。</pre><p>参考例: <a href="s/researcher-amir-bar.html">Amir Bar</a></p></section>
+<section><h2>コードの README を書く</h2><pre class="prompt">私たちのコードリポジトリ「[リポジトリ名]」(論文「[タイトル]」、[会議名])の README.md を書いてください。添付の DESIGN.md は構成と見せ方にだけ使ってください。ヘッダー、バッジ、ティーザー、セクションの順番、表、コードブロック、引用ブロックが対象です。
+内容は私たちのプロジェクトから取ります。[一行の要約]、[ティーザー画像または GIF]、インストール、[データの準備]、[学習と評価のコマンド]、[結果の表]、[学習済み重み]、BibTeX、ライセンス、謝辞。
+GitHub Flavored Markdown と GitHub が許可する HTML だけを使ってください。存在しない結果、リンク、バッジは作らないでください。</pre><p>参考例: <a href="s/readme-adobe-research-obj-and-mat-selection.html">adobe-research/obj-and-mat-selection</a></p></section>
+<section><h2>既存のページの見た目を変える</h2><pre class="prompt">添付の DESIGN.md を使って、既存のプロジェクトページ(添付の HTML)の見た目を変えてください。内容とリンクはすべて残してください。
+変えてよいのは色、フォント、余白、ボタンとカードの見た目、セクションの並びのリズムだけです。変更したトークンを変更前と変更後で報告してください。</pre></section></main></div>
+<script src="../assets/data.ja.js"></script><script src="../assets/site.js"></script></body></html>

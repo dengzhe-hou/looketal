@@ -22,3 +22,7 @@ In v2 the analysts found remaining errors in 4 of the 5 files. Most were viewpor
 An independent agent checked about 129 concrete claims in ten v2 files against fresh renders: zpressor, sparse-planning, smpo, ogbench, egoworld, semanticdraw, multimodal-distribution-matching, guidedog, Matt Deitke and Erik Wijmans. It found 4 wrong values, about 3%. Six files had no errors. Three of the four were values that a script or a later cascade rule changes at render time. All four were corrected.
 
 Raw outputs are in the session scratchpad and are not kept in the repo.
+
+## Spot audit, second round (2026-10-28)
+
+After adding 100 project and researcher pages and 40 code READMEs, auditors checked 13 new files (10 pages, 3 READMEs) against the rendered page or the README source: 208 claims, 8 wrong (3.8%). All 8 were confirmed against the CSS, HTML, SVG or Markdown and corrected. Five concerned values that only hold for part of the page (a column split used in two of four sections, a border rule used by two of three lists, one icon larger than the others, a section gap changed by a script tag, a footer handle in a different color); three concerned README details (a third logo color, an autolinked email, a GIF count).

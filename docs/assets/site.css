@@ -194,3 +194,16 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -.01em; }
   .wtrack, .bigshot .frame.scroll .view img, .grid .card, .hero h1, .hero .lede { animation: none; }
   .card:hover .shot img.tall.ready { transition: opacity .25s; transform: none; }
 }
+
+/* languages: switcher, note on English-only DESIGN.md text, CJK font fallbacks */
+.langs { display: flex; flex-wrap: wrap; gap: 4px 10px; margin: 10px 0 0; font-size: 12.5px; }
+.langs a { color: var(--faint); text-decoration: none; }
+.langs a:hover { color: var(--ink); }
+.langs a[aria-current] { color: var(--ink); font-weight: 600; }
+.langnote { font-size: 13px; color: var(--faint); border-left: 2px solid var(--line); padding: 2px 0 2px 10px; margin: 18px 0 0; }
+:root:lang(ja) { --sans: Inter, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI", Meiryo, system-ui, sans-serif;
+  --serif: Newsreader, "Hiragino Mincho ProN", "Noto Serif JP", "Yu Mincho", Georgia, serif; }
+:root:lang(zh-Hans) { --sans: Inter, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  --serif: Newsreader, "Songti SC", "Noto Serif SC", SimSun, Georgia, serif; }
+:lang(ja) .prose p, :lang(zh-Hans) .prose p { line-height: 1.85; }
+:lang(ja) { line-break: strict; }

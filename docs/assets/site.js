@@ -1,5 +1,7 @@
 (() => {
   const D = window.LOOKETAL;
+  const U = D.ui, AS = D.assets;  // UI strings for this language; prefix for shared assets (docs/assets)
+  const fmt = (s, o) => s.replace(/\{(\w+)\}/g, (_, k) => o[k]);
   const $ = id => document.getElementById(id);
   const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
@@ -9,13 +11,13 @@
     t.textContent = msg; t.classList.add("on"); setTimeout(() => t.classList.remove("on"), 1300);
   }
   async function copy(text) {
-    try { await navigator.clipboard.writeText(text); toast("Copied"); } catch { toast("Copy failed"); }
+    try { await navigator.clipboard.writeText(text); toast(U.copied); } catch { toast(U.copy_failed); }
   }
 
   // theme: auto (follows the OS) -> light -> dark; remembered per browser when storage is available
   const themes = ["auto", "light", "dark"];
   const applyTheme = t => { if (t === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", t);
-    const b = $("theme"); if (b) b.textContent = `Theme: ${t}`; };
+    const b = $("theme"); if (b) b.textContent = `${U.theme}: ${U["theme_" + t]}`; };
   let theme = "auto";
   try { theme = localStorage.getItem("looketal-theme") || "auto"; } catch {}
   applyTheme(theme);
@@ -25,15 +27,15 @@
   const strip = e => `<div class="strip">${e.palette.slice(0, 6).map(p => `<em style="background:${esc(p.hex)}"></em>`).join("")}</div>`;
   function specimen(e) {
     const [bg, text, accent] = e.specimen;
-    const pills = (e.kind === "project" ? ["Paper", "Code", "Video"] : ["CV", "Scholar", "Email"])
+    const pills = (e.kind === "project" ? ["Paper", "Code", "Video"] : e.kind === "readme" ? ["Install", "Usage", "Cite"] : ["CV", "Scholar", "Email"])
       .map(t => `<i style="background:${esc(accent)}">${t}</i>`).join("");
     const font = e.fonts[0] ? `'${esc(e.fonts[0])}',` : "";
     return `<div class="spec" style="background:${esc(bg)};color:${esc(text)};font-family:${font}system-ui,sans-serif" aria-hidden="true">
       <b class="aa">Aa</b><span style="color:${esc(accent)}">${esc(e.fonts[0] || "system font")}</span><div class="pills">${pills}</div>${strip(e)}</div>`;
   }
-  const thumb = e => e.shot ? `<div class="shot"${e.tall ? ` data-tall="assets/shots/${esc(e.slug)}.tall.webp"` : ""}><img src="assets/shots/${esc(e.slug)}.card.webp" alt="" loading="lazy" width="640" height="400">${strip(e)}</div>` : specimen(e);
+  const thumb = e => e.shot ? `<div class="shot"${e.tall ? ` data-tall="${AS}assets/shots/${esc(e.slug)}.tall.webp"` : ""}><img src="${AS}assets/shots/${esc(e.slug)}.card.webp" alt="" loading="lazy" width="640" height="400">${strip(e)}</div>` : specimen(e);
   function card(e) {
-    const meta = e.kind === "project" ? e.venue : `Researcher · ${e.venue}`;
+    const meta = e.kind === "project" ? e.venue : `${e.kind === "readme" ? U.readme : U.researcher} · ${e.venue}`;
     return `<a class="card" href="s/${esc(e.slug)}.html">${thumb(e)}<div class="cbody"><div class="meta">${esc(meta)}</div>
       <div class="name">${esc(e.title)}</div><div class="mood">${esc(e.mood)}</div></div></a>`;
   }
@@ -46,6 +48,9 @@
     im.onload = () => requestAnimationFrame(() => im.classList.add("ready"));
     im.src = box.dataset.tall; box.prepend(im);
   });
+
+  // language links keep the current filters and anchor
+  document.querySelectorAll(".langs a").forEach(a => { a.href += location.search + location.hash; });
 
   // ---- browse page ----
   if ($("grid") && $("filters")) {
@@ -60,7 +65,7 @@
     const counts = {};
     D.entries.forEach(e => e.modules.forEach(m => counts[m] = (counts[m] || 0) + 1));
     Object.keys(counts).sort((a, b) => counts[b] - counts[a]).forEach(m => {
-      const b = document.createElement("button"); b.className = "chip"; b.innerHTML = `${esc(m)} <span>${counts[m]}</span>`;
+      const b = document.createElement("button"); b.className = "chip"; b.innerHTML = `${esc(U.mods[m] || m)} <span>${counts[m]}</span>`;
       b.setAttribute("aria-pressed", st.mods.has(m));
       b.onclick = () => { st.mods.has(m) ? st.mods.delete(m) : st.mods.add(m); b.setAttribute("aria-pressed", st.mods.has(m)); render(); };
       $("mods").append(b);
@@ -99,14 +104,14 @@
     function render() {
       const list = D.entries.filter(match).sort((a, b) => a._rank - b._rank);
       const title = inColl ? D.collectionTitles[st.collection]
-        : st.kind === "project" ? "Project pages" : st.kind === "researcher" ? "Researcher pages" : "All styles";
+        : st.kind === "project" ? U.nav_project : st.kind === "researcher" ? U.nav_researcher : st.kind === "readme" ? U.nav_readme : U.nav_all;
       $("btitle").textContent = title;
-      $("bcount").textContent = `${list.length} of ${D.entries.length} styles` +
-        (st.q ? (window.LOOKETAL_TEXT ? " · searching titles, metadata and DESIGN.md text" : " · loading full-text index…") : "");
-      $("grid").innerHTML = list.length ? list.map(card).join("") : `<div class="empty">No pages match these filters.</div>`;
+      $("bcount").textContent = fmt(U.count, { n: list.length, total: D.entries.length }) +
+        (st.q ? (window.LOOKETAL_TEXT ? U.searching : U.loading_index) : "");
+      $("grid").innerHTML = list.length ? list.map(card).join("") : `<div class="empty">${esc(U.no_match)}</div>`;
       document.querySelectorAll('.side nav a').forEach(a => {
         const h = a.getAttribute("href");
-        const k = h.includes("kind=project") ? "project" : h.includes("kind=researcher") ? "researcher" : h === "browse.html" ? "all" : null;
+        const k = h.includes("kind=project") ? "project" : h.includes("kind=researcher") ? "researcher" : h.includes("kind=readme") ? "readme" : h === "browse.html" ? "all" : null;
         if (k) a.toggleAttribute("aria-current", (st.kind || "all") === k && !inColl);
       });
       writeUrl();
@@ -115,7 +120,7 @@
     function needText() {
       if (window.LOOKETAL_TEXT || textLoading || !st.q) return;
       textLoading = true;
-      const sc = document.createElement("script"); sc.src = "assets/search.js"; sc.onload = render; document.body.append(sc);
+      const sc = document.createElement("script"); sc.src = AS + "assets/search.js"; sc.onload = render; document.body.append(sc);
     }
     $("q").oninput = ev => { st.q = ev.target.value.trim().toLowerCase(); needText(); render(); };
     needText();
@@ -135,7 +140,7 @@
     let tab = "md", mode = "extended";
     const body = $("pbody");
     const text = () => tab === "md" ? (mode === "compact" ? S.compact : S.md) : tab === "css" ? S.css : tab === "tw" ? S.tw : S.tokens;
-    const show = () => { body.textContent = text() || "Not available for this style."; $("mode").style.visibility = tab === "md" ? "visible" : "hidden"; };
+    const show = () => { body.textContent = text() || U.not_available; $("mode").style.visibility = tab === "md" ? "visible" : "hidden"; };
     document.querySelector(".ptabs").onclick = ev => {
       const b = ev.target.closest("button"); if (!b) return; tab = b.dataset.tab;
       document.querySelectorAll(".ptabs button").forEach(x => x.setAttribute("aria-selected", x === b)); show();

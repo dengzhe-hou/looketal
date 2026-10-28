@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>设计提示词 · Look et al.</title><meta name="description" content="学术网页的设计资料库"><link rel="alternate" hreflang="en" href="../prompts.html"><link rel="alternate" hreflang="ja" href="../ja/prompts.html"><link rel="alternate" hreflang="zh-Hans" href="../zh/prompts.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css"></head>
+<body><div class="shell"><aside class="side"><a class="brand" href="index.html"><span class="mark">et<br>al.</span><span>Look et al.</span></a>
+<nav><a href="index.html">首页</a><a href="browse.html?kind=project">论文项目页</a><a href="browse.html?kind=researcher">研究者主页</a><a href="browse.html?kind=readme">代码 README</a><a href="browse.html">全部风格</a><a href="collections.html">专题</a><a href="prompts.html" aria-current=page>设计提示词</a><a href="about.html">关于</a></nav><button class="theme-toggle" id="theme" type="button" aria-label="主题">主题: 自动</button>
+<div class="langs" role="group" aria-label="语言"><a href="../prompts.html" hreflang="en" lang="en">English</a><a href="../ja/prompts.html" hreflang="ja" lang="ja">日本語</a><a href="../zh/prompts.html" hreflang="zh-Hans" lang="zh-Hans" aria-current=true>简体中文</a></div>
+<div class="side-foot">截图版权归各页面作者所有，并链接到原页面。<br>DESIGN.md 文本采用 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>，代码采用 MIT。</div></aside><main class="main"><header class="phead"><div class="eyebrow">专题</div><h1>基于真实学术网页的设计提示词</h1>
+<p class="lede">DESIGN.md 告诉编程 agent 视觉规则，内容来自你的论文。把方括号填好，再附上你选的 DESIGN.md。</p></header>
+<section><h2>做一个项目页</h2><pre class="prompt">为我们的论文《[标题]》([会议名])做一个项目页。附上的 DESIGN.md 只用于配色、字体、间距和组件样式。
+内容来自论文，包括作者和单位、[预告图或视频]、摘要、[方法图]、[结果，可以是表格、视频或对比滑块]、BibTeX。
+链接按钮是 [Paper] [arXiv] [Code] [Data] [Demo]。
+做成能在 GitHub Pages 上运行的静态页面。列出哪些视觉决定来自参考页面，哪些是你改的。</pre><p>参考示例: <a href="s/acl-2026-craft.html">CRAFT: Training-Free Cascaded Retrieval for Tabular QA</a></p></section>
+<section><h2>做一个研究者主页</h2><pre class="prompt">为我做一个学术主页。附上的 DESIGN.md 只用于视觉规则。
+内容包括姓名、[职位和单位]、照片、简短介绍、[新闻]、带[缩略图或会议标签]的代表论文、[获奖]、联系方式链接。
+论文列表从 [publications.bib] 生成。做成静态、无障碍的页面；只有参考页面有深色模式时才支持深色模式。</pre><p>参考示例: <a href="s/researcher-amir-bar.html">Amir Bar</a></p></section>
+<section><h2>写一个代码 README</h2><pre class="prompt">为我们的代码仓库「[仓库名]」(论文《[标题]》，[会议名])写 README.md。附上的 DESIGN.md 只用于结构和呈现方式，包括头部、徽章、预告图、章节顺序、表格、代码块和引用块。
+内容来自我们的项目，包括[一句话简介]、[预告图或 GIF]、安装、[数据准备]、[训练和评测命令]、[结果表]、[预训练权重]、BibTeX、许可证、致谢。
+只用 GitHub Flavored Markdown 和 GitHub 允许的 HTML。不要编造不存在的结果、链接或徽章。</pre><p>参考示例: <a href="s/readme-adobe-research-obj-and-mat-selection.html">adobe-research/obj-and-mat-selection</a></p></section>
+<section><h2>给现有页面换风格</h2><pre class="prompt">用附上的 DESIGN.md 给我们现有的项目页(附上的 HTML)换风格。所有内容和链接都保留。
+只改配色、字体、间距、按钮和卡片样式，以及各节的节奏。报告你改了哪些 token，写出改前和改后的值。</pre></section></main></div>
+<script src="../assets/data.zh.js"></script><script src="../assets/site.js"></script></body></html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>关于 · Look et al.</title><meta name="description" content="学术网页的设计资料库"><link rel="alternate" hreflang="en" href="../about.html"><link rel="alternate" hreflang="ja" href="../ja/about.html"><link rel="alternate" hreflang="zh-Hans" href="../zh/about.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css"></head>
+<body><div class="shell"><aside class="side"><a class="brand" href="index.html"><span class="mark">et<br>al.</span><span>Look et al.</span></a>
+<nav><a href="index.html">首页</a><a href="browse.html?kind=project">论文项目页</a><a href="browse.html?kind=researcher">研究者主页</a><a href="browse.html?kind=readme">代码 README</a><a href="browse.html">全部风格</a><a href="collections.html">专题</a><a href="prompts.html">设计提示词</a><a href="about.html" aria-current=page>关于</a></nav><button class="theme-toggle" id="theme" type="button" aria-label="主题">主题: 自动</button>
+<div class="langs" role="group" aria-label="语言"><a href="../about.html" hreflang="en" lang="en">English</a><a href="../ja/about.html" hreflang="ja" lang="ja">日本語</a><a href="../zh/about.html" hreflang="zh-Hans" lang="zh-Hans" aria-current=true>简体中文</a></div>
+<div class="side-foot">截图版权归各页面作者所有，并链接到原页面。<br>DESIGN.md 文本采用 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>，代码采用 MIT。</div></aside><main class="main"><header class="phead"><div class="eyebrow">关于</div><h1>关于 Look et al.</h1>
+<p class="lede">一个学术网页参考库，供研究者和他们使用的编程 agent 参考。</p></header>
+<section class="prose"><h2>收录了什么</h2>
+<p><b>180 个论文项目页</b>，每个会议每年 10 个，覆盖 NeurIPS、ICML、ICLR、CVPR、ACL 的 2025 年和 2026 年，以及 ICCV 2025、ECCV 2026、SIGGRAPH 2025 和 2026、CoRL 2025、CHI 2026、EMNLP 2025，另外还有 10 篇期刊论文，来自 TMLR、TPAMI、JMLR 和 Nature 系列期刊(2025 年和 2026 年)。候选来自 arXiv 的论文备注，备注里要写明已被录用并链接项目页；页面必须能打开，workshop 论文不收。候选共 907 个。大多数会议每年有 40 个以上候选，CHI 2026 只有 19 个，EMNLP 2025 有 37 个。</p>
+<p><b>50 个研究者主页</b>，从 236 位候选中选出，候选按三条固定规则收集。第一条是 ACM 图灵奖得主(2018–2025 年)，以及 NeurIPS、ICML、ICLR、CVPR、ACL 的 Best Paper、Outstanding Paper、Test of Time 奖的第一作者或最后作者(2023–2025 年)。第二条是 ACL Outstanding Paper 的第一作者和最后作者(2023–2025 年)。第三条来自认知科学和计算神经科学，包括鲁梅尔哈特奖得主(2010–2025 年)、格鲁什科博士论文奖得主(2018–2025 年)、CogSci 计算建模奖的作者(2020–2025 年)和 CCN 大会主旨报告人(2023–2025 年)。只收个人主页，机构的人员名录页、Google Scholar 和 LinkedIn 不算。</p>
+<p><b>40 个代码 README</b>，分四组各 10 个，分别是视觉(CVPR、ICCV、ECCV)、机器学习(NeurIPS、ICML、ICLR 和期刊)、语言(ACL、EMNLP)，以及图形学、机器人和人机交互(SIGGRAPH、CoRL、CHI)。候选是上面这些项目页链接的官方代码仓库：907 个页面里有 744 个链接了仓库，其中 647 个仓库的 README 不少于 2.5 KB。README 直接用 GitHub API 返回的 HTML 渲染，采用 GitHub 浅色主题和仓库页面的 920px 宽度，再按和下文页面相同的方法评审，标准是头部、图片、结构和完成度。GitHub 固定了字体和颜色，所以 README 的 DESIGN.md 记录的是结构和呈现方式(头部区块、徽章、章节结构、组件)，而不是 CSS。</p>
+<h2>怎么选的</h2>
+<p>只看视觉设计，分两轮选。每个候选都按 1440×900 截图。第一轮由模型评审看完一组候选的首屏，留下 20 个；第二轮看每个页面高 2700px 的长截图，选出 10 个。第一批研究者候选作为一整组评审，先留 60 个，再选 30 个。标准是字体排印、超出模板默认值的独特面貌、布局和节奏、研究成果的展示方式，以及完成度。研究内容、会议和知名度都不考虑；两个页面不相上下时，优先选能带来新风格的那个。只截到加载动画、空白页或反爬页面的候选无法评判，直接去掉。每个页面的入选理由写在它的风格页上。</p>
+<h2>DESIGN.md 怎么写</h2>
+<p>先看实际渲染出来的页面。用无头浏览器读取标题、各级标题、正文、按钮和容器的计算样式，实际加载的字体，首屏结构(按 DOM 顺序)，以及首屏各颜色所占比例。然后再从页面的样式表和标记里补充选择器、悬停和响应式规则。CSS 和渲染结果不一致时，以渲染结果为准。每个文件都按固定的章节顺序写(Overview、First Viewport、配色/字体/间距 token、Layout Metrics、Components、Page Modules、套用到其他内容时的建议、给 agent 的提示词指南和 Quick Start)，并自动检查提示词里用到的每个颜色是否都在 token 表里。270 条里有 270 条对照过实际渲染的页面。DESIGN.md 只写英文版，这样所有读者和编程 agent 用的都是同一份文本。</p>
+<p>方法在一次还原测试之后做过修订。只拿到 DESIGN.md 和另一份内容的制作者重做了 5 个页面，一个不知道原页面的评判者把重做的页面和原页面配对，再由分析者对照线上页面按 1 到 5 分打相似度。用只根据 CSS 写的第一版时，评判者 5 个全部配对正确，但相似度平均只有 3.0(2 到 4)，主要原因是 CSS 里写了、页面上却没有显示的值。用现在的版本，在同样 5 个页面上做同样的测试，仍然全部配对正确，相似度平均 4.0(5 个都是 4 分)。另外抽查了 10 个文件，约 129 处说明里有 4 处数值写错，已经改正。</p>
+<h2>截图</h2>
+<p>每条都展示原页面首屏的截图，缩小到 1200×750，注明版权归作者所有，并链接回原页面。和其他设计参考网站一样，截图只用于参考和比较。DESIGN.md 描述的是视觉风格，不是作者发布的官方指南。</p>
+<h2>许可与引用</h2>
+<p>DESIGN.md 文件、入选名单和网站文字采用 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a> 许可。注明 Look et al.(Dengzhe Hou)即可用于非商业用途；商业使用请先联系。代码采用 MIT 许可。截图归各页面作者所有，不在这两个许可范围内。引用时请写 Hou, D. (2026), <i>Look et al.: A Design Library of Academic Web Pages for Humans and AI Agents</i>, Zenodo, <a href="https://doi.org/10.5281/zenodo.23718470" target="_blank" rel="noopener">doi:10.5281/zenodo.23718470</a>。</p>
+<h2>删除</h2>
+<p>如果你是页面作者，希望删除或更正你的页面或截图，请通过<a href="https://github.com/dengzhe-hou/looketal/issues/new?template=removal.yml" target="_blank" rel="noopener">删除申请表</a>(GitHub 上的简短表单)提交，我们会撤下。申请由人工处理，通常几天内完成。</p></section></main></div>
+<script src="../assets/data.zh.js"></script><script src="../assets/site.js"></script></body></html>

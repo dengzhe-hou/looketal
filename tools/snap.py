@@ -1,8 +1,9 @@
 """Capture above-the-fold screenshots with headless Chrome and write webp thumbnails.
 
-Usage: python -I -B snap.py OUT_DIR URLS_JSON [--workers 4] [--tall] [--wait MS]
+Usage: python -I -B snap.py OUT_DIR URLS_JSON [--workers 4] [--tall] [--wait MS] [--width PX]
 URLS_JSON is a list of {"slug": ..., "url": ...}. For each slug writes OUT_DIR/<slug>.png (raw 1440x900),
 OUT_DIR/<slug>.webp (1200x750) and OUT_DIR/<slug>.card.webp (640x400). Prints a JSON status list.
+--width sets a narrower window (16:10 kept), e.g. 968 for a rendered README whose column is 920px.
 """
 import json
 import subprocess
@@ -14,7 +15,8 @@ from pathlib import Path
 from PIL import Image
 
 CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-W, H = 1440, 900
+W = int(sys.argv[sys.argv.index("--width") + 1]) if "--width" in sys.argv else 1440
+H = W * 5 // 8
 TALL = "--tall" in sys.argv
 WAIT = "--timeout=" + (sys.argv[sys.argv.index("--wait") + 1] if "--wait" in sys.argv else "10000")
 
@@ -45,7 +47,7 @@ def shoot(item, out):
     if TALL:
         # taller window for judging what lies below the fold (100vh heroes stretch, so thumbnails stay on the 900px shot)
         tall = out / f"{item['slug']}.tall.png"
-        if run_chrome(item["url"], tall, out, "--timeout=12000", (W, 2700)) and tall.exists():
+        if run_chrome(item["url"], tall, out, "--timeout=12000", (W, W * 15 // 8)) and tall.exists():
             Image.open(tall).convert("RGB").resize((720, 1350), Image.LANCZOS).save(out / f"{item['slug']}.tall.webp", "WEBP", quality=72)
             tall.unlink()
     lo, hi = im.convert("L").getextrema()
