@@ -31,12 +31,21 @@
     return `<div class="spec" style="background:${esc(bg)};color:${esc(text)};font-family:${font}system-ui,sans-serif" aria-hidden="true">
       <b class="aa">Aa</b><span style="color:${esc(accent)}">${esc(e.fonts[0] || "system font")}</span><div class="pills">${pills}</div>${strip(e)}</div>`;
   }
-  const thumb = e => e.shot ? `<div class="shot"><img src="assets/shots/${esc(e.slug)}.card.webp" alt="" loading="lazy" width="640" height="400">${strip(e)}</div>` : specimen(e);
+  const thumb = e => e.shot ? `<div class="shot"${e.tall ? ` data-tall="assets/shots/${esc(e.slug)}.tall.webp"` : ""}><img src="assets/shots/${esc(e.slug)}.card.webp" alt="" loading="lazy" width="640" height="400">${strip(e)}</div>` : specimen(e);
   function card(e) {
     const meta = e.kind === "project" ? e.venue : `Researcher · ${e.venue}`;
     return `<a class="card" href="s/${esc(e.slug)}.html">${thumb(e)}<div class="cbody"><div class="meta">${esc(meta)}</div>
       <div class="name">${esc(e.title)}</div><div class="mood">${esc(e.mood)}</div></div></a>`;
   }
+
+  // hover preview: on first hover a card fetches the tall capture, which then scrolls inside the card
+  document.addEventListener("pointerover", ev => {
+    const box = ev.target.closest && ev.target.closest(".shot[data-tall]");
+    if (!box || box.querySelector("img.tall")) return;
+    const im = new Image(); im.className = "tall"; im.alt = ""; im.decoding = "async";
+    im.onload = () => requestAnimationFrame(() => im.classList.add("ready"));
+    im.src = box.dataset.tall; box.prepend(im);
+  });
 
   // ---- browse page ----
   if ($("grid") && $("filters")) {

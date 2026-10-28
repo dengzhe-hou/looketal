@@ -133,6 +133,7 @@ def load_entries():
         }
         e["specimen"] = pick_roles(e["palette"])
         e["shot"] = (ROOT / "content" / "shots" / f"{slug}.card.webp").exists()
+        e["tall"] = (ROOT / "content" / "shots" / f"{slug}.tall.webp").exists()
         entries.append((e, md, pre, sections))
     entries.sort(key=lambda x: (x[0]["kind"], x[0]["conf"], -(x[0]["year"] or 0), x[0]["slug"]))
     return entries
@@ -149,7 +150,7 @@ def nav(prefix, active):
                     for h, t, k in items)
     return f"""<aside class="side"><a class="brand" href="{prefix}index.html"><span class="mark">et<br>al.</span><span>{SITE}</span></a>
 <nav>{links}</nav><button class="theme-toggle" id="theme" type="button" aria-label="Color theme">Theme: auto</button>
-<div class="side-foot">Screenshots link to the original pages.<br>Styles measured from public HTML/CSS.</div></aside>"""
+<div class="side-foot">Screenshots © their authors, linked to the original pages.<br>DESIGN.md text <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>, code MIT.</div></aside>"""
 
 
 def page(title, body, prefix, active, desc=TAGLINE, extra_head=""):
@@ -180,7 +181,9 @@ def strip(e):
 
 def thumb(e, prefix):
     if e.get("shot"):
-        return (f'<div class="shot"><img src="{prefix}assets/shots/{e["slug"]}.card.webp" alt="" loading="lazy" '
+        # the tall capture is fetched on first hover (site.js) and scrolls inside the card
+        tall = f' data-tall="{prefix}assets/shots/{e["slug"]}.tall.webp"' if e.get("tall") else ""
+        return (f'<div class="shot"{tall}><img src="{prefix}assets/shots/{e["slug"]}.card.webp" alt="" loading="lazy" '
                 f'width="640" height="400">{strip(e)}</div>')
     return specimen(e)
 
@@ -193,6 +196,15 @@ def card(e, prefix):
 
 
 # ---------- pages ----------
+
+def wall(es):
+    """Two rows of thumbnails drifting in opposite directions; each row is doubled so the loop is seamless."""
+    shots = [e for e in es if e.get("shot")]
+    def row(items, cls):
+        cells = "".join(f'<a href="s/{e["slug"]}.html" tabindex="-1"><img src="assets/shots/{e["slug"]}.card.webp" alt="" width="640" height="400"></a>' for e in items)
+        return f'<div class="wrow {cls}"><div class="wtrack">{cells}{cells}</div></div>'
+    return f'<div class="wall" aria-hidden="true">{row(shots[0::2][:18], "r1")}{row(shots[1::2][:18], "r2")}</div>'
+
 
 def build_home(entries):
     es = [e for e, *_ in entries]
@@ -212,6 +224,7 @@ each with an AI-readable DESIGN.md: colors, type, spacing, components and page m
 <div class="quick"><a href="browse.html?kind=project">Project pages <span>{sum(e['kind']=='project' for e in es)}</span></a>
 <a href="browse.html?kind=researcher">Researcher pages <span>{sum(e['kind']=='researcher' for e in es)}</span></a>
 <a href="collections.html">Collections</a><a href="prompts.html">Design prompts</a></div></header>
+{wall(es)}
 <div class="facets">
 {facet("Venues", "conf", sorted(confs.items()))}
 {facet("Years", "year", sorted(years.items(), reverse=True))}
@@ -279,7 +292,7 @@ def build_style(e, md, pre, sections, entries):
 <div class="crumbs">{crumbs}</div>
 <h1 class="sname">{esc(e['title'])}</h1>
 <p class="smood">{esc(e['mood'])}</p>
-{f'<figure class="bigshot"><a href="{esc(e["url"])}" target="_blank" rel="noopener"><img src="../assets/shots/{e["slug"]}.webp" alt="Screenshot of {esc(e["title"])}" width="1200" height="750"></a><figcaption>Screenshot of <a href="{esc(e["url"])}" target="_blank" rel="noopener">{esc(e["url"])}</a>, © the authors. Shown for reference. <a href="{ISSUES}&amp;title=Removal:+{e["slug"]}" target="_blank" rel="noopener">Request removal</a></figcaption></figure>' if e["shot"] else ""}
+{f'<figure class="bigshot"><a class="frame{' scroll' if e['tall'] else ''}" href="{esc(e["url"])}" target="_blank" rel="noopener"><span class="bar"><i></i><i></i><i></i><b>{esc(re.sub(r"^https?://", "", e["url"]).rstrip("/"))}</b></span><span class="view"><img src="../assets/shots/{e["slug"]}.{'tall.webp' if e['tall'] else 'webp'}" alt="Screenshot of {esc(e["title"])}" width="{720 if e['tall'] else 1200}" height="{1350 if e['tall'] else 750}"></span></a><figcaption>Screenshot of <a href="{esc(e["url"])}" target="_blank" rel="noopener">{esc(e["url"])}</a>, © the authors. Shown for reference. <a href="{ISSUES}&amp;title=Removal:+{e["slug"]}" target="_blank" rel="noopener">Request removal</a></figcaption></figure>' if e["shot"] else ""}
 {specimen(e, big=True)}
 <div class="sactions"><a class="btn primary" href="{esc(e['url'])}" target="_blank" rel="noopener">Visit page ↗</a>
 <a class="btn" href="../designs/{e['slug']}.md" download>Download DESIGN.md</a></div>
@@ -378,6 +391,8 @@ def build_about(entries):
 <p>The method was revised after a reconstruction test. Builders given only a DESIGN.md and different content rebuilt five pages, a blind judge tried to match each rebuild to its original, and an analyst scored similarity from 1 to 5 against the live page. With the first version, written from CSS alone, the judge matched all five, but overall similarity averaged 3.0 (2 to 4), mostly because of values the CSS declared and the page never showed. With the current version, the same test on the same five pages again matched all five and averaged 4.0 (all five scored 4). A separate audit of ten other files found 4 wrong values in about 129 checked claims; those were corrected.</p>
 <h2>Screenshots</h2>
 <p>Each entry shows an above-the-fold screenshot of the original page, reduced to 1200×750, credited to the authors and linked back to the live page. Screenshots are shown for reference and comparison, the same way design reference libraries such as Refero do. DESIGN.md files describe visual style; they are not official guides of the authors.</p>
+<h2>License and citation</h2>
+<p>The DESIGN.md files, the selection and the site text are under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>. You can reuse them for non-commercial work with credit to Look et al. (Dengzhe Hou). For commercial use, ask first. The code is MIT. Screenshots belong to the pages' authors and are not covered by either license. To cite the library, use the citation file in the <a href="https://github.com/dengzhe-hou/looketal" target="_blank" rel="noopener">repository</a>.</p>
 <h2>Removal</h2>
 <p>If you are an author and want your page or screenshot removed or corrected, {REMOVAL} and it will be taken down. Requests are handled by hand, usually within a few days.</p></section>"""
     return page(f"About · {SITE}", body, "", "about")
@@ -395,7 +410,7 @@ def main():
     (OUT / "assets" / "shots").mkdir()
     for e, *_ in entries:
         if e["shot"]:
-            for suf in (".webp", ".card.webp"):
+            for suf in (".webp", ".card.webp") + ((".tall.webp",) if e["tall"] else ()):
                 shutil.copy(ROOT / "content" / "shots" / f"{e['slug']}{suf}", OUT / "assets" / "shots" / f"{e['slug']}{suf}")
     # full-text index for search, loaded lazily by the browse page
     idx = {e["slug"]: re.sub(r"```.*?```", " ", md, flags=re.S).lower() for e, md, *_ in entries}

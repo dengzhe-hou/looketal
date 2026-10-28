@@ -46,3 +46,7 @@ python -I -B -m http.server 8765 --directory docs
 ## Screenshots and removal
 
 Each entry shows a reduced above-the-fold screenshot credited to its authors and linked to the live page. Authors can ask for removal or correction through [this form](https://github.com/dengzhe-hou/looketal/issues/new?template=removal.yml).
+
+## License and citation
+
+Code (`tools/`, `.github/`) is MIT (`LICENSE`). DESIGN.md files, the selection, `data/` and site text are CC BY-NC 4.0 (`LICENSE-CONTENT.md`). Screenshots belong to the pages' authors and are covered by neither. Citation metadata is in `CITATION.cff`.

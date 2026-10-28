@@ -81,7 +81,8 @@
    "#16233a",
    "#ffffff"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2026-dise",
@@ -163,7 +164,8 @@
    "#0078d4",
    "#ff9349"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2026-figma",
@@ -243,7 +245,8 @@
    "#181814",
    "#181814"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2026-guidedog",
@@ -324,7 +327,8 @@
    "#1a1a1a",
    "#7a1f1f"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2026-lami",
@@ -405,7 +409,8 @@
    "#1a1a1a",
    "#1a1a1a"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2026-paircoder",
@@ -485,7 +490,8 @@
    "#10202e",
    "#10202e"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2026-progresslm",
@@ -565,7 +571,8 @@
    "#feae6f",
    "#24292f"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2026-the-stackelberg-speaker",
@@ -643,7 +650,8 @@
    "#6366f1",
    "#6366f1"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2026-unleashing-spatial-reasoning",
@@ -724,7 +732,8 @@
    "#1b1916",
    "#ffffff"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-findings-2026-edu",
@@ -803,7 +812,8 @@
    "#1e2328",
    "#1e2328"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2025-cosyn",
@@ -885,7 +895,8 @@
    "#363636",
    "#363636"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2025-dice",
@@ -966,7 +977,8 @@
    "#363636",
    "#0a66c2"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2025-gamebot",
@@ -1048,7 +1060,8 @@
    "#2c3e50",
    "#209cee"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2025-instructpart",
@@ -1130,7 +1143,8 @@
    "#363636",
    "#209cee"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2025-os",
@@ -1210,7 +1224,8 @@
    "#feae6f",
    "#fff0ce"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2025-songcomposer",
@@ -1289,7 +1304,8 @@
    "#159957",
    "#606c71"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2025-symmetrical-visual-contrasti",
@@ -1369,7 +1385,8 @@
    "#363636",
    "#363636"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-2025-tuna",
@@ -1452,7 +1469,8 @@
    "#363636",
    "#209cee"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-findings-2025-afrobench",
@@ -1531,7 +1549,8 @@
    "#111827",
    "#111827"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "acl-findings-2025-slamming",
@@ -1611,7 +1630,8 @@
    "#363636",
    "#363636"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2026-archon",
@@ -1692,7 +1712,8 @@
    "#f4f8ff",
    "#32d6d3"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2026-autogaze",
@@ -1775,7 +1796,8 @@
    "#353535",
    "#000000"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2026-building-a-precise-video-lan",
@@ -1858,7 +1880,8 @@
    "#6b6560",
    "#1a1a1a"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2026-egosound",
@@ -1937,7 +1960,8 @@
    "#0b1220",
    "#1a2440"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2026-multimodal-distribution-matc",
@@ -2017,7 +2041,8 @@
    "#0f172a",
    "#1e293b"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2026-pano3dcomposer",
@@ -2099,7 +2124,8 @@
    "#363636",
    "#363636"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2026-pixel-motion-diffusion-is-wh",
@@ -2179,7 +2205,8 @@
    "#0f172a",
    "#0ea5e9"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2026-reflection-separation",
@@ -2260,7 +2287,8 @@
    "#0f1419",
    "#0f1419"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2026-streamavatar",
@@ -2343,7 +2371,8 @@
    "#1a365d",
    "#2c5282"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2026-unipixie",
@@ -2422,7 +2451,8 @@
    "#0f172a",
    "#334155"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2025-category",
@@ -2505,7 +2535,8 @@
    "#ffffff",
    "#ffffff"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2025-discovering-hidden-visual-co",
@@ -2587,7 +2618,8 @@
    "#333333",
    "#209cee"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2025-long-video-diffusion-generat",
@@ -2669,7 +2701,8 @@
    "#3273dc",
    "#000000"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2025-mirrorverse",
@@ -2752,7 +2785,8 @@
    "#353535",
    "#353535"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2025-perturb-and-revise",
@@ -2830,7 +2864,8 @@
    "#ffffff",
    "#ffffff"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2025-recovering-dynamic-3d-sketch",
@@ -2911,7 +2946,8 @@
    "#2e333d",
    "#404654"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2025-salad",
@@ -2989,7 +3025,8 @@
    "#363636",
    "#363636"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2025-semanticdraw",
@@ -3071,7 +3108,8 @@
    "#732a14",
    "#ab4012"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2025-spatialllm",
@@ -3151,7 +3189,8 @@
    "#000000",
    "#000000"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "cvpr-2025-stereo4d",
@@ -3234,7 +3273,8 @@
    "#363636",
    "#363636"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2026-egoworld",
@@ -3315,7 +3355,8 @@
    "#1f2937",
    "#2563eb"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2026-evolutionary-caching-to-acce",
@@ -3391,7 +3432,8 @@
    "#18181b",
    "#71717a"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2026-factuality-matters",
@@ -3472,7 +3514,8 @@
    "#0078d4",
    "#0078d4"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2026-monocular-normal-estimation",
@@ -3547,7 +3590,8 @@
    "#363636",
    "#363636"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2026-pa3ff",
@@ -3631,7 +3675,8 @@
    "#4a4d55",
    "#0f1115"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2026-spacer",
@@ -3714,7 +3759,8 @@
    "#111111",
    "#111111"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2026-streamsplat",
@@ -3796,7 +3842,8 @@
    "#00b4d8",
    "#363636"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2026-text",
@@ -3877,7 +3924,8 @@
    "#1e293b",
    "#1e293b"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2026-trace",
@@ -3957,7 +4005,8 @@
    "#eae8e4",
    "#eae8e4"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2026-uniedit-flow",
@@ -4033,7 +4082,8 @@
    "#363636",
    "#363636"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2025-agentstudio",
@@ -4114,7 +4164,8 @@
    "#000000",
    "#46aeeb"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2025-cubediff",
@@ -4193,7 +4244,8 @@
    "#000000",
    "#3a3a3a"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2025-dataenvgym",
@@ -4273,7 +4325,8 @@
    "#363636",
    "#363636"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2025-delta",
@@ -4353,7 +4406,8 @@
    "#333333",
    "#777777"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2025-dextrack",
@@ -4432,7 +4486,8 @@
    "#363636",
    "#363636"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2025-dice",
@@ -4507,7 +4562,8 @@
    "#101020",
    "#794590"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2025-ogbench",
@@ -4589,7 +4645,8 @@
    "#333333",
    "#598be7"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2025-protosnap",
@@ -4653,7 +4710,8 @@
    "#212529",
    "#212529"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2025-representation-alignment-for",
@@ -4733,7 +4791,8 @@
    "#000000",
    "#0e710e"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "iclr-2025-vd3d",
@@ -4809,7 +4868,8 @@
    "#212529",
    "#007bff"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2026-counterfactual-residual-data",
@@ -4891,7 +4951,8 @@
    "#1f2933",
    "#1f2933"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2026-dual-mechanisms-of-value-exp",
@@ -4961,7 +5022,8 @@
    "#303039",
    "#303039"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2026-foca",
@@ -5038,7 +5100,8 @@
    "#141b24",
    "#141b24"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2026-infoflow-kv",
@@ -5120,7 +5183,8 @@
    "#f0f4f9",
    "#111723"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2026-miro",
@@ -5191,7 +5255,8 @@
    "#e6e6e6",
    "#ff9a5c"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2026-modus",
@@ -5273,7 +5338,8 @@
    "#2c5d63",
    "#2c5d63"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2026-photoagent",
@@ -5354,7 +5420,8 @@
    "#f0f0f5",
    "#9898a8"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2026-poet",
@@ -5433,7 +5500,8 @@
    "#1a1459",
    "#a78bfa"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2026-scenesmith",
@@ -5514,7 +5582,8 @@
    "#00b4d8",
    "#fcbf49"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2026-ssi-bench",
@@ -5593,7 +5662,8 @@
    "#660874",
    "#660874"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2025-cellflux",
@@ -5672,7 +5742,8 @@
    "#feae6f",
    "#feae6f"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2025-core-knowledge-deficits-in-m",
@@ -5753,7 +5824,8 @@
    "#1e293b",
    "#6366f1"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2025-direct-discriminative-optimi",
@@ -5832,7 +5904,8 @@
    "#76b900",
    "#76b900"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2025-eq-vae",
@@ -5912,7 +5985,8 @@
    "#008080",
    "#363636"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2025-flextok",
@@ -5993,7 +6067,8 @@
    "#bde0fe",
    "#3273dc"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2025-fql",
@@ -6071,7 +6146,8 @@
    "#333333",
    "#598be7"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2025-how-far-is-video-generation",
@@ -6152,7 +6228,8 @@
    "#feae6f",
    "#fff0ce"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2025-qt",
@@ -6233,7 +6310,8 @@
    "#363636",
    "#a91097"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2025-smpo",
@@ -6312,7 +6390,8 @@
    "#ffffff",
    "#ffffff"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "icml-2025-vlm-cross-modal-reps",
@@ -6393,7 +6472,8 @@
    "#363636",
    "#000000"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2026-aeon",
@@ -6475,7 +6555,8 @@
    "#eef2fa",
    "#c5cfe3"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2026-authority-bias-in-language-m",
@@ -6542,7 +6623,8 @@
    "#141413",
    "#b5452d"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2026-brain",
@@ -6623,7 +6705,8 @@
    "#19243b",
    "#15264c"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2026-change",
@@ -6705,7 +6788,8 @@
    "#111110",
    "#111110"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2026-clean-data-can-still-carry-b",
@@ -6784,7 +6868,8 @@
    "#173e3c",
    "#b5c9bf"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2026-m",
@@ -6865,7 +6950,8 @@
    "#f59e0b",
    "#f59e0b"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2026-misspath",
@@ -6947,7 +7033,8 @@
    "#142030",
    "#f1effb"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2026-ram",
@@ -7027,7 +7114,8 @@
    "#373737",
    "#82afe6"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2026-remind",
@@ -7108,7 +7196,8 @@
    "#111111",
    "#006cfa"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2026-sparse-planning-in-visual-wo",
@@ -7191,7 +7280,8 @@
    "#252823",
    "#b74732"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2025-4dgt",
@@ -7270,7 +7360,8 @@
    "#212529",
    "#007bff"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2025-blurdm",
@@ -7349,7 +7440,8 @@
    "#159957",
    "#1e6bb8"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2025-fast-data-attribution-for-te",
@@ -7415,7 +7507,8 @@
    "#000000",
    "#1367a7"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2025-goatex",
@@ -7496,7 +7589,8 @@
    "#363636",
    "#4a4a4a"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2025-in-the-eye-of-mllm",
@@ -7575,7 +7669,8 @@
    "#000000",
    "#788084"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2025-rectified-point-flow",
@@ -7656,7 +7751,8 @@
    "#6366f1",
    "#4338ca"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2025-seeing-the-wind-from-a-falli",
@@ -7736,7 +7832,8 @@
    "#363636",
    "#4a4a4a"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2025-thermalgen",
@@ -7817,7 +7914,8 @@
    "#4a1fb4",
    "#4a1fb4"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2025-time",
@@ -7895,7 +7993,8 @@
    "#1e293b",
    "#1e293b"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "neurips-2025-zpressor",
@@ -7976,7 +8075,8 @@
    "#212529",
    "#007bff"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-amir-bar",
@@ -8056,7 +8156,8 @@
    "#003e74",
    "#003e74"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-anagh-malik",
@@ -8138,7 +8239,8 @@
    "#1772d0",
    "#1772d0"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-christoph-feichtenhofer",
@@ -8218,7 +8320,8 @@
    "#ffffff",
    "#009900"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-david-b-lindell",
@@ -8300,7 +8403,8 @@
    "#0076df",
    "#0076df"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-david-novotny",
@@ -8379,7 +8483,8 @@
    "#a2a2a2",
    "#787878"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-jaeyeon-kim",
@@ -8459,7 +8564,8 @@
    "#222222",
    "#245b96"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-jonathan-shafer",
@@ -8540,7 +8646,8 @@
    "#ffffff",
    "#06547d"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-junyang-lin",
@@ -8619,7 +8726,8 @@
    "#171717",
    "#5f5f5f"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-liwei-jiang",
@@ -8701,7 +8809,8 @@
    "#1a365d",
    "#2b6cb0"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-matt-deitke",
@@ -8781,7 +8890,8 @@
    "#47515c",
    "#265ed4"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-nikhila-ravi",
@@ -8854,7 +8964,8 @@
    "#282728",
    "#0066cc"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-yaodong-yang",
@@ -8936,7 +9047,8 @@
    "#ffffff",
    "#ffffff"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-aleksander-holynski",
@@ -9008,7 +9120,8 @@
    "#222222",
    "#222222"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-daniel-roy",
@@ -9084,7 +9197,8 @@
    "#a21919",
    "#666600"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-ioannis-gkioulekas",
@@ -9150,7 +9264,8 @@
    "#000000",
    "#1772d0"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-nathan-c-frey",
@@ -9214,7 +9329,8 @@
    "#2a1f17",
    "#9a4520"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-nicholas-carlini",
@@ -9293,7 +9409,8 @@
    "#a02020",
    "#a02020"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-sara-hooker",
@@ -9374,7 +9491,8 @@
    "#2a2a2a",
    "#24678d"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-tiago-pimentel",
@@ -9455,7 +9573,8 @@
    "#e8eaed",
    "#838b96"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-tim-rockt-schel",
@@ -9530,7 +9649,8 @@
    "#d1ccc3",
    "#a8bdcd"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-aaron-defazio",
@@ -9600,7 +9720,8 @@
    "#333333",
    "#333333"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-emmanuel-abbe",
@@ -9669,7 +9790,8 @@
    "#333333",
    "#428bca"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-erik-wijmans",
@@ -9750,7 +9872,8 @@
    "#ecf0f1",
    "#7f8c8d"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-michal-valko",
@@ -9831,7 +9954,8 @@
    "#444444",
    "#00778a"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-nataniel-ruiz",
@@ -9894,7 +10018,8 @@
    "#1b1714",
    "#5f5349"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-niklas-muennighoff",
@@ -9973,7 +10098,8 @@
    "#111111",
    "#111111"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-richard-socher",
@@ -10048,7 +10174,8 @@
    "#000000",
    "#a8a6a1"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-shangbin-feng",
@@ -10122,7 +10249,8 @@
    "#1a1a1a",
    "#1f4fb0"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-tanmay-gupta",
@@ -10201,7 +10329,8 @@
    "#373c44",
    "#181c25"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  },
  {
   "slug": "researcher-yoshua-bengio",
@@ -10282,6 +10411,7 @@
    "#0b404d",
    "#0b404d"
   ],
-  "shot": true
+  "shot": true,
+  "tall": true
  }
 ]
