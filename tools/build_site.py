@@ -17,7 +17,8 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs"
 CATALOG = ROOT / "data" / "catalog.json"  # one record per included page; DESIGN.md text lives in content/designs/
 SITE = "Look et al."
-REMOVAL = "contact us"  # set to the removal channel (e.g. a mailto link) before publishing
+ISSUES = "https://github.com/dengzhe-hou/looketal/issues/new?template=removal.yml"
+REMOVAL = f'<a href="{ISSUES}" target="_blank" rel="noopener">open a removal request</a> (a short GitHub form)'
 TAGLINE = "Design research for academic pages"
 esc = html.escape
 
@@ -278,7 +279,7 @@ def build_style(e, md, pre, sections, entries):
 <div class="crumbs">{crumbs}</div>
 <h1 class="sname">{esc(e['title'])}</h1>
 <p class="smood">{esc(e['mood'])}</p>
-{f'<figure class="bigshot"><a href="{esc(e["url"])}" target="_blank" rel="noopener"><img src="../assets/shots/{e["slug"]}.webp" alt="Screenshot of {esc(e["title"])}" width="1200" height="750"></a><figcaption>Screenshot of <a href="{esc(e["url"])}" target="_blank" rel="noopener">{esc(e["url"])}</a>, © the authors. Shown for reference.</figcaption></figure>' if e["shot"] else ""}
+{f'<figure class="bigshot"><a href="{esc(e["url"])}" target="_blank" rel="noopener"><img src="../assets/shots/{e["slug"]}.webp" alt="Screenshot of {esc(e["title"])}" width="1200" height="750"></a><figcaption>Screenshot of <a href="{esc(e["url"])}" target="_blank" rel="noopener">{esc(e["url"])}</a>, © the authors. Shown for reference. <a href="{ISSUES}&amp;title=Removal:+{e["slug"]}" target="_blank" rel="noopener">Request removal</a></figcaption></figure>' if e["shot"] else ""}
 {specimen(e, big=True)}
 <div class="sactions"><a class="btn primary" href="{esc(e['url'])}" target="_blank" rel="noopener">Visit page ↗</a>
 <a class="btn" href="../designs/{e['slug']}.md" download>Download DESIGN.md</a></div>
@@ -378,7 +379,7 @@ def build_about(entries):
 <h2>Screenshots</h2>
 <p>Each entry shows an above-the-fold screenshot of the original page, reduced to 1200×750, credited to the authors and linked back to the live page. Screenshots are shown for reference and comparison, the same way design reference libraries such as Refero do. DESIGN.md files describe visual style; they are not official guides of the authors.</p>
 <h2>Removal</h2>
-<p>If you are an author and want your page or screenshot removed or corrected, {REMOVAL} and it will be taken down.</p></section>"""
+<p>If you are an author and want your page or screenshot removed or corrected, {REMOVAL} and it will be taken down. Requests are handled by hand, usually within a few days.</p></section>"""
     return page(f"About · {SITE}", body, "", "about")
 
 

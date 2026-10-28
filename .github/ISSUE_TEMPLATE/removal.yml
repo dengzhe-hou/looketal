@@ -1,0 +1,25 @@
+name: Removal or correction request
+description: Ask for a page or screenshot to be removed from Look et al., or for an entry to be corrected.
+title: "Removal: "
+labels: ["removal"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL or style page on Look et al.
+    validations:
+      required: true
+  - type: dropdown
+    id: request
+    attributes:
+      label: Request
+      options:
+        - Remove the entry entirely
+        - Remove the screenshot only
+        - Correct something in the entry
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details (optional)

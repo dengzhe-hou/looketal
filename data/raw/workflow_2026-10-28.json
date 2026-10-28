@@ -1,7 +1,7 @@
 {
  "collector_notes": [
   {
-   "notes": "The relayed user request was only \"名字再想想\" (reconsider the name). This URL-collection step doesn't address that, so the parent should check whether the naming question still needs answering. I took the first 10 candidates of each year in arXiv relevance order. I skipped these: EchoChat 2610.04826 (project page is a bare GitHub repo), remdm.github.io for 2503.00307 (timed out with 000), and later candidates such as CompAdapt (comment says \"Submitted\", not accepted) and Tensor Product Attention (links to a GitHub repo). None of the 20 kept entries mentions a workshop. SatNav is in the NeurIPS 2026 Evaluations and Datasets track. The first page of 100 results per year was enough, so I didn't paginate further and didn't run the co:\"Accepted to NeurIPS\" query. arXiv's API redirected http to https, so I used the https endpoint. Scratch candidate lists are in C:\\Users\\houde\\AppData\\Local\\Temp\\claude\\C--Users-houde-Downloads\\e7675ab5-f0e5-459a-84c3-465f20062980\\scratchpad\\c26.tsv and C:\\Users\\houde\\AppData\\Local\\Temp\\claude\\C--Users-houde-Downloads\\e7675ab5-f0e5-459a-84c3-465f20062980\\scratchpad\\c25.tsv.",
+   "notes": "The relayed user request was only \"名字再想想\" (reconsider the name). This URL-collection step doesn't address that, so the parent should check whether the naming question still needs answering. I took the first 10 candidates of each year in arXiv relevance order. I skipped these: EchoChat 2610.04826 (project page is a bare GitHub repo), remdm.github.io for 2503.00307 (timed out with 000), and later candidates such as CompAdapt (comment says \"Submitted\", not accepted) and Tensor Product Attention (links to a GitHub repo). None of the 20 kept entries mentions a workshop. SatNav is in the NeurIPS 2026 Evaluations and Datasets track. The first page of 100 results per year was enough, so I didn't paginate further and didn't run the co:\"Accepted to NeurIPS\" query. arXiv's API redirected http to https, so I used the https endpoint. Scratch candidate lists are in <scratchpad>\\c25.tsv.",
    "queries": [
     "https://export.arxiv.org/api/query?search_query=co:\"NeurIPS 2026\" AND (co:\"project page\" OR abs:\"project page\" OR co:github.io)&start=0&max_results=100 (totalResults=154)",
     "https://export.arxiv.org/api/query?search_query=co:\"NeurIPS 2025\" AND (co:\"project page\" OR abs:\"project page\" OR co:github.io)&start=0&max_results=100 (totalResults=195)",
@@ -171,7 +171,7 @@
    ],
    "layout": "Single centered Bulma is-max-desktop column (960px, inferred); centered hero, stacked 3rem sections, flat white.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2026-v2w.md",
+   "md_path": "<repo>\\styles\\neurips-2026-v2w.md",
    "issues": "Not viewed in a browser; container width and Google Sans fallback inferred from Bulma/Nerfies defaults. Only arXiv button present.",
    "venue": "NeurIPS 2026",
    "year": 2026,
@@ -246,7 +246,7 @@
    ],
    "layout": "Left-aligned editorial layout, 1280px wide column with 720px reading measure; numbered sections alternating white and #f6f7f9; 4/5/6-column video grids.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2026-remind.md",
+   "md_path": "<repo>\\styles\\neurips-2026-remind.md",
    "issues": "Live page title ends 'Out-of-Sight State Evolution', differing slightly from the batch title. Not viewed in a browser; presence of a visible venue label in the hero not confirmed.",
    "venue": "NeurIPS 2026",
    "year": 2026,
@@ -325,7 +325,7 @@
    ],
    "layout": "Single 1040px column with 780px text measure; centered header; sections separated by inner hairlines; video galleries with toggles, picker and carousel.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2026-holo4d.md",
+   "md_path": "<repo>\\styles\\neurips-2026-holo4d.md",
    "issues": "Stylesheet stacks several cascade layers; last effective values reported. Not viewed in a browser.",
    "venue": "NeurIPS 2026",
    "year": 2026,
@@ -401,7 +401,7 @@
    ],
    "layout": "Dark centered hero (880px), overlapping white teaser card (1080px), then Bulma is-max-desktop sections on slate with alternating #eef2f8 bands.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2026-omniue.md",
+   "md_path": "<repo>\\styles\\neurips-2026-omniue.md",
    "issues": "Bulma default palette in frequency counts is unused and excluded. Only an arXiv button is present. Not viewed in a browser.",
    "venue": "NeurIPS 2026",
    "year": 2026,
@@ -478,7 +478,7 @@
    ],
    "layout": "Centered single column whose width varies per section (860-1120px); monochrome header, colored data sections; no shadows.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2026-satnav.md",
+   "md_path": "<repo>\\styles\\neurips-2026-satnav.md",
    "issues": "Extractor interactive_3d flag comes from a 2D canvas satellite view, not WebGL. Not viewed in a browser.",
    "venue": "NeurIPS 2026 (Evaluations and Datasets Track)",
    "year": 2026,
@@ -554,7 +554,7 @@
    ],
    "layout": "Centered hero, 1120px content column, abstract narrowed to 860px; 3-column grids collapsing to 2 and 1.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2026-preping.md",
+   "md_path": "<repo>\\styles\\neurips-2026-preping.md",
    "issues": "Inter is named but not loaded, so rendered body font depends on the visitor. Not viewed in a browser.",
    "venue": "NeurIPS 2026",
    "year": 2026,
@@ -631,7 +631,7 @@
    ],
    "layout": "1240px shell; centered intro; full-bleed surface band for the three.js gallery; bar-chart result cards.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2026-gensfm.md",
+   "md_path": "<repo>\\styles\\neurips-2026-gensfm.md",
    "issues": "HTML is an empty shell filled by JavaScript; authors, venue and links were read from data/content.json. Extractor missed the arXiv link for this reason. Not viewed in a browser.",
    "venue": "NeurIPS 2026",
    "year": 2026,
@@ -706,7 +706,7 @@
    ],
    "layout": "Full-width alternating white and #f6f7f9 bands with hairlines, 1200px inner content; slider sections 320-960px.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2026-auteur.md",
+   "md_path": "<repo>\\styles\\neurips-2026-auteur.md",
    "issues": "Brand tokens live in an inline style block, not the linked CSS. The 'Demo' button links to a GitHub repo. Not viewed in a browser.",
    "venue": "NeurIPS 2026",
    "year": 2026,
@@ -785,7 +785,7 @@
    ],
    "layout": "Two-column night hero at 1240px (text left, viewer right), then 960px day columns; whole token sets switch per section.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2026-aeon.md",
+   "md_path": "<repo>\\styles\\neurips-2026-aeon.md",
    "issues": "Viewer appearance described from CSS only; not viewed in a browser.",
    "venue": "NeurIPS 2026",
    "year": 2026,
@@ -864,7 +864,7 @@
    ],
    "layout": "Centered hero, 1280px container, 37em prose measure, auto-numbered section titles, mint bands.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2026-which-way-did-it-move.md",
+   "md_path": "<repo>\\styles\\neurips-2026-which-way-did-it-move.md",
    "issues": "Page ships a temporary palette switcher (green default, navy and yellow previews), so visitors may see a different accent. 9 of 13 stylesheets read. Not viewed in a browser.",
    "venue": "NeurIPS 2026",
    "year": 2026,
@@ -927,7 +927,7 @@
    ],
    "layout": "Nerfies single column; hero in is-max-widescreen, body in is-max-desktop; figures at 70% width.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2025-langsplatv2.md",
+   "md_path": "<repo>\\styles\\neurips-2025-langsplatv2.md",
    "issues": "Extractor flags interactive_3d and carousel are false positives from loaded but unused assets. Nerfies credit partly inside a commented-out footer. Not viewed in a browser.",
    "venue": "NeurIPS 2025",
    "year": 2025,
@@ -991,7 +991,7 @@
    ],
    "layout": "Nerfies centered column; 3-column shadowed video grids declared at 150% width (inferred overflow).",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2025-kungfubot.md",
+   "md_path": "<repo>\\styles\\neurips-2025-kungfubot.md",
    "issues": "Grid width of 150% may overflow the container; inferred from CSS only. Carousel assets loaded but unused. Not viewed in a browser.",
    "venue": "NeurIPS 2025",
    "year": 2025,
@@ -1067,7 +1067,7 @@
    ],
    "layout": "Bootstrap container with 12-column rows and 5px gutters; centered cover card, then left-aligned h3 sections with hr rules.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2025-4dgt.md",
+   "md_path": "<repo>\\styles\\neurips-2025-4dgt.md",
    "issues": "Bootstrap file is locally modified; edited rules found by searching it. Container width and h4 size inferred from Bootstrap defaults. Not viewed in a browser.",
    "venue": "NeurIPS 2025 Spotlight",
    "year": 2025,
@@ -1135,7 +1135,7 @@
    ],
    "layout": "Single centered Bulma is-max-desktop column; hero, light abstract band, stacked hero is-small sections with image carousels",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2025-noisygrpo.md",
+   "md_path": "<repo>\\styles\\neurips-2025-noisygrpo.md",
    "issues": "Video Presentation heading has no video in static HTML; teaser and More Works blocks commented out.",
    "venue": "NeurIPS 2025",
    "year": 2025,
@@ -1198,7 +1198,7 @@
    ],
    "layout": "Centered text column with two-column and four-up video grids",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2025-ef-3dgs.md",
+   "md_path": "<repo>\\styles\\neurips-2025-ef-3dgs.md",
    "issues": "No venue shown on page; only an arXiv button; image_card_fader.css returns 404; BibTeX reads 'To be updated'.",
    "venue": "NeurIPS 2025",
    "year": 2025,
@@ -1261,7 +1261,7 @@
    ],
    "layout": "Stacked Bootstrap rows, each col-md-8 offset-md-2, left-aligned headings",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2025-fiper.md",
+   "md_path": "<repo>\\styles\\neurips-2025-fiper.md",
    "issues": "No venue badge on page (only in BibTeX); Lato referenced but not loaded; splat carousel script imported with no visible viewer.",
    "venue": "NeurIPS 2025",
    "year": 2025,
@@ -1338,7 +1338,7 @@
    ],
    "layout": "Gradient landing hero with centered card, then soft sections with left-bar titles and framed media",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2025-rectified-point-flow.md",
+   "md_path": "<repo>\\styles\\neurips-2025-rectified-point-flow.md",
    "issues": "Page labels the paper as NeurIPS 2025 Spotlight while batch metadata says NeurIPS 2025; WebGL viewers not exercised.",
    "venue": "NeurIPS 2025",
    "year": 2025,
@@ -1398,7 +1398,7 @@
    ],
    "layout": "Centered Nerfies column with full-width teaser and four-fifths text",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2025-coopera.md",
+   "md_path": "<repo>\\styles\\neurips-2025-coopera.md",
    "issues": "Paper and Supplementary button markup did not render in the view checked; Poster and second carousel are commented out; venue sized with legacy font tag.",
    "venue": "NeurIPS 2025 Spotlight",
    "year": 2025,
@@ -1456,7 +1456,7 @@
    ],
    "layout": "Short centered column: hero, teaser video, three sections",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2025-planargs.md",
+   "md_path": "<repo>\\styles\\neurips-2025-planargs.md",
    "issues": "Venue class misspelled (publication-veneu); heading typo 'Comparsion'; extractor interactive_3d flag not confirmed.",
    "venue": "NeurIPS 2025",
    "year": 2025,
@@ -1524,7 +1524,7 @@
    ],
    "layout": "Hero then long three-column video galleries with centered headings",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\neurips-2025-goatex.md",
+   "md_path": "<repo>\\styles\\neurips-2025-goatex.md",
    "issues": "No Paper/arXiv/Code buttons in hero; captions at 0.6rem; template title fragment 'Tab Highlight Example' left in head; extractor missed Nerfies footer credit.",
    "venue": "NeurIPS 2025",
    "year": 2025,
@@ -1599,7 +1599,7 @@
    ],
    "layout": "Single 900px column, alternating white and tinted sections, figure cards",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2026-dynatok.md",
+   "md_path": "<repo>\\styles\\icml-2026-dynatok.md",
    "issues": "Page marked under construction; Code button disabled.",
    "venue": "ICML 2026",
    "year": 2026,
@@ -1682,7 +1682,7 @@
    ],
    "layout": "Centered column with fixed left floating TOC; wide interactive blocks up to 1400px",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2026-interruptible-lrms.md",
+   "md_path": "<repo>\\styles\\icml-2026-interruptible-lrms.md",
    "issues": "Orange palette assignment to Self-doubt inferred from color counts; interactive components not exercised.",
    "venue": "ICML 2026",
    "year": 2026,
@@ -1755,7 +1755,7 @@
    ],
    "layout": "Sticky nav, centered hero, full-width sections with distinct lilac backgrounds and grid cards",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2026-ssi-bench.md",
+   "md_path": "<repo>\\styles\\icml-2026-ssi-bench.md",
    "issues": "No BibTeX block in static HTML; leaderboard is JS-rendered and was not inspected loaded; h2 weight inferred.",
    "venue": "ICML 2026",
    "year": 2026,
@@ -1830,7 +1830,7 @@
    ],
    "layout": "Centered hero then alternating full-width bands with centered titles; containers 1120px and 1500px",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2026-agsm.md",
+   "md_path": "<repo>\\styles\\icml-2026-agsm.md",
    "issues": "Page shows ICML 2026 (Spotlight) while batch metadata says ICML 2026; body size and title line 2 size inferred.",
    "venue": "ICML 2026",
    "year": 2026,
@@ -1891,7 +1891,7 @@
    ],
    "layout": "Single 960px column with left-aligned section titles and stacked figures",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2026-d2.md",
+   "md_path": "<repo>\\styles\\icml-2026-d2.md",
    "issues": "No venue on page; results-table and subfig-grid classes have no CSS rules; fixed-width inline figures (up to 2000px).",
    "venue": "ICML 2026",
    "year": 2026,
@@ -1966,7 +1966,7 @@
    ],
    "layout": "Centered 980px column with 820px narrow blocks",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2026-idlm.md",
+   "md_path": "<repo>\\styles\\icml-2026-idlm.md",
    "issues": "Badge corner radius inferred from shields.io default.",
    "venue": "ICML 2026",
    "year": 2026,
@@ -2045,7 +2045,7 @@
    ],
    "layout": "Sticky frosted header, 1248px column, centered hero, 28px-radius white cards, two-column method grid",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2026-tapsampling.md",
+   "md_path": "<repo>\\styles\\icml-2026-tapsampling.md",
    "issues": "Page title says 'Homepage Preview' and header shows 'Preview / EN'. Table row highlight cascade (.tapsampling-row vs .ours-row) inferred, not render-checked."
   },
   {
@@ -2123,7 +2123,7 @@
    ],
    "layout": "Bulma is-max-desktop 960px column; tabbed interactive viewer area up to 64em; 6-column image grids",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2026-fr3d.md",
+   "md_path": "<repo>\\styles\\icml-2026-fr3d.md",
    "issues": "Viser embeds not loaded; hidden GitHub-Pages notice banner present in markup. Code link flagged by extractor but location not confirmed."
   },
   {
@@ -2197,7 +2197,7 @@
    ],
    "layout": "Bulma 960px column (1000px teaser), one full-bleed dark band, grouped video gallery",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2026-t3-video.md",
+   "md_path": "<repo>\\styles\\icml-2026-t3-video.md",
    "issues": "Page shows no venue (ICML 2026 from arXiv comment only). Sortable leaderboard-table CSS defined but no table in static HTML; gallery content JS-populated, inferred from CSS."
   },
   {
@@ -2278,7 +2278,7 @@
    ],
    "layout": "1200px column with full-bleed alternating #fafbfc/white bands; 3-up and 2-up video grids",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2026-grt.md",
+   "md_path": "<repo>\\styles\\icml-2026-grt.md",
    "issues": "No footer or template credit. Motion title and badge animation described from code only."
   },
   {
@@ -2349,7 +2349,7 @@
    ],
    "layout": "Bulma 960px column, full-width video carousels, inline flex comparison rows, fixed top-left TOC",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2025-riflex.md",
+   "md_path": "<repo>\\styles\\icml-2025-riflex.md",
    "issues": "Page shows no venue (ICML 2025 from arXiv comment). Commented-out section excluded. Highlighter hover effect and TOC overlap inferred from CSS."
   },
   {
@@ -2427,7 +2427,7 @@
    ],
    "layout": "Bulma 960px column, report-style with TOC, 8 h2 and 6 h3 sections, figures at 80-120% width",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2025-dplm-2-1.md",
+   "md_path": "<repo>\\styles\\icml-2025-dplm-2-1.md",
    "issues": "static/css/style.css returned empty. A commented-out 'ICCV 2023 (Oral, Best Student Paper)' line from the source template remains in the HTML."
   },
   {
@@ -2491,7 +2491,7 @@
    ],
    "layout": "Full-width dimmed image banner (min 30vh) over a Bulma 960px column",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2025-smpo.md",
+   "md_path": "<repo>\\styles\\icml-2025-smpo.md",
    "issues": "Four author links have empty href. Commented-out 'Ranni' headings from a previous project remain in source. Banner image colors not seen."
   },
   {
@@ -2554,7 +2554,7 @@
    ],
    "layout": "Bootstrap 3 grid, centered header and 8/12 teaser, left-aligned prose under light 48px h1 section heads",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2025-fql.md",
+   "md_path": "<repo>\\styles\\icml-2025-fql.md",
    "issues": "Bootstrap contextual colors appear in extractor frequencies but are unused; venue only in BibTeX."
   },
   {
@@ -2627,7 +2627,7 @@
    ],
    "layout": "Mixed widths: 80% full-HD teaser, three-quarter abstract column, 960px text, floated figures",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2025-eq-vae.md",
+   "md_path": "<repo>\\styles\\icml-2025-eq-vae.md",
    "issues": "Link-block anchors are nested/unbalanced in the source; effect on rendering not confirmed. Bulma button colors taken as Bulma 0.9 defaults for the classes used."
   },
   {
@@ -2699,7 +2699,7 @@
    ],
    "layout": "Single max-w-4xl (56rem) column, videos capped at 42rem, sections split by gray-200 rules",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2025-sounding-that-object.md",
+   "md_path": "<repo>\\styles\\icml-2025-sounding-that-object.md",
    "issues": "Source Sans 3 is loaded but not applied by any rule (inferred). Extractor publication_list flag is a false positive. Dark mode only via localStorage theme, no toggle on this page."
   },
   {
@@ -2768,7 +2768,7 @@
    ],
    "layout": "Google Sites single centered column; serif header, sans body, stacked Drive video iframes",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2025-biassemble.md",
+   "md_path": "<repo>\\styles\\icml-2025-biassemble.md",
    "issues": "No BibTeX. Page <title> is '首页'. Google system tokens (--gm3/--ws-sys) excluded as chrome. Title size per breakpoint inferred from theme CSS."
   },
   {
@@ -2833,7 +2833,7 @@
    ],
    "layout": "Bulma 960px column, #fafafa light bands, figures in centered flex rows at percentage widths",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2025-comemo.md",
+   "md_path": "<repo>\\styles\\icml-2025-comemo.md",
    "issues": "Head meta still contains template placeholder 'KEYWORDS SHOULD BE PLACED HERE'. Results are table images, not HTML tables."
   },
   {
@@ -2907,7 +2907,7 @@
    ],
    "layout": "Full-width medium image hero with 60% overlay over a Bulma 960px column; hub linking to satellite HTML pages",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2025-wam.md",
+   "md_path": "<repo>\\styles\\icml-2025-wam.md",
    "issues": "Commented-out template leftovers (lorem ipsum subtitle, 'Another Carousel', video section, arXiv button) excluded. .hero overlay rule targets every .hero. Banner image colors not seen."
   },
   {
@@ -2973,7 +2973,7 @@
    ],
    "layout": "Single centered column capped at 70vw; figures split 30/70 with text; white sections separated by thin #ededed rules.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\icml-2025-vlm-cross-modal-reps.md",
+   "md_path": "<repo>\\styles\\icml-2025-vlm-cross-modal-reps.md",
    "issues": "Not rendered in browser; static evidence only. Bootstrap 4 palette in raw counts treated as unused residue."
   },
   {
@@ -3037,7 +3037,7 @@
    ],
    "layout": "Results-first single centered Bulma column; video tiles on black in carousel; method near end.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2026-robomaster.md",
+   "md_path": "<repo>\\styles\\iclr-2026-robomaster.md",
    "issues": "Not rendered; static evidence only. Castoro loaded but unused (inferred)."
   },
   {
@@ -3094,7 +3094,7 @@
    ],
    "layout": "Body text-align center; Bootstrap col-md-8 offset-2 column; 2-up video grid collapsing under 576px; no footer.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2026-aim.md",
+   "md_path": "<repo>\\styles\\iclr-2026-aim.md",
    "issues": "Local CSS ../format/app.css and ../format/bootstrap.min.css return 404, so page renders on CDN Bootstrap 3 defaults; title text in HTML truncated ('Disentanglemen'); Video icon has no anchor; no template credit. Not rendered."
   },
   {
@@ -3160,7 +3160,7 @@
    ],
    "layout": "Centered single column of many short narrative sections with generous section-title margins; light abstract band.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2026-stitch.md",
+   "md_path": "<repo>\\styles\\iclr-2026-stitch.md",
    "issues": "Not rendered; static evidence only. Inline style block duplicated in source."
   },
   {
@@ -3221,7 +3221,7 @@
    ],
    "layout": "Single centered column; full-width gallery widgets; gradient hr dividers; still images only (no video).",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2026-uniedit-flow.md",
+   "md_path": "<repo>\\styles\\iclr-2026-uniedit-flow.md",
    "issues": "Not rendered. Several Google display fonts requested but unused; one assets/css directory path errored during extraction. Roles of #5555AA, #CAA6CA, #5D9EAB inferred from single inline uses."
   },
   {
@@ -3278,7 +3278,7 @@
    ],
    "layout": "Stacked 16px-radius #f8fafd tiles in one column; comparison grids hidden behind small toggles; rules capped at 960px.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2026-ufo-4d.md",
+   "md_path": "<repo>\\styles\\iclr-2026-ufo-4d.md",
    "issues": "Not rendered; static evidence only."
   },
   {
@@ -3342,7 +3342,7 @@
    ],
    "layout": "Teaser-first single column with tightened negative margins; dense image gallery.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2026-seal.md",
+   "md_path": "<repo>\\styles\\iclr-2026-seal.md",
    "issues": "Not rendered. Extractor found no named template string; credit inferred from footer thanks."
   },
   {
@@ -3404,7 +3404,7 @@
    ],
    "layout": "Stock Nerfies single centered column, four sections.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2026-color3d.md",
+   "md_path": "<repo>\\styles\\iclr-2026-color3d.md",
    "issues": "Not rendered. Extractor's interactive_3d flag appears to be a false positive (no 3D viewer script loaded). No arXiv button on page."
   },
   {
@@ -3471,7 +3471,7 @@
    ],
    "layout": "Editorial left-aligned layout: hero text left with faded image right; numbered sections with 3-column pillar grids and auto-fill video grids; one column under 900px.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2026-pa3ff.md",
+   "md_path": "<repo>\\styles\\iclr-2026-pa3ff.md",
    "issues": "Not rendered. No BibTeX block and no Paper/arXiv button in the link row. Role of #fbbf24 glyphs inferred."
   },
   {
@@ -3533,7 +3533,7 @@
    ],
    "layout": "Single centered column; results panes at fixed 300px/467px widths (desktop-oriented); 3-column grid.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2026-surfsplat.md",
+   "md_path": "<repo>\\styles\\iclr-2026-surfsplat.md",
    "issues": "Not rendered. interactive_3d flag reflects zoom/slider widgets, not a 3D viewer. Three jQuery versions loaded."
   },
   {
@@ -3599,7 +3599,7 @@
    ],
    "layout": "Centered docs-style column with sticky nav, hairline-separated sections, 3-column method flow and scrollable 2200px tables.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2026-egoworld.md",
+   "md_path": "<repo>\\styles\\iclr-2026-egoworld.md",
    "issues": "Not rendered. HTML color counts like #8595 are numeric character references, ignored. Some heading weights inferred."
   },
   {
@@ -3657,7 +3657,7 @@
    ],
    "layout": "Single centered 768px column with hr dividers; Bootstrap col-3/col-4 video rows.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2025-sg-i2v.md",
+   "md_path": "<repo>\\styles\\iclr-2025-sg-i2v.md",
    "issues": "Not rendered. The only button is labeled Code but links to the arXiv abstract."
   },
   {
@@ -3717,7 +3717,7 @@
    ],
    "layout": "Results-first single centered column; same stylesheet as RoboMaster; related works listed in footer.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2025-3dtrajmaster.md",
+   "md_path": "<repo>\\styles\\iclr-2025-3dtrajmaster.md",
    "issues": "Not rendered; static evidence only."
   },
   {
@@ -3786,7 +3786,7 @@
    ],
    "layout": "Custom single-file page: frosted header card (1200px) with animated rainbow title and 9-column author chip grid, then stacked white rounded section cards up to 1270px; 51 GIFs in percentage-width tables.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2025-i2vcontrol-camera.md",
+   "md_path": "<repo>\\styles\\iclr-2025-i2vcontrol-camera.md",
    "issues": "Inter is loaded but never assigned, so body likely renders in browser default serif (unverified); Youtube button href is '#'."
   },
   {
@@ -3853,7 +3853,7 @@
    ],
    "layout": "Stock Nerfies single 960px centered column, centered headings, justified text, all-white surface.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2025-setok.md",
+   "md_path": "<repo>\\styles\\iclr-2025-setok.md",
    "issues": "URL redirects to http://sqwu.top/SeTok-web/; Demo and Video buttons link to 'xxx'; no venue shown on page; Gradio/Caveat/Roboto CSS loaded but unused."
   },
   {
@@ -3904,7 +3904,7 @@
    ],
    "layout": "Single 950px Arial column with 80px top margin, inline-sized span headings, gradient hr rules and empty gap divs; figures in a col-md-8.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2025-viscoin.md",
+   "md_path": "<repo>\\styles\\iclr-2025-viscoin.md",
    "issues": "No venue label and no BibTeX on page; Google Sans link loaded but unused."
   },
   {
@@ -3967,7 +3967,7 @@
    ],
    "layout": "Stock APPT: white hero, 960px column, grey hero is-light bands for video carousels; 21 videos.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2025-sitcom-crafter.md",
+   "md_path": "<repo>\\styles\\iclr-2025-sitcom-crafter.md",
    "issues": ""
   },
   {
@@ -4032,7 +4032,7 @@
    ],
    "layout": "Stock APPT 960px column; TL;DR band under hero; four full-width figures with centered captions; Further Information list.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2025-atlas-gaussians.md",
+   "md_path": "<repo>\\styles\\iclr-2025-atlas-gaussians.md",
    "issues": "Extractor interactive_3d flag is a false positive (word 'Splatting'); figure alt text left as 'MY ALT TEXT'."
   },
   {
@@ -4090,7 +4090,7 @@
    ],
    "layout": "APPT chrome; galleries of 44 YouTube embeds in four-across square tiles (is-one-quarter, padding-bottom 100%), separated by small hero is-light bands.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2025-visage.md",
+   "md_path": "<repo>\\styles\\iclr-2025-visage.md",
    "issues": "arXiv button commented out with '<ARXIV PAPER ID>' placeholder; Paper links to OpenReview."
   },
   {
@@ -4160,7 +4160,7 @@
    ],
    "layout": "Nerfies 960px column with one #f0f0f0 Highlights band; two 600px-tall autoplay result loops.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2025-larp.md",
+   "md_path": "<repo>\\styles\\iclr-2025-larp.md",
    "issues": "Inline CSS for select boxes and #compGenTable has no matching elements in the HTML."
   },
   {
@@ -4228,7 +4228,7 @@
    ],
    "layout": "Nerfies 960px column with Arial body override and 800px content measure; numbered h4 method steps with MathJax; four case studies.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\iclr-2025-pig.md",
+   "md_path": "<repo>\\styles\\iclr-2025-pig.md",
    "issues": "arXiv button points to https://arxiv.org/ (placeholder)."
   },
   {
@@ -4292,7 +4292,7 @@
    ],
    "layout": "Stock APPT 960px column: grey abstract band, then four section is-small blocks each with one figure and a justified paragraph.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2026-aif.md",
+   "md_path": "<repo>\\styles\\cvpr-2026-aif.md",
    "issues": ""
   },
   {
@@ -4366,7 +4366,7 @@
    ],
    "layout": "Bootstrap jumbotron header; container/row/col-12 sections; figures up to min(82vw,1020px); six video carousel frames up to 1040px on dark mats.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2026-repho.md",
+   "md_path": "<repo>\\styles\\cvpr-2026-repho.md",
    "issues": "Video sources not present in static HTML (likely script-populated, inferred)."
   },
   {
@@ -4431,7 +4431,7 @@
    ],
    "layout": "Nerfies 960px column; 24 canvas split-view video comparisons switched by Bulma tabs and small toggle tabs; teaser in 16px-radius wrapper.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2026-rt-splatting.md",
+   "md_path": "<repo>\\styles\\cvpr-2026-rt-splatting.md",
    "issues": "Extractor interactive_3d flag is a false positive; --dark-* CSS vars declared for unused .scene-pill."
   },
   {
@@ -4505,7 +4505,7 @@
    ],
    "layout": "18px root, 1100px hero and 960px sections on #fafafa; 14 custom 3:2 drag sliders; pill tabs; scroll-reveal sections.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2026-reflection-separation.md",
+   "md_path": "<repo>\\styles\\cvpr-2026-reflection-separation.md",
    "issues": ""
   },
   {
@@ -4576,7 +4576,7 @@
    ],
    "layout": "Bulma 960px column restyled with Tailwind-like tokens (12/16px radii, shadow-sm..xl); fixed top-right More Works card and bottom-right scroll button.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2026-pr-iqa.md",
+   "md_path": "<repo>\\styles\\cvpr-2026-pr-iqa.md",
    "issues": "Inter declared but no webfont linked; extractor interactive_3d flag is a false positive."
   },
   {
@@ -4642,7 +4642,7 @@
    ],
    "layout": "Single centred Bulma column (is-max-desktop, 960px inferred), alternating white and #f8fafc bands, 12/16px radii with soft layered shadows.",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2026-omni-mmsi.md",
+   "md_path": "<repo>\\styles\\cvpr-2026-omni-mmsi.md",
    "issues": "Template placeholders still live on the page (carousel captions 'First image description.', sections 'Another Carousel' and 'Poster'). Bulma palette dominates extractor frequencies but is unused. Section headings use '·' instead of the spec's em dash and the H1 omits the em dash, following the user's global no-long-dash writing rule; other batches use the em dash, so the orchestrator may want to normalize.",
    "venue": "CVPR 2026",
    "year": 2026,
@@ -4713,7 +4713,7 @@
    ],
    "layout": "Single centred Bulma column with comparison sliders capped at 900px, square images, greyscale chrome.",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-findings-2026-translate-noise.md",
+   "md_path": "<repo>\\styles\\cvpr-findings-2026-translate-noise.md",
    "issues": "No explicit template credit line. Extractor image_compare_slider flag was false; the slider is hand-written CSS in an inline style block. Results are images, not HTML tables.",
    "venue": "CVPR 2026 Findings",
    "year": 2026,
@@ -4790,7 +4790,7 @@
    ],
    "layout": "Blog-style single reading column, max 1200px, viewport-relative side gutters 9vw to 27vw; longest page in batch (~10,000px).",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2026-autogaze.md",
+   "md_path": "<repo>\\styles\\cvpr-2026-autogaze.md",
    "issues": "Template's original green link colours (#598864/#7baa86) are overridden by --link-brown variables; listed as legacy. Responsive font sizes measured at ~1,000px viewport only.",
    "venue": "CVPR 2026",
    "year": 2026,
@@ -4851,7 +4851,7 @@
    ],
    "layout": "Single column up to 960px; carousel slides of two 420px images with 1.25rem gap under a slate/blue column header.",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2026-cfg-ctrl.md",
+   "md_path": "<repo>\\styles\\cvpr-2026-cfg-ctrl.md",
    "issues": "Screenshot caught a fade-in animation mid-way, so colours were taken from computed styles. Same template as Omni-MMSI; differences identified by diffing index.css. Heading dash convention differs from other batches (see Omni-MMSI note).",
    "venue": "CVPR 2026",
    "year": 2026,
@@ -4923,7 +4923,7 @@
    ],
    "layout": "Single centred Bulma 1.0 column with tightened section padding (1.5rem); media at 80% width; html pinned to data-theme light.",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-findings-2026-ltgs.md",
+   "md_path": "<repo>\\styles\\cvpr-findings-2026-ltgs.md",
    "issues": "Extractor flags dark_mode_toggle and interactive_3d were false positives (Bulma 1.0 built-in dark scheme in CDN CSS; the word 'Splatting'). Section heading 'Video (todo)' is a placeholder left on the live page. Three linked fonts (Encode Sans, Architects Daughter, Quicksand) show no visible use.",
    "venue": "CVPR 2026 Findings",
    "year": 2026,
@@ -4990,7 +4990,7 @@
    ],
    "layout": "Stacked white 1em-radius cards on a #f7f7f7 ground with 2em body padding; video tiles max 30em in wrap rows.",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2025-track4gen.md",
+   "md_path": "<repo>\\styles\\cvpr-2025-track4gen.md",
    "issues": "No BibTeX and no code link on the page. Only page 1 of 4 measured. Fixed 1073px method image can overflow narrow screens. Extractor title string doubled ('Track4GenTrack4Gen') because the HTML has two title tags.",
    "venue": "CVPR 2025",
    "year": 2025,
@@ -5062,7 +5062,7 @@
    ],
    "layout": "Centred Bulma text column with selectively wider media containers (max 1600px, 90%) and 1px #dbdbdb dividers with 3rem margins.",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2025-par.md",
+   "md_path": "<repo>\\styles\\cvpr-2025-par.md",
    "issues": "Section title size inferred from Bulma is-3 class, not measured. Quantitative results are images, not HTML tables.",
    "venue": "CVPR 2025",
    "year": 2025,
@@ -5134,7 +5134,7 @@
    ],
    "layout": "Centred single column with full-width sample video and #f5f5f5 bands; greyscale chrome, three-colour semantic highlights in text.",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2025-vicas.md",
+   "md_path": "<repo>\\styles\\cvpr-2025-vicas.md",
    "issues": "Highlight colours were inline rgb values converted to hex. HF link is a dataset page, not an interactive Space.",
    "venue": "CVPR 2025",
    "year": 2025,
@@ -5201,7 +5201,7 @@
    ],
    "layout": "Centred single column, video first, alternating #f5f5f5 bands; short page (~3,400px).",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2025-videoscene.md",
+   "md_path": "<repo>\\styles\\cvpr-2025-videoscene.md",
    "issues": "Extractor interactive_3d flag was a false positive (word 'Splat'). index.css contains an unused before/after slider kit (bal-* classes), verified absent from the rendered DOM.",
    "venue": "CVPR 2025",
    "year": 2025,
@@ -5279,7 +5279,7 @@
    ],
    "layout": "Pastel gradient header band then an 80% container with 900px inner blocks of justified Arial text and figures.",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2025-voxelsplat.md",
+   "md_path": "<repo>\\styles\\cvpr-2025-voxelsplat.md",
    "issues": "Extractor interactive_3d flag was a false positive (word 'Splatting'). No footer or template credit. A generic #007bff .button class is declared but off-pattern.",
    "venue": "CVPR 2025",
    "year": 2025,
@@ -5344,7 +5344,7 @@
    ],
    "layout": "Centred column for text, widescreen container for 3-column video grids; sections alternate white and translucent grey.",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2025-optimus-2.md",
+   "md_path": "<repo>\\styles\\cvpr-2025-optimus-2.md",
    "issues": "Author link colour not captured by the computed-style probe; #3273dc inferred from Bulma default and screenshot. index.css declares green hsl(121,100%,36%) author links that the markup does not hit, and sets body font twice (ends as Arial). No footer credit.",
    "venue": "CVPR 2025",
    "year": 2025,
@@ -5409,7 +5409,7 @@
    ],
    "layout": "Google Sites single centred column under the personal-site top bar; no cards, bands or buttons.",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2025-any6d.md",
+   "md_path": "<repo>\\styles\\cvpr-2025-any6d.md",
    "issues": "Vanity URL redirects to sites.google.com/view/taeyeop-lee/any6d. Extractor colour/radius/shadow frequencies are dominated by Google Sites Material 3 chrome (#0b57d0 etc.), which were excluded; only inline content styles were used. Content column width not measured.",
    "venue": "CVPR 2025",
    "year": 2025,
@@ -5474,7 +5474,7 @@
    ],
    "layout": "Centred Bulma column with left-aligned bold 150% section headings and hand-sized figures (100/97/60/50%).",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2025-argus.md",
+   "md_path": "<repo>\\styles\\cvpr-2025-argus.md",
    "issues": "Paper button is commented out in HTML and points to a different arXiv PDF (2403.01749); the Video button links back to the page itself. Unused neon gradient-text class (#00dbde to #fc00ff) in CSS. Table CSS present but zero tables in static HTML.",
    "venue": "CVPR 2025",
    "year": 2025,
@@ -5541,7 +5541,7 @@
    ],
    "layout": "Full-bleed gradient header, then a centered 1000px column of white 8px-radius cards on pale grey; GIF boxes 800px, figures 70% width.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2025-perturb-and-revise.md",
+   "md_path": "<repo>\\styles\\cvpr-2025-perturb-and-revise.md",
    "issues": "Rendered page not viewed. Page BibTeX cites arXiv:2408.00760 (2024), which does not match the paper's arXiv ID 2412.05279.",
    "venue": "CVPR 2025",
    "year": 2025,
@@ -5598,7 +5598,7 @@
    ],
    "layout": "Bulma hero stack alternating white and #f5f5f5 bands; centered four-fifths text column; video carousel.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\cvpr-2025-salad.md",
+   "md_path": "<repo>\\styles\\cvpr-2025-salad.md",
    "issues": "Rendered page not viewed; Biolinum web-font load assumed. No BibTeX section on the page. hsl-to-hex conversion is mine.",
    "venue": "CVPR 2025",
    "year": 2025,
@@ -5663,7 +5663,7 @@
    ],
    "layout": "Single left-aligned 740px reading column with figures and table breaking out to 920/860px.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2026-guidedog.md",
+   "md_path": "<repo>\\styles\\acl-2026-guidedog.md",
    "issues": "Rendered page not viewed; paper-grain texture read from CSS only.",
    "venue": "ACL 2026",
    "year": 2026,
@@ -5728,7 +5728,7 @@
    ],
    "layout": "Bulma hero stack starting with a light title band; centered columns; fixed-height carousel slides.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-findings-2026-wow-bench.md",
+   "md_path": "<repo>\\styles\\acl-findings-2026-wow-bench.md",
    "issues": "Rendered page not viewed. No arXiv button (Paper links to ACL Anthology). Striped-row colour is Bulma default, not measured.",
    "venue": "ACL 2026 Findings",
    "year": 2026,
@@ -5807,7 +5807,7 @@
    ],
    "layout": "Centered 960px Bulma column with fixed glass nav and stat/example card grids.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2026-vc-inspector.md",
+   "md_path": "<repo>\\styles\\acl-2026-vc-inspector.md",
    "issues": "Rendered page not viewed; sticky-nav reveal inferred from CSS.",
    "venue": "ACL 2026",
    "year": 2026,
@@ -5876,7 +5876,7 @@
    ],
    "layout": "1120px container, centered hero, 18px-radius white cards with wide soft shadows, 3-column highlight grid.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2026-vln-nf.md",
+   "md_path": "<repo>\\styles\\acl-2026-vln-nf.md",
    "issues": "Rendered page not viewed; effective font unconfirmed. Code and data links not yet public per page note.",
    "venue": "ACL 2026",
    "year": 2026,
@@ -5946,7 +5946,7 @@
    ],
    "layout": "Centered 980px column (780px narrow) with alternating white and grey bands; two-column method grid.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2026-lami.md",
+   "md_path": "<repo>\\styles\\acl-2026-lami.md",
    "issues": "Rendered page not viewed. Footer contact link points to #.",
    "venue": "ACL 2026",
    "year": 2026,
@@ -6017,7 +6017,7 @@
    ],
    "layout": "Centered Bootstrap container of 16px-radius cards; metric and figure grids collapse under 768px.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2026-dise.md",
+   "md_path": "<repo>\\styles\\acl-2026-dise.md",
    "issues": "Rendered page not viewed; Playfair fallback inferred. No Code button on page (extractor code flag comes from author GitHub links).",
    "venue": "ACL 2026",
    "year": 2026,
@@ -6079,7 +6079,7 @@
    ],
    "layout": "Centered column widened to 1180px for figure sections; flat figures at 70% width with viewport-height caps.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2026-mmerror.md",
+   "md_path": "<repo>\\styles\\acl-2026-mmerror.md",
    "issues": "Rendered page not viewed; section visibility deduced from a CSS hiding selector. Footer is empty, so no template credit on page.",
    "venue": "ACL 2026",
    "year": 2026,
@@ -6154,7 +6154,7 @@
    ],
    "layout": "Centered 960px Bulma column with stat-card grid and one emerald gradient call-out.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-findings-2026-ganitllm.md",
+   "md_path": "<repo>\\styles\\acl-findings-2026-ganitllm.md",
    "issues": "Rendered page not viewed; Noto Sans Bengali source not confirmed. Process note: I accidentally published this .md once as a private claude.ai artifact (https://claude.ai/artifact/YCBVrkETwrisXJM16sc1hr) with an empty edit call; it was not requested and holds a pre-correction version. I did not delete it; the user can remove it if unwanted.",
    "venue": "ACL 2026 Findings",
    "year": 2026,
@@ -6219,7 +6219,7 @@
    ],
    "layout": "Centered four-fifths Bulma column; white sections each with a heading, full-width image and prose.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2026-badscientist.md",
+   "md_path": "<repo>\\styles\\acl-2026-badscientist.md",
    "issues": "Rendered page not viewed. Red/grey hex values are Bulma 0.9.1 defaults inferred from the version banner. Stylesheet names Inter but the HTML links different fonts.",
    "venue": "ACL 2026",
    "year": 2026,
@@ -6289,7 +6289,7 @@
    ],
    "layout": "Centered 1100px container with README-like Markdown sections, a full-bleed TL;DR band and one carded slider.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2026-universalrag.md",
+   "md_path": "<repo>\\styles\\acl-2026-universalrag.md",
    "issues": "Rendered page not viewed. Sticky header styles defined but no header element in markup.",
    "venue": "ACL 2026",
    "year": 2026,
@@ -6353,7 +6353,7 @@
    ],
    "layout": "Bulma column stack, all-white sections, full-width carousels of 200px-tall images.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2025-cosyn.md",
+   "md_path": "<repo>\\styles\\acl-2025-cosyn.md",
    "issues": "Rendered page not viewed. Page shows no venue (ACL 2025 comes from the arXiv comment); BibTeX is an arXiv @article. Extractor's interactive_3d flag is a false positive.",
    "venue": "ACL 2025",
    "year": 2025,
@@ -6417,7 +6417,7 @@
    ],
    "layout": "Single 960px Bulma column with white and #f5f5f5 bands, 2/4-up card grids",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-findings-2025-gear.md",
+   "md_path": "<repo>\\styles\\acl-findings-2025-gear.md",
    "issues": "Rendered header reads 'Submitted to ACL 2025' while arXiv comment states Findings acceptance; noted in file.",
    "person": "Zhili Shen",
    "venue": "ACL 2025 Findings",
@@ -6480,7 +6480,7 @@
    ],
    "layout": "Bootstrap container up to 1140px, centered header, stacked cards with video grids",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2025-jarvis-vla.md",
+   "md_path": "<repo>\\styles\\acl-2025-jarvis-vla.md",
    "issues": "No footer template credit; Barron lineage inferred from CSS. Venue not shown in header.",
    "person": "Muyao Li",
    "venue": "ACL 2025",
@@ -6542,7 +6542,7 @@
    ],
    "layout": "Single 960px centered column, three emoji-headed sections",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-findings-2025-negvqa.md",
+   "md_path": "<repo>\\styles\\acl-findings-2025-negvqa.md",
    "issues": "Exact extent of the aliceblue band not measured.",
    "person": "Yuhui Zhang",
    "venue": "ACL 2025 Findings",
@@ -6606,7 +6606,7 @@
    ],
    "layout": "1200px container, alternating white/grey hero bodies, two-column video rows",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2025-gamebot.md",
+   "md_path": "<repo>\\styles\\acl-2025-gamebot.md",
    "issues": "Rendered top band looked pale lavender rather than the saturated CSS gradient; the softening layer was not traced.",
    "person": "Wenye Lin",
    "venue": "ACL 2025",
@@ -6667,7 +6667,7 @@
    ],
    "layout": "960px column, tabbed cards with half/full columns of bubbles and audio boxes",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-findings-2025-contextdialog.md",
+   "md_path": "<repo>\\styles\\acl-findings-2025-contextdialog.md",
    "issues": "No abstract or BibTeX on the page; author placement below first viewport not checked.",
    "person": "Heeseung Kim",
    "venue": "ACL 2025 Findings",
@@ -6733,7 +6733,7 @@
    ],
    "layout": "960px column with full-width scrolling leaderboards",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2025-prmbench.md",
+   "md_path": "<repo>\\styles\\acl-2025-prmbench.md",
    "issues": "leaderboard.css references an undefined --UCLA-darkblue variable; noted.",
    "person": "Mingyang Song",
    "venue": "ACL 2025",
@@ -6798,7 +6798,7 @@
    ],
    "layout": "960px column, four-fifths text, wide thumbnail tables",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2025-instructpart.md",
+   "md_path": "<repo>\\styles\\acl-2025-instructpart.md",
    "issues": "",
    "person": "Zifu Wan",
    "venue": "ACL 2025",
@@ -6860,7 +6860,7 @@
    ],
    "layout": "Single 900px column with black header and footer bands",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2025-arise.md",
+   "md_path": "<repo>\\styles\\acl-2025-arise.md",
    "issues": "No venue shown on the page; heading sizes are browser defaults (inferred).",
    "person": "Yize Zhang",
    "venue": "ACL 2025",
@@ -6929,7 +6929,7 @@
    ],
    "layout": "960px column, part headings on light bands",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\acl-2025-tuna.md",
+   "md_path": "<repo>\\styles\\acl-2025-tuna.md",
    "issues": "Footer credit sits inside a stray comment marker; leaderboard header uses an undefined CSS variable.",
    "person": "Fanheng Kong",
    "venue": "ACL 2025",
@@ -6989,7 +6989,7 @@
    ],
    "layout": "Wide editorial grid up to 1585px, fixed header, large hero, carousel rows",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-yoshua-bengio.md",
+   "md_path": "<repo>\\styles\\researcher-yoshua-bengio.md",
    "issues": "Cookie banner covered part of the first viewport (not interacted with); aurora wash source not traced.",
    "person": "Yoshua Bengio",
    "venue": "Turing Award 2018",
@@ -7052,7 +7052,7 @@
    ],
    "layout": "3x3 card grid on steel-blue background, compact icon tiles on mobile",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-geoffrey-hinton.md",
+   "md_path": "<repo>\\styles\\researcher-geoffrey-hinton.md",
    "issues": "",
    "person": "Geoffrey Hinton",
    "venue": "Turing Award 2018",
@@ -7117,7 +7117,7 @@
    ],
    "layout": "Two-column table, 140px cream sidebar plus fluid main column with ~30 grey-bar sections",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-yann-lecun.md",
+   "md_path": "<repo>\\styles\\researcher-yann-lecun.md",
    "issues": "No CSS; values transcribed from HTML attributes. Section-bar font color attribute is malformed and not applied.",
    "person": "Yann LeCun",
    "venue": "Turing Award 2018",
@@ -7176,7 +7176,7 @@
    ],
    "layout": "Single unconstrained column of labeled dl lists, all bold due to an unclosed h3",
    "rendered_check": true,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-alfred-aho.md",
+   "md_path": "<repo>\\styles\\researcher-alfred-aho.md",
    "issues": "No CSS; font sizes are browser defaults (inferred). Whole page bold because content is inside an h3.",
    "person": "Alfred V. Aho",
    "venue": "Turing Award 2020",
@@ -7242,7 +7242,7 @@
    ],
    "layout": "Fixed 800px table on grey ground with GIF bevel frame; name banner image, grey nav strip, two-column content",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-jack-dongarra.md",
+   "md_path": "<repo>\\styles\\researcher-jack-dongarra.md",
    "issues": "No CSS beyond a:hover; values read from HTML attributes; font-size px conversions inferred."
   },
   {
@@ -7297,7 +7297,7 @@
    ],
    "layout": "Single column of fixed-width (773-815px) borderless tables, 20px cell padding, doubled HR separators",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-andrew-barto.md",
+   "md_path": "<repo>\\styles\\researcher-andrew-barto.md",
    "issues": "Page has no CSS; extractor returned nothing; font family and sizes are browser defaults (inferred)."
   },
   {
@@ -7349,7 +7349,7 @@
    ],
    "layout": "Unstyled full-width single column; Verdana h2 name, 2px hr, right-floated image",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-richard-sutton.md",
+   "md_path": "<repo>\\styles\\researcher-richard-sutton.md",
    "issues": "No colors declared anywhere; all colors listed are browser defaults marked inferred."
   },
   {
@@ -7445,7 +7445,7 @@
    ],
    "layout": "1100px container, sticky bordered nav, two-column header grid, stacked sections with card list",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-liwei-jiang.md",
+   "md_path": "<repo>\\styles\\researcher-liwei-jiang.md",
    "issues": "Avenir Next is not web-loaded so fallback rendering unverified."
   },
   {
@@ -7522,7 +7522,7 @@
    ],
    "layout": "Fixed 1000px body on charcoal, inner white panel, single column of h3 sections",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-yejin-choi.md",
+   "md_path": "<repo>\\styles\\researcher-yejin-choi.md",
    "issues": "bootstrap.min.css and two Google Fonts CSS links return 404; Monoton/Permanent Marker classes fall back. Font fallback inferred."
   },
   {
@@ -7588,7 +7588,7 @@
    ],
    "layout": "72rem shell, sticky blurred header, hero grid 12rem+1fr, 3-col theme grid, 2-col work grid, responsive at 980/760/560px",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-junyang-lin.md",
+   "md_path": "<repo>\\styles\\researcher-junyang-lin.md",
    "issues": ""
   },
   {
@@ -7645,7 +7645,7 @@
    ],
    "layout": "Bootstrap container, fixed navbar with progress bar, floated 30% profile, publication rows col-sm-2/col-sm-8",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-benjamin-eysenbach.md",
+   "md_path": "<repo>\\styles\\researcher-benjamin-eysenbach.md",
    "issues": "Bootstrap/MDB default palette filtered; heading sizes and container width inferred from Bootstrap defaults; al-folio identified from markup, no footer credit."
   },
   {
@@ -7712,7 +7712,7 @@
    ],
    "layout": "Full-width nav with absolute logo, two-column profile flex, single-column content up to 1200px",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-vaishnavh-nagarajan.md",
+   "md_path": "<repo>\\styles\\researcher-vaishnavh-nagarajan.md",
    "issues": "Root URL is a meta refresh to /home/index.html; extractor rerun on that page. Monokai syntax colors excluded. Futura is a system font, not loaded."
   },
   {
@@ -7785,7 +7785,7 @@
    ],
    "layout": "Fixed two-pane: 300px floated sidebar, tab bar, 650px main column; not responsive",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-aditi-raghunathan.md",
+   "md_path": "<repo>\\styles\\researcher-aditi-raghunathan.md",
    "issues": "Publications are injected from publications.json by JS, so rendered list markup is inferred. Roboto and Inter are loaded but unused."
   },
   {
@@ -7848,7 +7848,7 @@
    ],
    "layout": "Bulma columns: sticky is-4 sidebar, is-8 main; publications as is-mobile thumbnail+text rows",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-jake-snell.md",
+   "md_path": "<repo>\\styles\\researcher-jake-snell.md",
    "issues": "Bulma palette variables excluded; three hex values are my HSL conversions (marked computed). Venue .box colors declared but unused on home page. Inter not web-loaded."
   },
   {
@@ -7922,7 +7922,7 @@
    ],
    "layout": "academicpages two-column: floated ~15% sidebar and ~83% content, 1280px masthead",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-xiangyu-qi.md",
+   "md_path": "<repo>\\styles\\researcher-xiangyu-qi.md",
    "issues": "Solarized syntax colors excluded; template heading sizes inferred."
   },
   {
@@ -7996,7 +7996,7 @@
    ],
    "layout": "175px fixed navy sidebar, 1000px max content with margin-left 175px; sidebar becomes overlay on mobile",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-yi-ren.md",
+   "md_path": "<repo>\\styles\\researcher-yi-ren.md",
    "issues": ""
   },
   {
@@ -8063,7 +8063,7 @@
    ],
    "layout": "Single centered 43em column (90% width), centered header with 2px black rule, floated coauthor filter box; no photo, no thumbnails.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-danica-sutherland.md",
+   "md_path": "<repo>\\styles\\researcher-danica-sutherland.md",
    "issues": "Not rendered in browser; heading sizes and page background are browser defaults marked (inferred)."
   },
   {
@@ -8129,7 +8129,7 @@
    ],
    "layout": "1000px centered table; grid hero (text + 203px cropped portrait) stacking under 840px; text-only news and publication rows.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-jianyuan-wang.md",
+   "md_path": "<repo>\\styles\\researcher-jianyuan-wang.md",
    "issues": "Not rendered in browser; leftover canonical link to leonidk.com from template fork chain."
   },
   {
@@ -8201,7 +8201,7 @@
    ],
    "layout": "Fixed left header 35% wide (dark photo background, right-aligned), main column offset 35% with 54em max; stacks on small screens.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-david-novotny.md",
+   "md_path": "<repo>\\styles\\researcher-david-novotny.md",
    "issues": "Publication list is generated client-side from bib_data.js; described from make_bib.js, not observed. Not rendered in browser."
   },
   {
@@ -8267,7 +8267,7 @@
    ],
    "layout": "Bootstrap container capped at 960px; 4/8 header row (photo | name), stacked and centered on phones; single content column.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-angelina-wang.md",
+   "md_path": "<repo>\\styles\\researcher-angelina-wang.md",
    "issues": "Most Bootstrap palette colors in extractor output are unused framework defaults. Not rendered in browser."
   },
   {
@@ -8355,7 +8355,7 @@
    ],
    "layout": "1140px wrapper (980px narrow variant); editorial section heads; publication rows as 80px/1fr/auto grid; multi-column grids collapsing to one column.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-yaodong-yang.md",
+   "md_path": "<repo>\\styles\\researcher-yaodong-yang.md",
    "issues": "Only the Chinese default page was measured; /en/ not checked. Not rendered in browser."
   },
   {
@@ -8416,7 +8416,7 @@
    ],
    "layout": "Single centered column up to 60em; nav row stacks under 850px; posts list with 130px date gutter.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-zekun-shi.md",
+   "md_path": "<repo>\\styles\\researcher-zekun-shi.md",
    "issues": "Home page has no publication list (separate /publication page). Not rendered in browser."
   },
   {
@@ -8469,7 +8469,7 @@
    ],
    "layout": "Left-aligned block, 1100px max, 30px margin; headshot floats left, unfloated under 700px.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-kenji-kawaguchi.md",
+   "md_path": "<repo>\\styles\\researcher-kenji-kawaguchi.md",
    "issues": "Page is stale: title says Harvard, announces NUS appointment from Fall 2021, latest entries 2021. Current page likely ml.comp.nus.edu.sg/kawaguchi (not measured). Colors are browser defaults (inferred). Not rendered in browser."
   },
   {
@@ -8529,7 +8529,7 @@
    ],
    "layout": "Single 650px centered column, 2rem/1rem padding; flex-wrapped nav row.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-akbir-khan.md",
+   "md_path": "<repo>\\styles\\researcher-akbir-khan.md",
    "issues": "No publication list on home page. Nav border stays #333 in dark mode where it matches the background (inferred). Not rendered in browser."
   },
   {
@@ -8591,7 +8591,7 @@
    ],
    "layout": "Centered 56rem wrapper; hero flex row (200px round photo + text) that stacks on small screens.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-dora-zhao.md",
+   "md_path": "<repo>\\styles\\researcher-dora-zhao.md",
    "issues": "HTML <title> is empty and the bio is wrapped in a nested <body> element. Publications on separate /research page. Not rendered in browser."
   },
   {
@@ -8671,7 +8671,7 @@
    ],
    "layout": "Grid of fixed 340px sidebar + fluid content (max 1100px, padding 4rem 6rem); sidebar becomes a top block under 960px.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-idan-attias.md",
+   "md_path": "<repo>\\styles\\researcher-idan-attias.md",
    "issues": "Dark mode is the default (body class dark-mode). Light-mode title links have no explicit color (browser default, inferred). Not rendered in browser."
   },
   {
@@ -8739,7 +8739,7 @@
    ],
    "layout": "Three absolutely positioned columns (18% rail, 28%, 48%) under a 520px header offset 20%; body min-width 968px, max 1400px; no mobile layout.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-daniel-roy.md",
+   "md_path": "<repo>\\styles\\researcher-daniel-roy.md",
    "issues": "Extractor's dark_mode_toggle flag is a false positive from a commented-out Twitter widget. Page not responsive (min-width 968px). Not rendered in browser."
   },
   {
@@ -8812,7 +8812,7 @@
    ],
    "layout": "Centered 1050px navbar and single white card (10px radius, soft shadow); portrait floats right; three-column talk grid.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-florian-tramer.md",
+   "md_path": "<repo>\\styles\\researcher-florian-tramer.md",
    "issues": "Publication-page styles described from shared CSS; that page was not fetched. Bootstrap defaults marked (inferred). Not rendered in browser."
   },
   {
@@ -8888,7 +8888,7 @@
    ],
    "layout": "Centered 60em boxed column with 18em contact card floated right; videos 480x270 alternating left/right; mobile dropdown nav under 40em.",
    "rendered_check": false,
-   "md_path": "C:\\Users\\houde\\Downloads\\academic-page-styles\\styles\\researcher-nicholas-carlini.md",
+   "md_path": "<repo>\\styles\\researcher-nicholas-carlini.md",
    "issues": "Font fallback 'sans' is not a valid generic family (inferred browser default if Lora fails). Not rendered in browser."
   }
  ],
