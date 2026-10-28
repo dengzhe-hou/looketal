@@ -468,6 +468,7 @@ def main():
     global LANG, HAS_README
     base = load_entries()
     HAS_README = any(e["kind"] == "readme" for e, *_ in base)
+    base_es = [e for e, *_ in base]
     if OUT.exists():
         shutil.rmtree(OUT)
     (OUT / "designs").mkdir(parents=True)
@@ -505,6 +506,16 @@ def main():
     LANG = "en"
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     (OUT / "CNAME").write_text("looketal.com\n", encoding="utf-8")  # GitHub Pages custom domain
+    # sitemap with every page in each language, linked as alternates, for search engines
+    paths = ["index.html", "browse.html", "collections.html", "prompts.html", "about.html"] + [f"s/{e['slug']}.html" for e in base_es]
+    def url(l, p):
+        return f"https://looketal.com/{SUBDIR[l]}{'' if p == 'index.html' else p}"
+    rows = "".join("<url><loc>" + url(l, p) + "</loc>" + "".join(
+        f'<xhtml:link rel="alternate" hreflang="{i18n.HTML_LANG[a]}" href="{url(a, p)}"/>' for a in i18n.LANGS) + "</url>\n"
+        for p in paths for l in i18n.LANGS)
+    (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                                     'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + rows + "</urlset>\n", encoding="utf-8")
+    (OUT / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: https://looketal.com/sitemap.xml\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
