@@ -51,4 +51,4 @@ Each entry shows a reduced above-the-fold screenshot credited to its authors and
 
 ## License and citation
 
-Code (`tools/`, `.github/`) is MIT (`LICENSE`). DESIGN.md files, the selection, `data/` and site text are CC BY-NC 4.0 (`LICENSE-CONTENT.md`). Screenshots belong to the pages' authors and are covered by neither. Cite as: Hou, D. (2026). Look et al.: a curated library of academic web page designs with AI-readable DESIGN.md files. Zenodo. https://doi.org/10.5281/zenodo.23718470 (this DOI always points to the latest version; metadata in `CITATION.cff`).
+Code (`tools/`, `.github/`) is MIT (`LICENSE`). DESIGN.md files, the selection, `data/` and site text are CC BY-NC 4.0 (`LICENSE-CONTENT.md`). Screenshots belong to the pages' authors and are covered by neither. Cite as: Hou, D. (2026). Look et al.: A Design Library of Academic Web Pages for Humans and AI Agents. Zenodo. https://doi.org/10.5281/zenodo.23718470 (this DOI always points to the latest version; metadata in `CITATION.cff`).

@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use Look et al. or its DESIGN.md files, please cite it as below."
-title: "Look et al.: a curated library of academic web page designs with AI-readable DESIGN.md files"
+title: "Look et al.: A Design Library of Academic Web Pages for Humans and AI Agents"
 type: dataset
 authors:
   - family-names: Hou
