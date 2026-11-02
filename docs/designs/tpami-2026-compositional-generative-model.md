@@ -166,6 +166,8 @@ Anatomy in DOM order (desktop 1440px). The Bootstrap container is 1320px with 12
 - **Figures**: full 1170px body width with 12px radius; caption 13px #6d7683 below.
 - **News or a long publication list**: reuse the related-card pattern (76×52px thumbnail, 14px/700 title, grey meta line, trailing chevron) in a two-column grid at 579px per card.
 - **More metadata**: add `dt`/`dd` pairs to the ruled strip; it wraps with 16px row and 40px column gaps.
+- **No project icon**: omit the 132px image and its right column; keep the title block left-aligned in the 1051px copy column. The header still ends at y=524 at 1440 with the metadata strip below.
+- **No DOI or counts**: keep the ruled strip with only the fields you have (VENUE, RELEASED, ARXIV, TOPICS), same 10.5px/700 uppercase labels and 16px 40px gaps; never print empty or zero values.
 
 ## Do's and Don'ts
 
@@ -205,6 +207,7 @@ Quick colors: page #f1f1f1, card #ffffff, accent #e74c3c, headings #2f3c4e, body
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 :root {
   --theme-color: #e74c3c;
   --primary-bg-color: #ffffff;

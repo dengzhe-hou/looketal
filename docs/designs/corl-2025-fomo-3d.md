@@ -129,6 +129,9 @@ Declared but not visible on this page: `--color-dark-light`, `--color-light-pink
 - **Long publication lists**: a list of rows in the 810px column, each a Zagma 20px title over a 12px/500 Neue Haas meta line, separated by 1px rgba(255,255,255,0.15) rules, with a pink hover.
 - **News**: reuse the 18px ruled section heading and 20px body; dates in Neue Haas 12px/500 at 60% white.
 - **More links**: add pills to the rail (48px tall, 14px apart); keep them outlined, with pink only on hover.
+- **No site chrome**: omit the promo bar, header pill, back link and share button; the title starts at y=120 at x=103 and the sections below keep their spacing.
+- **No logo tile**: the rail starts with the outlined pills at x=103 and the abstract stays at x=315 in the 810px column.
+- **No company footer**: end with a full-width 600px #ff2c6b band holding the lab name and contact email in white at x=103; elsewhere pink stays on hovers and abstract links.
 
 ## Do's and Don'ts
 
@@ -168,6 +171,7 @@ Quick colors: page #191818, text #ffffff, body rgba(255,255,255,0.8), meta rgba(
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500&family=Inter:wght@400;500&display=swap");
 :root {
   --color-dark: #191818;
   --color-white: #ffffff;

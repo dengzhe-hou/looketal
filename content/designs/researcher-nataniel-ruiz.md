@@ -101,6 +101,8 @@ There are no rules, cards, chips or boxes.
 - **News**: a run-in label "news." followed by a bullet list starting with a lowercase date ("oct 2026:"), same 13px type.
 - **A results table**: this style has no table; if one is unavoidable use 13px text, no fills, a 1px #5f5349 rule under the header only.
 - **Long pages**: keep the single column and the run-in labels; do not add a sticky nav.
+- **No headshot**: set the name at x=366, the bio column's left edge, with the link list on its baseline and the tagline 8px below. The bio follows 42px under the tagline instead of y=218; no placeholder.
+- **No tagline**: leave it out and keep the link list on the name's baseline. The 84px headshot still sets the hero to y=176, so the bio stays at y=218.
 
 ## Do's and Don'ts
 
@@ -139,6 +141,7 @@ Quick colors: paper #f4ede4, text #1b1714, muted #5f5349, link #b54e46, link hov
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap");
 :root {
   --text: #1b1714;
   --muted: #5f5349;

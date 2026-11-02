@@ -119,6 +119,8 @@ Anatomy in DOM order (`.content-width { width: min(1050px, calc(100% - 48px)) }`
 - **News**: reuse the background row (160px date gutter, 25px padding, hairlines) in a new section with an eyebrow and a 48px heading.
 - **A results table**: hairline rows (1px #d9dde0), 12.48px uppercase #626a72 headers with 0.09em tracking, 14.88px #202428 cells, best value 650.
 - **Long publication lists**: keep a selected set on the #f5f6f7 band and link the rest with the outlined button.
+- **No portrait**: leave out the 278px column and set the hero grid to one column. Eyebrow, name, role, intro and link row keep their y values (161, 194, 364, 412, 521); the hero still ends at 640.
+- **No research questions**: keep the numbered rows between 1px #d9dde0 hairlines and fill them with two or three research themes or projects, each a short title and one sentence, with 01 and 02 in #626a72.
 
 ## Do's and Don'ts
 

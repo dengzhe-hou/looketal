@@ -193,6 +193,7 @@ Quick colors: paper #f7f4ee, deep paper #f0ebe2, white plates #ffffff, ink #1b19
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,200;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700;1,6..72,800&family=Inter:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,400;1,500;1,600;1,700;1,800&display=swap");
 :root {
   --paper: #f7f4ee;
   --paper-deep: #f0ebe2;

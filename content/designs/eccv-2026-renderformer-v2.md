@@ -153,6 +153,8 @@ Anatomy in DOM order (desktop 1440px):
 - **Long publication or news lists**: use the square-bullet list (16.32px #44535f, 9px cobalt markers, 11px gaps) or rule sub-titles (18.88px/700 with a 1px #d4dad4 underline) per year.
 - **More sections**: alternate #f4f6f2 and #ffffff bands at 84px padding and give each a 62×4px tab and kicker; pick its color from the primitive palette only when the section is about that primitive, otherwise #1f6fb2.
 - **More stats**: the strip holds five columns at 1440; a sixth should start a second row rather than squeeze the 34.4px values.
+- **No 3×3 render plate**: put your teaser figure in the 490px right column (1px #d4dad4 border on #ecefea) at its own aspect ratio with the 13.12px caption; with no figure, leave that column empty and keep the text left-aligned.
+- **No headline numbers**: omit `section.stats`; the first section starts directly under the hero's 1px #d4dad4 rule. Three or more numbers stay in the strip with 34.4px/800 values.
 
 ## Do's and Don'ts
 
@@ -192,6 +194,7 @@ Quick colors: paper #f4f6f2, card #ffffff, panel #ecefea, ink #16202b, body #445
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono&display=swap");
 :root {
   --paper: #f4f6f2;
   --card: #ffffff;

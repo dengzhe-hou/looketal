@@ -126,6 +126,7 @@ Anatomy in DOM order:
 - **Results table:** use the leaderboard recipe (striped, hoverable, 0.5rem cells) under an h2.title.is-3; bold the best row.
 - **News list:** a `.content` bullet list in 16px Merriweather with the date in DM Sans 700.
 - **Long abstracts:** narrow the abstract to about 720px or raise it to 17px; at 900px and 16px the measure is long.
+- **No teaser diagram:** drop the 864px figure and its 20px caption. The Abstract section starts at y=462, where the teaser would, 60px under the buttons row. Title, pill, authors and buttons keep their sizes.
 
 ## Do's and Don'ts
 
@@ -164,6 +165,7 @@ Quick colors: headings #363636, body #4a4a4a, links #485fc7, buttons #363636 wit
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --bg: #ffffff;
   --heading: #363636;

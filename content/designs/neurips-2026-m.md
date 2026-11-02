@@ -57,8 +57,8 @@ Anatomy in DOM order (wrapper x 160–1280, content x 184–1256):
 
 ## Tokens — Typography
 
-- **Display serif**: declared `'Instrument Serif', Georgia, 'Times New Roman', serif`; renders Instrument Serif 400 and 400 italic. Substitute: Newsreader Display at weight 400 (similar condensed, high-contrast proportions).
-- **Sans**: declared `'Inter', system-ui, 'Segoe UI', Helvetica, Arial, sans-serif`; renders Inter 400, 500, 600, 800. Substitute: Inter is free; if unavailable use Geist Sans.
+- **Display serif**: declared `'Instrument Serif', Georgia, 'Times New Roman', serif`; renders Instrument Serif 400 and 400 italic. Substitute: Newsreader at weight 400 in its display optical size (similar condensed, high-contrast proportions).
+- **Sans**: declared `'Inter', system-ui, 'Segoe UI', Helvetica, Arial, sans-serif`; renders Inter 400, 500, 600, 800. Substitute: Geist.
 
 | Role | Selector | Size | Weight | Line-height | Tracking |
 |---|---|---|---|---|---|
@@ -183,6 +183,7 @@ Quick colors: navy #0b1020, navy card #121a33, amber #f59e0b, amber ink #b45309,
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap");
 :root {
   --navy: #0b1020;
   --navy2: #121a33;

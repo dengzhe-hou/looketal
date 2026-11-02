@@ -46,7 +46,7 @@ Anatomy in DOM order (y = top of element box):
 
 ## Tokens — Typography
 
-- **All text**: `body { font-family: Charter }` with no fallback and no webfont, so Charter renders only where it is installed (macOS ships it); on Windows and Linux the browser default serif renders instead (Times New Roman in this capture). Substitute: Charis SIL or "Bitstream Charter" from a webfont host, since both keep Charter's proportions; add `serif` as fallback.
+- **All text**: `body { font-family: Charter }` with no fallback and no webfont, so Charter renders only where it is installed (macOS ships it); on Windows and Linux the browser default serif renders instead (Times New Roman in this capture). Substitute: Charis SIL, which keeps Charter's proportions; add `serif` as fallback.
 - **Math**: KaTeX 0.10.2 and MathJax 3 are both loaded (KaTeX_Main and KaTeX_Math faces rendered).
 - **Icons**: Font Awesome 6 (Free 900) and Academicons in the pills; line-art SVG files for the hero key points.
 
@@ -170,6 +170,7 @@ Quick colors: title #feae6f, hero text #000000, article text rgba(0,0,0,0.8), ca
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --title: #feae6f;
   --ink: #000000;

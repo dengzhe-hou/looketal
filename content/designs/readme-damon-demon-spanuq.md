@@ -100,6 +100,7 @@ The README has no images, GIFs or videos. Its only visual elements are the four 
 - **A paper repo with a teaser.** Insert one `width="100%"` figure (856px) between the nav bar and the `---` rule; keep the Results table directly under Overview.
 - **A method with several backbones.** Keep one row per backbone in the Results table and one config file per backbone in the tree.
 - **A shorter README.** Cut the nav bar when there are fewer than five `##` sections; GitHub's outline menu covers it.
+- **No results table.** Keep the slot under Overview and put a compact `### At a glance` table of key facts there (supported models or settings, one measured value each), numeric columns right-aligned, so a table still shows by y≈672.
 
 ## Do's and Don'ts
 

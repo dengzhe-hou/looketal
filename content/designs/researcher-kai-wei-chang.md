@@ -149,6 +149,8 @@ Anatomy in DOM order (Bootstrap `.container` width min(1180px, 100% − 32px) wi
 - **Long publication lists**: reuse the highlight row (14px/700 title, 13px note, 12px padding, hairline) and add the tag-chip row for links.
 - **More news**: keep the 74px date column and 10px row gap; cap the strip at about five rows and link the rest.
 - **Students or group members**: use the impact-tile recipe (beige #f3f2ed, 8px radius) for each person with a 13px/700 name and a 12px caption.
+- **No impact numbers**: fill the four 97px #f3f2ed tiles with counts the researcher can verify, such as papers, students, grants and talks, each a 20px/800 #1e1e1e number over a #373a38 caption. Keep the 2×2 grid at 250px.
+- **No portrait**: keep the 190px right column with the 13px/700 #1e1e1e name, 13px #5f625f address lines and the 12px/700 #064f99 contact links centred at y=147. The news strip still starts at y=506.
 
 ## Do's and Don'ts
 
@@ -188,6 +190,7 @@ Quick colors: page #f7f7f5, panel #ffffff, rule #d8d8d2, ink #1e1e1e, paragraph 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap");
 :root {
   --page: #f7f7f5;
   --surface: #ffffff;

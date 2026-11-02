@@ -57,7 +57,7 @@ Arithmetic check: 36 + 28.8 ≈ 65; 65 + 146 + 21.6 ≈ 232; 232 + 27 = 259; 259
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Title / authors | 'Google Sans', sans-serif (Google Fonts link, regular only) | Google Sans 400; 600 is synthesized | Product Sans / Outfit |
+| Title / authors | 'Google Sans', sans-serif (Google Fonts link, regular only) | Google Sans 400; 600 is synthesized | Outfit |
 | Body | 'Noto Sans', sans-serif | Noto Sans 400 | Noto Sans |
 | Bold runs | `strong { font-family: 'Lato Bold', sans-serif }` | Lato Bold is never loaded, so bold runs fall back to the system sans (Arial Bold on Windows) | Arial Bold |
 | UI (tabs, buttons) | Bulma system stack: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto… | Segoe UI on Windows | Inter |
@@ -144,6 +144,8 @@ Arithmetic check: 36 + 28.8 ≈ 65; 65 + 146 + 21.6 ≈ 232; 232 + 27 = 259; 259
 - **More comparisons**: add tabs to the existing strips; keep environment tabs #d1e0ff and task tabs #f0f3fa so the two levels stay distinct.
 - **Long publication or news lists**: a justified 14.4px list in a white section, items led by bold (#363636) dates, links #209cee.
 - **Another concept pair**: reuse the two-tone rule: one word per concept in #0095ff and #b45f06, echoed in the figure strokes.
+- **No teaser diagram**: put the teaser image or video in the same slot, 821px wide at x=310, directly on white with no border, radius or shadow. With neither, the hero ends at y=423 and the Abstract h2 follows near y=466.
+- **No second concept**: colour only the one key term in the title #0095ff and leave the other words #363636; do not use #b45f06 anywhere, and keep the title at Google Sans 43.2px/600.
 
 ## Do's and Don'ts
 
@@ -183,6 +185,7 @@ Quick colors: page #ffffff, band #f5f5f5, title #363636, text #4a4a4a, merge #00
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 html { zoom: 0.9; }
 :root {
   --paper: #ffffff;

@@ -39,7 +39,7 @@ All shields badges use the static path form in the default `flat` style: 20px ta
 | Model License | Model Agreement | #f5de53 (label #555555, message text #333333) | flat (default) | LICENSE-MODEL |
 | (link row) | **Paper Link**👁️ | GitHub link blue, bold | plain link | arxiv.org/pdf/2412.19437 |
 
-The rows are grouped by purpose: product and model hub (row 1), community channels (row 2), licenses (row 3). The two brand-blue badges share #536af5, close to the logo's #4d6bfe; both license badges share #f5de53. In the Twitter badge the underscore in `deepseek_ai` is read by shields.io as a space, so it renders "deepseek ai". The METHOD_README table gives `brightgreen` as #4c1; the WeChat SVG returned on 2026-10-28 fills #44bb00.
+The rows are grouped by purpose: product and model hub (row 1), community channels (row 2), licenses (row 3). The two brand-blue badges share #536af5, close to the logo's #4d6bfe; both license badges share #f5de53. In the Twitter badge the underscore in `deepseek_ai` is read by shields.io as a space, so it renders "deepseek ai". Older shields.io palettes gave `brightgreen` as #4c1; the WeChat SVG returned on 2026-10-28 fills #44bb00.
 
 Other colors on the page come from images and GitHub itself: the logo #4d6bfe; the benchmark chart's DeepSeek-V3 bars #4d6bfe with diagonal hatching, a light blue #aac1ff series and a sand #e8d2a0 series among grey bars; and GitHub's Note callout bar and title in #0969da.
 

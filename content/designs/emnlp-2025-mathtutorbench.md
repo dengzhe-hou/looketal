@@ -136,6 +136,7 @@ Anatomy in DOM order (desktop 1440px):
 - **More results tables**: reuse the leaderboard frame; mark best values only with 800 #215caf, never with a background fill.
 - **News or publication lists**: a section with a petrol eyebrow ("NEWS") and a list of 16px #4a4a4a items, each date as 600 #222222; separate entries with 1px #e4e7ec lines rather than cards.
 - **More stats**: use feature tiles (#e9eff7, 8px radius) with the number as the bold #08407e title.
+- **No leaderboard**: keep the RESULTS eyebrow, h2 and intro, and put your main results table in the same rounded 1px #e4e7ec frame from y=614, header #e9eff7, best values 800 #215caf. With only a plot, use `.figure` there.
 
 ## Do's and Don'ts
 

@@ -147,6 +147,8 @@ Anatomy in DOM order (desktop 1440px; `.container.is-max-widescreen` 1152px at x
 - **A results table**: wrap Bulma `table is-fullwidth is-striped` (16px, cells 8px 12px) in the 8px-radius `.table-container` with its 0 2px 4px shadow; bold the best values rather than colouring them.
 - **News or updates**: a white Bulma box per item (6px radius, 20px padding) inside a #f8f9fa band, date as a 20px / 700 #2c3e50 h4.
 - **More stats or key points**: use the purple gradient box only once per page, for the main findings.
+- **No game collection**: keep the boxed tabs, with counts in the labels, over the white grid panel in the #f8f9fa band, filled with your dataset subsets or task categories as borderless square thumbnails. With no images, drop the band.
+- **No tagline**: drop the two h2 lines but keep the band's 48px top padding, so the 1152px video or teaser starts at y=702 and the hero stays 52 to 654px.
 
 ## Do's and Don'ts
 
@@ -186,6 +188,7 @@ Quick colors: accent #e74c3c, slate #2c3e50, hero ink rgba(0,0,0,0.7), text #444
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 :root {
   --accent: #e74c3c;
   --slate: #2c3e50;

@@ -161,6 +161,8 @@ Anatomy in DOM order (desktop 1440px, hero centred in `.hero-inner`, 1060px wide
 - **More results**: add table cards with the same tabs; mark the proposed method only with #efecfb background and #3d2f9a bold text, and keep best/second as bold/underline rather than colour.
 - **More stats**: extend the 4-column metric grid; it drops to 2 columns at 960px and 1 at 520px.
 - **A video**: place it in a `.wide-figure` card (white, 1px #e0dcf3, radius 10px, card shadow) with a figcaption.
+- **No acronym tag**: leave out `p.eyebrow`; the two-tone title starts at y=62 instead of 106, with line 1 still in #3d2f9a. Add no replacement tag and no nav bar.
+- **No teaser figure**: leave out `figure.teaser`; the hero ends 20px below the buttons at y=548 and the abstract section opens directly, with no placeholder card and no change to the hero.
 
 ## Do's and Don'ts
 
@@ -200,6 +202,7 @@ Quick colors: page #ffffff, ink #142030, slate #334155, muted #5a6779, indigo #3
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap");
 :root {
   --bg: #ffffff;
   --ink: #142030;

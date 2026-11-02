@@ -40,7 +40,7 @@ Anatomy in DOM order (all centred in a 1100px body starting at x=170):
 ## Tokens — Typography
 
 - **Declared:** `body { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; font-size: 18px; text-align: justify }`; `h1, h2 { font-weight: 300 }`; `b, strong { font-weight: 700 }`.
-- **Rendered:** no web fonts load (`fonts_loaded` is empty). On the Windows capture machine the stack resolves to Arial, which has no 300 weight, so all "light" text renders at Arial regular. On macOS the same CSS renders in Helvetica Neue Light, which is visibly thinner. Substitute: Helvetica Neue Light where available; on the web, Inter at 300 gives the same neutral grotesque at light weight.
+- **Rendered:** no web fonts load (`fonts_loaded` is empty). On the Windows capture machine the stack resolves to Arial, which has no 300 weight, so all "light" text renders at Arial regular. On macOS the same CSS renders in Helvetica Neue Light, which is visibly thinner. Substitute: Inter at 300, the same neutral grotesque at light weight.
 - **Mono:** browser `monospace` (Consolas / Courier New) in the BibTeX `code`.
 
 | Role | Selector | Size | Weight | Line height | Colour |
@@ -113,6 +113,7 @@ Anatomy in DOM order (all centred in a 1100px body starting at x=170):
 - **A results table:** a centred HTML table at 900px with 18px body text, a bold header row, 1px black top and bottom rules only, and the best number in bold; keep it plain to match the page.
 - **More results:** repeat the result-block pattern (bold lead-in, explanation, centred 900px figure) separated by fade rules.
 - **News:** a short `ul` of dated items under the links table, 18px with bold dates.
+- **No teaser image:** remove the 960×422 teaser table; the fade `hr` and centred 27px Abstract `h2` follow the links table directly, about 422px higher than in the source. Keep everything centred in the 1100px body.
 
 ## Do's and Don'ts
 

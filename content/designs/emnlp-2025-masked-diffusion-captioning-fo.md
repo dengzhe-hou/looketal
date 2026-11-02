@@ -49,7 +49,7 @@ The grey band ends at about y=496. The Abstract heading (`h1`, 26px/600) starts 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
 | Display / UI | "Poppins", serif (headings, hero), "Poppins", sans-serif (buttons) | Poppins 300, 400, 400 italic, 500, 600 from Google Fonts | Montserrat |
-| Body | "Charter", sans-serif on `p.text` | Charter regular and italic (self-hosted woff2) | Bitstream Charter / XCharter |
+| Body | "Charter", sans-serif on `p.text` | Charter regular and italic (self-hosted woff2) | Charis SIL |
 | Code | "Fira Code", monospace | Fira Code 400 | JetBrains Mono |
 | Math | MathJax 2.7.1 HTML-CSS, Gyre Pagella | GyrePagellaMathJax family | — |
 | Icons | Font Awesome 6 Free | Font Awesome 6 Free 900 (solid) | — |
@@ -172,6 +172,7 @@ Quick colors: hero #e0e4e6, page #ffffff, figure band #f6f6f6, footer #fafafa, i
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Charis+SIL:ital,wght@0,400;1,400&family=Fira+Code&display=swap");
 :root {
   --hero-bg: #e0e4e6;
   --bg: #ffffff;
@@ -182,7 +183,7 @@ Quick colors: hero #e0e4e6, page #ffffff, figure band #f6f6f6, footer #fafafa, i
   --dot-active: #e2a3a3;
   --btn-fill: rgba(255, 255, 255, 0.2);
   --font-display: "Poppins", sans-serif;
-  --font-body: "Charter", "XCharter", Georgia, serif;
+  --font-body: "Charter", "Charis SIL", Georgia, serif;
   --font-mono: "Fira Code", monospace;
   --radius: 10px;
   --gutter: 15vw;

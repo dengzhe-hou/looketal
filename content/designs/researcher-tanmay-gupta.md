@@ -127,6 +127,8 @@ Declared but not visible: `.tag` (purple), `.award` (gold #6b5200 on rgba(197,15
 - **More roles**: the rail stretches with content; keep 40px between events and one h3 per role.
 - **Venue or award badges**: the inline style already defines `.venue` (rgba(17,24,39,0.06) fill, 1px rgba(17,24,39,0.14), 6px radius, 13.6px/600) and `.award` (gold); use them after a paper title rather than adding new colours.
 - **A results table**: use Pico's default table (hairline rows) inside the right column; do not add fills.
+- **No career timeline**: keep the 2px #cccccc rail in the right column and put education, internships or projects on it as dated events, each with a #007acc date, a 24px/700 h3 and a 17.6px paragraph; one event is enough.
+- **No portrait**: start the left column with the "About me" h2 at y=171, level with "Professional Journey", and keep the 5/1/6 split; no ellipse or placeholder.
 
 ## Do's and Don'ts
 

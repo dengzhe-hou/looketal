@@ -125,6 +125,9 @@ The page has no shadows, cards or radii apart from the pill buttons.
 - **News**: a grey band directly after the hero with a dated disc list in 16px.
 - **Long publication lists**: a white section with a 768px disc list, titles bold, venues plain.
 - **A highlighted term in prose**: reuse #008080 for the method name, sparingly.
+- **No acronym in the title**: color the words forming your method's name #008080, the rest #363636; with none, keep the whole title #363636 and use teal once on the method name in the body.
+- **No teaser figure**: use the paper's main figure at 936px wide with a left-aligned bold-lead caption; with none, the next band starts under the buttons.
+- **No highlights**: the Abstract follows the hero as a white section; later bands keep their fills and the alternation starts at Dataset.
 
 ## Do's and Don'ts
 
@@ -164,6 +167,7 @@ Quick colors: title #363636 with keywords #008080, body #4a4a4a, band text rgba(
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --heading: #363636;
   --keyword: #008080;

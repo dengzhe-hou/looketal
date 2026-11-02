@@ -46,8 +46,8 @@ Declared but not visible: Poppins (404, see Typography); `.highlight-row` adds a
 
 ## Tokens — Typography
 
-- **Serif display (rendered):** declared `"Poppins", serif`; the Poppins files 404, so it renders Times New Roman (system). Applies to the title, venue, section h1s and captions. Substitute: Tinos or Liberation Serif for the same metrics; if you want the intended look, load real Poppins.
-- **Body serif:** declared `"Charter", sans-serif` on `p.text` and `footer p`; rendered Charter regular, italic and bold (self-hosted woff2). Weight 300 renders as Charter regular. Substitute: Charis SIL or Bitstream Charter.
+- **Serif display (rendered):** declared `"Poppins", serif`; the Poppins files 404, so it renders Times New Roman (system). Applies to the title, venue, section h1s and captions. Substitute: Tinos, which has the same metrics.
+- **Body serif:** declared `"Charter", sans-serif` on `p.text` and `footer p`; rendered Charter regular, italic and bold (self-hosted woff2). Weight 300 renders as Charter regular. Substitute: Charis SIL.
 - **Sans (rendered):** declared `"Poppins", sans-serif` on `.button` and `table`; renders Arial. Substitute: Arimo.
 - **Mono:** Fira Code 400 for inline `code`.
 - **Icons:** Font Awesome 6.6 Free (solid).
@@ -127,6 +127,8 @@ Declared but not visible: Poppins (404, see Typography); `.highlight-row` adds a
 - **BibTeX:** a `pre` in Fira Code on #fafafa with the same 10px radius as the chips.
 - **Long publication or news lists:** plain Charter list items in the 749px column; no cards, no bands.
 - **Video teaser:** place a looping video in the cover slot and keep the blurred-duplicate halo by layering a second blurred `video` behind it.
+- **No cover photo:** put the teaser figure in the slot at 389px wide with the blurred duplicate behind it. With no figure, make the hero one 749px column at x=216 and end the band 58px under the link chips.
+- **No TL;DR:** set the abstract's first two sentences in the same 18px Charter paragraph, drop the bullet features, and put the chips right after it; the cover photo still sets the band height.
 
 ## Do's and Don'ts
 
@@ -165,6 +167,7 @@ Quick colors: band #ddcecd, text and links #353535, chip rgba(255,255,255,0.25),
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300&display=swap");
 :root {
   --band: #ddcecd;
   --text: #353535;

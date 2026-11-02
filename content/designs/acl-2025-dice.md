@@ -136,6 +136,8 @@ Declared but not visible: `.interpolation-panel` (#f5f5f5, 10px radius) is unuse
 - **News**: a short bulleted list in a `.content` block under the link row, 16px, dates bold; do not add a colored banner, the teaser image already carries identity.
 - **Long publication lists**: a single 960px column of 16px entries with titles in #363636 600 and links in #3273dc.
 - **More languages**: add another `is-small` pill to the switcher and tag every text node with `data-i18n`.
+- **No banner image**: build the banner as a 912×356 #282828 panel with the short project name centred in white Google Sans 48px/600 and the 20px/25px subtitle under it. Link row and carousel band keep their order.
+- **No figure carousel**: keep the #f5f5f5 band and set up to three paper figures in a static equal-width row inside it, each with the 1px #bbbbbb border and 10px radius; a single figure is centred at 912px wide.
 
 ## Do's and Don'ts
 
@@ -175,6 +177,7 @@ Quick colors: headings #363636, body #4a4a4a, author link #209cee, grey band #f5
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --heading: #363636;
   --text: #4a4a4a;

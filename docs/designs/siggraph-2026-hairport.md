@@ -148,6 +148,8 @@ Page texture: `body::before { background-image: linear-gradient(rgba(23,24,23,0.
 - **Long publication or news lists**: reuse `.timeline` rows (7rem date column, 0.82rem/850 #183f3b dates, 1px #d8ddd6 rules).
 - **More metrics**: extend `.stat-list` tiles (serif 23.2px/650 numbers, 13.12px/800 #616761 labels); they auto-fit at min 184px.
 - **Extra sections**: alternate plain #f7f7f4 and toned #f0f2ee bands at 108px vertical padding, each opening with an eyebrow kicker and a 53.6px serif h2.
+- **No short name**: set the paper's one-word subject, up to 12 characters, as the 140px/0.86 wordmark and put the full title in the 39.2px subtitle beneath it; the venue pill above and the authors below stay as they are.
+- **No teaser figure**: put the paper's main figure in `figure.hero-figure` at 1360px wide with the 8px frame, 1px #bbc4bb border and two-layer shadow, caption strip below; margin-top stays 48px.
 
 ## Do's and Don'ts
 
@@ -187,6 +189,7 @@ Quick colors: page #f7f7f4, surface #ffffff, toned band #f0f2ee, ink #171817, so
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700&family=Inter:wght@400;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap");
 :root {
   --bg: #f7f7f4;
   --surface: #ffffff;

@@ -134,6 +134,8 @@ Anatomy in DOM order (`header.container`, 1320px, x=60–1380, padding 0 12px):
 - **Long publication or news list:** a Bootstrap card titled in 32px / 800 with the gradient bar, entries as a `list-group` with dates in #666666.
 - **More links:** add pills; the fixed gradient means extra pills simply take the next slice of the sunrise.
 - **Narrow screens:** add a font-size rule for `.title-font` below 768px (for example 32px); the source keeps 48px.
+- **No logo:** leave out the 96px icon and keep the two-line 48px / 72px masthead centred between the two rules, with the gradient only on the first part. Nothing replaces the icon.
+- **No teaser infographic:** put your main figure in the same `img-thumbnail` frame (4px padding, 1px #dee2e6, 6px radius), up to 1296px wide at y=593, with the 14px #6c757d caption. Without a figure, the Abstract card starts at y=593.
 
 ## Do's and Don'ts
 
@@ -172,6 +174,7 @@ Quick colors: gradient #0078d4 → #8661c5 → #ff9349, text #212529, names #000
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700;800;900&display=swap");
 :root {
   --sunrise: linear-gradient(107.54deg, #0078d4 0.39%, #8661c5 51.23%, #ff9349 100%);
   --sunrise-soft: linear-gradient(107.54deg, #e6eff7 0.39%, #eeebf5 51.23%, #fcf4ee 100%);

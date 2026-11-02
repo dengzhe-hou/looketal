@@ -121,6 +121,8 @@ Declared but not visible as text color: inline #ff9300, #f8a09c ("the negative i
 - **News**: a short line of bold text in the first grey band above the intro paragraph; no extra color.
 - **Long publication lists**: a white band with a real `ul`, 16px, titles bold, venues #7f7f7f.
 - **A third condition**: reserve #7f7f7f for "absent" and pick one more hue only if a figure already uses it.
+- **No institution logo**: set the affiliations as one centred regular 20px/30px #4a4a4a text line in the logo row, and make the venue line #363636 instead of cardinal, because that red is borrowed from the logo.
+- **No two-condition contrast**: give your proposed method #05b0f0 and its baseline or contrast case #f49443 in the intro paragraph spans and in figure frames; with one condition only, use #05b0f0 alone and add no second hue.
 
 ## Do's and Don'ts
 
@@ -160,6 +162,7 @@ Quick colors: title #363636, authors #209cee, venue #be1e2d, match #05b0f0, mism
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --heading: #363636;
   --text-white-band: #0a0a0a;

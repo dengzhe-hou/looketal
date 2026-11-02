@@ -118,6 +118,8 @@ Declared but not visible: the theme's `.btn` styles (translucent white buttons) 
 - **News**: a short `ul` under the link row; items already get 18px bottom margins.
 - **Long publication lists**: plain Markdown list in the 1088px column, titles bold, links #1e6bb8.
 - **Long text samples**: keep using the bordered `pre`; for prose rather than lyrics, a `blockquote` (0.3rem #dce6f0 left border, #819198 text) is the theme's quieter option.
+- **No audio samples**: keep the sample recipe of a bold label, then the output as an unframed image up to the 1088px column width, then any text output in the boxed `pre` (#f3f6fa fill, 1px #dce6f0 border).
+- **No teaser illustration**: put the paper's main figure 26px under the link row at the full 1088px content width, with no border or shadow. The gradient band, centred author block and pipe-separated links stay as they are.
 
 ## Do's and Don'ts
 
@@ -157,6 +159,7 @@ Quick colors: band #155799 → #159957, headings #159957, body #606c71, links #1
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 :root {
   --band: linear-gradient(120deg, #155799, #159957);
   --band-fallback: #159957;

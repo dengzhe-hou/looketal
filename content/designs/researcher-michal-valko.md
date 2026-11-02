@@ -161,6 +161,8 @@ Declared but not visible on this page: the table, purple and red badge palettes,
 - **More students**: the compact grid (minmax 180px) absorbs dozens; keep the badge colours fixed per role.
 - **Awards**: use the amber `.student-highlight` style (#92400e on #fef3c7, 8px radius) inline after a name or title.
 - **Talks**: add rows to the talks table; past talks go to the Talks page.
+- **No student photos**: fill the 50px sidebar rail with collaborator photos and 8px #64748b first names; with none, end the sidebar after the three 40px logos. The dashed #000000 edge keeps its full height.
+- **No work illustrations**: keep each card's accent top bar, uppercase label, year pill and ghost numeral, and drop the tinted blob; the #17385f title and #40546a text fill the card.
 
 ## Do's and Don'ts
 

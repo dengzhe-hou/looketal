@@ -149,6 +149,9 @@ Hover lift is a shared motif: video tiles, result cards, method cards and figure
 - **A larger results table**: widen `.metrics-table` to the 900px result column, keep the #edf2f7 header with the 2px #1a365d rule and 1px #e2e8f0 row rules, and wrap it in a `.result-card`. Mark best values in 600 weight rather than colour.
 - **Long publication or news lists**: put them in a white `.result-card` column at 900px, each item a 17px line with a 15.2px #4a5568 date, separated by 1px #e2e8f0 rules; use a subsection title with the orange left rule as the group header.
 - **Light sections in alternation**: alternate plain #f7fafc sections with `.alt-bg` gradient bands; do not introduce a second accent.
+- **No venue**: keep the `.venue-tag` pill and its glow, and set the year or status in it (for example Preprint 2026); it is the hero's one lit element.
+- **No teaser figure**: put your first figure in the 1136px frame at y=850; with none, the abstract band follows the hero at y=754.
+- **No short name**: put the title up to any colon in the 72px h1 and the rest in the 24px subtitle; with no colon, the full title takes the h1.
 
 ## Do's and Don'ts
 
@@ -187,6 +190,7 @@ Quick colors: hero #0f2942 → #1a365d → #2c5282, accent #ed8936 (hover #c0562
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700&family=JetBrains+Mono&display=swap");
 :root {
   --primary: #1a365d;
   --primary-light: #2c5282;

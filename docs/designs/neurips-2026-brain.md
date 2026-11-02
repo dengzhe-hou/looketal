@@ -154,6 +154,8 @@ Anatomy in DOM order:
 - **Long publication list**: one sidebar entry for "Publications"; in the column, rows separated by 1px #dfe5ed with a 12px uppercase #4263d4 year label and 16px titles.
 - **News**: a section labelled "NN / NEWS" with dated rows; dates in 12px/700 uppercase #627086, text 16px #19243b.
 - **More than three categories**: give each category one fixed color and reuse it on text, card top borders and chart bars; never mix two category colors in one element.
+- **No institution logos**: set affiliations as one centred 14px DM Sans line in #627086 under the authors, numbered to match the superscripts, with the 57px navy buttons 24px below. Draw no placeholder logo boxes.
+- **No modality schematic**: put the teaser figure in the same panel (1px #dce3ef, 16px radius, gradient #f8faff to #ffffff to #f1faf8) with a 12px uppercase caption in #627086. With no teaser, end the hero at the buttons.
 
 ## Do's and Don'ts
 
@@ -193,6 +195,7 @@ Quick colors: ink #19243b, navy #15264c, muted #627086, line #dfe5ed, sidebar #f
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@700;800&display=swap");
 :root {
   --navy: #15264c;
   --ink: #19243b;

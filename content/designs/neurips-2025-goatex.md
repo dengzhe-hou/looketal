@@ -120,6 +120,8 @@ Anatomy in DOM order (centred in a 960px column):
 - **Larger galleries:** extend the `columns is-multiline` grid in the grey band; keep every caption box the same fixed height (6em) so videos align across a row.
 - **A results table:** place it in a white section between gallery and pipeline, centred at 912px, Bulma `table is-striped` with 600-weight headers in `#363636`; keep it unboxed like the figures.
 - **News:** a short list in the hero below the note line, 16px `#4a4a4a`, dates in bold.
+- **No result videos:** fill the same `#f5f5f5` band and 3-column grid with still renders on `#000000` tiles, each under the 9.6px caption in a fixed 6em box. Keep the band edge to edge and add no frames or shadows.
+- **No teaser image:** omit the 912×532 figure; the Abstract section follows the hero directly at about y=337. Do not enlarge the hero or add a link row to fill the space.
 
 ## Do's and Don'ts
 
@@ -156,6 +158,7 @@ Other Nerfies-template pages share the skeleton. In this NeurIPS 2025 batch, See
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;600&family=Noto+Sans:wght@400;600&display=swap");
 :root {
   --title: #363636;
   --text: #4a4a4a;

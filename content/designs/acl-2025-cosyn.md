@@ -123,6 +123,8 @@ Nothing on the page is rounded apart from the buttons and carousel arrows.
 - **More charts**: reuse the three bar colours (#e9edc9, #ccd5ae, #d4a373 with a black outline for your method) and Crimson Text labels.
 - **News or publication lists**: 22px justified paragraphs with bold dates; no cards or tints.
 - **A venue**: add a 22px small-caps #363636 line between the title and authors rather than a badge.
+- **No teaser video**: put the paper's main figure at 960px wide in its place, unframed, starting at y=521 with the centred 22px caption below it. The small-caps title, authors and five buttons stay as they are.
+- **No headline chart**: let the teaser caption run straight into the centred 32px Abstract heading and leave out the bracketed right-aligned note with it. Keep the earthy sand, sage and tan palette for the figures that follow.
 
 ## Do's and Don'ts
 
@@ -161,6 +163,7 @@ Quick colors: title #363636, body #4a4a4a, authors #209cee, links #3273dc, chart
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
 :root {
   --title: #363636;
   --text: #4a4a4a;

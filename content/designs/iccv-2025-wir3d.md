@@ -131,6 +131,8 @@ Anatomy in DOM order (desktop 1440px; body margin 8px; sections 1040px wide at x
 - **Long publication or news lists**: one gray box per group, items as Source Sans 3 19.2px lines with bold dates; links in #263966.
 - **More buttons**: add navy keys to the nav row; keep the venue as the only light key.
 - **A code block**: keep it in a gray box; switch to a monospace face only if alignment matters.
+- **No lab badge**: leave out `.logobox` but keep the title slab's 40px top and 52.8px side margins and the key row pulled up 18.72px over its bottom edge, so the overlap stays the header's signature.
+- **No teaser strip**: put your teaser figure in the 85%-wide slot (8px radius, no frame) between the affiliation and the abstract box; with none, the `p.graybox` abstract follows the affiliation line.
 
 ## Do's and Don'ts
 
@@ -170,6 +172,7 @@ Quick colors: text #363636, navy #263966, navy underside #4e649e, hover #537998,
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Source+Sans+3:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900&display=swap");
 :root {
   --fore: #363636;
   --accent: #263966;

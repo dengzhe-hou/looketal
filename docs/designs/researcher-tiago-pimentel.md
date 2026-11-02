@@ -138,6 +138,8 @@ Anatomy in DOM order (desktop 1440px; nav and grid 1080px at x=180 with 24px pad
 - **Talks and service**: CV pattern, a 150px pink mono heading column beside 15px muted list items with `strong` in #e8eaed.
 - **Code or BibTeX**: #1b1e23 box with a hairline border, 12px radius, 12.5px mono.
 - **Light mode**: swap to #ffffff, #1b1d21, #474d56, #6b727c and accent #c71f73; badge text darkens (for example #a01055 on magenta).
+- **No portrait**: start the 256px sticky column with the 27px name at y=109 and keep the vertical hairline at x=489 so the profile column still reads as a sidebar; no placeholder circle.
+- **No news**: start the right column with the 13px "Selected publications" label at y=117 and the first paper about 32px below; the 72px mono aside and pink years stay.
 
 ## Do's and Don'ts
 
@@ -176,6 +178,7 @@ Quick colors: background #131519, soft #1b1e23, text #e8eaed, muted #aeb6c0, fai
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap");
 :root, [data-theme="dark"] {
   --bg: #131519; --bg-soft: #1b1e23; --text: #e8eaed; --text-muted: #aeb6c0; --text-faint: #838b96;
   --border: rgba(255,255,255,0.12); --border-strong: rgba(255,255,255,0.22); --accent: #ee82b8;

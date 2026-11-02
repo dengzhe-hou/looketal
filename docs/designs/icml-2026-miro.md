@@ -152,6 +152,9 @@ A 3px tangerine scroll-progress bar runs across the very top of the window.
 - **Long publication or news lists**: use `.callout` rows (graphite, 4px tangerine left bar, 10px 14px padding) with the date as a 14px/600 #ff9a5c lead, like the contents numbers.
 - **More stats**: add cards to the secondary KPI row (it wraps at 20% per card); keep only two hero KPIs.
 - **Light theme content**: rely on the existing toggle values (#ffffff, #1a1a1a, #f5f5f5, #ff6b35) rather than inventing new ones.
+- **No KPI numbers**: omit both KPI rows; the next block (carousel or first figure) starts at y=544 under the link pills. The hero stays compact, 48px to 520px, and centered.
+- **No accepted venue**: keep the filled #ff9a5c pill with its shine and set it to PREPRINT, 13px/700 uppercase, #0b0c10 text; the title stays at y=129.
+- **No acronym in the title**: tint only the method name in #ff9a5c at weight 600 inside the one-line 32px h1; the rest stays #e6e6e6.
 
 ## Do's and Don'ts
 

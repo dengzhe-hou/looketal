@@ -46,7 +46,7 @@ Anatomy in DOM order (desktop 1440px, everything centred):
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Display | 'Google Sans', sans-serif (`.publication-title`, `.publication-authors`, `.teaser`) | Google Sans 400 (bold weights are synthesized from the single loaded face) | Product Sans |
+| Display | 'Google Sans', sans-serif (`.publication-title`, `.publication-authors`, `.teaser`) | Google Sans 400 (bold weights are synthesized from the single loaded face) | Outfit |
 | Text | 'Noto Sans', sans-serif (`body`) | Noto Sans 400 | Noto Sans |
 | Code | monospace | system monospace (Consolas on Windows) | JetBrains Mono |
 | Icons | Font Awesome 6 Free, Academicons | Font Awesome 6 Free 900, Academicons 400 | — |
@@ -169,6 +169,7 @@ Quick colors: cover video tones #3e0340 / #000028 / #886391, title #ffffff, auth
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --cover-height: 60vh;
   --cover-plum: #3e0340;

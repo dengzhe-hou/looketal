@@ -112,6 +112,8 @@ Anatomy in DOM order (`.wrap` max-width 920px, padding 56px 22px 40px, so conten
 - **A results table**: put it inside a card with hairline rows (1px rgba(0,0,0,.10)), 14px/650 uppercase #666666 headers, 16px #111111 cells, no fills.
 - **A photo**: place it at the top of the left card, full card width (373px at 1440) with a 10px radius, above the "ABOUT" label; keep the card white.
 - **Longer pages**: keep the backdrop fixed so cards scroll over it; add more card pairs in the same 0.95fr / 1.05fr grid with 14px gaps.
+- **No open weights or tutorials**: open the right card with the RECENT RESEARCH label and its title-and-venue rows, with no divider above it. The 0.95fr / 1.05fr grid stays and both cards share the taller one's height.
+- **No ink-landscape.svg**: draw a new 1600×1000 contour SVG with smooth isolines and a few lines of your own text or code set along the curves, then mask it over #111111 at 11% unchanged.
 
 ## Do's and Don'ts
 

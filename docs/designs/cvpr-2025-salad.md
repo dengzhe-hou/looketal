@@ -40,7 +40,7 @@ Anatomy in DOM order (all centred in the 960px `.container.is-max-desktop`, hero
 
 ## Tokens — Typography
 
-- **Sans (humanist):** declared `'Linux Biolinum', Arial, sans-serif` on `body`, `.title`, `.subtitle`, `.content`, `.button`, `.publication-authors` (via `@import url('https://fonts.cdnfonts.com/css/linux-biolinum')`). Rendered: Linux Biolinum 400 for every role; headings are explicitly weight 400, so nothing is synthesized. Substitute: Linux Biolinum O from CTAN or, on Google Fonts, Alegreya Sans.
+- **Sans (humanist):** declared `'Linux Biolinum', Arial, sans-serif` on `body`, `.title`, `.subtitle`, `.content`, `.button`, `.publication-authors` (via `@import url('https://fonts.cdnfonts.com/css/linux-biolinum')`). Rendered: Linux Biolinum 400 for every role; headings are explicitly weight 400, so nothing is synthesized. Substitute: Libertinus Sans, the Google Fonts release of the same design.
 - **Unused request:** Google Fonts `Google+Sans|Noto+Sans|Castoro` is still linked by the template but never applied.
 - **Icons:** Academicons (arXiv), Font Awesome 5 (GitHub, SVG).
 
@@ -113,6 +113,8 @@ Anatomy in DOM order (all centred in the 960px `.container.is-max-desktop`, hero
 - **BibTeX:** a grey band like the Abstract with a `pre` on #ffffff so it reads against #f5f5f5.
 - **Award or highlight:** keep it typographic, a second plain line or italic, not a coloured badge; the page has no accent color beyond the author links.
 - **Long publication or news lists:** a white band with a 17.92px left-aligned list in the 960px column.
+- **No YouTube teaser:** put the teaser image or a self-hosted video in the same 763px slot (x=338, y=391, 10px radius, overflow hidden). With neither, the #f5f5f5 Abstract band starts directly at y=391.
+- **No result videos:** fill the carousel band with result images at 1344px wide, keeping the black dots and white round arrows; a single image sits centred on the band with no dots or arrows.
 
 ## Do's and Don'ts
 
@@ -151,6 +153,7 @@ Quick colors: title #363636, body #4a4a4a, band text rgba(0,0,0,0.7), authors #2
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Sans&display=swap");
 :root {
   --bg: #ffffff;
   --band: #f5f5f5;
@@ -161,7 +164,7 @@ Quick colors: title #363636, body #4a4a4a, band text rgba(0,0,0,0.7), authors #2
   --author: #209cee;
   --link: #3273dc;
   --button: #363636;
-  --font-sans: 'Linux Biolinum', 'Alegreya Sans', Arial, sans-serif;
+  --font-sans: 'Linux Biolinum', 'Libertinus Sans', Arial, sans-serif;
   --title-size: 48px;
   --h2-size: 32px;
   --subtitle-size: 20px;

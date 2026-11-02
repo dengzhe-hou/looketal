@@ -148,6 +148,8 @@ Anatomy in DOM order (desktop 1440px, everything centred):
 - **Long publication or news lists**: use step-card styling (#f2f1ec, 1px #dedbd2, 4px radius, 18px padding) or plain rows with 1px #dedbd2 rules; dates in IBM Plex Mono 12.5px #4f4d44.
 - **More sections**: open each with an 18px mono uppercase #9e2f1c label and a 15px intro; separate sections with the 1px #dedbd2 top rule and 56px padding.
 - **Video**: put it in a white `.fig` card (1px #dedbd2, 4px radius) with a #f2f1ec caption strip, matching the teaser cards.
+- **No interactive 3D viewers**: put result images in the same white 333×373 cards (1px #dedbd2, 4px radius, 300px contained stage, caption strip) and omit the Explore buttons; vermilion stays on the venue dot.
+- **No third teaser card**: with one or two images, keep the cards at 333px with a 16px gap, centred; add no empty cards. With none, the abstract follows the masthead at y=623.
 
 ## Do's and Don'ts
 
@@ -187,6 +189,7 @@ Quick colors: paper #faf9f6, card #f2f1ec, border #dedbd2, strong border #c6c2b6
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
 :root {
   --surface-0: #faf9f6;
   --surface-1: #f2f1ec;

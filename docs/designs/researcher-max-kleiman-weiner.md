@@ -116,6 +116,8 @@ Anatomy in DOM order (desktop 1440px; container x=75–1365 with 15px padding, s
 - **A results table**: in the 830px right column, 14px Roboto rgba(0,0,0,.8), header row 700, 1px rules; never fill cells with blue.
 - **Long publication lists**: keep the single list (the page runs to about 3,800px with one list); add year subheads in Montserrat 31.5px only if the list must be split.
 - **Projects with images**: place a figure in the 830px column above the citation; keep it unframed.
+- **No portrait**: keep the 400px left column and start the 24.5px light Montserrat name at y=150, followed by the affiliation lines and icon row at the same gaps. The bio stays at x=520 from y=120.
+- **No selected publications**: set the full Publications list on the #f7f7f7 band right after About, with the 31.5px Montserrat title in the left third and citations in the right two-thirds. No white Publications section follows.
 
 ## Do's and Don'ts
 
@@ -155,6 +157,7 @@ Quick colors: text rgba(0,0,0,.8), muted rgba(0,0,0,.54), headings #313131, bran
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 :root {
   --ink: rgba(0, 0, 0, 0.8);
   --ink-muted: rgba(0, 0, 0, 0.54);

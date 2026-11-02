@@ -116,6 +116,8 @@ Declared but not visible on this page: `a.button` maroon (#663333, hover #884444
 - **More sections**: repeat the 28px `span.header` label preceded and followed by a `<br>`; do not add rules or colored headings.
 - **Images instead of videos**: keep the 480×270 frame (`div.video img` has the same size) and the left/right alternation.
 - **Long bios**: stay within the 928px measure; the floated card keeps the first ~440px of text narrower automatically.
+- **No videos or images**: leave out the alternating floats and run each section's paragraphs at the full 928px measure under the 28px label; the floated contact card and its portrait stay.
+- **No portrait**: keep the #f8f8f8 contact card floated right at y=110 with name, role, email and links centred; with the 300px photo gone it ends near y=245 instead of 545, and the bio wraps under it.
 
 ## Do's and Don'ts
 
@@ -154,6 +156,7 @@ Quick colors: text #222222, links #a02020 (hover #c03030, underline bar #cc4444)
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 :root {
   --ink: #222222;
   --link: #a02020;

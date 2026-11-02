@@ -139,6 +139,8 @@ Anatomy in DOM order (hero `.container.is-fullhd` → `.glass-container` 1152px 
 - **Abstract:** a content card with the section-title bar and 17.6px / 1.8 #666666 justified text at 800px max, as the CSS already defines (`.abstract-content`).
 - **More authors:** the centred 19.2px line wraps; keep superscripts and put affiliations on their own line.
 - **News or updates:** a content card with a list of short rows, each date as a 14px #667eea pill like the active nav item.
+- **No comparison figures:** keep the two #f8f9fa sub-cards (500px max, 12px radius) joined by the #667eea "↔", and fill them with the two things your paper contrasts, such as your method and the closest baseline, each as a short text block or figure.
+- **No research question:** keep the gradient callout (#c2dcfa to #f1f2fe) below the sub-cards and put the paper's one-sentence thesis in it, text in #474646, so the Motivation card still starts at y=442.
 
 ## Do's and Don'ts
 

@@ -125,6 +125,9 @@ Anatomy in DOM order (desktop 1440px; root `div.min-h-screen.flex.flex-col.items
 - **Long publication or news lists**: a plain list under a separator heading, 16px / 24px, dates in 14px #737373 to the left.
 - **More sections**: repeat `section.mb-6` with heading, separator and content; media stays at 70% of the column (542px at 1440).
 - **More awards**: one amber #e17100 line each, 8px apart, above the buttons.
+- **No award**: drop the amber line; the buttons move up to y=332 and #e17100 is not used anywhere on the page.
+- **No institution logos**: keep the 14px #737373 affiliation lines as plain text with superscript numbers; leave out the 24px logo slots and add no icons.
+- **No teaser image**: the justified 16px description starts 16px under the button row at y=411, and the Video Teaser section below is unchanged.
 
 ## Do's and Don'ts
 

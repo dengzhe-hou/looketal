@@ -157,6 +157,8 @@ Background texture: a fixed 46px grid of #2e3544 lines at 35% (layer opacity 0.4
 - **Results tables**: reuse `table.results` exactly; mark the proposed row with the cyan-to-violet wash and use cyan only for best values, never amber.
 - **Long publication or news lists**: use the TL;DR list pattern: mono cyan index or date column at 26px min-width, 15.5px #bfc8d3 text, hairline rows inside an 18px-radius glass box.
 - **Light content (photos, white-background plots)**: inset them on #0d131e with 22–28px padding so the white edges do not touch the navy page.
+- **No headline numbers**: use up to three tiles for any quantities the paper states (models, tasks, datasets), cyan number over mono label. With none, omit `.metrics`; the byline follows the subtitle after 30px and the hero stays 100svh.
+- **No short name**: set the full title in Space Grotesk 700 at 46px, #f0f4f9, with the cyan-to-violet gradient on its last word, in place of the 138px two-line wordmark. Eyebrow, canvas and byline stay left-aligned.
 
 ## Do's and Don'ts
 
@@ -196,6 +198,7 @@ Quick colors: page #080c16, panel #111723 at 55%, raised #0d131e, chip #151c2a, 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap");
 :root {
   --bg: #080c16;
   --bg-2: #0d131e;

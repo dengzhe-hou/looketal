@@ -132,6 +132,8 @@ All weights are 400; hierarchy comes only from size and colour.
 - **Results tables**: the page-content table style: 1px #36322c cell borders, 8px padding, header cells in #c6a081 at weight 400.
 - **Awards**: a copper 11px line under the venue, never a badge or bold.
 - **Light mode**: none in the source; keep the dark palette.
+- **No portrait**: start the bio at x=184 and keep its 862px measure (1072 minus the 180px portrait and 30px gap) at 12px / 22.8px; leave the left empty, with no placeholder.
+- **No long publication list**: with under 20 papers, drop the search field and year select, and keep the count line, copper "▾" year summaries, 13px titles, 11px copper venue lines and "+ BibTeX" toggles.
 
 ## Do's and Don'ts
 
@@ -170,6 +172,7 @@ Quick colors: background #181715, surface #201e1b, ink #d1ccc3, muted #aaa194, r
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 :root {
   color-scheme: dark;
   --bg: #181715;

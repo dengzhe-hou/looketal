@@ -45,7 +45,7 @@ Anatomy in DOM order (centered on x=720; `.container.is-max-desktop` 960px; hero
 
 ## Tokens — Typography
 
-- **Title, subtitle, authors:** `'Google Sans', sans-serif`; renders Google Sans 400 and 600 (loaded). Substitute: Product Sans or Outfit.
+- **Title, subtitle, authors:** `'Google Sans', sans-serif`; renders Google Sans 400 and 600 (loaded). Substitute: Outfit.
 - **Body:** declared `'Noto Sans', sans-serif` in `index.css`, overridden by Bulma's `BlinkMacSystemFont, -apple-system, "Segoe UI", …` stack loaded afterwards; renders Segoe UI on Windows, SF Pro on macOS. Noto Sans 400 does load and renders on the link buttons. Substitute for the body: Inter.
 - **Code:** browser monospace (Consolas on Windows).
 
@@ -124,6 +124,8 @@ Anatomy in DOM order (centered on x=720; `.container.is-max-desktop` 960px; hero
 - **Long publication or news list:** a four-fifths column of #eef6fc notification cards, one per item, #1d72aa text.
 - **Image gallery instead of video:** keep the full-bleed band and the 10px-corner slides; use `slidesToShow: 1` so neighbors keep peeking.
 - **Abstract:** if one is required, place it in a white four-fifths column above the gallery, justified 16px, and keep the TL;DR box.
+- **No gallery of clips:** show the single teaser video centred in the #f5f5f5 band at 936px wide (x=252) with 10px corners and no arrows; the band, its 32px title and the full-bleed width stay.
+- **No TL;DR:** leave out the #c8e1f1 box; the gallery band moves up about 100px to start near y=357 and the masthead above does not change.
 
 ## Do's and Don'ts
 
@@ -162,6 +164,7 @@ Quick colors: title #363636, body #4a4a4a, author links #209cee, TL;DR #c8e1f1, 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;600&display=swap");
 :root {
   --bg: #ffffff;
   --title: #363636;

@@ -46,10 +46,10 @@ Anatomy in DOM order (desktop 1440px, column x=270–1170):
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Text | 'Segoe UI', sans-serif | no web font loaded; Segoe UI (system) on Windows, the default sans-serif elsewhere | Selawik |
+| Text | 'Segoe UI', sans-serif | no web font loaded; Segoe UI (system) on Windows, the default sans-serif elsewhere | Inter |
 | Icons | Font Awesome 6.5 | Font Awesome 6 Free 900, Brands 400 | — |
 
-Selawik is Microsoft's open metric-compatible stand-in for Segoe UI.
+Selawik, Microsoft's metric-compatible stand-in for Segoe UI, is not on Google Fonts; Inter is the closest loadable face by measured title width.
 
 | Role | Selector | Size / weight / line-height | Color |
 |---|---|---|---|
@@ -120,6 +120,8 @@ Selawik is Microsoft's open metric-compatible stand-in for Segoe UI.
 - **Long publication or news lists**: a left-aligned list at 16px in the 900px column, dates bold; or reuse the `.placeholder` block (#f7f7f7, 4px #cccccc left bar) for a short news note.
 - **More figures**: add full-width 900px images under `h2` headings with a 16px #333333 caption paragraph.
 - **A different venue**: swap the logo PNG at 150px wide; keep it top-left above the title.
+- **No annotated teaser**: put the paper's main figure in the same slot (y=190, 900px wide, no frame) with white rounded callout labels drawn into the image. A paper with no figure moves the authors up to y=190.
+- **No logo or visitor badge**: leave both top corners empty, with no placeholder. The title stays left-aligned at y=66 and the layout below does not move.
 
 ## Do's and Don'ts
 
@@ -147,7 +149,7 @@ A single centred 900px column: logo and counter, title, teaser, centred credits 
 
 Quick colors: background #ffffff, title #111111, text #333333, links #0066cc, BibTeX #f7f7f7 with #cccccc bar and #808080 text, footer #888888, counter #fe7d37.
 
-1. "Make the body a 900px column: max-width 900px, margin 0 auto, padding 32px, font 'Segoe UI', Selawik, sans-serif, 16px, line-height 1.6, color #333333 on #ffffff. Put a 150px conference logo absolutely at the top-left of a relative title block (padding-top 12.8px) and a small counter badge at the top-right; title h1 32px/700 #111111, left-aligned, two lines."
+1. "Make the body a 900px column: max-width 900px, margin 0 auto, padding 32px, font 'Segoe UI', Inter, sans-serif, 16px, line-height 1.6, color #333333 on #ffffff. Put a 150px conference logo absolutely at the top-left of a relative title block (padding-top 12.8px) and a small counter badge at the top-right; title h1 32px/700 #111111, left-aligned, two lines."
 2. "Under a full-width teaser image, add a centred author block: 16.8px, names bold #333333 with underlines on linked names, superscripts; affiliations italic with underlined lab links; then a centred row of 19.2px #0066cc underlined links, each with a Font Awesome icon 8px before the label, 16px apart, underline removed on hover."
 3. "Style the BibTeX as a quote block: background #f7f7f7, border-left 4px solid #cccccc, padding 16px, italic 16px #808080, lines broken manually; section headings h2 24px/700 #111111 left-aligned."
 
@@ -159,6 +161,7 @@ Quick colors: background #ffffff, title #111111, text #333333, links #0066cc, Bi
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 :root {
   --bg: #ffffff;
   --title: #111111;
@@ -169,7 +172,7 @@ Quick colors: background #ffffff, title #111111, text #333333, links #0066cc, Bi
   --quote-text: #808080;
   --footer: #888888;
   --counter: #fe7d37;
-  --font: "Segoe UI", Selawik, sans-serif;
+  --font: "Segoe UI", "Inter", sans-serif;
 }
 body { font-family: var(--font); max-width: 900px; margin: 0 auto; padding: 2rem; line-height: 1.6; color: var(--text); background: var(--bg); }
 ```

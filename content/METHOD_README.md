@@ -11,7 +11,7 @@ A code README has fewer design tools than a web page. GitHub fixes the font, col
 ## Rules
 
 - Every claim names the Markdown that produces it. Write "inferred" only when the source cannot settle a value.
-- Badge colors are hex values read from the badge URL or the shields.io named color (`blue` is `#007ec6`, `brightgreen` `#4c1`, `green` `#97ca00`, `yellow` `#dfb317`, `orange` `#fe7d37`, `red` `#e05d44`, `lightgrey` `#9f9f9f`, `blueviolet` `#8a2be2`, `success` `#4c1`, `informational` `#007ec6`).
+- Badge colors are hex values read from the badge URL or the shields.io named color (as served on 2026-11-02: `blue` is `#007ec6`, `brightgreen` `#44bb00`, `green` `#67ac09`, `yellow` `#d8b800`, `orange` `#ea7233`, `red` `#dd4343`, `lightgrey` `#939393`, `blueviolet` `#8a2be2`, `success` `#44bb00`, `informational` `#007ec6`). shields.io has changed these before, so read the SVG when in doubt.
 - One property, one value across the file. The Agent Prompt Guide and Quick Start reuse values from the tables.
 - Separate "absent from the source" from "present but unusual" in Section Outline.
 - Theme: `light` when images and badges are designed for a white background only, `both` when the README switches images with `<picture>` and `prefers-color-scheme` or uses images that work on both, `dark` only if it is designed for GitHub's dark theme.

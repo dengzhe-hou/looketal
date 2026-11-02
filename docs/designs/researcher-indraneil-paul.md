@@ -54,9 +54,9 @@ Social icons use brand colors as literals: Scholar #4285f4, GitHub #24292f, Hugg
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Serif (display) | "Newsreader Variable", ui-serif, Georgia, "Times New Roman", serif | Newsreader Variable 200–800 | Source Serif 4 |
-| Sans (text) | "Source Sans 3 Variable", ui-sans-serif, system-ui, sans-serif | Source Sans 3 Variable 200–900 | Source Sans Pro |
-| Mono (labels) | "Source Code Pro Variable", ui-monospace, SFMono-Regular, Menlo, monospace | Source Code Pro Variable 200–900 | IBM Plex Mono |
+| Serif (display) | "Newsreader Variable", ui-serif, Georgia, "Times New Roman", serif | Newsreader Variable 200–800 | Newsreader |
+| Sans (text) | "Source Sans 3 Variable", ui-sans-serif, system-ui, sans-serif | Source Sans 3 Variable 200–900 | Source Sans 3 |
+| Mono (labels) | "Source Code Pro Variable", ui-monospace, SFMono-Regular, Menlo, monospace | Source Code Pro Variable 200–900 | Source Code Pro |
 
 | Role | Selector | Size / weight / line-height | Color |
 |---|---|---|---|
@@ -150,6 +150,8 @@ The availability dot pulses with `box-shadow: 0 0 0 0 → 0 0 0 .5rem` in color-
 - **A results or stats table**: hairline rows (1px #e6e3db), header in Source Code Pro 12.16px #6b6b63, cells 15.68px #1a1a18, best value 700 #004225. No fills.
 - **Talks or teaching**: reuse the news row (88px mono date gutter, 15.68px text, hairline separators) under a new 28.8px small-caps eyebrow with an emoji.
 - **Awards**: use the gold badge (#8a6a00 on #faf2d3, 1px #e6d18f, 4px radius) inside the publication meta row.
+- **No photo**: keep the bio at 588px from x=300 and leave the right column empty, with no placeholder; append the location to the role line after a comma, so the bio still starts at y=238.
+- **No availability note**: put one call to action (open positions, collaboration requests) in the callout, keeping the 3px #004225 bar and small-caps head. With none, omit the box and start the social row 28px below the bio.
 
 ## Do's and Don'ts
 
@@ -189,6 +191,7 @@ Quick colors: page #faf9f5, ink #1a1a18, muted #6b6b63, hairline #e6e3db, chip b
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@200;400;500;600;700;800&family=Source+Sans+3:wght@200;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;400;500;600;700;800;900&display=swap");
 :root {
   --bg: #faf9f5;
   --bg-raised: #ffffff;

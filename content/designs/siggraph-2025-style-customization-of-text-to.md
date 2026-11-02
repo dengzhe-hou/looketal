@@ -45,7 +45,7 @@ Anatomy in DOM order (desktop 1440px, centred inside `.container.is-max-desktop`
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Display | 'Google Sans', sans-serif (`.publication-title`, `.publication-authors`, `.teaser`) | Google Sans 400 (600 synthesized) | Product Sans |
+| Display | 'Google Sans', sans-serif (`.publication-title`, `.publication-authors`, `.teaser`) | Google Sans 400 (600 synthesized) | Outfit |
 | Text | 'Noto Sans', sans-serif (`body`) | Noto Sans 400 | Noto Sans |
 | Figure labels | none (inside images) | a handwritten marker hand for prompts; bold sans for "(a)" and "(b)" labels | Gochi Hand |
 | Icons | Font Awesome (SVG via JS) | inline SVG; Academicons CSS linked | — |
@@ -118,6 +118,8 @@ The dashed dividers and thin gray frames are drawn in the PNGs, not with CSS bor
 - **Long publication or news lists**: a centred 32px/600 heading and a left-aligned 16px list in the 912px column; no cards.
 - **More result figures**: compose them as grids in the same manner as the source (square icons on white, handwritten quoted prompt per cell, dashed dividers), export at 936px wide for a section or 912px for the teaser, and give gallery images the rgba(0,0,0,0.2) 0px 2px 4px 0px shadow.
 - **A venue**: add a plain centred Google Sans 20px #4a4a4a line under the affiliations rather than a badge.
+- **No input column**: leave out the left exemplar column and its dashed vertical rule, start the grid at the left edge of the 912px teaser, and keep the quoted handwritten prompts above and the bold sans labels beneath.
+- **No text prompts**: label each column with a short handwritten word or phrase in quotes, such as a class or condition name, in the same hand; do not leave the columns bare.
 
 ## Do's and Don'ts
 
@@ -157,6 +159,7 @@ Quick colors: background #ffffff, title #363636, body #4a4a4a, authors #209cee, 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --bg: #ffffff;
   --title: #363636;

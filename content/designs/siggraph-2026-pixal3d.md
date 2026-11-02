@@ -136,6 +136,8 @@ Background layers: `.bg-grid { background-image: linear-gradient(rgba(99, 102, 2
 - **A results table**: put it in a #13131a card with 1px #27272a and 14px radius; header 13.6px/600 uppercase #a1a1aa, cells 15.2px #e4e4e7, 1px #27272a row rules, our row on rgba(99,102,241,0.08) with #818cf8 text.
 - **Long publication or news lists**: use #13131a cards (16px radius, padding 32px as in the citation box) with an uppercase 16.8px/600 #818cf8 date label and #a1a1aa body text, stacked 20px apart.
 - **Shorter hero**: if the teaser image is busy, keep its opacity at 0.15 but reduce `min-height` rather than adding a scrim; the text already sits on near-black.
+- **No hero teaser image**: drop the `.hero::before` layer and keep the glows, the 60px grid and `min-height: 100vh`, so the hero is still 900px tall at 1440 and the badge stays at y=206. Add no replacement picture or scrim.
+- **No short project name**: use the title text before its first colon (or its first three words) as the gradient first line and the nav logo, with the rest of the h1 in #e4e4e7 at 72px/800.
 
 ## Do's and Don'ts
 
@@ -175,6 +177,7 @@ Quick colors: page #0a0a0f, card #13131a, well #0d0d14, text #e4e4e7, muted #a1a
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 :root {
   --primary: #6366f1;
   --primary-light: #818cf8;

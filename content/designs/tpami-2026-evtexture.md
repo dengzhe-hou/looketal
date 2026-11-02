@@ -140,6 +140,8 @@ Anatomy in DOM order (desktop 1440px, everything centred; the header's `.contain
 - **An HTML results table**: put it in a 1344px `.container` on white; header 16px/600 #363636 with a 1px #e5edf2 bottom rule, body 16px #20242a tabular numerals, best values bold; caption below at 17.28px, line-height 1.65, justified.
 - **A longer abstract**: keep the grey `hero is-light` band but raise the text to 17.28px with 1.65 line-height (the size the custom sheet intends for body text) so it does not read small.
 - **Related publications**: the unused `.publication-card` recipe fits here: white, 1px #dfe7ee, radius 8px, padding 21.6px, shadow 0 12px 30px rgba(24,39,75,0.06), with a #1f6f68 (journal) or #315f9d (conference) venue pill.
+- **No demo videos**: put the paper's main comparison figure under a 32px/600 #363636 h2 on white at the full 1344px container width, with square corners and no frame, and a justified 17.28px/1.65 caption below.
+- **No venue chips**: omit `.publication-badges`; the title then starts at y=64 and the band ends about 50px sooner (y=485), with the wash, centred layout and charcoal buttons unchanged.
 
 ## Do's and Don'ts
 
@@ -179,6 +181,7 @@ Quick colors: header base #f7fafc with a mint-to-cream wash, title #15202b, subt
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --header-base: #f7fafc;
   --header-wash: linear-gradient(135deg, rgba(236, 248, 246, 0.9), rgba(247, 249, 252, 0.95) 48%, rgba(255, 248, 226, 0.82));

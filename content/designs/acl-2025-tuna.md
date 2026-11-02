@@ -135,6 +135,9 @@ Declared but not visible: `#results th` sets `background-color: var(--UCLA-darkb
 - **Long publication lists**: inside a four-fifths column, 16px rows with bold titles and #3273dc links.
 - **More parts**: open each with a #f5f5f5 part-title band and put its content in `.box` cards.
 - **Video-heavy content**: carousels inside boxes, videos at 800px with metadata and justified captions.
+- **No leaderboard**: put your main results table right after the abstract at the full 1344px width, with a #dddddd grouped header and borders, #f5f5f5 even rows and bold #3273dc names.
+- **No logo**: set the wordmark alone, centred at y 100, a 48px first letter then 40px capitals in #363636, with the subtitle 4px below.
+- **No venue**: set "Preprint" in that slot in the same 24px/700 gradient text (#0077be to #00c9a7) so the page keeps its one gradient.
 
 ## Do's and Don'ts
 
@@ -174,6 +177,7 @@ Quick colors: headings #363636, body #4a4a4a, authors #209cee, model links #3273
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --heading: #363636;
   --text: #4a4a4a;

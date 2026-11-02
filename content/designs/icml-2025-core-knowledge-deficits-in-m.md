@@ -170,6 +170,8 @@ Anatomy in DOM order (y = top of element box):
 - **Long publication or related-work lists**: reuse the timeline pattern without dates, or a 3-column grid of criteria cards using one neutral tint.
 - **Fewer links**: keep the white neutral button first and give each remaining link its own two-stop gradient; do not reuse a gradient on two buttons.
 - **Video teasers**: frame them like figures in the #f1f5f9 panel with 32px padding.
+- **No TL;DR paragraphs**: set the abstract's first paragraph alone in the 896px justified 20px / 28px #334155 block at y 240. The button row follows 48px below and the hero closes 96px under the buttons.
+- **No key findings**: build the finding-card block from your contributions or main results, with pastel gradient fills, #1f2937 card titles and dark translucent number badges. Two or three cards keep the same card width.
 
 ## Do's and Don'ts
 
@@ -209,6 +211,7 @@ Quick colors: hero #fdfcfb → #e2d1c3, title #1e293b, hero text #334155, headin
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
 :root {
   --hero-from: #fdfcfb;
   --hero-to: #e2d1c3;

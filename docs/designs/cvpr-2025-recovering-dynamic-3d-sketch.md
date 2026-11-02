@@ -46,7 +46,7 @@ Anatomy in DOM order (all centred; hero container `is-max-widescreen` 1152px wid
 
 ## Tokens — Typography
 
-- **Display (handwritten):** declared `"Gochi Hand"` on `.publication-title` and `.tldr` (Google Fonts); rendered Gochi Hand 400. Substitute: Caveat Brush (heavier) or Patrick Hand (calmer); Gochi Hand itself is free.
+- **Display (handwritten):** declared `"Gochi Hand"` on `.publication-title` and `.tldr` (Google Fonts); rendered Gochi Hand 400. Substitute: Patrick Hand; Gochi Hand itself is on Google Fonts.
 - **Text:** declared `'Quicksand'` on `.content`, `.publication-authors`, `.publication-keywords`, `.caption`, `.method-name`, `.botton-text`; rendered Quicksand variable 300–700. Substitute: Nunito.
 - **UI fallback:** Bulma 1.0 body stack `Inter, "SF Pro", "Segoe UI", Roboto, …`; Inter is not web-loaded, so any text outside the Quicksand classes uses the visitor's system face (Segoe UI on Windows). Almost all visible text is in the classes above.
 - **Mono:** `.bibtex-box` declares `"Roboto Mono"` (loaded 400); the inner `pre` uses Bulma's `Inconsolata, Hack, "SF Mono", "Roboto Mono", …` stack at 14px, which resolves to Roboto Mono where Inconsolata is absent.
@@ -126,6 +126,8 @@ Anatomy in DOM order (all centred; hero container `is-max-widescreen` 1152px wid
 - **Long titles:** Gochi Hand runs wide; above about 50 characters let it wrap to two lines rather than shrinking below 40px.
 - **News or updates:** a short Quicksand list above the Abstract, each date in #14274e bold.
 - **More links:** add further navy pills; keep the hover inversion.
+- **No lab logos:** leave out `.logo-list` and the superscript keys; the institution line stays, the buttons rise to about y=256 and the teaser to about y=400.
+- **No teaser video:** put your best result image or clip in the 864px slot at x=288 with no frame, since the sketchbook framing lives only inside footage; the Gochi Hand TL;DR line stays directly under it.
 
 ## Do's and Don'ts
 
@@ -164,6 +166,7 @@ Quick colors: title #2e333d, body #404654, heads #14274e, buttons #143163 with #
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Nunito:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
 :root {
   --bg: #ffffff;
   --title: #2e333d;

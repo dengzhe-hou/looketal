@@ -19,7 +19,7 @@ Anatomy in DOM order (desktop 1440px, everything centred). Bulma `.container.is-
 1. **Hero band** (`section.hero.project-hero`, 0–323px): gradient above, `.hero-body` padding 21.6px 24px 24.8px, 1px #e6ece7 bottom border.
 2. **Kicker pill** (`p.project-kicker`, y=22, 32px tall): "Unified Driving World Model", Google Sans 14.4px/700, #256f39 on #eef7f0, 1px #cfe3d3 border, radius 999px, padding 0 13.6px; margin-bottom 11.2px.
 3. **Title** (`h1.publication-title`, y=65, 100px tall): Google Sans 44.8px/600, line-height 1.12, #363636 (Bulma `.title`), max-width 1060px, two lines; rendered margin-bottom 24px (Bulma `.title:not(:last-child)` overrides the declared 0.55rem).
-4. **Authors** (`.author-row`, y=189): Google Sans 15.68px, line-height 1.42, names with pages #1f6feb (underline on hover), names without pages #18211d, superscripts; author blocks 2.88px apart.
+4. **Authors** (`.author-row`, y=189): Google Sans 15.68px, line-height 1.42, names with pages #1f6feb (underline on hover), names without pages #18211d, 13.07px superscripts, no commas between names; author blocks 2.88px apart.
 5. **Affiliations** (y=220, 5.6px below): 14.4px #53605a, three entries with leading superscripts.
 6. **Buttons** (`.publication-links`, y=258, 12px below, 40px tall): Paper, Code, Weights, Conference Version, Conference Version Code; flex, gap 12px, centred. The hero ends at y=323.
 7. **Abstract** (`section.abstract-section`, white, padding 28px 24px; h2 at y=351): "Abstract" Google Sans 32px/600 #17201a, 24px below it the paragraph at y=411 in the 4/5 column (x=274, 891px wide), Noto Sans 15.68px, line-height 1.55, #415047, justified.
@@ -56,7 +56,7 @@ Anatomy in DOM order (desktop 1440px, everything centred). Bulma `.container.is-
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Headings / names | 'Google Sans', sans-serif | Google Sans 400 (Google Fonts); 600 and 700 are synthesised bold | Product Sans → Outfit |
+| Headings / names | 'Google Sans', sans-serif | Google Sans 400 (Google Fonts); 600 and 700 are synthesised bold | Outfit |
 | Body | 'Noto Sans', sans-serif | Noto Sans 400 | Open Sans |
 | Code | monospace | system monospace (Consolas on Windows) | IBM Plex Mono |
 | Icons | Font Awesome 5 (SVG) | rendered as inline SVG | — |
@@ -146,9 +146,11 @@ Castoro is requested in the Google Fonts link but is not used by any rendered el
 
 - **More authors**: keep the centred `.author-row` at 15.68px with blue linked names and 2.88px gaps; affiliations stay on one 14.4px #53605a line and wrap inside 1120px.
 - **More buttons**: add charcoal `.button.is-dark` items to the flex row (gap 12px, wrapping); do not introduce colored buttons.
-- **An HTML results table**: put it in a white card like `.analysis-copy` (1px #e1e8e2, radius 8px, shadow 0 8px 20px rgba(25,42,31,0.05)); header 15.04px/700 #2c7a3f, body 15.04px #415047, rows divided by 1px #e1e8e2, best values bold #17201a; title above as a centred 20px/700 #2c7a3f subtitle.
+- **An HTML results table**: put it in a white card like `.analysis-copy` (the full 1120px container, 1px #e1e8e2, radius 8px, padding 13.6px, shadow 0 8px 20px rgba(25,42,31,0.05)); Noto Sans header 15.04px/700 #2c7a3f, body 15.04px #415047, cells 8px 12px, numbers right aligned, rows divided by 1px #e1e8e2, best values bold #17201a; title above as a centred 20px/700 #2c7a3f subtitle.
 - **News or updates**: a column of contribution-style cards (padding 12px, green 15.68px/700 date heading, 16px #415047 text), 10.4px apart.
 - **More contributions**: keep three cards per row (366px each at 1440); add a second row rather than a fourth column.
+- **No contribution cards**: leave out `.tl-dr-grid` and let the 891px justified abstract run straight into the next section; do not add empty cards to fill the fold.
+- **No topic line for the kicker**: put the venue in the pill (same 14.4px/700 #256f39 on #eef7f0, 32px tall) rather than dropping it, since the title's position at y=65 depends on it.
 
 ## Do's and Don'ts
 
@@ -176,7 +178,7 @@ Centred single column at 1120px. Hero band → Abstract (4/5 column) with three 
 
 Quick colors: page #fbfcfb, white #ffffff, title #363636, headings #17201a, text #415047, green #2c7a3f, kicker #256f39 on #eef7f0, author links #1f6feb, borders #e1e8e2, footer #eef6f0.
 
-1. "Build a centred hero band with background radial-gradient(circle at 12% 0%, rgba(65,139,84,0.12), transparent 34%), linear-gradient(180deg, #ffffff 0%, #f4f8f5 100%), a 1px #e6ece7 bottom border and padding 21.6px 24px 24.8px. Inside a 1120px container: a pill kicker (Google Sans 14.4px/700, #256f39 on #eef7f0, 1px #cfe3d3, radius 999px, min-height 32px), a Google Sans 44.8px/600 title (line-height 1.12, #363636), 15.68px authors in #1f6feb, 14.4px #53605a affiliations, and a row of #17201a buttons (radius 6px, padding 7px 16px, white text and icons, gap 12px)."
+1. "Build a centred hero band with background radial-gradient(circle at 12% 0%, rgba(65,139,84,0.12), transparent 34%), linear-gradient(180deg, #ffffff 0%, #f4f8f5 100%), a 1px #e6ece7 bottom border and padding 21.6px 24px 24.8px. Inside a 1120px container: a pill kicker (Google Sans 14.4px/700, #256f39 on #eef7f0, 1px #cfe3d3, radius 999px, min-height 32px), a Google Sans 44.8px/600 title (line-height 1.12, #363636), 15.68px authors (#1f6feb when linked, #18211d otherwise, no commas between names), 14.4px #53605a affiliations, and a row of #17201a buttons (radius 6px, padding 7px 16px, white text and icons, gap 12px)."
 2. "Make three contribution cards in a 3-column grid with 10.4px gaps: white, 1px #e1e8e2, radius 8px, padding 12px, box-shadow 0 8px 20px rgba(25,42,31,0.05); heading Google Sans 15.68px/700 #2c7a3f, text Noto Sans 16px #415047, line-height 1.55."
 3. "Present a figure: full 1120px image on white with 1px #e5ebe6 border, radius 8px, 5.6px padding and box-shadow 0 16px 38px rgba(25,42,31,0.07), under a centred Google Sans 32px/600 #17201a section title with 24px below it."
 
@@ -188,6 +190,7 @@ Quick colors: page #fbfcfb, white #ffffff, title #363636, headings #17201a, text
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --page: #fbfcfb;
   --white: #ffffff;

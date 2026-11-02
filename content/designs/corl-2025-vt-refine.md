@@ -52,7 +52,7 @@ Arithmetic check: 52 + 48 = 100; 100 + 90 + 24 = 214; authors 214–274 (two 30p
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Title / authors | 'Google Sans', sans-serif (Google Fonts link, regular only) | Google Sans 400; 600 is synthesized | Product Sans / Outfit |
+| Title / authors | 'Google Sans', sans-serif (Google Fonts link, regular only) | Google Sans 400; 600 is synthesized | Outfit |
 | Body / headings | 'Noto Sans', sans-serif | Noto Sans 400; 600 is synthesized | Noto Sans |
 | Code | monospace | Consolas on Windows | JetBrains Mono |
 | Icons | Font Awesome, Academicons | Academicons 400 (Font Awesome via its own CSS) | — |
@@ -136,6 +136,9 @@ Arithmetic check: 52 + 48 = 100; 100 + 90 + 24 = 214; authors 214–274 (two 30p
 - **More awards**: add lines in the award style (20px/600, bold #b22222 lead); keep them above the button row.
 - **More experiment videos**: repeat the two-column pattern (660px videos, 10px radius, "Trial N" 20px/600 titles).
 - **Long publication lists**: use the related-research rows (thumbnail plus 16px text) rather than cards.
+- **No teaser video**: keep the 32px/600 claim and put the teaser image under it at 99% width (1307px) with 10px radius, starting at y=653; drop the #bdbdbd Left/Right caption.
+- **No award**: leave out the firebrick line; the button row rises about 47px and the venue stays 24px/600 #363636.
+- **No institution logos**: leave out the row; the venue follows the 16px #2d2e2e affiliation block about 80px higher.
 
 ## Do's and Don'ts
 
@@ -175,6 +178,7 @@ Quick colors: page #ffffff, title #363636, body #4a4a4a, visuo #46b1f0, tactile 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --paper: #ffffff;
   --title: #363636;

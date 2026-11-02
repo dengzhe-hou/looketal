@@ -157,6 +157,7 @@ Declared but not visible: `--orange-color` #ff5c00 (only on the unused `.nav-cv-
 - **Long publication lists**: keep year headers with the gold tab; the page already makes the "Old Preprints" header a collapsible `<summary>`, and older years can follow the same pattern.
 - **News**: one timeline item per event; reserve the gold UPCOMING badge for future dates and the red AWARD badge for honours.
 - **Fewer accents**: if the page must be calmer, drop the cats and the highlighter bands first; keep navy, #2b6cb0 and gold.
+- **No portrait**: drop the 160px photo and the 40px column gap, so the name line and keycap row start at x=202. Keep the header 181px tall so the nav stays at y=193.
 
 ## Do's and Don'ts
 
@@ -195,6 +196,7 @@ Quick colors: navy #1a365d, blue #2b6cb0, link button #3182ce, sky #4299e1, text
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Kaushan+Script&display=swap");
 :root {
   --primary-color: #1a365d;
   --secondary-color: #2b6cb0;

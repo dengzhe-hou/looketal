@@ -156,6 +156,7 @@ Quick colors: text #20313f, links and headings #003e74, name #002147, hover #006
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
 :root {
   --navy: #003e74;
   --navy-deep: #002147;

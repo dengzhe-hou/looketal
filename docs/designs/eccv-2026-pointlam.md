@@ -137,6 +137,8 @@ Anatomy in DOM order (desktop 1440px, everything centred in a 1000px container a
 - **Long publication or news lists**: use idea-card rows: 1px #e7e7e9 top rule, 18px padding, a 12px/650 crimson date or index, a 19px/650 title and 14px #66707a detail.
 - **More metrics**: keep three per row; add a second metric row rather than shrinking the 48px numbers.
 - **A video**: treat it like a figure: full container width, no border, a centred 14px #66707a caption 18px below.
+- **No short method name**: set the title before any colon as the 66px/750 crimson wordmark and the rest as the 38px/650 subtitle; with no colon, set the full title in crimson at 38px/750 and omit the subtitle.
+- **No teaser figure**: close the hero with the 1px #e7e7e9 rule at about y=518 and let the abstract kicker follow; the venue line, wordmark and buttons keep their positions.
 
 ## Do's and Don'ts
 

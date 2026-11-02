@@ -176,6 +176,7 @@ Quick colors: text #222222, muted #666666, links #245b96, rule #dddddd, highligh
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap");
 :root {
   --text: #222222;
   --muted: #666666;

@@ -47,7 +47,7 @@ Anatomy in DOM order (Bulma `.container.is-max-desktop` 960px with Bootstrap's 1
 
 ## Tokens — Typography
 
-- **Title:** declared `font-family: Lato` with no `@font-face` or font link; renders Times New Roman bold (Windows) or Times (macOS). This accidental serif is the page's most distinctive feature. Substitute that keeps the rendered look: Tinos Bold or Liberation Serif Bold. If you want what the author intended: Lato Bold.
+- **Title:** declared `font-family: Lato` with no `@font-face` or font link; renders Times New Roman bold (Windows) or Times (macOS). This accidental serif is the page's most distinctive feature. Substitute that keeps the rendered look: Tinos Bold. If you want what the author intended: Lato Bold.
 - **Body and authors:** declared `'Noto Sans', sans-serif` and `'Google Sans', sans-serif`; neither loads, so both render in the default sans-serif (Arial on Windows, Helvetica on macOS). Substitute: Arimo.
 - **Section titles:** `"Source Sans Pro", Calibri, Candara, Arial, sans-serif`; renders Source Sans Pro 700 (the only weight loaded). Substitute: Source Sans 3 Bold.
 - **Teaser and diagram labels:** baked into the images (a casual handwritten-style face).
@@ -128,6 +128,8 @@ Anatomy in DOM order (Bulma `.container.is-max-desktop` 960px with Bootstrap's 1
 - **Long publication or news list:** under the tab row, a list with bold #363636 titles and the venue in italic #8d85e5.
 - **More sibling pages:** add tabs but shrink the width so all fit on one row (for five, about 19% each); keep exactly one filled.
 - **Video results:** use the same three-column grid with "Source" / "Ours" labels burned into the video corners in white on 70% black.
+- **No sibling pages:** keep the four 24% tab buttons as in-page anchors (Home, Method, Results, BibTeX), Home filled #8784c7 and the rest outlined, in the same slot under the teaser paragraph at about y=904.
+- **No before/after pairs:** keep the #f5f5f5 Feature band and its three-column grid, one result image per cell with a rgba(0,0,0,0.7) chip naming the model. No slider handle, no empty half.
 
 ## Do's and Don'ts
 
@@ -166,6 +168,7 @@ Quick colors: title #363636, product word and emphasis #8d85e5, tabs #8784c7 wit
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&family=Arimo:wght@400;700&family=Source+Sans+3:wght@700&display=swap");
 :root {
   --bg: #ffffff;
   --title: #363636;

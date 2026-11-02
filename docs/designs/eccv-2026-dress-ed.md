@@ -150,6 +150,8 @@ Anatomy in DOM order (desktop 1440px, everything centred):
 - **Long publication or news lists**: use edit-type card styling (1px #d0e2f4, 4px radius, 18px 16px padding) in an auto-fit minmax(160px, 1fr) grid, or a ruled list with the 11.52px uppercase cobalt label as the date.
 - **A second dark section**: reuse #0a1a2e with #0e2240 cards and #6ab0e8 labels, but keep it to one per page so the transition stays an event.
 - **More stats**: add stat-strip items; they wrap at 812px, so a sixth item joins the second row next to the fifth.
+- **No headline numbers**: omit the stat strip; the hero ends at y=541 under the buttons and the #eaf3fb Overview band starts there. Three or more numbers stay in the strip with 32px Garamond values.
+- **No multi-stage pipeline**: keep the full-bleed #0a1a2e section and put your method's stages (up to four) in its #0e2240 cards with Roman numerals; a single method figure sits in one #0e2240 card instead.
 
 ## Do's and Don'ts
 
@@ -189,6 +191,7 @@ Quick colors: base #f5f9fe, tint #eaf3fb, callout #e4f0fb, ink #0d1f33, slate #3
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
 :root {
   --bg: #f5f9fe;
   --text: #0d1f33;

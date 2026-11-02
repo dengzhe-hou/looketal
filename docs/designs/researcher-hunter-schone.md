@@ -122,6 +122,8 @@ No other radii, borders or shadows render on the page.
 - **Long publication lists**: keep one 18px paragraph per entry across the 924px width; group by year with a 28px/700 #181818 capitals subheading rather than adding new colours.
 - **More news**: keep the 14px month-line plus bullets pattern; the page caps it at "Recent News (2-years)", so move older items into an archive rather than lengthening the hero area.
 - **A new section**: open it with a 50px/700 #576947 centred capitals heading; use a full-bleed photo band behind it only when there is a strong cut-out image.
+- **No portrait**: leave out the 399px circle. Start the pill row at y=258, centred over the 460px contact box at x=750, level with the research statement; the contact line follows 54px below. The left column stays at x=230.
+- **No signal trace**: draw a repeating wave line pattern in #efefee on white behind the hero and news, based on any time series or curve from the work, under about 10% contrast.
 
 ## Do's and Don'ts
 
@@ -161,6 +163,7 @@ Quick colors: olive #576947, olive hover #587f36, dark olive #2f3827, ink #18181
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 :root {
   --olive: #576947;
   --olive-hover: #587f36;

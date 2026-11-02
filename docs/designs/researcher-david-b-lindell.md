@@ -134,6 +134,8 @@ Declared but not visible: `--global-hover-color` #00369f (no rule uses it; link 
 - **More press**: keep one row per item with a 144px thumbnail; text-only items should still get a #f5f5f5 thumbnail box so the column aligns.
 - **Talks**: use the theme's talk entry (200×112 thumbnail, radius 4px, 600 blue title, 14px #555555 venue).
 - **Students / people**: reuse the press row recipe with a square photo instead of 16:9.
+- **No paper thumbnails**: put each paper's first figure in the 160×110 box with object-fit cover. If no paper has a figure, drop the thumbnail column from every row so titles start at x=285, keeping the #f0f0f0 separators.
+- **No portrait**: start the name at x=285, y=106 with the title block and the three icons below it at the same offsets, and let the bio follow 24px after the icons. Nothing replaces the 200px portrait.
 
 ## Do's and Don'ts
 
@@ -172,6 +174,7 @@ Quick colors: text #000000, secondary #555555, accent #0076df, award #cc0000, ic
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 :root {
   --text: #000000;
   --secondary: #555555;

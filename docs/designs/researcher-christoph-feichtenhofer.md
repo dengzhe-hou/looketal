@@ -165,6 +165,7 @@ Quick colors: banner #3b5998, banner text #ffffff, body #444444, h3 #777777, tit
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
 :root {
   --banner: #3b5998;
   --text: #444444;

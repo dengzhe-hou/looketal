@@ -55,7 +55,7 @@ Anatomy in DOM order (`.sec-hero` padding 72px 36px 27px; `.hero-inner` max-widt
 
 ## Tokens — Typography
 
-- **Sans:** declared `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif` with `font-feature-settings: 'kern', 'liga', 'cv11'`; rendered Inter 400, 500, 600, 700, 800 from Google Fonts. Substitute: Inter is free; if replacing, Geist.
+- **Sans:** declared `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif` with `font-feature-settings: 'kern', 'liga', 'cv11'`; rendered Inter 400, 500, 600, 700, 800 from Google Fonts. Substitute: Geist.
 - **Mono:** `'JetBrains Mono', 'SFMono-Regular', Menlo, …`; rendered JetBrains Mono 400 for BibTeX and the pseudocode panel. Substitute: IBM Plex Mono.
 - **Icons:** Font Awesome 6.5 (brands), Academicons.
 
@@ -140,6 +140,8 @@ Anatomy in DOM order (`.sec-hero` padding 72px 36px 27px; `.hero-inner` max-widt
 - **Video teaser:** place it inside the same 820px 3:2 frame with the 10px radius and frame shadow; keep the example pills above it.
 - **Award:** add a second venue-style pill next to "CVPR 2026"; keep it white with #555555 text.
 - **News:** a short list in a white code-box-style card (1px #e3e3e3, 10px radius) under the buttons.
+- **No second layer:** omit the `.comp-tab` row and label the frosted corner tags Input and Output; the 820×547 slider moves up to about y=542.
+- **No example tabs:** with one example, omit the `.ex-tab` row too, so the slider (or the toggle row above it) follows the buttons at y=488.
 
 ## Do's and Don'ts
 
@@ -178,6 +180,7 @@ Quick colors: page #fafafa, title and active #0f1419, text #4a4a4a, authors #256
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=JetBrains+Mono:ital,wght@0,400;1,400&display=swap");
 :root {
   --bg: #fafafa;
   --ink: #0f1419;

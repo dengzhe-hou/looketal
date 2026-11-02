@@ -44,7 +44,7 @@ The TL;DR section heading follows at y=1155.
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Display (hero) | 'Google Sans', sans-serif (`.publication-title`, `.publication-authors`) | Google Sans 400 only; 600 is synthesized | Product Sans or Outfit |
+| Display (hero) | 'Google Sans', sans-serif (`.publication-title`, `.publication-authors`) | Google Sans 400 only; 600 is synthesized | Outfit |
 | Body | 'Noto Sans', sans-serif | Noto Sans 400; bold synthesized | Open Sans |
 | Code | Bulma monospace | system monospace (Consolas on Windows) | Source Code Pro |
 | Icons | Font Awesome (local `fontawesome.all.min.css` + JS), Academicons | SVG icons injected by the FA script | — |
@@ -126,6 +126,8 @@ The Google Fonts request also names Castoro, which is not applied anywhere.
 - **Long publication or news lists**: a `.content ul` with bold leads, exactly like Key Features, 16px with 4px item spacing.
 - **An award**: the template's `.publication-awards` rule (bold #ff3860) is declared but unused here; if added, place it under the venue line at 24px.
 - **More figures**: keep each full-width with radius 5px and shadow 0 4px 12px rgba(0,0,0,0.1); introduce it with a 24px subheading.
+- **No video**: put the pipeline or teaser figure in the same slot at y=509, 960px wide, with the 4px solid #2b2b2b border, 8px radius and 0 6px 18px rgba(0,0,0,0.25) shadow; the hero above does not change.
+- **No title emoji**: start the title with its first word and use no emoji in any heading; the 48px Google Sans title is otherwise unchanged.
 
 ## Do's and Don'ts
 
@@ -165,6 +167,7 @@ Quick colors: background #ffffff, headings and buttons #363636, body #4a4a4a, au
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --bg: #ffffff;
   --heading: #363636;

@@ -165,6 +165,7 @@ Quick colors: page #17181c, header #27272a, card well #1f2937, text #ffffff, bio
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,500;0,600;0,700;0,900;1,100;1,400;1,500;1,600;1,700;1,900&display=swap");
 :root {
   --bg: #17181c;
   --header: #27272a;

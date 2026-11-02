@@ -138,6 +138,8 @@ The page has no rounded containers other than the buttons and no shadows anywher
 - **Larger results tables**: keep the table style and wrap it in `.table-scroll` with a min-width; bold best values at 600 #303039 rather than adding color.
 - **Long publication or news lists**: plain list items at 16px with dates in 13px #62626e; separate groups with the same 1px #ececf0 rule as sections.
 - **Many sections**: the contents rail scales with no changes; keep link labels short (two or three words).
+- **No TL;DR**: omit the heading and paragraph; the first section heading then takes y=531, after the 64px gap under the buttons. The contents rail and 660px column are unchanged.
+- **No subtitle**: drop `.paper-subtitle`; the authors follow the 41.6px title 24px below it, and venue, buttons and TL;DR follow unchanged. The title stays balanced and centered in the 660px column.
 
 ## Do's and Don'ts
 

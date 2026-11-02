@@ -57,7 +57,7 @@ Declared but not visible: `.publication-venue` (#f72585) and `.gradient-text-alt
 
 ## Tokens — Typography
 
-- **Headings:** `'Google Sans', sans-serif` on `.title.is-1/.is-2`, `.publication-title`, card headings and table header strips; renders Google Sans 600. Substitute: Product Sans or Outfit (similar round geometric caps).
+- **Headings:** `'Google Sans', sans-serif` on `.title.is-1/.is-2`, `.publication-title`, card headings and table header strips; renders Google Sans 600. Substitute: Outfit (similar round geometric caps).
 - **Body:** `'Noto Sans', sans-serif`; renders Noto Sans 400 and 700. Section titles (`h2.title.is-3`, weight 600) render with the 700 face. Substitute: Open Sans.
 - **Scene pills:** native `button` font (Segoe UI on Windows, SF on macOS), 13.6px / 500.
 - **Code:** browser monospace, 14.08px, line-height 1.6.
@@ -185,6 +185,7 @@ Quick colors: gradient #00b4d8 → #7209b7, hero wash #f0f7ff → #f5f0ff → #f
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@600&family=Noto+Sans:wght@700&display=swap");
 :root {
   --grad-a: #00b4d8;
   --grad-b: #7209b7;

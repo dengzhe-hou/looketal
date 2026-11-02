@@ -118,6 +118,9 @@ The first section ends with 48px padding; the "Abstract" section title rule sits
 - **Long publication or news lists**: a plain list in the 776px column, 16px / 1.65, each item led by a date in 500 weight; separate groups with the ruled section title.
 - **More gallery items**: add 360px tiles; at 1440 they wrap three per row with 8px gaps.
 - **A BibTeX block**: monospace 14px black on #ececec, no radius, in the 776px column under a ruled "Citation" section title.
+- **No result videos**: fill the 360px tiles with still result images, unframed, 8px gaps and the same hover lift; fewer than three sit centred in one row.
+- **No teaser**: the 776px justified intro paragraph starts 48px under the nav strip and the ruled sections follow as before; no image replaces it.
+- **No video link**: keep the ruled strip with the remaining icon links; two sit at the 12% side padding, a single link is centred.
 
 ## Do's and Don'ts
 

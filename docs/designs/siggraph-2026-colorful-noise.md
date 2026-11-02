@@ -160,6 +160,8 @@ Kicker dash: `.section-tag::before` is 24×3px, radius 2px, `background: linear-
 - **A results table**: put it in a white 16px-radius card with the card shadow; header row 11px/500 uppercase #c8502a, body 15px #6b6560, 1px #ede9e2 row rules, best value 600 #1a1816.
 - **Long publication or news lists**: use rows of 15px #6b6560 text with a 11px/500 uppercase #c8502a date, separated by 1px #ede9e2 rules at 56px section padding.
 - **More applications**: repeat `.app-subsection` blocks (24px serif titles, 14px #6b6560 descriptions, 48px apart) with Caveat captions on figures.
+- **No lab logo**: keep the centred affiliation text, lab name 19px/600 #1a1816 over institution 15px #6b6560, and drop the logo and the 1×52px divider; the button row follows below it unchanged.
+- **No name prefix**: apply the spectrum gradient (#e05a5a, #d4b84a, #4a9ab5, #8b5bbf) to the title's first one or two words, clipped to text; the rest of the 50px title stays #1a1816.
 
 ## Do's and Don'ts
 
@@ -199,6 +201,7 @@ Quick colors: page #faf9f7, surface #ffffff, text #1a1816, muted #6b6560, faint 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital,wght@0,400;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Caveat:wght@500;600&display=swap");
 :root {
   --bg: #faf9f7;
   --surface: #ffffff;

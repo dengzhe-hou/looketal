@@ -70,7 +70,7 @@ Anatomy in DOM order (desktop 1440px):
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
 | UI / text | 'Rajdhani', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif | Rajdhani 500 and 700 only; 400 text uses 500, 600–900 use 700 | Rajdhani (load 500, 700) |
-| Chinese examples | 'KaiTi', '楷体', 'STKaiti', '华文楷体', 'Microsoft YaHei' | system KaiTi where installed | LXGW WenKai |
+| Chinese examples | 'KaiTi', '楷体', 'STKaiti', '华文楷体', 'Microsoft YaHei' | system KaiTi where installed | LXGW WenKai TC |
 | Tab buttons | browser default for `button` | Arial 16px | Arial |
 | Code | browser monospace | system monospace | JetBrains Mono |
 
@@ -169,6 +169,9 @@ Anatomy in DOM order (desktop 1440px):
 - **More stats**: extend the stat grid in rows of four; below 900px it drops to two.
 - **News**: stack announcement bars (white-to-blue gradient, #bfdbfe border, #3b82f6 badge) at the top of the header card, newest first.
 - **An abstract**: put it in a gradient card titled with a 24.8px / 800 #2563eb card title and 16px #1e293b text.
+- **No leaderboard**: put your main results table in the `.tabs` card with one active tab (2px #2563eb underline), a #f3f4f6 header and #f4f8fb zebra rows, and color the numbers with the score colors from #16a34a (high) to #dc2626 (low).
+- **No logo**: omit the 48px logo box and its 16px margin; the title starts at x=282, with the taglines unchanged.
+- **No audio examples**: show each example as text question and answer blocks in the same blue-bordered Examples card, with no player.
 
 ## Do's and Don'ts
 
@@ -208,6 +211,7 @@ Quick colors: page #f8fafc → #e0e7ef, card #e0e7ef → #b6d0f7, main blue #256
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap");
 :root {
   --page-a: #f8fafc;
   --page-b: #e0e7ef;

@@ -150,6 +150,9 @@ Banner overlay: `#banner:before { background-color: #42424f; opacity: 0.7; posit
 - **More figures**: give each its own band, alternating #ffffff and #ececec, with a 12px justified caption directly under the image.
 - **Long publication or news lists**: use a grey #ececec band with left-aligned 14.67px/300 rows, titles in bold #111111 and links with the 1px dotted underline; no cards.
 - **More download links**: add `.fancy-button-white` pills to the button row; on white bands they render at opacity 0.7 too, so the face looks light grey.
+- **No banner video**: keep the 459px banner and the 70% #42424f overlay over one still photo of the system with `object-fit: cover`; with no photo use a flat #42424f field. White type is unchanged.
+- **No project name**: leave out the gradient logotype; the white title starts at y=136 and the banner ends at y=400. The gradient is not applied to any other text.
+- **No institution logo**: keep the 60px #1d154d strip and centre the institution name in it as white 22px/700 text, with no logo box.
 
 ## Do's and Don'ts
 
@@ -189,6 +192,7 @@ Quick colors: navy bar #1d154d, overlay #42424f at 0.7, white #ffffff, band grey
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 :root {
   --navy: #1d154d;
   --overlay: #42424f;

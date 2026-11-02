@@ -168,6 +168,7 @@ Quick colors: background #fafafa, text #47515c, links #265ed4, secondary #434343
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@700&display=swap");
 :root {
   --bg: #fafafa;
   --text: #47515c;

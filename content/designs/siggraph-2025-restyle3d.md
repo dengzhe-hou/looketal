@@ -48,7 +48,7 @@ The full wordmark ramp is #006400, #006666, #006D6D, #007373, #007979, #008080, 
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Display | 'Google Sans', sans-serif (`.publication-title`, `.teaser`) | Google Sans 400 (600 synthesized) | Product Sans |
+| Display | 'Google Sans', sans-serif (`.publication-title`, `.teaser`) | Google Sans 400 (600 synthesized) | Outfit |
 | Text | 'Noto Sans', sans-serif (`body`) | Noto Sans 400 | Noto Sans |
 | Code | monospace | system monospace | JetBrains Mono |
 | Icons | Font Awesome (SVG via JS) | inline SVG | — |
@@ -131,6 +131,8 @@ The full wordmark ramp is #006400, #006666, #006D6D, #007373, #007979, #008080, 
 - **Long publication or news lists**: a `section.section` with a centred 32px/600 heading and a 16px list in the 960px column, dates bold.
 - **More videos**: add another `section.hero.teaser.is-small` player (24px heading, 912px video, `.pages` dot row), or a gray `is-light` band for a single hero-level video.
 - **A different method name**: build its ramp in the same way, one inline span per letter, from a dark green to teal or another adjacent-hue pair, nine steps or one per letter.
+- **No teaser video**: keep the full-width #f5f5f5 band and its 20px heading directly under the hero, and place the paper's main still figure in it at 912px with no frame, 24px below the heading.
+- **No method name**: ramp the paper's key noun, such as the task or dataset name, from #006400 to #009090 with one inline span per letter, in the wordmark line and the band heading.
 
 ## Do's and Don'ts
 
@@ -170,6 +172,7 @@ Quick colors: background #ffffff, band #f5f5f5, title #363636, body #4a4a4a, lin
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --bg: #ffffff;
   --band: #f5f5f5;

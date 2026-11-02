@@ -120,6 +120,8 @@ Anatomy in DOM order (desktop 1440px, centred, `.container.is-max-desktop` 960px
 - **Long publication or news lists**: centred 24px heading, then rows of 16px #f5f5f5 text in the 763px column with bold dates.
 - **More image rows**: add `.carousel-container`s; alternate `carousel-scroll-left` and `carousel-scroll-right` and keep the 80px framed identity inset.
 - **Font fallback**: link the Google Fonts stylesheet correctly (or self-host) if the intended Noto Sans / Google Sans look matters; as served, everything renders in the system sans.
+- **No photo rows**: fill one to three `.carousel-container` rows with your result images at 200px wide, 4px radius, 3px apart, alternating `carousel-scroll-left` and `carousel-scroll-right`, with the 140px charcoal fades. Use the 80px framed inset only when a row has one reference input.
+- **No award**: set the venue line as plain bold 22px #f5f5f5 text with no tinted word; #f44336 stays unused and the button row keeps its place below the line.
 
 ## Do's and Don'ts
 
@@ -159,6 +161,7 @@ Quick colors: background #202020, text #f5f5f5, buttons #363636, code #303030, h
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap");
 :root {
   --main-color: #f5f5f5;
   --main-background-color: #202020;
@@ -166,7 +169,7 @@ Quick colors: background #202020, text #f5f5f5, buttons #363636, code #303030, h
   --code-bg: #303030;
   --highlight: #f44336;
   --rule: rgba(255, 255, 255, 0.665);
-  --font-title: "Bradley Hand", cursive;
+  --font-title: "Bradley Hand", "Caveat", cursive;
   --font-body: 'Noto Sans', Arial, sans-serif;
   --container: 960px;
   --tile-width: 200px;

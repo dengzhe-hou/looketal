@@ -179,6 +179,7 @@ Quick colors: hero gradient #000000 → #122153 → #feae6f → #f4eacb, title #
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --hero-gradient: linear-gradient(-235deg, #000000 10%, #122153 55%, #feae6f 85%, #f4eacb 100%);
   --title: #feae6f;

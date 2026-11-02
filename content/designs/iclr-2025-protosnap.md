@@ -114,6 +114,7 @@ Outline buttons fill with #007bff and turn white on hover (Bootstrap default).
 - **A results table**: use Bootstrap `table table-sm` at 800px, bold best values, no color fills; keep the italic caption below.
 - **Long publication or news lists**: a Bootstrap `list-unstyled` list in the 800px column with dates in bold and links in #007bff.
 - **A video**: Bootstrap `embed-responsive embed-responsive-16by9` at 800px, centred, with an italic caption.
+- **No annotated teaser**: put your main figure at 800px, centred, at y=345 with the TL;DR line under it, and draw any highlight frames inside the image, not in CSS. With no figure, the hr and Abstract start at y=345.
 
 ## Do's and Don'ts
 

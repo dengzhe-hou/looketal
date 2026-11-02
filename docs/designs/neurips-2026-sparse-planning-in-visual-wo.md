@@ -134,6 +134,8 @@ Anatomy in DOM order (shell x 220–1220, header centered):
 - **More results tables**: repeat the table recipe; always tint only the proposed method's column (#f7f7f4) and head it in #b74732.
 - **Long publication list**: rows separated by 1px #e1e2dc, index in 10px mono on the left, title 15px #252823, venue 12px #62665f right-aligned.
 - **News**: a section with index "NN / NEWS" and a list of 14px lines, each with a 10px mono date.
+- **No demo recordings**: put four square qualitative images, or four crops of one result figure, in the same #272c29 frames (238px columns, 16px gaps, 222px squares) with the task name and 8px mono label. Drop "Pause demos".
+- **No headline numbers**: keep the stat strip with one column per fact from the paper, at most three, values 30px/500 and labels 11px #62665f between 1px #e1e2dc hairlines. Never leave a column empty.
 
 ## Do's and Don'ts
 

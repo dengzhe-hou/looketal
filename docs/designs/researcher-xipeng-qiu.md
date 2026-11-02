@@ -141,6 +141,9 @@ Anatomy in DOM order (`.page` max-width 1200px, x=120–1320; sidebar 260px; mai
 - **News**: reuse the timeline rows with dates in the 64px column.
 - **Students**: the stylesheet's student groups use small colored labels (amber #fef3c7/#92400e for PhD, indigo #e0e7ff/#3730a3 for MS); keep them to the students page.
 - **English version**: keep the same layout; Latin text renders in Segoe UI and the uppercase sidebar labels gain their full 0.08em tracking.
+- **No portrait**: start the 260px sidebar with its first labelled section at y=119, keeping the 1px #e2e6ec right border and the 32px 24px padding; no placeholder image.
+- **No open-source repositories**: use the project cards for datasets, courses or books, #ffffff with the #eef1f5 badge; leave out the mono repo tiles and amber star pills.
+- **No third research topic**: build the grid with `auto-fill` instead of `auto-fit` so each #f7f8fa card stays 280px wide and left aligned instead of stretching.
 
 ## Do's and Don'ts
 

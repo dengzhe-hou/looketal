@@ -110,6 +110,8 @@ The split is strict: serif for everything you read, sans for everything you clic
 - **Long publication list**: serif 17px entries in the text column with the title as a rust-underlined link and venue in 15px #5e5d59 sans; 16px between entries.
 - **News**: a dated list inside an In-brief style callout: #f5f4f0 panel, 3px #b5452d left border, rust 13px uppercase label "NEWS".
 - **More buttons**: add outlined pills only; keep exactly one filled black pill.
+- **No hero illustration**: put the paper's main figure in `figure.hero-art`, 880px wide with a 12px radius, on white and with no placeholder ground. With no figure at all, start the 640px serif text 48px under the buttons.
+- **No lab logo**: drop `header.site-header` and start the hero 96px from the top of the page, left-aligned in the 880px column. Add no nav bar and no text wordmark.
 
 ## Do's and Don'ts
 
@@ -149,6 +151,7 @@ Quick colors: page #ffffff, ink #141413, muted #5e5d59, accent #b5452d, rule #e3
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap");
 :root {
   --page: #ffffff;
   --ink: #141413;

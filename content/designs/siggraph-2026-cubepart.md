@@ -146,6 +146,8 @@ Declared but not visible: `--accent-3: #d56c8f` (rose) is defined in `:root` but
 - **A results table**: use `.table-wrap` (white, 1px #e3dfd5, 14px radius, small shadow) with the #f3f0ea header row; mark our row with rgba(111,92,214,0.05) and violet bold values.
 - **Long publication or news lists**: render each item as a white 14px-radius card (1px #e3dfd5, padding 18px) with a Newsreader 20px/600 date or title in #6f5cd6 and 14.5px #303542 text, in the 820px narrow container.
 - **Static results instead of 3D**: keep the gallery card frame and 4:3 12px-radius tiles on the cream viewer gradient so the carousel rhythm survives without WebGL.
+- **No hero video**: leave out the tinted band and the Video pill. The 1124px teaser figure follows the hero about 24px below its end (y=558), and the cream ground continues unbroken.
+- **No short name**: paint the title's first one or two words with the violet, indigo, jade gradient at 64px/600, then the colon and the rest as the 36px/500 serif subtitle, short enough for one line at 1440.
 
 ## Do's and Don'ts
 
@@ -185,6 +187,7 @@ Quick colors: page #fbfaf7, tint #f3f0ea, surface #ffffff, ink #1a1d24, ink-2 #3
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600&family=Inter:wght@400;500;600;700&display=swap");
 :root {
   --bg: #fbfaf7;
   --bg-tint: #f3f0ea;

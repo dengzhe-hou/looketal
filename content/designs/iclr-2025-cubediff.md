@@ -40,7 +40,7 @@ Anatomy in DOM order (body padding 20px; `header` has 48px top margin and is cen
 
 ## Tokens — Typography
 
-- **Sans:** declared `'Roboto', sans-serif`; Google Fonts request asks only for `Roboto:wght@400` (and Roboto Mono 200, unused). Rendered: Roboto 400 only, so every bold heading is browser-synthesized bold. Substitute: Roboto with real 700, or Inter.
+- **Sans:** declared `'Roboto', sans-serif`; Google Fonts request asks only for `Roboto:wght@400` (and Roboto Mono 200, unused). Rendered: Roboto 400 only, so every bold heading is browser-synthesized bold. Substitute: Roboto with a real 700.
 - **Mono:** `pre` falls back to the browser `monospace` (rendered 13px). Substitute: Roboto Mono.
 - **Icons:** Academicons 1.9.4 and Font Awesome 6 Brands (kit).
 
@@ -163,6 +163,7 @@ Quick colors: text #000000 on #ffffff, buttons #3a3a3a (hover #1a1a1a), active t
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700&display=swap");
 :root {
   --bg: #ffffff;
   --text: #000000;

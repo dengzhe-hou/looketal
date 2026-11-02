@@ -46,7 +46,7 @@ Anatomy in DOM order (y = top of element box):
 
 ## Tokens — Typography
 
-- **Text and headings**: `fonts.css` sets `body { font-family: 'DM Sans', sans-serif !important }` with self-hosted woff2. Only the 400 face is declared and loaded (`fonts_loaded`: DM Sans 400), so the 600 title and 700 venue are browser-synthesized bold. Substitute: DM Sans from Google Fonts with real 600 and 700 weights (same design; if DM Sans is unavailable, Manrope).
+- **Text and headings**: `fonts.css` sets `body { font-family: 'DM Sans', sans-serif !important }` with self-hosted woff2. Only the 400 face is declared and loaded (`fonts_loaded`: DM Sans 400), so the 600 title and 700 venue are browser-synthesized bold. Substitute: DM Sans from Google Fonts with real 600 and 700 weights (same design).
 - **Controls**: Bulma buttons and native selects keep the system stack (`BlinkMacSystemFont, -apple-system, "Segoe UI", …`), so "Click to animate figure" and the select values render in Segoe UI on Windows.
 - **Mono**: DM Mono 400 is declared in `fonts.css`; the BibTeX `pre` renders in the browser monospace.
 - **Root size**: `html { font-size: 12pt }`, which equals 16px.
@@ -127,6 +127,8 @@ Anatomy in DOM order (y = top of element box):
 - **Long publication lists**: a left-aligned list in the 739px column, 16px black text, titles as #3273dc links.
 - **News**: a few dated lines under the TLDR, centered, 16px, the date in bold; keep it above the teaser only if short.
 - **Static figures**: drop the animate button and keep the figure at 600–720px, centered, with no frame.
+- **No TLDR**: leave out the TLDR and previous-title lines; the teaser video then starts at y=380, right after the hero ends at y=364. Pills, venue and the 720px centered video column are unchanged.
+- **No teaser**: omit the video and animate button; the 2px #ededed 90vw divider and the centered 24px Abstract title follow the TLDR directly. No substitute figure, and the 739px column stays.
 
 ## Do's and Don'ts
 
@@ -166,6 +168,7 @@ Quick colors: title #363636, body #000000, authors #209cee, links #3273dc, pills
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=DM+Mono&display=swap");
 :root {
   --title: #363636;
   --ink: #000000;

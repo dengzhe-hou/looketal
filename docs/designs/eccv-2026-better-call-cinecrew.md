@@ -154,6 +154,9 @@ Anatomy in DOM order (desktop 1440px, container x 80–1360):
 - **BibTeX**: use a glass card with a mini label "Citation" and a #09090b well (24px radius, 16px padding) in a monospace 13px #d4d4d8.
 - **Long publication or news lists**: use timeline items (260px, 26px radius, gold uppercase date label, 20px/600 title, 14px gray text) in a scrolling row, or stack them full-width inside one card.
 - **A footer**: one 14px #a1a1aa line in the 1280px container with a 1px rgba(255,255,255,0.06) top rule and 40px padding.
+- **No hero video**: put your best result image in the same `.hero-media.card` (602×339, 32px radius, shadow), contained on a #09090b well; the 1.06fr / 1fr grid and its 40px gap stay.
+- **No script or storyboard**: keep the 32px-radius lead card and set the paper's key claim in the 26px light lead, coloring its method, data and effect nouns #58a6ff, #f6b650 and #fda4af.
+- **No logo**: set the project's initials at 15px/700 white in the 42px tile beside the title; the header stays 76px.
 
 ## Do's and Don'ts
 
@@ -193,6 +196,7 @@ Quick colors: bg #121212, text #ffffff, muted #a1a1aa, light gray #d4d4d8, gold 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 :root {
   --bg: #121212;
   --card: rgba(255, 255, 255, 0.03);

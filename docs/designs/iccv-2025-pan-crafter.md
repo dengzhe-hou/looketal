@@ -158,6 +158,8 @@ Anatomy in DOM order (desktop 1440px, centred, `.container` content box x=180 to
 - **Long publication or news lists**: reuse the research-line items (8px radius, 1px #e2e6ec, Outfit 13.5px/650 title, 11px venue) stacked in a 1080px column on a #f5f7fa band, with the newest highlighted in #fdf2ef.
 - **More qualitative results**: add a tab to the `.tablist` and tiles to the strip; mark the method's own output with the ours tile, never with a second accent color.
 - **A video**: put it in a `.figure-media` frame (12px radius, 1px #e2e6ec) at 1240px width with the centred 14.5px caption.
+- **No logo**: drop `img.hero-logo` so the Outfit title starts at y=48 and the hero shortens by 114px; keep the red accent phrase, red author links and radial glow. Nav and footer wordmarks become plain #1c2738 text.
+- **No headline figure**: after the h2 and lead line, put your main result figure in the 12px-radius 1px #e2e6ec frame, 1240px wide from y=655, with the centred 14.5px caption. With none, the next band follows the lead line.
 
 ## Do's and Don'ts
 
@@ -197,6 +199,7 @@ Quick colors: ink #1c2738, body #2b3240, muted #5a6373, faint #6b7385, accent #e
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap");
 :root {
   --text: #1c2738;
   --text-2: #2b3240;

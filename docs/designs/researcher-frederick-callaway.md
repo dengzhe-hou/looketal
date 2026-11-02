@@ -109,6 +109,7 @@ The home page renders no boxes, borders, radii or shadows.
 - **Long publication lists**: follow the Publications page pattern: year label in a 110px column (15px) beside a 1fr list, 28px between entries, title 17px, details 14px #666666.
 - **More people**: a 190px portrait beside the copy, 45px gap, names 22px with -.025em tracking.
 - **A different logo**: keep a single black line illustration on white at the column's 517px width; one or two small accents (blue, yellow) at most.
+- **No lab logo**: put one black-outline line drawing of the central idea in the right column at 517px wide, unframed, and keep the two-column grid. With no drawing, leave that column empty and keep the introduction at x=168.
 
 ## Do's and Don'ts
 

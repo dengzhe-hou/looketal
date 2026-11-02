@@ -104,6 +104,8 @@ Anatomy in DOM order (desktop 1440px; content column x=410–1030):
 - **A results table**: 16px Fira Sans #333333 in the 620px column, header row 400 #000000 with a 1px #efefef rule, no fills.
 - **Long publication lists**: one 18px paragraph per entry, title as a black link with the pine underline, venue italic; group years under 32px Playfair headings.
 - **Wide figures**: use the 790px wide alignment; captions 16px #333333.
+- **No portrait**: leave out the columns row and place the 24px profile icon row at x=410, y=459, spaced 20px, with the bio 30px below it; the masthead, title and 620px column do not change.
+- **No other pages**: keep the nav row with in-page anchors to your sections (about, publications, CV) in the same 16px Fira Sans #333333, so the header stays 358px tall.
 
 ## Do's and Don'ts
 
@@ -143,6 +145,7 @@ Quick colors: title and link text #000000, body #333333, accent #3c8067, accent 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Fira+Sans&display=swap");
 :root {
   --global--color-primary: #000000;
   --global--color-foreground: #333333;

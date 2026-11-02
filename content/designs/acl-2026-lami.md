@@ -144,6 +144,7 @@ No shadows or gradients anywhere.
 - **Key contributions**: use the declared `.method-point` cards in a two-column grid with a 32px gap (white, 1px #e8e8e8, 6px radius, 24px padding, 16.32px/600 Noto Sans title).
 - **Long publication lists or news**: a plain list in a white band with Noto Serif 17.92px year headings and 14.4px items; links #1a5276.
 - **More tables**: repeat the table recipe; keep group rows uppercase grey and the proposed method in #eef5fb.
+- **No TL;DR**: let the grey Abstract band follow the hero directly, with its 56px padding and centred 26.4px Noto Serif heading, so the white and grey alternation holds from there.
 
 ## Do's and Don'ts
 
@@ -183,6 +184,7 @@ Quick colors: white #ffffff, band #f8f9fa, heading #1a1a1a, body #2c2c2c, text #
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Serif:ital,wght@0,600;0,700;1,600;1,700&display=swap");
 :root {
   --bg: #ffffff;
   --band: #f8f9fa;

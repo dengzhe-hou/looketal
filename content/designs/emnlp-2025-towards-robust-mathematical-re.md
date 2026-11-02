@@ -133,6 +133,8 @@ Anatomy in DOM order (desktop 1440px; body padding 16px 0; the card sits at x=20
 - **Teaser figure in the header**: place it as a figure after the buttons, inside the white 16px-padded frame at 720px width, caption italic #374151.
 - **News or updates**: use the note-box recipe (pale blue, 4px #3b82f6 left bar) for each dated item, the date in 600 #111827.
 - **More stats**: a summary table is the native form; avoid stat cards, which the page never uses.
+- **No brand logo**: start the header with the 36px/700 title at y=64 and keep the medal at x=1104; everything below moves up 64px and the 1px #e5e7eb header rule stays. Add no text stand-in for the logo.
+- **No medal**: leave the right of the header row empty and let the title use the full 960px; the rule and note box stay. An award or badge image, if you have one, goes there at 96px square with 4px radius.
 
 ## Do's and Don'ts
 

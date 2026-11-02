@@ -54,7 +54,7 @@ Anatomy in DOM order (hero column x 220–1220):
 
 ## Tokens — Typography
 
-- **Sans**: declared `'NVIDIA-NALA', Arial, Helvetica, sans-serif`; renders NVIDIA Sans (NALA build) as a variable font (100–900) plus static 400, 500, 700. Substitute: Inter (close proportions), or DM Sans for the rounder feel.
+- **Sans**: declared `'NVIDIA-NALA', Arial, Helvetica, sans-serif`; renders NVIDIA Sans (NALA build) as a variable font (100–900) plus static 400, 500, 700. Substitute: Inter (close proportions).
 - **Mono**: `ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace` for BibTeX (Consolas on Windows).
 
 | Role | Selector | Size at 1440 | Weight | Line-height | Tracking |
@@ -131,6 +131,8 @@ Anatomy in DOM order (hero column x 220–1220):
 - **Long publication list**: a section card with rows separated by 1px #e0e0e0; titles 16.5px/700 #1a1a1a, venue in #c27b1d, award in #b0401a, link pills in green below each.
 - **News**: a card titled "News" with a bulleted list; dates in 700 #76b900.
 - **Video results**: the template's carousel card (white, radius 12px, padding 8px) with round rgba(0,0,0,.55) arrows that turn green on hover and #76b900 active dots.
+- **No teaser figure**: delete `.teaser-card` and let the Abstract card start where it stood, near y=404 at 1440, in the same 1000px column. The hero stays left-aligned; no hero image or empty card takes its place.
+- **No award**: drop "· Spotlight" and its #bbbbbb dot, so the venue line is only the venue name in #c27b1d 18.9px/500. The 30px gap to the buttons stays and #b0401a goes unused.
 
 ## Do's and Don'ts
 
@@ -170,6 +172,7 @@ Quick colors: canvas #f1f3ee, card #ffffff, green #76b900 (hover #63a000), green
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;900&display=swap");
 :root {
   --canvas: #f1f3ee;
   --card: #ffffff;
@@ -188,7 +191,7 @@ Quick colors: canvas #f1f3ee, card #ffffff, green #76b900 (hover #63a000), green
   --footer-bg: #0a0a0a;
   --page-max-width: 1000px;
   --card-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  --font: 'NVIDIA-NALA', Arial, Helvetica, sans-serif;
+  --font: 'NVIDIA-NALA', 'Inter', Arial, Helvetica, sans-serif;
 }
 html { font-size: 18px; }
 body { background: var(--canvas); color: var(--ink); font-size: 16.5px; line-height: 1.4em; font-family: var(--font); }

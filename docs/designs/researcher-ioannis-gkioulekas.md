@@ -149,6 +149,7 @@ Quick colors: text #000000, links #1772d0, hover and award text #b35500, award b
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&display=swap");
 :root {
   --text: #000000;
   --link: #1772d0;

@@ -58,6 +58,8 @@ def lint(path):
         problems.append(f"colors used but not in the color table: {', '.join(stray)}")
     if not readme and "share" not in sections.get("First Viewport", "").lower() and "%" not in sections.get("First Viewport", ""):
         problems.append("First Viewport has no color share")
+    if not re.search(r"^\s*[-*] \*\*[^*]*\b(no|without|missing)\b", sections.get("Adapting to Other Content", ""), re.M | re.I):
+        problems.append("Adapting to Other Content has no '**No ...**' rule for missing content")
     inferred = len(re.findall(r"inferred", md, re.I))
     return problems, inferred
 

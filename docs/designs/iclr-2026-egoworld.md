@@ -50,7 +50,7 @@ Declared but not visible on load: the title's rotating conic-gradient selection 
 
 ## Tokens — Typography
 
-- **Family:** declared `"Spoqa Han Sans Neo", sans-serif` on `body`; renders Spoqa Han Sans Neo 400 and 700 (self-hosted). Weights 600 and 800 in the CSS fall to 700. Substitute: Pretendard or Noto Sans KR, which keep the same open, slightly wide Latin.
+- **Family:** declared `"Spoqa Han Sans Neo", sans-serif` on `body`; renders Spoqa Han Sans Neo 400 and 700 (self-hosted). Weights 600 and 800 in the CSS fall to 700. Substitute: Noto Sans KR, which keeps the same open, slightly wide Latin.
 - **Tables:** `"Times New Roman", Times, serif` on `.comparison-table`, a deliberate paper-table look. Substitute: Tinos.
 - **Code:** browser `monospace` (Consolas on Windows) in the BibTeX block.
 - **Math:** MathJax CHTML fonts for Φ and the formulation.
@@ -138,6 +138,8 @@ Declared but not visible on load: the title's rotating conic-gradient selection 
 - **Long publication or news list:** list items separated by 1px #e3e5e8 rules, dates as teal #0f766e uppercase 12.8px labels above 16px titles.
 - **Video teaser:** place it in the teaser slot at 960px with square corners and keep the TL;DR bar above it.
 - **Mobile:** add a 16px side gutter to `.container` below 1024px; the source leaves text flush to the screen edge.
+- **No teaser figure:** end the hero at the TL;DR bar (3px #2563eb rule) and start the Abstract after a 1px #e3e5e8 hairline, so title, buttons, TL;DR and the abstract fill the first viewport. The sticky nav stays as is.
+- **No formulation:** keep the teal note by setting a #0f766e uppercase 12.8px label reading KEY IDEA over a #f7f7f8 strip with 1px #e3e5e8 rules, holding the central claim in one or two sentences of #1f2937 text.
 
 ## Do's and Don'ts
 
@@ -176,6 +178,7 @@ Quick colors: page #ffffff, text #1f2937, muted #4b5563, title #121212, link #25
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;800&display=swap");
 :root {
   --bg: #ffffff;
   --bg-soft: #f7f7f8;
@@ -189,7 +192,7 @@ Quick colors: page #ffffff, text #1f2937, muted #4b5563, title #121212, link #25
   --shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
   --radius-btn: 12px;
   --radius-code: 10px;
-  --font: "Spoqa Han Sans Neo", "Pretendard", sans-serif;
+  --font: "Spoqa Han Sans Neo", "Noto Sans KR", sans-serif;
   --font-table: "Times New Roman", Tinos, serif;
   --container: 960px;
   --title-size: clamp(2.05rem, 3.7vw, 3.2rem);

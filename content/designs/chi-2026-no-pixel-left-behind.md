@@ -139,6 +139,8 @@ The Abstract heading follows at y=952.
 - **Long publication or news lists**: use the left-aligned design-principles list (max 760px, 8px between items) with dates bold #333333.
 - **More links**: add pills; they wrap and centre, six per row at 1440.
 - **A second language**: follow the page's pattern of paired `.en-text`/`.jp-text` spans and swap with the same toggle; keep Hiragino Sans and Meiryo in the stack for Japanese.
+- **No teaser image**: put the method or result figure at y=434, 960px wide, with the 8px radius, 0 4px 10px rgba(0,0,0,0.1) shadow and left-aligned italic 14.4px caption. With no figure, the Abstract heading follows the buttons at about y=434.
+- **No language toggle**: leave out `.lang-switch` and the paired `.en-text`/`.jp-text` spans; the top-right corner stays empty and the title still starts at y=64.
 
 ## Do's and Don'ts
 
@@ -178,6 +180,7 @@ Quick colors: page #f5f5f5, card #ffffff, text #333333, title #222222, headings 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 :root {
   --page: #f5f5f5;
   --card: #ffffff;

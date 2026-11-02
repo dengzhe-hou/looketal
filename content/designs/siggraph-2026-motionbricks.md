@@ -176,6 +176,7 @@ Quick colors: hero #050608, paper #fafaf7 / #f2f2ec, ink #111418, soft ink #2b2f
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 :root {
   --accent: #76b900;
   --accent-dark: #5b8f00;

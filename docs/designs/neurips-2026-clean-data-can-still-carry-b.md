@@ -56,7 +56,7 @@ Declared but not visible: #ae502e (a rust focus outline, `a:focus-visible, butto
 
 ## Tokens — Typography
 
-- **Family**: declared `Arial, sans-serif`; renders Arial (no web fonts loaded). Substitute: Helvetica Neue, or Arimo for metric-compatible rendering.
+- **Family**: declared `Arial, sans-serif`; renders Arial (no web fonts loaded). Substitute: Arimo, for metric-compatible rendering.
 - **Mono**: `monospace` (system default) for card step labels and BibTeX.
 
 | Role | Selector | Size at 1440 (clamp) | Weight | Line-height | Tracking |
@@ -133,6 +133,8 @@ Declared but not visible: #ae502e (a rust focus outline, `a:focus-visible, butto
 - **Long publication list**: one row per paper separated by 1px #cbd6cd, title 16px #173e3c, venue 14px #65766e; group under a numbered eyebrow.
 - **News**: a section with eyebrow "NN / NEWS", dates in 12px monospace #597269 (the card label style) before 16px text.
 - **More results**: repeat the table pattern; tint and bold only the proposed rows with #e2ecdf.
+- **No venue badge**: drop `span.badge`; the 12px uppercase eyebrow in #586f68 becomes the first line under the 76px header padding. Keep the hero text-only and left-aligned, with no replacement pill or logo.
+- **No dek**: leave out `p.dek`; the authors follow the subtitle after its 21px gap. Do not fill the space with an image or the abstract, which stays late under "IN THE PAPER".
 
 ## Do's and Don'ts
 

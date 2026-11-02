@@ -141,6 +141,9 @@ Header glass: `background: rgba(255,255,255,.85); backdrop-filter: saturate(180%
 - **More videos**: extend the 2-column grid (464px cards at 1440, 32px gap); each card keeps the Fraunces 17.6px title and a 14.4px muted caption.
 - **Long publication or news lists**: a list at 16px/1.65 with dates in 600 #0a0a0a and links in #5a4df5; separate groups with the 1px #e6e6e6 section rule, not cards.
 - **A method figure**: use the hero-figure treatment (full 960px, 10px radius, no border) so it blends with white.
+- **No teaser video**: put the main figure in the slot at y=425, 960px wide, 10px radius, no border; with none, the buttons move up to y=425 and the Abstract rule rises to about y=495.
+- **No venue**: keep the lilac pill and put the year and Preprint in it, 700 then 400, so the pill still sits at y=362.
+- **No result videos**: fill the 2×2 grid (464px cards, 32px gap) with result figures, keeping the Fraunces 17.6px title and 14.4px muted caption on each.
 
 ## Do's and Don'ts
 
@@ -180,6 +183,7 @@ Quick colors: page #ffffff, ink #0a0a0a, muted #626262, rule #e6e6e6, accent #5a
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fraunces:ital,opsz,wght@0,9..144,700&display=swap");
 :root {
   --bg: #ffffff;
   --ink: #0a0a0a;

@@ -31,7 +31,7 @@ All three are shields.io static badges in the default `flat` style (no `style=`)
 | Project Page | TORA | #007ec6 (label #555555) | flat (default), path color `blue` | nahyuklee.github.io/tora/ |
 | 🤗 Hugging Face | Space | #d8b800 (label #555555) | flat (default), path color `yellow`, the emoji is part of the label text | huggingface.co/NahyukLEE/tora |
 
-The label names the destination and the message gives the identifier (the arXiv number) or the item ("TORA", "Space"). The `yellow` badge is served with fill #d8b800 and white message text; the shields.io named-color list in METHOD_README gives #dfb317 for `yellow`, and the served SVG is used here. The arXiv badge carries the white arXiv glyph on the grey label; the other two have no logo.
+The label names the destination and the message gives the identifier (the arXiv number) or the item ("TORA", "Space"). The `yellow` badge is served with fill #d8b800 and white message text; older shields.io palettes gave #dfb317 for `yellow`, and the served SVG is used here. The arXiv badge carries the white arXiv glyph on the grey label; the other two have no logo.
 
 Colors on the page that are not badges come from the architecture figure: a brick red #9a3827 on the student side (the left of the "TORA" block, the student Gram matrix, the projector features) and a steel blue #2e6081 on the teacher side; both are pixel medians, and the block itself is a red-to-blue gradient. GitHub's TIP (green) and NOTE (blue) alerts appear further down in GitHub's own alert colors.
 

@@ -54,7 +54,7 @@ Anatomy in DOM order (desktop 1440px):
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
 | Body / UI | 'Noto Sans', sans-serif (Google Fonts, 400 only) | Noto Sans 400; bold synthesised | Noto Sans (load 600/700 weights) |
-| Title / authors | 'Google Sans', sans-serif | not loaded; generic sans-serif (Arial here) | Product Sans-like: Google Sans Text or Outfit; to match the render, Arial |
+| Title / authors | 'Google Sans', sans-serif | not loaded; generic sans-serif (Arial here) | Arimo, to match the rendered Arial |
 | Code | Bulma monospace stack | system monospace | JetBrains Mono |
 
 | Role | Selector | Size / weight / line-height | Color |
@@ -147,6 +147,8 @@ Anatomy in DOM order (desktop 1440px):
 - **Long abstracts**: the page sets the abstract at 1344px justified; for readability, a `.column.is-four-fifths` without the inline width override gives 1075px.
 - **News or publication lists**: use the bracketed-date bullet pattern; bold the date only.
 - **Additional benchmarks**: link them with the navy outline pill, as the navbar does for CMB.
+- **No dataset counts**: fill the six-up stats row with your own headline numbers (tasks, models, languages) as 32px #363636 values over 11px uppercase #4a4a4a labels, unboxed. With none, the bullet list runs straight into the overview figure.
+- **No interactive example**: show one worked example (question plus options) as a static card, white with a 1px #dbdfe6 border and a #f4f6fa question box, the correct option outlined #2e7d4f with a #eef7f1 label strip. No reveal script.
 
 ## Do's and Don'ts
 
@@ -186,6 +188,7 @@ Quick colors: page #ffffff, charcoal #363636, text #4a4a4a, author links #209cee
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 :root {
   --bg: #ffffff;
   --charcoal: #363636;

@@ -142,6 +142,8 @@ Spacing scale (`--s-1`…`--s-9`): 4, 8, 12, 16, 24, 32, 48, 72, 96px.
 - **A news or update list**: use the `.result-sub` eyebrow (12.48px/500 uppercase #5a5a5a) for the date, followed by a 16px #2a2a2a line, with 1px #f0f0f0 rules between items.
 - **Image results instead of videos**: reuse `.video-row.cols-4` (four 177px squares at 1440 with 12px gaps) with the same uppercase heads; keep the black letterbox and 2px radius.
 - **A long abstract**: put it in `.section-sub` (16px/1.65 #2a2a2a, centred, max 760px) under a 32px Castoro "Abstract" title; switch to left alignment if it runs past six lines.
+- **No concept image**: leave out the 224px image column and centre the labelled 4×2 video block (488px) in the 744px column; the TL;DR caption stays 32px below it.
+- **No teaser videos**: drop the 4×2 grid and the 1.1fr 2.4fr split, centre your main figure at 720px with no frame, and keep the TL;DR caption 32px below it.
 
 ## Do's and Don'ts
 
@@ -181,6 +183,7 @@ Quick colors: background #ffffff, ink #111111, secondary text #2a2a2a, muted #5a
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Castoro&family=Noto+Sans:wght@400;500;600;700&display=swap");
 :root {
   --ink: #111111;
   --ink-2: #2a2a2a;

@@ -46,7 +46,7 @@ Anatomy in DOM order (y = top of element box):
 ## Tokens — Typography
 
 - **Display**: declared `"Newsreader", Georgia, serif` (`--font-serif`), loaded from Google Fonts with optical size 6..72 at 400/600/700. Rendered: Newsreader 600 and 700 (`fonts_loaded`). Substitute: Source Serif 4 (also an optical-size text serif).
-- **Text**: declared `"General Sans", system-ui, sans-serif` (`--font-sans`) from Fontshare at 400/500/600. Rendered: General Sans 400, 500, 600. Substitute: Satoshi, or Inter with slightly tighter tracking.
+- **Text**: declared `"General Sans", system-ui, sans-serif` (`--font-sans`) from Fontshare at 400/500/600. Rendered: General Sans 400, 500, 600. Substitute: Figtree.
 - **Code**: `"JetBrains Mono", monospace` declared for inline code (not loaded as a web font, falls back to the system mono). **Math**: KaTeX.
 
 | Role | Selector | Size / line-height | Weight | Color |
@@ -139,6 +139,8 @@ Anatomy in DOM order (y = top of element box):
 - **News**: an overline "UPDATES" and a two-column list (date in 11.2px uppercase #8a8880, text in 15.5px #4a4840) separated by faint rules.
 - **Long publication lists**: the same date-plus-text rows, titles in Newsreader 19.2px/600 #181814.
 - **Video**: inside a figure card with the image padding and 6px radius, captioned like figures.
+- **No key results**: keep the 5fr / 4fr grid and label the right column "CONTRIBUTIONS" in the same 11.2px/600 uppercase #8a8880, with three rows of a #c04030 Newsreader 22.4px/700 numeral 1, 2 and 3 beside a 14.1px #4a4840 sentence.
+- **No venue**: leave out the badge; the author line then starts at y 340, 52px higher, with the same 32px gap under the headline, and the red stays in the kicker, numerals and links.
 
 ## Do's and Don'ts
 
@@ -178,6 +180,7 @@ Quick colors: paper #edeae3, cream #f5f2ed, card #e6e2da, ink #181814, body #4a4
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,600;0,6..72,700&display=swap");
 :root {
   --bg: #edeae3;
   --bg-card: #e6e2da;
@@ -191,7 +194,7 @@ Quick colors: paper #edeae3, cream #f5f2ed, card #e6e2da, ink #181814, body #4a4
   --border-2: rgba(24, 24, 20, 0.07);
   --radius: 10px;
   --radius-sm: 6px;
-  --font-sans: "General Sans", system-ui, sans-serif;
+  --font-sans: "General Sans", "Figtree", system-ui, sans-serif;
   --font-serif: "Newsreader", Georgia, serif;
   --max: 1200px;
   --nav-h: 60px;

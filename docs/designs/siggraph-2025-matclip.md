@@ -44,7 +44,7 @@ Anatomy in DOM order (desktop 1440px, centred inside `.container.is-max-desktop`
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Display | 'Google Sans', sans-serif (`.publication-title`, `.publication-authors`, `.teaser`) | Google Sans 400 (600 synthesized) | Product Sans |
+| Display | 'Google Sans', sans-serif (`.publication-title`, `.publication-authors`, `.teaser`) | Google Sans 400 (600 synthesized) | Outfit |
 | Text | 'Noto Sans', sans-serif (`body`) | Noto Sans 400 | Noto Sans |
 | Code | monospace | system monospace | JetBrains Mono |
 | Icons | Font Awesome (SVG via JS), Academicons | inline SVG | — |
@@ -124,6 +124,8 @@ The overview's rounded gray panels, the blue architecture panel and the boxed te
 - **Long publication or news lists**: a wide section with a left-aligned 32px heading and a 16px list; or a gray `is-light` band at 763px for a short list.
 - **More comparisons**: compose them like the teaser (2×2 swatch grids, a #fcd0a1 labelled arrow for the method, a thin black rule before baselines, bold labels below) at 912px.
 - **More results**: add items to an image/video pair carousel; each item is one target and one video at 50% each.
+- **No baseline comparison**: draw only the two 2×2 grids with the #fcd0a1 arrow between them and the bold labels beneath, and leave out the third grid and the black rule. The 912px teaser keeps y=436.
+- **No result videos**: make each carousel item a target image and a result image at 50% each in the 1334px strip, so the side-by-side pairing stays; the dots stay black.
 
 ## Do's and Don'ts
 
@@ -163,6 +165,7 @@ Quick colors: background #ffffff, band #f5f5f5, title #363636, body #4a4a4a, aut
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --bg: #ffffff;
   --band: #f5f5f5;

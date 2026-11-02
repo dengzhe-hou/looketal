@@ -153,6 +153,8 @@ Anatomy in DOM order (desktop 1440px, hero centred in a 960px container at x=240
 - **A results table**: put an HTML table in the four-fifths column; header 14.4px/600 #1a1459 with a 1px #eef0f6 rule, body 16px #2d2d2d, best value bold #6d28d9. Wrap it in the `.figure-img` radius and shadow on a white band.
 - **Long publication or news lists**: use the references style (14.88px #444444, 12px between items) inside a #f8f9fc band, with dates in #1a1459 600.
 - **More sections**: alternate white and #f8f9fc bands and insert a dark divider band before each major part (Results, Analysis, Method).
+- **No short name**: put the full title in `h1.publication-title` at 41.6px/700 with the #a78bfa to #60a5fa gradient on the words before its colon (first two words if none); drop the subtitle and reuse that phrase as the nav brand.
+- **No second affiliation**: drop the numeric superscripts and keep one 15.2px rgba(255,255,255,.65) affiliation line; the three superscript colors go unused and no new color is added.
 
 ## Do's and Don'ts
 
@@ -192,6 +194,7 @@ Quick colors: hero #0f0c29 → #1a1459 → #24243e → #0d1b3e, accent text #a78
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap");
 :root {
   --hero: linear-gradient(135deg, #0f0c29 0%, #1a1459 35%, #24243e 65%, #0d1b3e 100%);
   --divider: linear-gradient(135deg, #0f0c29 0%, #1a1459 40%, #1e3a8a 100%);

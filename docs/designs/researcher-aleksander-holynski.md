@@ -115,6 +115,8 @@ Anatomy in DOM order (desktop 1440px; `.mainPage` 800px at x=320; header table c
 - **More authors**: break author lines by hand at about 60 characters, as the page does, so the centred block stays balanced.
 - **Awards**: keep them as red #ff0000 words in the venue line rather than badges.
 - **Results tables**: plain 12.6px PT Serif tables, centred, no borders, bold for best values.
+- **No portrait video**: show a still 216px black-and-white circular cut-out at the same spot (x=811, y=16) on white, no border. With no portrait at all, centre the name and links across the 800px column.
+- **No topic chips**: leave out the chip row and let the first gallery row start at y=402 instead of 446; the 67% and 33% cells and the 197px videos stay as they are.
 
 ## Do's and Don'ts
 
@@ -153,6 +155,7 @@ Quick colors: background #ffffff, text and links #222222, highlight #ff0000, chi
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=PT+Sans&display=swap");
 :root {
   --ink: #222222;
   --bg: #ffffff;

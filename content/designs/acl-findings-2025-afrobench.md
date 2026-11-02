@@ -133,6 +133,8 @@ Spacing follows Tailwind's 4px scale: 48px (`mt-12`) between every hero block an
 - **News**: reuse the banner shape without the pulse and at 18px/700, or a white card with a dated 16px list; one yellow banner per page at most.
 - **Long publication lists**: a 16px #374151 list inside the 1024px column with titles in weight 700 and #3b82f6 links.
 - **More links**: add pills to the same row; keep yellow for paper/results and blue for code.
+- **No announcement banner**: leave out the yellow box; the pills start at y 441, 48px under the summary, and the stat cards at y 527. Yellow stays only on the ArXiv and Leaderboard pills.
+- **No headline numbers**: keep the three 317px white cards, headed by three short findings or contributions in 24px/700 #1f2937, each with one 16px #374151 sentence.
 
 ## Do's and Don'ts
 

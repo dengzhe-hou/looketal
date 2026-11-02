@@ -115,6 +115,8 @@ There are no boxes, cards, images or radii anywhere apart from the focus ring.
 - **Portrait**: if one is needed, a small square (about 96px) to the left of the name with no radius and no shadow; do not widen the column.
 - **Awards**: keep them in the right-hand italic slot or as a section with the same rows; no badges or colour.
 - **Talks or teaching**: same rows, venue or term on the right.
+- **No writing list**: make your selected papers the first list, under a 13.26px italic uppercase label such as RESEARCH, each a sienna link row with the venue in the right italic slot, so the ruled rows still reach the fold.
+- **No location line**: leave out `p.subtitle`; the name keeps y=77 and the bio starts 42.5px below it, at about y=167, with nothing added in its place.
 
 ## Do's and Don'ts
 

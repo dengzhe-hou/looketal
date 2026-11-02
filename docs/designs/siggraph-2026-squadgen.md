@@ -58,7 +58,7 @@ The metrics band starts at y=1041, just below the fold.
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Headings / UI | 'Google Sans', sans-serif | Google Sans 400 only; 700/800 synthesised | Product Sans is unavailable; use Outfit 700–800 |
+| Headings / UI | 'Google Sans', sans-serif | Google Sans 400 only; 700/800 synthesised | Outfit 700–800 |
 | Body | 'Noto Sans', sans-serif | Noto Sans 400 | Noto Sans |
 | Math inline | 'Castoro', serif | Castoro 400 | Source Serif 4 |
 | Math display | MathJax SVG | rendered as SVG paths | — |
@@ -150,6 +150,8 @@ The metrics band starts at y=1041, just below the fold.
 - **A results table**: use the existing `.results-table-wrapper` (white, 1px #dfe5eb, 8px radius); th Google Sans 14.4px #18202a, 1px #dfe5eb cell rules, best values `<strong>` in #0a5260.
 - **More metrics**: keep the band at four cells per row (288px each at 1440); a fifth metric goes in a second band row rather than squeezing the cells.
 - **Long publication or news lists**: put each entry in an 8px white card with 1px #dfe5eb, a 13.12px/800 uppercase #0a5260 eyebrow date, and #5f6c7b text, stacked with 1rem gaps inside a #f5f7f9 section.
+- **No teaser image**: leave out the teaser card; the hero then ends 48px under the last button row (about y=600 with two rows at 1440) and the metrics band follows. Keep the wash and centred header, and add no empty card.
+- **No headline numbers**: omit the four-cell metrics band, give the Abstract section the #f5f7f9 fill and keep alternating white and #f5f7f9 from there at 76.8px padding; do not invent figures to fill cells.
 
 ## Do's and Don'ts
 
@@ -189,6 +191,7 @@ Quick colors: page #ffffff, band #f5f7f9, ink #18202a, muted #5f6c7b, line #dfe5
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --ink: #18202a;
   --muted: #5f6c7b;

@@ -169,6 +169,8 @@ Weights are fractional (550, 650, 760); with system fonts they snap to the neare
 - **Long publication or news lists**: use the resource-row recipe (11px mono index, 18px/500 title, 11px #8391a9 date or venue line, 25px vertical padding, #282c37 rules).
 - **More sections**: open each with an 11px "0N / LABEL" line and a 69.12px two-tone h2 whose second sentence is #a9acb8; keep the 370px intro paragraph right-aligned.
 - **A single headline number**: reuse the 86px/400 #d4c5f7 metric with a 10px mono footnote rather than a stat strip.
+- **No research film**: put your best result video in the same 1129×636 `.feature-player` with the Play pill; a still figure sits letterboxed on #10131b without the pill, and the film meta row is dropped.
+- **No short project name**: set the title's words before any colon, or its first two words, as the 44px h1 and wordmark; the full title moves to the 13px subtitle, so the hero stays three lines.
 
 ## Do's and Don'ts
 

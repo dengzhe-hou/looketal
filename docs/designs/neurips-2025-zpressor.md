@@ -54,7 +54,7 @@ Anatomy in DOM order (centred unless noted):
 ## Tokens — Typography
 
 - **Declared:** `body { font-family: 'optima', 'Philosopher'; font-size: medium }`; `h1 { font-family: 'Philosopher' }`. Philosopher 400/700 (and italics) from Google Fonts.
-- **Rendered:** Philosopher 400 and 700 loaded (`fonts_loaded`); Optima is not present on the capture machine, so all body text renders in Philosopher. On a Mac with Optima installed, body text would render in Optima while the title stays Philosopher. Substitute: Marcellus or Optima nova; Marcellus is the closer free match for Philosopher's flared humanist strokes.
+- **Rendered:** Philosopher 400 and 700 loaded (`fonts_loaded`); Optima is not present on the capture machine, so all body text renders in Philosopher. On a Mac with Optima installed, body text would render in Optima while the title stays Philosopher. Substitute: Marcellus, for Philosopher's flared humanist strokes.
 - **Mono:** Bootstrap `SFMono-Regular, Menlo, Monaco, Consolas, …` in the BibTeX block.
 - Figures inside images use a Times-style serif for captions ("DepthSplat (36 views)"), which harmonises with Philosopher.
 
@@ -136,6 +136,8 @@ Anatomy in DOM order (centred unless noted):
 - **A results table:** under a ruled `h3`, 16px Philosopher body in `#595959`, header row 700 `#212529`, best result in `#e9908b` and second in `#97adba`, matching the title's pastel order.
 - **More comparisons:** add more slider boxes with label chips and a row of scene tabs; alternate steel-blue and rose tab sets per dataset, as the page does.
 - **News:** a short list under the band, 16px `#595959`, dates in bold `#212529`.
+- **No TL;DR teaser image:** keep the ruled `h3` TL;DR and the 16px/300 lead, skip the 920×501px image, and let the ruled Abstract `h3` follow the lead. The hero band stays unchanged and no placeholder appears.
+- **No logo:** leave out the 50×50px favicon. The title then starts at y=64 and the band ends near y=380 instead of 430. The tinted title spans, the `hr` and the black buttons stay.
 
 ## Do's and Don'ts
 
@@ -172,6 +174,7 @@ Quick colors: band `#ebf0f1`, ink `#212529`, body `#595959`, pastels `#e9908b`, 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --band: #ebf0f1;
   --ink: #212529;

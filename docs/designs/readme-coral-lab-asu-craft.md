@@ -98,6 +98,7 @@ The visual weight comes from typography and gray code panels: the stage table un
 - **A benchmark with scores.** Add a results table after the stage table with right-aligned numeric columns (`| ---: |`) and bold best values; CRAFT has none, so this is an extension.
 - **A pure library.** Keep everything after the header as is; trim the badge row to Python, License and docs, and drop the Paper and Poster entries from the link bar.
 - **Fewer links.** If there is no poster or slides, drop both the badge and the link-bar entry so the two rows stay in step.
+- **No pipeline stages.** Keep the three-column table but list the method's components instead of stages (Component / Role / Input → Output), with bold names and about 572px width, directly under the intro so the method is explained before Install.
 
 ## Do's and Don'ts
 

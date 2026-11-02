@@ -46,7 +46,7 @@ Arithmetic check: hero body content area 100–852px (52 + 48, 900 − 48) is 75
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Display | 'Google Sans', sans-serif (Google Fonts, regular only) | Google Sans 400; 600 is synthesized | Product Sans / Outfit |
+| Display | 'Google Sans', sans-serif (Google Fonts, regular only) | Google Sans 400; 600 is synthesized | Outfit |
 | Body | 'Noto Sans', sans-serif | Noto Sans 400 (italic synthesized) | Noto Sans |
 | UI controls | Bulma system stack | Segoe UI on Windows | Inter |
 | Code | monospace | Consolas on Windows | JetBrains Mono |
@@ -127,6 +127,8 @@ Arithmetic check: hero body content area 100–852px (52 + 48, 900 − 48) is 75
 - **More demo videos**: add rows to the two-column grid (660px videos at 1440, 24px gutter, 50px between rows), each with a 24px/600 centred title.
 - **Long publication or news lists**: a 960px section with 16px #4a4a4a items and #363636 bold dates; no cards.
 - **A longer project name**: keep the wordmark to one short word; if it is longer than about six characters, reduce from 192px so it stays on one line within 1344px.
+- **No hero video**: use one full-bleed still of the system, light to mid grey, in the same 900px hero with `object-fit: cover`; wordmark, subtitle and venue keep y=290, 510 and 614. With no image, start at the white title block.
+- **No short name**: drop the 192px wordmark and set the paper title as the white 64px/80px Google Sans line, centred and wrapping inside 1344px, with the 32px italic venue under it, the block vertically centred.
 
 ## Do's and Don'ts
 
@@ -166,6 +168,7 @@ Quick colors: hero text #ffffff, subtitle rgba(255,255,255,0.9), title ink #3636
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;1,400&family=Noto+Sans:ital,wght@0,400;1,400&display=swap");
 :root {
   --hero-text: #ffffff;
   --title-ink: #363636;

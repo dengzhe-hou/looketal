@@ -49,7 +49,7 @@ Anatomy in DOM order (desktop 1440px, everything centred inside `.container.is-m
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Display | 'Google Sans', sans-serif (`.publication-title`, `.publication-authors`, `.teaser`) | Google Sans 400 (600 synthesized) | Product Sans |
+| Display | 'Google Sans', sans-serif (`.publication-title`, `.publication-authors`, `.teaser`) | Google Sans 400 (600 synthesized) | Outfit |
 | Text | 'Noto Sans', sans-serif (`body`) | Noto Sans 400 | Noto Sans |
 | Handwriting | none (inside images) | rasterized in the JPEGs; a rounded marker hand | Patrick Hand |
 | Code | monospace | system monospace | JetBrains Mono |
@@ -131,6 +131,8 @@ Anatomy in DOM order (desktop 1440px, everything centred inside `.container.is-m
 - **Long publication or news lists**: a `section.section` with a centred 32px/600 title and a left-aligned 16px list in the 912px column, dates bold #363636.
 - **New figures with prompts**: draw the prompt above the image in the same marker hand with each subject noun in its mask colour, and export it as part of the image at the column width (912px for the teaser, 800px for method figures). Keep 3–4 hues and reuse them for the matching masks.
 - **More results**: add slides to the one-up carousel; each slide is one wide strip (1344px at 1440).
+- **No teaser image**: close the gap. The two centred 20px Google Sans subtitles follow the buttons directly at y=455, then the 1344px results carousel, whose handwritten coloured caption becomes the first figure on the page.
+- **No text prompts**: caption each figure group with a short handwritten label drawn into the image, such as a method or condition name, and colour its key word in the hue of the matching mask or region.
 
 ## Do's and Don'ts
 
@@ -170,6 +172,7 @@ Quick colors: background #ffffff, title #363636, body #4a4a4a, authors #209cee, 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&family=Patrick+Hand&display=swap");
 :root {
   --bg: #ffffff;
   --title: #363636;

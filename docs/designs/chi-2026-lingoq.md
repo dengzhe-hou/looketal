@@ -127,6 +127,8 @@ The three buttons follow at y=1271 and the video frame at y=1447.
 - **Long publication or news lists**: a `list-disc list-outside ml-4` list at 18px / 300, dates in 600; or reuse the purple-ruled citation block per entry.
 - **More links**: extra pills follow the same recipe; choose another Tailwind 400–500 hue only if the three existing colors are used up.
 - **A header author line**: if authors must appear at the top, place them under the subtitle at 18px / 300 black, 12px below, before the teaser.
+- **No teaser**: the Abstract label follows the subtitle 48px below, at y=264, and the kicker, wordmark and subtitle keep their sizes; add no image or frame.
+- **No short project name**: set the paper title in the wordmark slot at 60px/700, line-height 1, black, left aligned and wrapping, and drop the 30px subtitle; the sky-blue kicker stays above it.
 
 ## Do's and Don'ts
 
@@ -166,6 +168,7 @@ Quick colors: background #ffffff, text #000000, section labels #4592ec, buttons 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,300;1,6..12,400;1,6..12,600;1,6..12,700&display=swap");
 :root {
   --bg: #ffffff;
   --text: #000000;

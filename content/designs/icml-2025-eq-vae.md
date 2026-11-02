@@ -49,7 +49,7 @@ Anatomy in DOM order (y = top of element box):
 
 ## Tokens — Typography
 
-- **Body**: `index.css` sets `body { font-family: 'Ubuntu', sans-serif; font-size: 20px !important }`, overriding both the template's Noto Sans rule and an inline 10px rule. Rendered: Ubuntu 400 and 700 from Google Fonts (`fonts_loaded`). Substitute: Ubuntu is free on Google Fonts; if replacing it, use Nunito Sans.
+- **Body**: `index.css` sets `body { font-family: 'Ubuntu', sans-serif; font-size: 20px !important }`, overriding both the template's Noto Sans rule and an inline 10px rule. Rendered: Ubuntu 400 and 700 from Google Fonts (`fonts_loaded`). Substitute: Nunito Sans.
 - **Title, authors, teaser**: `'Google Sans', sans-serif` on `.publication-title`, `.publication-authors` and `.teaser`. Rendered: Google Sans 400 only, so the 600 title and 700 authors are synthesized bold. Substitute: Albert Sans.
 - **Method mark**: `.texttt { font-family: Consolas }` with no fallback, so it renders as Consolas on Windows and as the browser default font elsewhere. Substitute: Inconsolata (keeps the monospace look on every platform).
 - **Inline code**: browser `monospace` at 14px, forced black.
@@ -130,6 +130,8 @@ Anatomy in DOM order (y = top of element box):
 - **News**: a short list inside the #f5f5f5 abstract band, above "Abstract", with the date in bold.
 - **Long publication lists**: plain list in the 1002px column, titles as #3273dc links.
 - **A different method name**: keep one `span` in Consolas teal; only the method name gets the color.
+- **No teaser image**: leave out the teaser and its caption and start the #f5f5f5 abstract band right under the button row at y 470. Title, authors, affiliations and the four buttons keep their positions.
+- **No venue button**: drop the blue ICML 2025 button and leave Code, arXiv and Models as a centered row of 60px buttons; do not recolor another button blue. The hero still ends at y 470.
 
 ## Do's and Don'ts
 
@@ -169,6 +171,7 @@ Quick colors: title #363636 with the method name in #008080, body #4a4a4a, autho
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Google+Sans:wght@400;600;700&display=swap");
 :root {
   --title: #363636;
   --mark: #008080;

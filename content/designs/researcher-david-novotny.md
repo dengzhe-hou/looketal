@@ -159,6 +159,7 @@ Quick colors: sidebar gradient #48636e → #162630 (base #021a2e), sidebar name 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --sidebar-top: #48636e;
   --sidebar-bottom: #162630;
@@ -171,7 +172,7 @@ Quick colors: sidebar gradient #48636e → #162630 (base #021a2e), sidebar name 
   --rule: #efefef;
   --award: #8bbe6a;
 }
-body { background: #ffffff; color: var(--text); font: 400 16px/1.75em "Source Sans Pro", Helvetica, sans-serif; }
+body { background: #ffffff; color: var(--text); font: 400 16px/1.75em "Source Sans Pro", "Source Sans 3", Helvetica, sans-serif; }
 #header { position: fixed; top: 0; left: 0; width: 35%; height: 100%; padding: 8em 4em; text-align: right;
   background: linear-gradient(var(--sidebar-top), var(--sidebar-bottom)) var(--sidebar-base); color: var(--sidebar-text); }
 #header strong { color: #ffffff; font-weight: 400; }

@@ -118,6 +118,8 @@ Anatomy in DOM order (y = top of element box):
 - **News**: a short centered 16px list in a grey band between the chart and the abstract.
 - **Long publication lists**: a single 960px column, 16px, bold titles and #3273dc links.
 - **A second chart**: centered at 912px in its own white section with a 32px heading; keep charts unframed.
+- **No teaser chart**: put the strongest figure (method diagram or result plot) at y 392, 912px wide, unframed and uncaptioned. With no figure, the #f5f5f5 abstract band starts directly at y 392 under the buttons.
+- **No compute budgets**: leave out the `.gpu-tag` badges and set the table headers as plain 700 #363636 text; the four-column table and its #dbdbdb rules stay, and green, yellow and red are used nowhere else.
 
 ## Do's and Don'ts
 
@@ -157,6 +159,7 @@ Quick colors: title #363636, text #4a4a4a, authors #209cee, buttons #363636, ban
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;1,400&family=Noto+Sans:ital,wght@0,400;1,400&display=swap");
 :root {
   --heading: #363636;
   --text: #4a4a4a;

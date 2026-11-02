@@ -130,6 +130,8 @@ Nothing on the page is rounded and nothing casts a shadow.
 - **A results table**: Georgia 15px, header row 700 with a 1px #cccbd0 rule under it, no fills; mark the best value in bold, not in color.
 - **Long publication or news lists**: use the site's writing-row pattern: 200×112.5px thumbnail plus a 9–10px uppercase kicker, a 24px title link in ink, and a 15px #484653 summary, separated by #cccbd0 hairlines.
 - **A video**: embed at the full 720px column with an italic caption, no frame.
+- **No poster**: place your main figure at the full 720px column width where the poster sits, after the Contents list, with an italic centred #666666 caption. With no figure, the first section heading follows the Contents list directly.
+- **No pull quote**: set the paper's single key claim once in a #f1edf2 box with a 2px #a18bad left rule and #484653 text, right after the first section, so the mauve pair still appears.
 
 ## Do's and Don'ts
 

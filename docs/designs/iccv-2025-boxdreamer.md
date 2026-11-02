@@ -137,6 +137,8 @@ Anatomy in DOM order (desktop 1440px; Bootstrap `.container` 1140px at x=150, co
 - **Long publication or news lists**: use rows in a frosted container, each with a 16px/600 #ee8080 date and black text, separated by 2px #f5f5f5 rules.
 - **More videos**: add `.video-item`s to the grid; the auto-fill grid stays at 258.75px columns at 1440.
 - **Another badge**: reuse the gradient pill button shape rather than inventing new colors; the coral-to-teal gradient is reserved for the venue.
+- **No venue**: drop the coral-to-teal pill, which is reserved for the venue, and let the 2px #f5f5f5 rule follow the gradient title; the header card closes up and the four gradient buttons stay.
+- **No overview figure**: let the justified 16px abstract with its azure `.highlight` phrases start at y=649 in the 1110px column under the TL;DR; the header card and gradient heading bar do not change.
 
 ## Do's and Don'ts
 
@@ -176,6 +178,7 @@ Quick colors: coral #ee8080, azure #3881e0, ivory #fdfcf9, text #000000, rule #f
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 :root {
   --primary-color: #ee8080;
   --secondary-color: #3881e0;

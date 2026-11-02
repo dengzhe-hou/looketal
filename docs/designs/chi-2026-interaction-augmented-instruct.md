@@ -152,6 +152,9 @@ Below the fold: the abstract card at y=915 (900px), the "Introduction Video" lab
 - **Long publication or news lists**: reuse paper items: #f8f9fa rows, 1px #e9ecef, radius 8px, padding 15px, 12px apart, 16px / 600 titles with 14px #666666 meta and a #3b82f6 border on hover.
 - **More links**: add `.action-btn`s next to the PDF button with 16px gaps; secondary links as white buttons with 1px #e5e7eb border and #374151 text.
 - **A BibTeX block**: a card like the abstract (#f8fafc, 1px #e5e7eb, radius 12px, padding 24px 28px) with 13px monospace #4b5563, max 900px, above the tab bar.
+- **No paradigm database**: keep the #f5f5f5 zone under the 1px #e5e7eb rule and fill it with white 12px cards (1px #e0e0e0) holding your figures or results table; add the tab bar only for two or more groups.
+- **No teaser**: the 900px abstract card takes the teaser's slot, 36px under the authors block; the badge, title and authors do not change.
+- **No highlighted title terms**: set the whole title in #1f2937 and leave #c04f17 and #3c7c22 unused; the #3b82f6 badge and author names carry the color.
 
 ## Do's and Don'ts
 

@@ -196,6 +196,7 @@ Quick colors: steel blue #2d6fa3, sky #a3d8fd, light blue #7db7ff, slate #1e293b
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap");
 :root {
   --primary-color: #2d6fa3;
   --sky: #a3d8fd;

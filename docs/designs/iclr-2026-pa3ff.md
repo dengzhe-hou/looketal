@@ -179,6 +179,7 @@ Quick colors: paper #faf8f3, tint #f3efe6, ink #0f1115, muted #4a4d55, light #7c
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,900&family=IBM+Plex+Sans:ital,wght@0,400;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 :root {
   --paper: #faf8f3;
   --paper-tint: #f3efe6;

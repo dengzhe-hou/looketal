@@ -146,6 +146,7 @@ Quick colors: page #fffef7, text #000000, accent #009db5, muted #828282.
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Roboto+Mono:ital,wght@0,400;1,400&display=swap");
 :root {
   --global-bg-color: #fffef7;
   --global-text-color: #000000;

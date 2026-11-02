@@ -137,6 +137,8 @@ Anatomy in DOM order (desktop 1440px, everything centred in `.wrap`, max 920px w
 - **Long publication or news lists**: use the contribution-list pattern (8px blue squares, 12px gaps) with a 13px mono #6b7c93 date before each item.
 - **Videos**: put each in a figure panel (white, 10px radius, 20px padding) with a ruled 14px caption.
 - **More sections**: add another 52px-padded section with a 13px uppercase #0f4e8c label and a 1px #dfe7f1 rule; do not introduce larger section headings.
+- **No teaser figure**: the Abstract section starts right under the header band, so its label sits at about y=480; the band, the buttons and the 1px #dfe7f1 rule do not change.
+- **No BibTeX entry**: write the entry from the title, authors, venue and year, and keep the full-width navy #0f1b2c slab with #cfe0f5 text and its Copy button; the page never ends without it.
 
 ## Do's and Don'ts
 

@@ -55,7 +55,7 @@ Anatomy in DOM order (all centred):
 ## Tokens — Typography
 
 - **Declared:** `body { font-family: 'Jost'; font-weight: 500; font-size: 1.25em }` from Google Fonts (weights 300–900 requested). Bootstrap's own stack is overridden.
-- **Rendered:** Jost 400, 500, 700, 800, 900 loaded (`fonts_loaded`); icons from FontAwesome 4.7 and Academicons. Substitute: Futura PT, or Outfit for a free geometric sans with the same round "o" and short x-height.
+- **Rendered:** Jost 400, 500, 700, 800, 900 loaded (`fonts_loaded`); icons from FontAwesome 4.7 and Academicons. Substitute: Outfit, a geometric sans with the same round "o" and short x-height.
 - **Mono:** Bootstrap `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace` in the BibTeX block (Consolas on Windows).
 
 | Role | Selector | Size | Weight | Line height | Colour |
@@ -139,6 +139,8 @@ Anatomy in DOM order (all centred):
 - **A results table:** place it under an `h3` + `hr` head, 20px Jost body, bold header row in `#212529`, best scores in `#c68b5b`, second-best in `#6589bf`, so the table reuses the title's two accents; put it on white, not on the band.
 - **Long galleries:** follow the page's own pattern of collapsed sections behind `#007bff` "Click to Expand" buttons with `sm-gutters` two- or three-up video rows.
 - **News or updates:** a short list just above the teaser caption, 20px/500 `#212529` with bold dates in `#5a6268`, no card.
+- **No short name:** drop the 56px/800 `#6c6c6c` wordmark line; the title is then the two 40px/700 lines, with `#c68b5b` and `#6589bf` on one key phrase each, repeated on the same phrases in the abstract.
+- **No teaser video:** put a still figure in the slot, 1090px wide with 22px radius, under the same bold `#8899a5` caption. With no figure, drop the caption and let the abstract follow the band 16px below it.
 
 ## Do's and Don'ts
 
@@ -176,6 +178,7 @@ Other pages on Zhen Xu's longvolcap template (ZJU 3DV group) share the jumbotron
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700;800;900&display=swap");
 :root {
   --band: #ebf0f1;
   --ink: #212529;

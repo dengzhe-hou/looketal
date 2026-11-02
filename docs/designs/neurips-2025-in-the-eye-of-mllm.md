@@ -49,7 +49,7 @@ Anatomy in DOM order (centred unless noted):
 ## Tokens — Typography
 
 - **Declared:** `--font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif`, Google Fonts weights 300–700; `--font-mono: 'JetBrains Mono', 'Courier New', monospace`.
-- **Rendered:** Inter 400, 500, 600, 700 loaded; the 800 title weight is synthesized from 700. The BibTeX block renders in Prism's stack (`Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace`) because the Prism theme overrides the page's JetBrains Mono, which is never loaded. The Copy button falls back to the browser's Arial 13.33px. Substitute for Inter: Roboto Flex or SF Pro Text at the same weights.
+- **Rendered:** Inter 400, 500, 600, 700 loaded; the 800 title weight is synthesized from 700. The BibTeX block renders in Prism's stack (`Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace`) because the Prism theme overrides the page's JetBrains Mono, which is never loaded. The Copy button falls back to the browser's Arial 13.33px. Substitute for Inter: Roboto Flex at the same weights.
 
 | Role | Selector | Size | Weight | Line height | Colour |
 |---|---|---|---|---|---|
@@ -133,6 +133,8 @@ Anatomy in DOM order (centred unless noted):
 - **More results:** add `.result-card`s; the `minmax(500px, 1fr)` grid puts two side by side at desktop widths. Use `tr.highlight` (`rgba(75,85,99,0.1)`) for the proposed method row.
 - **Dataset statistics:** the stylesheet already defines `.stat-card` (white, 12px radius, 32px padding, 48px `#788084` icon, 32px number); use a `repeat(auto-fit, minmax(200px, 1fr))` grid on a `#f3f4f6` band.
 - **News:** a `.feature-list` of white cards with teal icons and dates in 600 `#000000`, placed in its own section between hero and abstract.
+- **No venue badge:** leave out `span.conference-badge` and its 32px gap: the buttons move up to y=443 and the hero ends near y=577 instead of 654. Gradient, white type and buttons stay as they are.
+- **No Key Contributions list:** list the paper's main findings in the same white `.feature-list` cards with teal `#00a19b` check icons in the Method band, so the small teal accents survive and the hero remains the only saturated area.
 
 ## Do's and Don'ts
 
@@ -170,6 +172,7 @@ BlurDM in this NeurIPS 2025 batch also opens with a saturated gradient hero and 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 :root {
   --hero: linear-gradient(180deg, #00a19b 40%, #000000 100%);
   --title-fill: linear-gradient(45deg, #faf9f9, #e5e7eb);

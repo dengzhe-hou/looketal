@@ -126,6 +126,7 @@ Anatomy in DOM order (desktop 1440px; Bootstrap `.container` 1140px at x=150, co
 - **Long publication or news lists**: `p.lead` items at 20px/300 with bold 500 dates, or a `ul` in 16px; links underlined #002147.
 - **More buttons**: add more `.btn-template-outlined` buttons to the same row; keep them square and uppercase.
 - **Centre or left**: the header and demo are centred, sections are left-aligned; keep that split rather than mixing within a section.
+- **No before/after demo**: centre your teaser figure at up to 1110px (4px radius, faint shadow-sm) under the venue line, with no column labels or thumbnail strip; the 20px/300 abstract follows 24px below.
 
 ## Do's and Don'ts
 
@@ -165,6 +166,7 @@ Quick colors: ink #212529, Oxford blue #002147, link hover #2f5a89, strip #f8f9f
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 :root {
   --ink: #212529;
   --oxford: #002147;

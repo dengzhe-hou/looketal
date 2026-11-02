@@ -125,6 +125,7 @@ Anatomy in DOM order (`header` padding 40px 20px, centred, 360px tall, margin-bo
 - **Teaser video:** a white card at 800px with the video flush to the edges, directly under the header so the first screen has imagery.
 - **Award:** reuse the `.conference` line, for example "CVPR 2025 · Highlight" in #ffff00; do not add a second accent.
 - **News:** a white card with a short list, dates in #2c3e50 bold.
+- **No venue:** keep the yellow line as the header's one saturated colour and write the paper's status in it, such as "Preprint", at 20.8px/500 with 1px letter-spacing in #ffff00; the header stays 360px tall.
 
 ## Do's and Don'ts
 

@@ -134,6 +134,7 @@ Anatomy in DOM order (desktop 1440px, everything centred in a 960px `.container.
 - **An HTML results table**: place it on a white or #f5f5f5 band at 960px; header 16px/600 #363636 with a 1px #e2e8f0 bottom rule, body 16px #1e293b, best values bold; caption below in 16.8px #64748b.
 - **Key takeaways or news**: one `.callout-new` per item (4px #1086d5 left border, blue wash, 16px 20px padding) with the date or number in bold #363636.
 - **More sections**: alternate the band color (white, then #f5f5f5) and add an anchor to the navbar.
+- **No abstract video**: put the paper's main figure in the right half column, 468px wide with a 10px radius, 1px #e2e8f0 border and centred caption; with no figure, run the abstract in one centred 714px column.
 
 ## Do's and Don'ts
 
@@ -173,6 +174,7 @@ Quick colors: text #1e293b, headings #363636, page bands #ffffff and #f5f5f5, au
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --ink: #1e293b;
   --heading: #363636;

@@ -145,6 +145,8 @@ Anatomy in DOM order (y = top of element box):
 - **A results table**: put it on a white card (16px radius, 1px #e2e8f0) with a #f8fafc header row, #1e293b 600 labels, #64748b numbers, and the method row tinted rgba(99,102,241,0.06) with bold #4f46e5 values.
 - **Videos**: present them like figures: 16px radius, `--shadow-lg`, centered, caption 14.72px #64748b.
 - **Long publication lists or news**: a white card list on the #f8fafc band with 600 titles and #e0e7ff tag pills for venues.
+- **No motivation figure**: set the motivation text with its gradient subheads as one centred column on the #f8fafc band, bold phrases in #4f46e5, with no empty image slot.
+- **No benchmark cards**: show your datasets, tasks or baselines as up to four 16px-radius cards with an emoji, a 600 #1e293b title and #64748b text; with none of these, drop the section.
 
 ## Do's and Don'ts
 
@@ -184,6 +186,7 @@ Quick colors: night #0a0a1a → #0d1127 → #111827, indigo #6366f1, violet #8b5
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 :root {
   --primary: #6366f1;
   --primary-dark: #4f46e5;

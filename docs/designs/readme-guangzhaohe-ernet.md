@@ -39,7 +39,7 @@ All eight are shields.io static badges with no `style=` or `logo=`, so they rend
 | (none) | Citation | #555555 | flat, one part, path color `gray` | `#citation` |
 | License | CC BY-NC 4.0 | #939393 (label #555555) | flat (default), path color `lightgrey` | LICENSE |
 
-Row 1 is "where the paper lives" plus the weights jump; row 2 is "what to do here". Four badges are in-page anchors to numbered headings, so the badge rows double as a table of contents. The served SVGs give #67ac09 for `green`, #ea7233 for `orange` and #939393 for `lightgrey`; the shields.io named-color list in METHOD_README gives #97ca00, #fe7d37 and #9f9f9f for those names, and the served values are used here. Underscores in the path render as spaces ("Project_Page", "Inference_Demo") and `--` as a hyphen ("CC_BY--NC_4.0").
+Row 1 is "where the paper lives" plus the weights jump; row 2 is "what to do here". Four badges are in-page anchors to numbered headings, so the badge rows double as a table of contents. The served SVGs give #67ac09 for `green`, #ea7233 for `orange` and #939393 for `lightgrey`; older shields.io palettes gave #97ca00, #fe7d37 and #9f9f9f for those names, and the served values are used here. Underscores in the path render as spaces ("Project_Page", "Inference_Demo") and `--` as a hyphen ("CC_BY--NC_4.0").
 
 Colors on the page that are not badges come from the teaser: periwinkle blue #7f8fe4 and lavender #a495dd on the registered trajectories and the baseline points (pixel medians), with ERNet's own marker a pink-red triangle #ce7282, all on a pale blue ground plane and a light grey plot card.
 

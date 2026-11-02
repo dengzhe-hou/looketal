@@ -160,6 +160,8 @@ Cards are white at 86–88% with a 2px backdrop blur, which reads as solid white
 - **More stats or features**: extend the stat row in fours and the card grid in threes; keep shadows off the stat tiles.
 - **Long publication or news lists**: use stacked white cards (16px radius, 1px #e5e7eb, padding 24px) with a 20px/800 title, an 11.52px uppercase #64748b date label and 16px #475569 summary.
 - **Extra highlights**: use the solver-badge pattern (999px pill, tint fill, matching border, 750 weight) rather than new solid colours.
+- **No one-line claim**: keep `.project-tldr-card` and put the paper's main contribution in it as one sentence at 21.6px/650, with the method name at 800, one phrase in the gradient text and one in #1d4ed8.
+- **No teaser figure**: put the first method or result figure in `.teaser-card` (912px, 22px radius, 11.2px padding) with a centred #334155 caption; with none, the abstract follows the claim card.
 
 ## Do's and Don'ts
 
@@ -198,6 +200,7 @@ Quick colors: ink #0f172a, copy #334155, body #1f2937, card text #475569, author
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800;900&display=swap");
 :root {
   --ink: #0f172a;
   --body: #1f2937;

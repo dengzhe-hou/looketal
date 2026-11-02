@@ -140,6 +140,9 @@ Bars: `background: rgba(251,251,253,0.92); backdrop-filter: saturate(180%) blur(
 - **More method stages**: extend the stage grid in rows of three 323px cards (16px gap); each keeps the 4px #1565c0 top border.
 - **Long publication or news lists**: a list under a cobalt h2 with dates in 600 #333333 and titles as #3273dc links; separate groups with h3 subsections (4px cobalt bar), not cards.
 - **More videos**: use `.video-grid-3` (three 320px columns, 20px gap) with italic captions; reserve `.video-grid-1` (640px) for a single spotlight.
+- **No teaser video**: use a teaser image in the slot (500px wide, 8px radius). With none, end the header 40px under the buttons, so the #dee2e6 rule falls near y=550 and Abstract starts near y=590.
+- **No sibling projects**: keep the frosted 52px bar and fill it with centred section-link tabs, the active one 600 #1565c0 on rgba(0,0,0,0.08); the pill stays at y=92.
+- **No venue**: keep the cobalt pill with "Preprint" in it, so the title stays at y=184.
 
 ## Do's and Don'ts
 
@@ -179,6 +182,7 @@ Quick colors: page #ffffff, text #333333, accent #1565c0, link #3273dc, h3 #4444
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 :root {
   --primary-color: #1565c0;
   --bg-color: #ffffff;

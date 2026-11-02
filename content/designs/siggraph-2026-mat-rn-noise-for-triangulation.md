@@ -129,6 +129,8 @@ Anatomy in DOM order (desktop 1440px, centred in a 960px column at x=240):
 - **A results table**: use a Bulma `.table` inside the 960px column on white; header #363636 600, 16px #4a4a4a cells, 1px #e6e6e6 rules, best value bold.
 - **Long publication or news lists**: put them in a #f5f5f5 band section with 16px/24px rows and bold 16px `.content-heading` dates.
 - **More video sets**: add a third toggle button with the same 58px recipe; the selected state keeps the green-to-blue gradient.
+- **No teaser strip**: leave out `section.hero.teaser` and its caption, so the #f5f5f5 Abstract band starts directly under the hero at y=401. Keep the centred header, the button row and the white and grey alternation after it.
+- **No video carousel**: drop the gradient toggle and the three tiles, and put your result figures in the same #f5f5f5 band, frameless with square corners (the 1px #bbbbbb border and 10px radius belong to video tiles only).
 
 ## Do's and Don'ts
 
@@ -168,6 +170,7 @@ Quick colors: page #ffffff, band #f5f5f5, footer #fafafa, text #4a4a4a, headings
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --bg: #ffffff;
   --band: #f5f5f5;

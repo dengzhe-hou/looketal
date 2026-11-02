@@ -121,6 +121,7 @@ Anatomy in DOM order (desktop 1440px; `.html` container 1400px at x=0):
 - **Long publication lists**: keep one paragraph per paper and add year sub-headings as 22px Open Sans bold uppercase lines.
 - **Phones**: the source does not adapt; if needed, stack the dark tab, header and both columns at 100% width below 968px.
 - **Awards list**: lines in #222222 with the award name in #a21919.
+- **No portrait**: keep the #333333 tab at 257px wide and 516px tall with only its bottom-right corner rounded, and start the CONTACT heading at its top. The name stays at x=280, y=0, so the column headings still sit at y=512.
 
 ## Do's and Don'ts
 
@@ -159,6 +160,7 @@ Quick colors: background #f2f2f2, name #a21919, links #666600, hover #888800, te
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Open+Sans:ital,wght@0,700;1,700&display=swap");
 :root {
   --bg: #f2f2f2;
   --name: #a21919;

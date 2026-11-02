@@ -39,7 +39,7 @@ Anatomy in DOM order (all centred in a 1140px column starting at x=150):
 
 ## Tokens — Typography
 
-- **Sans:** declared `'Source Sans 3', 'Lato', Verdana, Helvetica, sans-serif` (self-hosted variable woff2, weights 300–700, normal and italic). Rendered: Source Sans 3. Substitute: Source Sans Pro.
+- **Sans:** declared `'Source Sans 3', 'Lato', Verdana, Helvetica, sans-serif` (self-hosted variable woff2, weights 300–700, normal and italic). Rendered: Source Sans 3. Substitute: Source Sans 3.
 - **Mono:** declared `'Source Code Pro', 'Lato', Verdana, Helvetica, monospace` for code and `.text-tt`. Rendered: Source Code Pro 400 and 600 (Google Fonts). Substitute: IBM Plex Mono.
 - **Math:** MathJax 3 CHTML fonts.
 
@@ -117,6 +117,8 @@ Anatomy in DOM order (all centred in a 1140px column starting at x=150):
 - **Results table:** use an HTML table in 18px Source Sans 3 with 1px #eeeeee row rules and the best value bold; keep it under an h2, not in a card.
 - **More links:** extend the `h3` text-link row (Paper · Code · Data · Leaderboard); keep 24px / 400 blue, no icons.
 - **News or changelog:** a plain `ul` under an h2, date in Source Code Pro 600.
+- **No wordmark logo:** start with the 39px / 600 title at y=30 and set the first letters of the project name in bold #598be7 and the rest in #333333, so the single blue syllable survives. Authors follow 10px below.
+- **No teaser grid:** put your one strongest figure in the teaser slot, centred and up to 1140px wide at y≈334, then the 24px pitch. With none, the pitch follows the links and the Overview h1 rises into the first viewport.
 
 ## Do's and Don'ts
 
@@ -155,6 +157,7 @@ Quick colors: text #333333, accent #598be7 (hover #9bb9f1), variant red #f54254,
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap");
 :root {
   --bg: #ffffff;
   --text: #333333;

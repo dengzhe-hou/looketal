@@ -153,6 +153,8 @@ Base spacing unit `--spacing: 1.5rem` (24px). The page uses no shadows and no ro
 - **Figures**: full 612px column width, caption Figtree 16.2px (.9em) / 600 #181b1b; put any gloss in a margin note instead of a long caption.
 - **Long publication or news lists**: use the findings list pattern (red Figtree numerals or dates in the 35.2px gutter, serif bold lead, grey em-dash, serif detail) rather than cards.
 - **More sections**: each new section gets the ruled all-small-caps rail head and a right-rail link; keep the 96px gap between sections.
+- **No key findings**: number the paper's contributions in the same pattern under the FINDINGS label (14.32px/650 red numeral in the 35.2px gutter, 600 serif lead, grey em-dash, 400 serif detail at 18.36px/26.6px).
+- **No margin notes**: leave the 160px left rail with only the masthead, venue and date, right-aligned, and keep the 612px text column at x=370; add nothing to the rail.
 
 ## Do's and Don'ts
 
@@ -192,6 +194,7 @@ Quick colors: paper #ffffff, ink #181b1b, rail notes #475252, muted labels #4850
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --paper: #ffffff;
   --ink: #181b1b;

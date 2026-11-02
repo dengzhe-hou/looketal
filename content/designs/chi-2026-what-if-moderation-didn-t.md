@@ -159,6 +159,9 @@ The Abstract heading follows at y=1244 (hero padding-bottom 48px plus the h2's 4
 - **Long publication or news lists**: use the explainer box (#fff9f0, 1px #feeacb, radius 8px, padding 19.2px 24px) with dates bold #2c3e50 and entries at 15.2px #555555.
 - **More awards**: one `.award-line` per award in #663399; keep them stacked rather than inline.
 - **More findings**: continue the 2-column pastel grid (488px cards at 1440), cycling blue, green, amber and purple.
+- **No awards**: drop `.awards-section`; the authors follow the venue line and #663399 is not used anywhere, so the header stays slate, grey and near-black.
+- **No institution logo**: set the affiliations as one centred EB Garamond 16px #666666 line where the logo sat, above the pills; draw no logo box.
+- **No interactive explorer**: after the video, under the usual centred heading, put the main takeaway in one explainer box (#fff9f0, 1px #feeacb, radius 8px) so the amber note stays, then the pipeline figure.
 
 ## Do's and Don'ts
 
@@ -198,6 +201,7 @@ Quick colors: background #ffffff, text #333333, headings #2c3e50, awards #663399
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap");
 :root {
   --bg-color: #ffffff;
   --text-color: #333333;

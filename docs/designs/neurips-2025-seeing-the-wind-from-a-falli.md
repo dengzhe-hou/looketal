@@ -48,7 +48,7 @@ Anatomy in DOM order (all centred):
 ## Tokens — Typography
 
 - **Declared:** Google Fonts link for Google Sans, Noto Sans and Castoro (Nerfies). `body` is `'Noto Sans', sans-serif`; `.publication-title` and `.publication-authors` are `'Google Sans', sans-serif`.
-- **Rendered:** Google Sans 400 and Noto Sans 400 loaded (`fonts_loaded`); bold weights are synthesized from those. Icons: Font Awesome 6 (Free 900, Brands 400) and Academicons. Substitute for Google Sans: Product Sans is not public, so use Outfit or DM Sans, whose round geometric shapes and wide "a" match best.
+- **Rendered:** Google Sans 400 and Noto Sans 400 loaded (`fonts_loaded`); bold weights are synthesized from those. Icons: Font Awesome 6 (Free 900, Brands 400) and Academicons. Substitute for Google Sans: Outfit, whose round geometric shapes and wide "a" match best.
 - **Mono:** Bulma `monospace` in the BibTeX `pre`.
 
 | Role | Selector | Size | Weight | Line height | Colour |
@@ -128,6 +128,8 @@ Anatomy in DOM order (all centred):
 - **A results table:** give it its own band in the alternation (yellow if the previous was white), a centred `h2.title.is-3`, and a white table on yellow bands so it reads as a card; header row in 600 `#363636`, best values in bold.
 - **Long galleries:** add more carousel bands and keep alternating `#ffecb3` and `#ffffff`; never put two yellow bands in a row below the fold (only the hero and TL;DR share yellow).
 - **News:** a short list in the white abstract section, 16px `#4a4a4a`, dates in 700 weight, above the abstract heading.
+- **No TL;DR video:** keep the second `bg-cream` band and its `h2.title.is-4`, and put the main result image in `column is-10`, 796px wide with a 10px radius. With no image, drop the band; the white abstract starts at y=474.
+- **No title icon:** leave out the 2em icon and its 10px margin. The centred 48px/600 `#363636` title, amber pills and yellow hero stay as they are; use no emoji or stock graphic in its place.
 
 ## Do's and Don'ts
 
@@ -165,6 +167,7 @@ Other Nerfies-derived Bulma pages share the skeleton, but few re-colour whole ba
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans:wght@400;900&display=swap");
 :root {
   --band: #ffecb3;
   --page: #ffffff;

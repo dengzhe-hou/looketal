@@ -50,7 +50,7 @@ Declared but not visible: a stats bar, dark sections, agent-role chips and wave 
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Display | 'Google Sans', sans-serif | Google Sans 400 only; the 800 title weight is synthesized bold | Product Sans is not public; use Outfit |
+| Display | 'Google Sans', sans-serif | Google Sans 400 only; the 800 title weight is synthesized bold | Outfit |
 | Text | 'Noto Sans', sans-serif | Noto Sans 400 | Open Sans |
 | Icons | Font Awesome 6, Academicons | loaded | — |
 
@@ -181,6 +181,7 @@ Quick colors: title #363636, navy #0a1628, harbor #0f2b46, cyan #00b4d8, glow cy
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans&display=swap");
 :root {
   --primary: #0f2b46;
   --accent: #00b4d8;

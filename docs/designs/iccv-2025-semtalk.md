@@ -150,6 +150,8 @@ Anatomy in DOM order (desktop 1440px, column x=140 to 1300):
 - **Long publication or news lists**: put each item in a `.highlight-item` (18px radius, #fffafb → #fef5f7 gradient, 18px padding, 16px/800 heading, 15.4px #667085 text) in the 2-column grid inside a section card.
 - **Key numbers**: use the 3-column metric cards (21.6px #d47a9e numbers) rather than a new style.
 - **A footer**: if needed, use the stylesheet's `.footer` (centred, 15px #667085, links 600 #e891b3, padding 26px 0 46px).
+- **No venue**: keep the line's slot and set 'Preprint' in the same 32px/900 #d47a9e with the `0 6px 18px rgba(190,24,93,0.13)` text-shadow and no emoji, so the hero card keeps its pink focal point and height.
+- **No teaser**: drop `.teaser-box`; the Abstract section card (22px radius, 1160px column) follows the hero after the usual 26px gap, and the hero card keeps its frosted glass and pink glows.
 
 ## Do's and Don'ts
 
@@ -189,6 +191,7 @@ Quick colors: ink #1f2937, muted #667085, body #374151, sakura #e891b3, sakura d
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,600;0,700;0,800;0,900;1,100;1,400;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --card: rgba(255, 255, 255, 0.86);
   --card-solid: #fff;

@@ -141,6 +141,8 @@ Anatomy in DOM order (y = top of element box):
 - **Long publication lists or news**: a white card list with 14px radius, a bold 16.64px title, #43586a meta line and #1f6feb links; separate years with an h2 on alternating bands.
 - **More links**: add ink pills to the centered row; reserve no other button colors.
 - **Comparisons with losses**: reuse the grid's #dcf0df improve, #fbe2e2 regress and #f7f8fa missing cell fills.
+- **No announcement strip**: drop the gradient strip; the sticky nav sits at y 0 and everything below rises 42px, while the venue pill, title and buttons stay unchanged.
+- **No teaser figure**: put the main method figure in the same 1032px framed card (14px radius, 1px #e2e8f0 border, soft shadow); with no figure the stat tiles take its place.
 
 ## Do's and Don'ts
 
@@ -180,6 +182,7 @@ Quick colors: page #ffffff, band #f6f8fb, ink #10202e, soft ink #43586a, line #e
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap");
 :root {
   --bg: #ffffff;
   --bg-alt: #f6f8fb;

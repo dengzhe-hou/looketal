@@ -120,6 +120,7 @@ The page has no shadows, no rounded corners and no filled controls.
 - **Long publication lists**: plain bulleted list, bold titles, venue in regular weight, links in #598be7.
 - **News**: a short dated bullet list under an "Updates" `h1`, the date in bold.
 - **A highlighted claim**: the declared `.block-statement` (#dee8fa fill, 2px #598be7 border, 10px radius, 20px bold) is the one sanctioned callout.
+- **No teaser video**: use a still figure, 710px wide, in the same centered 8/12 column, unframed. With no figure at all, Overview (48px/300) takes the slot at y 250 and everything below rises 356px; title, authors and links stay.
 
 ## Do's and Don'ts
 
@@ -159,6 +160,7 @@ Quick colors: text #333333, links #598be7, hover #9bb9f1, rules #e6e6e6, code #f
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
 :root {
   --text: #333333;
   --link: #598be7;

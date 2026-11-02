@@ -141,6 +141,7 @@ Declared but not visible: `.results-table tr.highlight-row td { font-weight: 800
 - **Larger results tables**: reuse `.results-table` banding (#f8edd8 for the method group, #fdf9f1 for strong baselines, white for the rest) and 700 (`strong`) for your own best numbers; wrap in `.table-wrapper` for horizontal scroll on phones.
 - **Long publication or news lists**: use 20px/300 paragraphs with a 600-weight date, separated by `hr.section-divider` hairlines.
 - **More emphasis boxes**: use at most one `.highlight-box` per section; use inline pills for smaller emphasis.
+- **No key claim**: place the paper's single headline result in one `.highlight-box` (#fdf4e9 fill, #e1b76e border) right after the abstract, so the brass accent still appears; the header stays text-only with no image.
 
 ## Do's and Don'ts
 
@@ -179,6 +180,7 @@ Quick colors: text #353535, link #000000 with hover #775223, header gradient #f1
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Fira+Code&display=swap");
 :root {
   --text: #353535;
   --link-brown: #000000;

@@ -141,6 +141,8 @@ The method list's spine is `background: linear-gradient(to bottom, var(--accent-
 - **Another results table**: reuse the table recipe inside `.l-middle` (768px): warm 11px/600 uppercase header, 13px tabular cells, the "Ours" row on rgba(0,66,118,0.07) with #004276 text.
 - **Long publication or news lists**: use the method-step pattern (30px ringed number or date, Georgia 16px/600 title, 15px secondary line) inside `.l-body` (600px), 24px apart on the fading spine.
 - **Wide figures**: promote them to `.l-page` (936px) or `.l-screen` (1152px) and keep 3px radii with the `0 2px 12px rgba(0,0,0,0.08)` shadow; text never leaves the 600–768px columns.
+- **No contribution cards**: skip that section; Method follows the Abstract after the usual 1px rgba(0,0,0,0.1) rule at 768px, and its ringed #004276 step numbers carry the numbered motif. Do not add empty cards.
+- **No teaser video**: keep the 936px framed row (3px radius, 0 2px 12px rgba(0,0,0,0.08) shadow, y=429) and put a still 2×2 image grid of the outputs right of the chevron, in the 58% column.
 
 ## Do's and Don'ts
 

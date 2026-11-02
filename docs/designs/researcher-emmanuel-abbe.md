@@ -108,6 +108,8 @@ Declared but not visible: Bootstrap's dropdown, navbar, pagination and alert col
 - **Students**: use the same media-object pattern per person with a smaller rounded photo.
 - **Results or figures**: images at the full 645px text width with a 17px italic caption; no borders.
 - **More titles**: add further 22px/700 lines under the name; the stack is the identity.
+- **No portrait**: start the subhead and paragraphs at x=140 with the same 645px justified, hyphenated measure, and keep the first subhead at y=383. The right margin stays empty; add no placeholder.
+- **No extra tabs**: keep the tab row with only the sections the researcher has, About first and active, so the tabs widen to share the baseline that ends at x=1005. Do not switch to a navbar.
 
 ## Do's and Don'ts
 
@@ -146,6 +148,7 @@ Quick colors: ground #f6f6f6, text #333333, links and inactive tabs #428bca, act
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --ground: #f6f6f6;
   --text: #333333;

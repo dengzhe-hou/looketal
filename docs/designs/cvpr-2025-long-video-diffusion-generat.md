@@ -44,7 +44,7 @@ Anatomy in DOM order:
 ## Tokens — Typography
 
 - **Sans (body):** declared `'Noto Sans', sans-serif` on `body`. Rendered: Noto Sans 400 only (Google Fonts `css?family=Google+Sans|Noto+Sans|Castoro` requests no weights), so every 600/700 heading and the bold hero text is browser-synthesized bold. Substitute: Noto Sans with real 600/700.
-- **Display (title block):** declared `'Google Sans', sans-serif` on `.publication-title`, `.publication-authors` and `.teaser`. Rendered: Google Sans 400. Substitute: Product Sans is unavailable, use Outfit.
+- **Display (title block):** declared `'Google Sans', sans-serif` on `.publication-title`, `.publication-authors` and `.teaser`. Rendered: Google Sans 400. Substitute: Outfit.
 - **Castoro:** requested, never applied.
 - **Mono:** BibTeX `pre` uses the browser `monospace` at 14px. Substitute: JetBrains Mono.
 - **Icons:** Font Awesome 5 (SVG via `fontawesome.all.min.js`).
@@ -126,6 +126,8 @@ Anatomy in DOM order:
 - **More sections:** each new section gets an anchor in the nav; past eight links the `space-around` bar crowds, so shorten labels.
 - **Dark footage:** the #000000 overlay text depends on the 30% white wash; with dark footage raise the wash to 0.5 or switch the overlay text to #ffffff with a white-outlined pill.
 - **News:** a short list in the 960px column before the gallery; the hero should stay text-light.
+- **No hero video:** use a teaser image as the 100vh cover layer with the same 30% white wash and left overlay. With no image, drop the 100vh and let the overlay flow on white under the 32px nav, followed by the paper title.
+- **No project name:** drop the 64px name and set the paper title in the 24px/700 tagline style in the same 432px box at top 45%; the first nav link is plain #3273dc, not #ff6a83.
 
 ## Do's and Don'ts
 
@@ -164,6 +166,7 @@ Quick colors: hero text and pill borders #000000 on video with a rgba(255,255,25
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Google+Sans:wght@400;600&display=swap");
 :root {
   --bg: #ffffff;
   --hero-ink: #000000;

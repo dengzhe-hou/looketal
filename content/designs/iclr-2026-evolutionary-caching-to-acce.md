@@ -42,7 +42,7 @@ Declared but not visible: `--success` #22c55e and `--success-light` #f0fdf4 have
 
 ## Tokens — Typography
 
-- **Headings:** declared `'Satoshi', system-ui, sans-serif`; renders Satoshi 700 and 900 (both loaded from Fontshare). Substitute: General Sans or Manrope ExtraBold, which keep the compact geometric width.
+- **Headings:** declared `'Satoshi', system-ui, sans-serif`; renders Satoshi 700 and 900 (both loaded from Fontshare). Substitute: Albert Sans, which keeps the compact geometric width.
 - **Body:** declared `'Geist', system-ui, sans-serif`; Geist is not loaded, so it renders as Segoe UI (Windows) or SF Pro (macOS). Substitute that keeps the rendered look: Inter. If you want what the author intended, load Geist.
 - **Mono:** declared `'JetBrains Mono', 'Geist Mono', monospace`; renders JetBrains Mono 400/500. Used for badge, buttons, table headers, code. Substitute: IBM Plex Mono.
 - The scale is fluid (`clamp()`); values below are what renders at 1440.
@@ -173,6 +173,7 @@ Quick colors: canvas #fafafa, text #18181b, muted #71717a, hairline #e4e4e7, sur
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,700;0,900;1,700;1,900&family=Inter:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=JetBrains+Mono:ital,wght@0,400;1,400&display=swap");
 :root {
   --bg: #fafafa;
   --text: #18181b;
@@ -183,7 +184,7 @@ Quick colors: canvas #fafafa, text #18181b, muted #71717a, hairline #e4e4e7, sur
   --accent-hover: #1d4ed8;
   --accent-dim: rgba(37, 99, 235, 0.06);
   --accent-light: #dbeafe;
-  --font-heading: 'Satoshi', 'General Sans', sans-serif;
+  --font-heading: 'Satoshi', 'Albert Sans', sans-serif;
   --font-body: 'Geist', 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
   --radius: 2px;

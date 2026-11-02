@@ -139,6 +139,8 @@ The stylesheet has no small-screen rule for the header or the 64px title; on pho
 - **Paper / code / data buttons**: add them next to the hero button as more `.btn-hero` outlines, 12px gap; keep the solid mauve `.btn` for below-the-fold downloads.
 - **A results table**: put it in a white card with the 18px radius and 1px #e9ecf5 border; header row 14px/700 #0b1220, body 14px #5b6474, 1px #e9ecf5 row rules; best values bold.
 - **News or a long list**: a single-column list of `.res`-style tiles (dashed #cfe0ff on #f7faff) with a bold date label and a mauve link.
+- **No highlight**: keep the inline tag with the venue alone, such as "[CVPR2026]", at 38.4px/400 and 90% opacity; with no venue either, drop the tag and leave the 64px/700 title alone on its line.
+- **No one-sentence pitch**: set the abstract's first sentence in the 22px/600 white slot, centred, with its key noun phrase bold; drop the 16px counts line, and the button keeps its 24px gap.
 
 ## Do's and Don'ts
 
@@ -177,6 +179,7 @@ Quick colors: ink #0b1220, nav #1a2440, muted #5b6474, brand mauve #8f5975, emph
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 :root {
   --brand: #8f5975;
   --ink: #0b1220;

@@ -120,6 +120,8 @@ Declared but not visible: the theme's banner background image (`landing-bg.jpg`,
 - **A results table**: Inconsolata 14px, 1px rgba(0,0,0,0.13) row rules, no fills, full 1000px width.
 - **More media**: add more 240×180 gallery tiles; keep four per row and no captions.
 - **More authors on a paper**: inline, comma-separated, own name in #000000 to match the emphasised spans.
+- **No portrait**: keep the two-column table; put the essay or paper links and the three #a3b3bb social icons in the 46% left column, and keep the 523px justified bio at x=697, y=435. No placeholder image.
+- **No press clippings**: fill the four-column gallery with 240×180 crops of paper figures or talk slides, no captions, under the same 1px rule; with no images, omit the rule and the gallery.
 
 ## Do's and Don'ts
 
@@ -158,6 +160,7 @@ Quick colors: ground #f2f6f7, panel #ffffff, banner #f8f8f8, text #2a2a2a, empha
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Actor&family=Cabin:wght@700&family=Karla&display=swap");
 :root {
   --ground: #f2f6f7;
   --panel: #ffffff;

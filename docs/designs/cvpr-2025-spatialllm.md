@@ -126,6 +126,8 @@ Anatomy in DOM order (`.header-container` flex, padding 50px; `.header-content` 
 - **Abstract heading:** if you need one, use the same 36px hairline h2 and add it to the contents list.
 - **Long publication or news lists:** plain bullet lists in the 704px column at body size; dates bold.
 - **Video:** place it as a `d-figure` at column width with a numbered caption; avoid a separate hero.
+- **No award or highlight:** set the venue alone in the 18.72px/700 #000000 line; the header takes no red, and the coral finding sentence stays the page's only colour accent.
+- **No teaser figure:** make the first method figure Figure 1 in that slot, 704px wide, max-height 360px, with the 13px caption led by bold "Figure 1."; with no figure, the first 36px h2 follows the lead paragraph near y=672.
 
 ## Do's and Don'ts
 

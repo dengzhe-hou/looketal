@@ -45,9 +45,9 @@ Anatomy in DOM order (wide frame x=80–1360; content x=104):
 
 ## Tokens — Typography
 
-- **Display:** declared `"Applied Sans Display", "Helvetica Neue", Arial, sans-serif` (vendored TTF, 600 and 700). Rendered: Applied Sans Display 600, 700. Substitute: Inter Display or Neue Haas Grotesk Display; for free use, Inter at 600/700 with -0.02em tracking.
+- **Display:** declared `"Applied Sans Display", "Helvetica Neue", Arial, sans-serif` (vendored TTF, 600 and 700). Rendered: Applied Sans Display 600, 700. Substitute: Inter Tight at 600/700.
 - **UI sans:** declared `"Applied Sans Text", …` (400, 400i, 600, 600i). Rendered: Applied Sans Text 400, 600. Substitute: Inter.
-- **Serif body:** declared `"XCharter", Georgia, "Times New Roman", serif` (vendored OTF). Rendered: XCharter 400, 400i. Substitute: Charis SIL or Bitstream Charter.
+- **Serif body:** declared `"XCharter", Georgia, "Times New Roman", serif` (vendored OTF). Rendered: XCharter 400, 400i. Substitute: Charis SIL.
 - **Mono:** declared `"SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace`; no webfont, so it renders as the first installed face (Consolas on Windows, SF Mono or Menlo on macOS). Substitute: JetBrains Mono.
 - **Math:** MathJax 3.
 
@@ -135,6 +135,8 @@ Anatomy in DOM order (wide frame x=80–1360; content x=104):
 - **More results tables:** reuse `table.data` with group rows for benchmark families; put the best row in 600 weight, never coloured fills.
 - **News or updates:** an eyebrow "UPDATES" section with mono dates in #767676 and one-line entries in XCharter.
 - **BibTeX:** add a figure frame whose stage holds mono 13px text, caption label "BibTeX." in blue.
+- **No headline numbers:** keep the stat row with the paper's own countable facts (a speedup, a task count, a dataset size) as #006cfa display numbers on 2px #111111 rules with #767676 captions; two facts give two columns.
+- **No demo video:** open section two with your main figure instead, in the same bordered 10px-radius frame on the #f6f7f9 stage with a blue caption label. The hero stays without a teaser.
 
 ## Do's and Don'ts
 
@@ -173,6 +175,7 @@ Quick colors: ink #111111, blue #006cfa (hover #0052bd), grey #767676, line #e4e
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600&family=Inter:wght@400;600&family=Charis+SIL&display=swap");
 :root {
   --white: #ffffff;
   --ink: #111111;
@@ -183,7 +186,7 @@ Quick colors: ink #111111, blue #006cfa (hover #0052bd), grey #767676, line #e4e
   --gray-soft: #f6f7f9;
   --blue-wash: #eef4ff;
   --blue-wash-2: #e0ecff;
-  --font-display: "Inter Display", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
   --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
   --font-serif: "XCharter", "Charis SIL", Georgia, serif;
   --font-mono: "JetBrains Mono", Menlo, Consolas, monospace;

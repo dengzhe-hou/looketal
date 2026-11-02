@@ -183,6 +183,7 @@ Quick colors: paper #fbfaf6, ink #141b24, muted #4d5660, vermilion #dd5230, rule
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 :root {
   --paper: #fbfaf6;
   --ink: #141b24;

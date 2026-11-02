@@ -141,6 +141,9 @@ Anatomy in DOM order (desktop 1440px, left-aligned at x=28):
 - **Long publication or news lists**: use the gallery-group-heading pattern per item: coral DM Mono 9px index, 20px/500 title, 11px mono #777770 line for venue or date, with 1px #262626 rules between items.
 - **A venue badge**: put it in the eyebrow slot (DM Mono 11px uppercase #c4c4bd with the 22px coral dash) instead of adding a filled badge.
 - **Image results instead of video**: use the 8px-radius scene card with the same coral badge and 24px grid gap.
+- **No hero video**: use your best result image as the full-bleed `object-fit: cover` background under the same filter and shade; text stays bottom-anchored at calc(100svh - 58px).
+- **No method name in the title**: underline the method name wherever it appears, or the first word, in #ff6b57 at 0.07em thickness and 0.09em offset; the coral underline stays.
+- **No logo**: drop the 30px logo and its 9px gap; the 14px/600 wordmark starts at x=28 and the header stays 58px.
 
 ## Do's and Don'ts
 
@@ -180,6 +183,7 @@ Quick colors: black #050505, surface #0b0b0b, line #262626, text #f2f1ec, muted 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=DM+Mono&display=swap");
 :root {
   --background: #050505;
   --surface: #0b0b0b;

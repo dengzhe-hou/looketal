@@ -53,8 +53,8 @@ Anatomy in DOM order (desktop 1440px, everything centred):
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Display / headings | 'DM Serif Display', Georgia, serif | DM Serif Display 400 only; h1–h3 render at 700 as synthesised bold | Abril Text |
-| Text | 'Source Sans 3', 'Segoe UI', sans-serif | Source Sans 3 300, 400, 400 italic, 500, 600, 700 | Source Sans Pro |
+| Display / headings | 'DM Serif Display', Georgia, serif | DM Serif Display 400 only; h1–h3 render at 700 as synthesised bold | Abril Fatface |
+| Text | 'Source Sans 3', 'Segoe UI', sans-serif | Source Sans 3 300, 400, 400 italic, 500, 600, 700 | Lato |
 | Mono | 'JetBrains Mono', 'Fira Code', monospace | JetBrains Mono 400, 500 (BibTeX `pre` falls back to plain `monospace`) | Fira Code |
 | Icons | Font Awesome 6 | Font Awesome 6 Free 900, Brands 400 | — |
 
@@ -155,6 +155,8 @@ Anatomy in DOM order (desktop 1440px, everything centred):
 - **Figures**: centre them at 780px inside a 10px-radius frame with the video's 0 4px 16px rgba(0,0,0,0.08) shadow; caption 13.6px #6b7280 below.
 - **News or a publication list**: reuse the resource card at reduced scale: 5px colored strip by type, mono tag for the date (10.88px uppercase), 17.6px serif title, link chips.
 - **A different acronym**: only colour letters that actually spell the name; everything else in the title stays #1a1a2e.
+- **No acrostic name**: set the method name alone on the first title line, filled with the 135deg #c0392b to #e74c3c gradient and followed by a colon, then the rest of the title in #1a1a2e at the same 54.4px.
+- **No install command**: drop the INSTALL chip and the downloads badge together; the hero then ends 64px under the button row at y=745 at 1440 and Overview starts at about y=809.
 
 ## Do's and Don'ts
 
@@ -194,7 +196,11 @@ Quick colors: paper #faf9f7, warm #f5f0ea, ink #1a1a2e, accent #c0392b → #e74c
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital,wght@0,400;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 :root {
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-text: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   --ink: #1a1a2e;
   --paper: #faf9f7;
   --warm: #f5f0ea;

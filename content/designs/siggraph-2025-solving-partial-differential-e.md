@@ -118,6 +118,8 @@ Avenir Next Pro is licensed and not freely redistributable; Nunito Sans matches 
 - **Long publication or news lists**: the lab's `figure.entry` recipe: an 80px (5em) square thumbnail beside a caption paragraph, one per row; or a plain list with 8px item spacing.
 - **More figures**: add `figure.full` blocks at 944px with 14.4px captions; for galleries use `figure.gallery` (two per row, images 240px tall).
 - **Videos**: `video` or `iframe.video` at 944px with `aspect-ratio: 16 / 9`, 16px left indent.
+- **No lab logo**: float the institution's own mark at 64px on the right with the same 32px margin; with no mark, leave the corner empty and let the balanced title use the full 960px column. No placeholder square.
+- **No teaser figure**: put the paper's main figure at 944px in the same slot with a justified 14.4px italic caption under it. A paper with no figure goes straight from the icon links to the Abstract `h2`.
 
 ## Do's and Don'ts
 
@@ -157,6 +159,7 @@ Quick colors: background #ffffff, text #000000, links #1772d0, hover #b35500, lo
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 :root {
   --text: #000000;
   --link: #1772d0;

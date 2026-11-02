@@ -141,6 +141,8 @@ Corners are square almost everywhere; only the portrait, logo tiles and the CTA 
 - **Long publication lists**: reuse the list with 64px mini-thumbs, black mono venue tags, crimson oral tags and gold spotlight tags; keep the filter bar.
 - **More news**: featured cards for the top items, then the 140px date column list with "·" crimson bullets.
 - **An English version**: the CSS switches the given-name `.em` to italic crimson for Latin names; keep that.
+- **No portrait**: leave out `a.hero-avatar` and add no placeholder. The name, romanized line, role chips and lede keep x=190 and their y values (159, 249, 303, 367), so the badge row still lands near y=830 at 1440.
+- **No stats numbers**: leave out the beige #ebe5d4 band. The next section, with its 64px serif heading and small crimson square, follows the link buttons directly on cream, and the dot grid runs on unbroken.
 
 ## Do's and Don'ts
 
@@ -180,6 +182,7 @@ Quick colors: cream #f5f1e8, beige #ebe5d4, card #ffffff, ink #0a0a0a, ink-2 #1f
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 :root {
   --bg: #f5f1e8;
   --bg-2: #ebe5d4;

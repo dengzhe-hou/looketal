@@ -175,6 +175,7 @@ Quick colors: night #0b1430, text #eef2fa, soft #c5cfe3, muted #8d9ab8, accent #
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Spectral:ital,wght@0,300;0,400;1,300;1,400&family=Schibsted+Grotesk:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 :root {
   --night-bg: #0b1430;
   --night-deep: #070d20;

@@ -39,7 +39,7 @@ Anatomy in DOM order (banner `section` full width, 0–399px; content wrapper 12
 
 ## Tokens — Typography
 
-- **Sans:** declared `"DIN", "DM-Sans", "Lato", sans-serif`. DIN is not provided and the local DM-Sans files did not load, so the page renders in Lato (Google Fonts, 400 and 700 loaded). Substitute: Lato itself, or Source Sans 3.
+- **Sans:** declared `"DIN", "DM-Sans", "Lato", sans-serif`. DIN is not provided and the local DM-Sans files did not load, so the page renders in Lato (Google Fonts, 400 and 700 loaded). Substitute: Source Sans 3.
 - **Code:** `"Courier New", Courier, monospace`, 14px / 800.
 - **Icons:** Font Awesome 6.2 (file, GitHub, paperclip).
 
@@ -119,6 +119,8 @@ Anatomy in DOM order (banner `section` full width, 0–399px; content wrapper 12
 - **Long results:** one outlined box per benchmark, each with its own table and date chips; add a "Submit" download pill for new entries.
 - **News:** an outlined box titled "News" with dates in `.label-date` chips at the start of each line.
 - **Narrow screens:** reduce the banner's 80px side padding to 16px under 768px; the source does not.
+- **No overview image:** keep the TL;DR `.content-box` at y≈415 with its 21.28px title, and run the 15.2px / 500 `p.text-content` straight under it. The banner stays text-only at 399px tall, and the Resources box follows.
+- **No leaderboard:** put your main results table in one outlined box (#f2f2f2 header, zebra rows, bold best scores) and fill the last column with dark #40434b date chips holding each method's year or version.
 
 ## Do's and Don'ts
 
@@ -157,6 +159,7 @@ Quick colors: banner #46aeeb, page #ffffff, text #000000, box border and chips #
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 :root {
   --banner: #46aeeb;
   --bg: #ffffff;

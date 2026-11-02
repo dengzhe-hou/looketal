@@ -38,7 +38,7 @@ Anatomy in DOM order (card spans x=220–1220, content x=270–1170; body paddin
 
 ## Tokens — Typography
 
-- **Card text:** declared `font-family: "Google Sans"` on `.content` (no fallback); body declares `sans-serif` and `'Open-Sans'` (misspelled, never matches). Rendered: Google Sans is not loaded, so cards render in the browser default serif (Times New Roman on Windows Chrome, Times on macOS). Substitute that keeps the rendered look: Tinos or Liberation Serif. If you want what the author intended: Google Sans → Product Sans or Inter.
+- **Card text:** declared `font-family: "Google Sans"` on `.content` (no fallback); body declares `sans-serif` and `'Open-Sans'` (misspelled, never matches). Rendered: Google Sans is not loaded, so cards render in the browser default serif (Times New Roman on Windows Chrome, Times on macOS). Substitute that keeps the rendered look: Tinos. If you want what the author intended, load Google Sans.
 - **Body outside cards:** sans-serif 14px (only reachable in empty margins).
 - **Icons:** Glyphicons Halflings (carousel chevrons).
 
@@ -112,6 +112,8 @@ Anatomy in DOM order (card spans x=220–1220, content x=270–1170; body paddin
 - **Long publication or news list:** one card titled "News", entries as justified 17.5px paragraphs with the date bold.
 - **Many result videos:** one card per comparison family, each with a single heading; separate items inside a card with the 2px dashed #737373 divider rather than new cards.
 - **Narrow screens:** the source has no responsive rule; if reusing, change card width to `min(1000px, 100% - 32px)` and padding to 16px under 768px.
+- **No teaser videos:** place your main figure as one 800px centred image at y=409 inside the first card, under the links. The Abstract card follows 25px below; width stays 1000px, with the 15px radius and halo.
+- **No teaser figure:** end the first card after the links row (y=374 plus the card's 50px padding) and start the Abstract card 25px below, so the stack of cards still opens the page.
 
 ## Do's and Don'ts
 

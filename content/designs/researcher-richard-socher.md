@@ -109,6 +109,8 @@ Anatomy in DOM order (desktop 1440px):
 - **News**: a bulleted list in the bio column, same 16px/1.8 type, with the date first.
 - **A results table**: Poppins 14px/300 black on white, 1px #f7f7f7 row bands, headings 500; keep it inside the 897px column.
 - **Different hero media**: any landscape photograph or video works; keep the title in a light warm grey such as #a8a6a1 so it sits in the image instead of on it.
+- **No hero media**: drop the hero section, keep the 102px fixed header carrying the name, and start the 897px bio column at y=145 (102px header plus 43px gap). Add no coloured band or placeholder.
+- **No photography rows**: keep the three #ffffff alternating rows for Publications, Talks or Projects, each with a 618×412 research figure or lab photo, a 35.2px/500 heading and a #a8a6a1 button; with no image, centre the heading and button alone.
 
 ## Do's and Don'ts
 
@@ -147,6 +149,7 @@ Quick colors: header and bio #f7f7f7, text #000000, hero title and buttons #a8a6
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
 :root {
   --mist: #f7f7f7;
   --ink: #000000;

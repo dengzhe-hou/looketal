@@ -59,7 +59,7 @@ Declared but not visible: `--brand-blue` #2f7fe0, `--brand-navy` #1e3a5f and `--
 
 ## Tokens — Typography
 
-- **Headings and prose**: declared `'Source Serif 4', serif` for `h1–h4`, the tagline and the abstract, from Google Fonts (400, 600, 700, 400 italic). Rendered: Source Serif 4 400, 400i, 700 (`fonts_loaded`). Substitute: Source Serif Pro (same design, earlier release).
+- **Headings and prose**: declared `'Source Serif 4', serif` for `h1–h4`, the tagline and the abstract, from Google Fonts (400, 600, 700, 400 italic). Rendered: Source Serif 4 400, 400i, 700 (`fonts_loaded`). Substitute: Source Serif 4 (same design, current release).
 - **UI and body**: declared `'Inter', sans-serif` (Google Fonts 400–800). Rendered: Inter 400, 600, 700. Card titles (`h4`) are reset to Inter.
 - **Buttons quirk**: `.btn` sets no font family, so the `<button>` "Try the Demo" renders in the browser default Arial while the `<a>` buttons inherit Inter.
 - **Mono**: `'SFMono-Regular', 'Consolas', monospace` for code blocks (system font).
@@ -155,6 +155,8 @@ Declared but not visible: `--brand-blue` #2f7fe0, `--brand-navy` #1e3a5f and `--
 - **Videos**: frame like `.fig` (12px radius, 1px #cfdcee, soft blue shadow) with an italic centered caption.
 - **Long publication lists or news**: stacked white cards with a colored 4px left edge per category and an uppercase 11.2px label.
 - **Dark mode**: swap to #0e141d page, #161e2a surfaces, #e7eef8 ink and #6ea8fe blue; keep the gold accent.
+- **No interactive demo**: remove the Demo/Paper segmented control and the gold button; the blue Paper button leads the row, gold stays only in the abstract bar and stage-2 card edge, and the hero still ends at y 417.
+- **No three-stage method**: make one 4px-edged card per component in the order blue #2f6fd0, gold #eab308, violet #6d4bd6 with their matching labels; for two components use the first two, for more than three group them into three cards.
 
 ## Do's and Don'ts
 
@@ -194,6 +196,7 @@ Quick colors: page #f3f7fd, surface #ffffff, soft #eaf2fc, ink #16233a, body #33
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,400;1,600&family=Source+Serif+4:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --page-bg: #f3f7fd;
   --surface: #ffffff;

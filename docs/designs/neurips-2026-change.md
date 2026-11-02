@@ -49,7 +49,7 @@ Declared but not visible: --surface #ffffff, --accent-soft #fbe5e1, the dark-the
 
 ## Tokens — Typography
 
-- **Sans**: declared `"Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif`; renders Inter Tight (variable, weights 200–700 loaded). Substitute: Inter Display, or Inter with tracking tightened by a further 0.02em.
+- **Sans**: declared `"Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif`; renders Inter Tight (variable, weights 200–700 loaded). Substitute: Inter with tracking tightened by a further 0.02em.
 - **Mono**: declared `"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`; renders JetBrains Mono 400. Substitute: IBM Plex Mono.
 
 | Role | Selector | Size at 1440 (clamp) | Weight | Line-height | Tracking |
@@ -141,6 +141,8 @@ Hierarchy is built from size and tracking alone; weights stay at 200–400 and b
 - **Long publication list**: one `.sx-row` per paper (2.2em number column, title, venue right), 1px #d9d9d3 hairline between rows, 15–16px text.
 - **News**: a run-in list under a 104px "News" section head; date in tabular numerals left, text 16px; no cards.
 - **No acronym**: set the project name as the wordmark anyway; if it is long, let it fill the 7-column cell (font-size from container width) and drop the red annotations.
+- **No strengths list**: fill `ul.mast-points` with up to four short claims of the work, one per column, in the same grid (15px/400, 1px #111110 top rule, #d9d9d3 hairlines), so columns 1 to 7 are never empty under the wordmark.
+- **No highlights video**: put the main figure in the 928×522 slot at x 20, unrounded and unframed, and keep the 76px "Highlights" heading and 17.5px/300 text in the column at x 964. Drop the clip lists.
 
 ## Do's and Don'ts
 
@@ -182,6 +184,7 @@ Quick colors: canvas #fafaf7, ink #111110, bar #000000 with #f0efea text, second
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;700&family=JetBrains+Mono:wght@200;300;400;600;700&display=swap");
 :root {
   --bg: #fafaf7;
   --ink: #111110;

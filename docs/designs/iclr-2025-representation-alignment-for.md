@@ -42,7 +42,7 @@ Anatomy in DOM order (body x=230–1210, content x=246–1194):
 
 ## Tokens — Typography
 
-- **Sans:** declared `"Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif`; Google Fonts request 300, 400, 600 with italics. Rendered: Titillium Web 300, 300i, 400, 600. Weights 500 and 700 fall back to the 400 and 600 faces. Substitute: Exo 2 (light weights) or Rajdhani for a closer squared look.
+- **Sans:** declared `"Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif`; Google Fonts request 300, 400, 600 with italics. Rendered: Titillium Web 300, 300i, 400, 600. Weights 500 and 700 fall back to the 400 and 600 faces. Substitute: Exo 2 (light weights).
 - **Mono:** browser `monospace` for BibTeX (14px).
 - **Icons:** Font Awesome 6 beta (file, GitHub), Material Icons (event).
 
@@ -118,6 +118,8 @@ Anatomy in DOM order (body x=230–1210, content x=246–1194):
 - **HTML results table:** 17px Titillium 300, header 600, 1px #dddddd rules top and bottom, best numbers bold #0e710e, inside the 90% grid width.
 - **Longer news list:** keep the icon + bracketed date pattern; past five items, show the latest five and collapse the rest.
 - **More links:** add icon text links to the same flex row (Models, Demo), 25px gap, same hover.
+- **No sample-grid teaser:** put your main figure in the 948px teaser slot at y=370, centred, with no frame or caption chrome. With no figure, the News section (or the first section) starts at y=370 instead.
+- **No News:** leave the section out and let the first section h2 (29.75px / 400, 1px #dddddd rule under it) take its place at y=714, below the teaser and its 32px gap.
 
 ## Do's and Don'ts
 
@@ -156,6 +158,7 @@ Quick colors: text #000000 on #ffffff, accent #0e710e, link hover #208799, hero-
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
 :root {
   --bg: #ffffff;
   --text: #000000;

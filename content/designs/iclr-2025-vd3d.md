@@ -41,7 +41,7 @@ Anatomy in DOM order (all centred; `.highlight-clean` wrapper with 20px top padd
 ## Tokens — Typography
 
 - **Display / UI:** declared `"Source Sans Pro", Calibri, Candara, Arial, sans-serif` on body and h1–h6, weight 300, line-height 1.1 for headings. Rendered: Source Sans Pro 300 and 400 (no 700 loaded, so `<b>` renders at 400 or synthesized). Substitute: Source Sans 3.
-- **Reading text:** declared `Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif` on `p` and `.caption`. Rendered: Palatino Linotype (system font on Windows; Palatino on macOS). Substitute: TeX Gyre Pagella.
+- **Reading text:** declared `Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif` on `p` and `.caption`. Rendered: Palatino Linotype (system font on Windows; Palatino on macOS). Substitute: Gelasio.
 - **Code:** Bootstrap `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`, 14px (87.5%).
 
 | Role | Selector | Size / weight / line-height |
@@ -116,6 +116,7 @@ Anatomy in DOM order (all centred; `.highlight-clean` wrapper with 20px top padd
 - **Long news or publication lists:** use the template's own `.citation` recipe (bold 1em title, 12px author line, italic venue h6, small grey or sky-blue venue tag) inside the 768px column.
 - **More links:** add further `btn-light` icon buttons in the same flush row; keep icons 24px monochrome SVG.
 - **Wide media:** let a teaser break out to the 1024px hero container, but keep text at 738px.
+- **No mosaic teaser:** show one image or video of your main result, 738px wide, directly under the first hairline in the 768px container. With no media, the Abstract h2 (32px / 300) follows that hairline inside the first viewport.
 
 ## Do's and Don'ts
 
@@ -154,6 +155,7 @@ Quick colors: text #212529, links #007bff, superscripts #313436, button #f8f9fa,
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400&display=swap");
 :root {
   --bg: #ffffff;
   --text: #212529;
@@ -162,7 +164,7 @@ Quick colors: text #212529, links #007bff, superscripts #313436, button #f8f9fa,
   --button: #f8f9fa;
   --hairline: rgba(0, 0, 0, 0.1);
   --code: #e83e8c;
-  --font-sans: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+  --font-sans: "Source Sans Pro", "Source Sans 3", Calibri, Candara, Arial, sans-serif;
   --font-serif: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --title-size: 33px;
   --h2-size: 32px;

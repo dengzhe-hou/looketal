@@ -124,6 +124,8 @@ Teal, magenta and gray panel borders belong to the teaser image.
 - **Long publication or news lists**: a `.content ul` in the 763px column, 16px, 4px spacing, dates bold.
 - **A venue or award line**: add a Google Sans 20px #4a4a4a line under the affiliations; the template's unused `.publication-awards` rule gives bold #ff3860 if an award must stand out.
 - **More media**: alternate white `.section` blocks and #f5f5f5 `hero is-light` bands to group related material.
+- **No teaser figure**: use the main method or result figure at y=460, 912px wide and unframed, with the centred 16px italic #4a4a4a caption. With no figure, the Abstract section starts at y=460 and its heading at y=508.
+- **No example video**: the `hero is-light` #f5f5f5 band keeps its justified text and numbered list and ends after them. With no supplementary text either, go from the Abstract to BibTeX without an empty band.
 
 ## Do's and Don'ts
 
@@ -163,6 +165,7 @@ Quick colors: background #ffffff, headings and buttons #363636, body #4a4a4a, au
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;1,400&family=Noto+Sans:ital,wght@0,400;1,400&display=swap");
 :root {
   --bg: #ffffff;
   --heading: #363636;

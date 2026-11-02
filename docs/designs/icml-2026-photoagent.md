@@ -184,6 +184,7 @@ Quick colors: page #0d0d12, alt #13131a, card #1a1a24, text #f0f0f5, muted #9898
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 :root {
   --bg: #0d0d12;
   --bg-alt: #13131a;

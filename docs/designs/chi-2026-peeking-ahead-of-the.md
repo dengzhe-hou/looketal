@@ -121,6 +121,7 @@ The salmon, peach and sand panels belong to the teaser image, not the CSS.
 - **Long publication or news lists**: a `.content ul` in the 912px column, 16px Noto Sans, dates bold #363636.
 - **An award**: the template's `.publication-awards` rule (bold #ff3860) is declared but unused; add it as its own line under the venue if needed.
 - **More figures**: one `section.section.hero` each, centred 32px heading, unframed full-width figure, bold-lead caption.
+- **No storyboard teaser**: use the main method or result figure at y=573, 912px wide and unframed, with the centred 16px/1.6 caption and its bold lead. With no figure, the Abstract heading moves up to y=621.
 
 ## Do's and Don'ts
 
@@ -160,6 +161,7 @@ Quick colors: background #ffffff, headings and buttons #363636, body #4a4a4a, au
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --bg: #ffffff;
   --heading: #363636;

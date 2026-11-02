@@ -137,6 +137,8 @@ Declared but not visible: the default `.button` style (#fff0ce fill, rgba(255,19
 - **More contributions**: add icon items in the hero; past four, move them below into the article.
 - **Long publication lists or news**: use the red-edged notice box for one announcement only; put dated items as a plain Distill list.
 - **Font**: specify `Charter, "Charis SIL", Georgia, serif` so non-Apple viewers do not fall back to Times.
+- **No square teaser**: put the paper's main figure in the right column at up to 585px wide, vertically centred against the text, unframed and unrounded; the gradient, text column and 767px hero height stay the same.
+- **No award pill**: leave out the pill; the intro paragraph follows the subtitle at the same 16px gap, about 52px higher, with the feature list and buttons moving up with it.
 
 ## Do's and Don'ts
 
@@ -176,6 +178,7 @@ Quick colors: gradient #1a0b2e → #671b8d → #bd5703 → #f97212, peach #feae6
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --hero-gradient: linear-gradient(-235deg, #1a0b2e 10%, #671b8d 55%, #bd5703 80%, #f97212d2 100%);
   --hero-title: #feae6f;

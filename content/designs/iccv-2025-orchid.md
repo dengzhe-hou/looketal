@@ -45,7 +45,7 @@ Anatomy in DOM order (desktop 1440px, everything centred):
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Title / authors / teaser caption | 'Google Sans', sans-serif | Google Sans 400 only; 600 headings are synthesized bold | Product Sans → Open Sans |
+| Title / authors / teaser caption | 'Google Sans', sans-serif | Google Sans 400 only; 600 headings are synthesized bold | Outfit |
 | Body / section titles | 'Noto Sans', sans-serif | Noto Sans 400 only; 600 synthesized | Noto Sans |
 | Code | monospace (Bulma) | system monospace (Consolas on Windows) | — |
 | Icons | Font Awesome, Academicons | loaded via kit | — |
@@ -127,6 +127,8 @@ Anatomy in DOM order (desktop 1440px, everything centred):
 - **Long publication or news lists**: use a #f5f5f5 band with a plain `ul` in the 960px container, dates in 600 #363636, text 16px #4a4a4a, links #3273dc.
 - **More media**: add another `.hero.is-light.is-small` band with a carousel; items keep the 10px radius and #bbbbbb hairline.
 - **More buttons**: add more `.is-rounded.is-dark` buttons in the same row with 5px vertical margin, each with its own colored icon.
+- **No teaser figure**: the header closes at y=431 and the first #f5f5f5 band of your best results, in 10px-radius items with 1px #bbbbbb frames, comes next; with no image results, the centred Overview heading comes next.
+- **No carousels**: show paired outputs as a static row of items with 10px radius and 1px #bbbbbb frames, italic rgba(0,0,0,0.7) prompts above, inside the #f5f5f5 band; leave out sliders and the toggle switch.
 
 ## Do's and Don'ts
 
@@ -166,6 +168,7 @@ Quick colors: title #363636, body #4a4a4a, authors #209cee, links #3273dc, band 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;1,400&family=Noto+Sans:ital,wght@0,400;1,400&display=swap");
 :root {
   --title: #363636;
   --text: #4a4a4a;

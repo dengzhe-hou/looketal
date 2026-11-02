@@ -107,7 +107,7 @@ Strategy badges use paired tints: #e8f4ec / #2d5a3d (Reflective), #e8f0f8 / #2d4
 - **Header gradient**: `background: linear-gradient(135deg, #2d2a26 0%, #4a453e 50%, #3d3833 100%)`, with `::before` overlay `radial-gradient(circle at 20% 80%, rgba(201, 124, 93, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(123, 158, 137, 0.15) 0%, transparent 50%)`.
 - **Contribution grid**: 2 columns, gap 20px, card padding 20px, icon-to-text gap 15px.
 - **Author band**: padding 40px 20px, centred, inner max 1200px; paragraphs margin-bottom 15px; award pill margin 15px 0; affiliation rows margin-top 20px and 10px.
-- **Article**: `.article` max-width 900px, padding 60px 20px, so text runs 860px from x=290. Section blocks fill 860px with 50px padding (inner text 760px from x=340), margin 40px 0.
+- **Article**: `.article` max-width 900px, padding 60px 20px, so text runs 860px from x=290. Section blocks fill 860px with 50px padding (inner text 760px from x=340), margin 40px 0; a 1px #d8d4cf `hr` with margin 60px 0 sits between blocks, and margins collapse, so blocks are 121px apart.
 - **Figures**: margin 40px 0, image max-width 100% (860px at top level, 760px inside blocks); caption 15px below with 20px side padding.
 - **Grids**: stat cards `repeat(auto-fit, minmax(250px, 1fr))` gap 25px (two 368px cards per row in a block); feedback cards minmax(280px, 1fr) gap 20px; pacing demo cards flex with gap 30px.
 - **Appendix bands**: #f0eeea, padding 50px 20px, inner max 900px.
@@ -160,6 +160,8 @@ Strategy badges use paired tints: #e8f4ec / #2d5a3d (Reflective), #e8f0f8 / #2d4
 - **More stats**: add `.result-card`s; at 1440 a 760px block fits two 368px cards per row (minmax 250px), numbers 40px Cormorant #c97c5d.
 - **Long publication or news lists**: use the limitation-card pattern (white, 8px radius, 4px #c97c5d left bar, padding 20px, 15px apart) with the date as a 16px / 600 #a65d40 lead.
 - **More contributions in the header**: keep the 2-column grid of 275px cards; beyond four, move extras into a section block rather than lengthening the dark band.
+- **No contribution cards**: keep the two 570px columns and put the abstract in the left one at y=222 as DM Sans 16px / 25.6px white at 0.9 opacity, then the buttons 40px below it and the studio links. The teaser and BibTeX panel still set the header height (948px at 1440), so the left column ends higher than the right; leave that dark space empty and do not move the title or shrink the band.
+- **No teaser image**: keep the right column and let the BibTeX panel start at y=222, 570px wide, with the abstract as above on the left.
 
 ## Do's and Don'ts
 
@@ -181,7 +183,7 @@ A single dense, colorful teaser (chat interface screenshots, a cartoon robot and
 
 ## Layout
 
-A 1200px two-column header (text and cards left, teaser and BibTeX right), then a full-width beige author band, then a 900px article column of white blocks spaced 80px apart (40px margins), then full-width beige appendix bands. All sections stack in one column below the header.
+A 1200px two-column header (text and cards left, teaser and BibTeX right), then a full-width beige author band, then a 900px article column of white blocks spaced 121px apart (a 1px #d8d4cf `hr` with 60px margins between them), then full-width beige appendix bands. All sections stack in one column below the header.
 
 ## Agent Prompt Guide
 
@@ -199,6 +201,7 @@ Quick colors: header gradient #2d2a26 → #4a453e → #3d3833, page #faf9f7, ban
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 :root {
   --color-bg: #faf9f7;
   --color-bg-alt: #f0eeea;

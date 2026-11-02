@@ -48,7 +48,7 @@ Anatomy in DOM order (Bulma `container is-max-desktop`, 960px):
 
 ## Tokens — Typography
 
-- **Display:** declared `'Google Sans', sans-serif` for `.publication-title`, authors and teaser caption; Google Fonts request `Google+Sans|Noto+Sans|Castoro` (400 only). Rendered: Google Sans 400, with 600/700 synthesized. Substitute: Product Sans, or Plus Jakarta Sans with a real 600.
+- **Display:** declared `'Google Sans', sans-serif` for `.publication-title`, authors and teaser caption; Google Fonts request `Google+Sans|Noto+Sans|Castoro` (400 only). Rendered: Google Sans 400, with 600/700 synthesized. Substitute: Outfit with a real 600.
 - **Body:** declared `'Noto Sans', sans-serif`. Rendered: Noto Sans 400. Substitute: Open Sans.
 - **Icons:** Font Awesome (bundled), Academicons.
 
@@ -123,6 +123,8 @@ Anatomy in DOM order (Bulma `container is-max-desktop`, 960px):
 - **Results table:** use Bulma `table is-striped` at 16px Noto Sans, header #363636, and colour only the best method's name in #ffa500 bold; avoid adding more highlight colours.
 - **Keyword discipline:** if you reuse the highlight idea, pick two colours from the brand (orange, violet) rather than the six used here.
 - **BibTeX:** add a Nerfies `pre` section at the end; the source has none.
+- **No logo image:** keep the h1 wordmark as text only, 48px / 700, first half in #ffa500 and second half in #c890fc. The title stays 24px below it, so the brand pair still opens the page.
+- **No hero video:** put your main figure as a 912px centred image at y=558 where the video sits, keep the 20px centred caption under it, and highlight its bold phrases in only #ffa500 and #b56cf9.
 
 ## Do's and Don'ts
 
@@ -161,6 +163,7 @@ Quick colors: heading #363636, text #4a4a4a, authors #209cee, brand orange #ffa5
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;600;700&family=Noto+Sans:wght@400;600&display=swap");
 :root {
   --bg: #ffffff;
   --heading: #363636;
@@ -172,7 +175,7 @@ Quick colors: heading #363636, text #4a4a4a, authors #209cee, brand orange #ffa5
   --band: #f5f5f5;
   --footer: #fafafa;
   --button: #363636;
-  --font-display: 'Google Sans', 'Product Sans', sans-serif;
+  --font-display: 'Google Sans', 'Outfit', sans-serif;
   --font-body: 'Noto Sans', sans-serif;
   --title-size: 48px;
   --h2-size: 32px;

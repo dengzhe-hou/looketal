@@ -114,6 +114,8 @@ Anatomy in DOM order (desktop 1440px; column x=430–1010):
 - **A results table**: 15.64px Source Sans, header row in #222222 700, 1px #dddddd rules, no fills; keep it within 580px.
 - **Long publication lists**: keep the entry pattern; group by year with lowercase Georgia h2 headings. The page itself moves the full list to a separate page.
 - **More links**: extend the arrow row; at 1440 each item is 40–70px wide, so eight fit on one centred line.
+- **No paper links**: show only the tabs that exist, such as "preprint" or "web", in #ede8e8 centred under the entry; a paper with none has no tab row but keeps the 200px #dddddd hairline.
+- **No publications yet**: retitle the h2 "select projects" and use the same entry (bold name, #333333 title, italic context in #5c5c5c, tabs for repo, demo or write-up), so the tab signature stays.
 
 ## Do's and Don'ts
 
@@ -153,6 +155,7 @@ Quick colors: page #f8f4f4, text #5c5c5c, headings and active #222222, titles #3
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --bg: #f8f4f4;
   --ink: #222222;

@@ -129,6 +129,8 @@ Declared but not visible: `span.highlight` (#ffffd0) is not used in the markup.
 - **More media**: the auto-fit grid wraps into extra rows of three; keep 16:9 thumbnails and one source pill per card.
 - **Talks or teaching**: reuse the media card with a slide or venue photo as the thumbnail.
 - **Students and collaborators**: a plain 14px list under a `heading`; do not add new colors.
+- **No recent media**: leave out the Recent Media heading and cards. The News heading then follows the header row at y≈386 with its #fafafa card below, and the apricot date pills stay the warm color above the fold.
+- **No portrait**: leave the 40% right cell empty, with no placeholder, and keep the bio at its 522px measure in the 63% cell. The text column alone sets the header row height.
 
 ## Do's and Don'ts
 
@@ -167,6 +169,7 @@ Quick colors: text #000000, links #1772d0 (hover #f09228), highlight #fbe5ba wit
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --link: #1772d0;
   --link-hover: #f09228;

@@ -129,6 +129,7 @@ Anatomy in DOM order (desktop 1440px; `section.hero > .hero-body` padding 48px 2
 - **More authors**: keep two or three centred 20px lines separated by em spaces, with footnote lines at 14.58px.
 - **Video**: use the template's `.publication-video` (16:9, radius 10px) in its own section between the teaser and the abstract.
 - **News**: a short list in the 763px column of a white section, dates bold, at 16px.
+- **No teaser**: put your strongest data graphic, else the method figure, in the teaser slot at 80% width and 8px radius, centred and unframed. With neither, the #f5f5f5 Abstract band follows the button row directly.
 
 ## Do's and Don'ts
 
@@ -168,6 +169,7 @@ Quick colors: page #ffffff, charcoal #363636, text #4a4a4a, author blue #209cee,
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;1,400&family=Noto+Sans:ital,wght@0,400;1,400&display=swap");
 :root {
   --bg: #ffffff;
   --charcoal: #363636;

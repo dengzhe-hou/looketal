@@ -153,6 +153,8 @@ Declared but not visible: `.hero` sets `linear-gradient(135deg, #667eea, #764ba2
 - **Long publication lists**: a white 12px-radius card per item with a 20px navy title and a 16px #4a4a4a venue line, two per row.
 - **More tasks or examples**: continue the alternating rows, swapping the video side each time, and reuse the abilities chip for any one-line takeaway.
 - **A BibTeX block**: a white band with a section title and underline, then a `pre` on #f8f9fa with a 1px #e0e6ed border and 12px radius.
+- **No mascot logo**: leave out the 200px logo; the title starts at y 48 with its 60×4px violet bar and everything below keeps its gaps, so the news band starts about 206px higher, at y 488.
+- **No news**: keep the gradient band under the hero, titled "Key Results" with the violet underline, and put one compact violet-headed results table and the Key Finding box in it instead of the notification and warning panels.
 
 ## Do's and Don'ts
 
@@ -192,6 +194,7 @@ Quick colors: title #2c3e50, headings #363636, body #4a4a4a, authors #209cee, ac
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans:wght@400;500;600;700&display=swap");
 :root {
   --title: #2c3e50;
   --heading: #363636;

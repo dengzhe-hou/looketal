@@ -52,7 +52,7 @@ Declared but not visible: `--gradient-primary` (#667eea → #764ba2), `--gradien
 
 ## Tokens — Typography
 
-- **Family:** declared `'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif`; renders Inter 400, 500, 600, 700, 800. Substitute: Geist or SF Pro Display.
+- **Family:** declared `'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif`; renders Inter 400, 500, 600, 700, 800. Substitute: Geist.
 - **Code:** declared `'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace`; renders the first one installed (Cascadia Code or Consolas on Windows, SF Mono on macOS). Substitute: JetBrains Mono.
 - **Thumbnail labels:** 12px #333333 in the native button font.
 
@@ -173,6 +173,7 @@ Quick colors: text #1e293b, link #2563eb (hover #1d4ed8), body grey #64748b, ban
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 :root {
   --text-primary: #1e293b;
   --text-secondary: #64748b;

@@ -60,7 +60,7 @@ Anatomy in DOM order (desktop 1440px, centred; Bulma containers are forced to ma
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Title / authors / teaser | 'Google Sans', sans-serif | Google Sans 400 (600 synthesized) | Product Sans → Open Sans |
+| Title / authors / teaser | 'Google Sans', sans-serif | Google Sans 400 (600 synthesized) | Outfit |
 | Body / headings | 'Noto Sans', sans-serif | Noto Sans 400 (600/700 synthesized) | Noto Sans |
 | Script accents | "Pacifico", cursive | Pacifico 400 | Pacifico |
 | Hand labels | "Architects Daughter", cursive | not loaded; system cursive (Comic Sans MS on Windows) | Architects Daughter |
@@ -151,6 +151,8 @@ Anatomy in DOM order (desktop 1440px, centred; Bulma containers are forced to ma
 - **Long publication or news lists**: use the abstract card recipe (#f6f6f6, 18px radius) with 16px #555555 rows and 600 #7c5c45 dates.
 - **More showcases**: add gallery rows; keep coral borders for content outputs and sky borders for style outputs.
 - **More buttons**: add another `.pub-btn` in a near-black (#222222 or #000000); avoid colored buttons, the orange is reserved for the Decompose action.
+- **No Decompose widget**: keep the blush card at about y=439 (32px radius, #ffeaea to #ffffff to #eaf6ff gradient, soft shadow) holding your teaser under Pacifico 35.2px headings in #f36b3b and #2a7be4, one per concept. No button.
+- **No background video**: fill the header with flat #ffedef, the haze the video produces; the 382px height, title, authors and buttons stay as they are.
 
 ## Do's and Don'ts
 
@@ -190,6 +192,7 @@ Quick colors: ink #222222, body #4a4a4a, venue #666666, heading brown #7c5c45, a
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;1,400&family=Noto+Sans:ital,wght@0,400;1,400&family=Pacifico&display=swap");
 :root {
   --ink: #222222;
   --body: #4a4a4a;

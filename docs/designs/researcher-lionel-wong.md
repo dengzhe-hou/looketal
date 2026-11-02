@@ -8,7 +8,7 @@ Values come from a headless Chrome render at 1440×900 (computed styles of every
 
 ## Overview
 
-A left-aligned, 600px-wide single column on white, set 50px from the top and left of the window, with the rest of the 1440px viewport left empty. The name "lio wong" is a lowercase 32px wordmark in ABC Gravity, a heavy, compressed grotesk. A 200px black-and-white grainy portrait with 5px rounded corners hangs to the right of the column in its margin (`margin-right: -250px`). The bio is 14px ABC Diatype in black with bold sentences for the key questions and blue (#1772d0) links that carry a "↗" arrow; links turn orange (#f09228) on hover. A centred contact row separates links with slashes. "Research Areas" (21px bold) introduces the signature component: each research question is a box with a 1px black border and 5px radius, a bold 14px question heading, and a bulleted list of sub-questions, each ending with bracketed citation links like "[CogSci, 2023]". Five such boxes stack down the page; there is no footer.
+A left-aligned, 600px-wide single column on white, set 50px from the top and left of the window, with the rest of the 1440px viewport left empty. The name "lio wong" is a lowercase 32px wordmark in ABC Gravity, a heavy, wide grotesk. A 200px black-and-white grainy portrait with 5px rounded corners hangs to the right of the column in its margin (`margin-right: -250px`). The bio is 14px ABC Diatype in black with bold sentences for the key questions and blue (#1772d0) links that carry a "↗" arrow; links turn orange (#f09228) on hover. A centred contact row separates links with slashes. "Research Areas" (21px bold) introduces the signature component: each research question is a box with a 1px black border and 5px radius, a bold 14px question heading, and a bulleted list of sub-questions, each ending with bracketed citation links like "[CogSci, 2023]". Five such boxes stack down the page; there is no footer.
 
 ## First Viewport
 
@@ -38,7 +38,7 @@ Anatomy in DOM order (desktop 1440px; `.content` x=58–658 after the 50px margi
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Wordmark | 'ABCGravity', "Bauhaus93", 'ABCDiatype', Verdana, Helvetica, sans-serif (self-hosted `fonts/ABCGravity-Normal.woff`) | ABCGravity normal | Anton (lowercase) or Archivo Black condensed |
+| Wordmark | 'ABCGravity', "Bauhaus93", 'ABCDiatype', Verdana, Helvetica, sans-serif (self-hosted `fonts/ABCGravity-Normal.woff`) | ABCGravity normal | Dela Gothic One |
 | Text | 'ABCDiatype', Verdana, Helvetica, sans-serif (self-hosted `.otf`, regular and bold) | ABCDiatype normal, bold | Inter Tight |
 | Lato | `@font-face` blocks for Lato 400/700 and italics | not used by any rule | — |
 
@@ -76,7 +76,7 @@ Anatomy in DOM order (desktop 1440px; `.content` x=58–658 after the 50px margi
 
 - **Wordmark**: lowercase name in ABC Gravity 32px, black; no logo or tagline.
 - **Margin portrait**: 200px grainy black-and-white photo, 5px radius, floated into the right margin at the top of the page.
-- **Arrow link**: #1772d0, no underline, with "↗" typed into the link text for external links; hover and focus #f09228.
+- **Arrow link**: #1772d0, no underline, with "↗" typed into the link text for external links in running text (contact-row and bracketed citation links have none); hover and focus #f09228.
 - **Slash link row**: one centred line of links separated by " / " in black.
 - **Research question box** (`.highlight`): 1px solid #000000, radius 5px, padding 21px; bold 14px question; disc bullets of sub-questions at 14px with key phrases in italic, each ending with bracketed blue citation links "[CogSci, 2023]" or "[Thesis, 2024][SPP, 2023]"; 3px between items.
 
@@ -96,11 +96,13 @@ Anatomy in DOM order (desktop 1440px; `.content` x=58–658 after the 50px margi
 
 ## Adapting to Other Content
 
-- **A full publication list**: add an `h2` (21px/700) and list each paper as one 14px line with the title in 700 (`papertitle` is declared at 14px/700) and blue bracketed links; no boxes, so the research boxes stay the only framed element.
+- **A full publication list**: add an `h2` (21px/700) and list each paper as one 14px item (two or three lines in the 600px column) with the title in 700 (`papertitle` is declared at 14px/700) and blue bracketed links; no boxes, so the research boxes stay the only framed element. The exception is **No research questions** below, where your main group takes the box.
 - **News**: an `h2` "News" and a plain list, each item starting with the date in 700; at 1440 one line holds about 90 characters in the 600px column.
 - **A results table**: 14px ABC Diatype, header in 700, 1px #000000 rules under the header only, inside the 600px column.
 - **More research areas**: repeat the box; each extra box adds its content height plus 21px. Keep each to one bold question and at most eight bullets.
 - **Centring on wide screens**: the source does not centre; if you must, set `margin: 50px auto` on `.content` and keep the portrait's -250px overhang, which needs the viewport to extend at least 250px past the column's right edge.
+- **No research questions**: keep the signature box. Put your main group (teaching, projects or selected papers) in a `.highlight` box right after the contact row, with one 14px/700 lead line and a disc list, so the 1px #000000 frame still appears by about y=580 at 1440. Other groups (news, teaching) follow the box as plain `h2` sections.
+- **No portrait**: leave out `img.margin` and keep the right margin empty; no placeholder, and the column stays 600px wide.
 
 ## Do's and Don'ts
 
@@ -128,7 +130,7 @@ Top-left anchored 600px column (50px margins), portrait hanging in the right mar
 
 Quick colors: text and borders #000000, links #1772d0, hover #f09228, page #ffffff.
 
-1. "Build a top-left column: .content max-width 600px, margin 50px; name in a heavy lowercase grotesk (ABC Gravity, fallback Anton) at 32px #000000; body in ABC Diatype 14px #000000; links #1772d0 with no underline and a '↗' after external links, hover #f09228."
+1. "Build a top-left column: .content max-width 600px, margin 50px; name in a heavy lowercase grotesk (ABC Gravity, substitute Dela Gothic One) at 32px #000000; body in ABC Diatype 14px #000000; links #1772d0 with no underline and a '↗' after external links in running text only, hover #f09228."
 2. "Hang a 200px black-and-white portrait in the right margin: float right, width 200px, margin-right -250px, border-radius 5px, no border or shadow."
 3. "Create research question boxes: border 1px solid #000000, border-radius 5px, padding 1.5em, margin 1.5em -1em; a bold 14px question, then a disc list of 14px sub-questions with key phrases in italic, each ending with bracketed #1772d0 citation links like '[CogSci, 2023]', 3px between items."
 
@@ -140,13 +142,14 @@ Quick colors: text and borders #000000, links #1772d0, hover #f09228, page #ffff
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter+Tight:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --ink: #000000;
   --link: #1772d0;
   --hover: #f09228;
   --paper: #ffffff;
-  --font-name: "ABCGravity", "Bauhaus93", "ABCDiatype", Verdana, Helvetica, sans-serif;
-  --font-text: "ABCDiatype", Verdana, Helvetica, sans-serif;
+  --font-name: "ABCGravity", "Bauhaus93", "Dela Gothic One", Verdana, Helvetica, sans-serif;
+  --font-text: "ABCDiatype", "Inter Tight", Verdana, Helvetica, sans-serif;
 }
 body { background: var(--paper); color: var(--ink); font: 400 14px var(--font-text); }
 .content { max-width: 600px; margin: 50px; }

@@ -123,6 +123,7 @@ Anatomy in DOM order (desktop 1440px; the slide is a full-width centred table ce
 - **Phones**: add a floor to the vmin sizes (for example `font-size: max(2vmin, 15px)`) since the source shrinks body text below 8px.
 - **More authors**: keep authors italic on one line; let them wrap.
 - **Awards**: keep the #940606 star line under the paper rather than a badge.
+- **No headshot**: leave out the 171px ring and circle. The 108px white name and the 36px centred paragraphs stay in the slide's centred table cell, so the name becomes the first element; add no placeholder.
 
 ## Do's and Don'ts
 
@@ -161,6 +162,7 @@ Quick colors: About #6f99ac, Publications #fcb052, Teaching #63a66d, Contact #a6
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --about: #6f99ac;
   --pubs: #fcb052;

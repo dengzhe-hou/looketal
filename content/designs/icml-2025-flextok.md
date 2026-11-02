@@ -54,7 +54,7 @@ Anatomy in DOM order (y = top of element box):
 
 - **Display**: declared `'Google Sans', sans-serif` on `.publication-title`, `.publication-authors` and `.teaser`. Rendered: Google Sans, but only the 400 face loaded (`fonts_loaded`: Google Sans 400), so the 600 title and venue line are browser-synthesized bold. Substitute: Albert Sans (similar round geometric proportions, real 600 weight).
 - **Body**: Bulma system stack `BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, …`. Rendered as Segoe UI on Windows and San Francisco on macOS. Substitute: Inter.
-- **Method name**: `.dmethod` declares `'American Typewriter', serif` at 1em. American Typewriter ships only with macOS, so on Windows and Linux the render falls back to the default serif (Times New Roman here). Substitute: Courier Prime if you want the typewriter look everywhere, or keep the serif fallback deliberately.
+- **Method name**: `.dmethod` declares `'American Typewriter', serif` at 1em. American Typewriter ships only with macOS, so on Windows and Linux the render falls back to the default serif (Times New Roman here). Substitute: Courier Prime, which keeps the typewriter look everywhere.
 - **Icons**: Font Awesome 5.15.3 (Free 900 and Brands 400) and Academicons, both loaded.
 
 | Role | Selector | Size / line-height | Weight | Color |
@@ -178,6 +178,7 @@ Quick colors: band gradient #bde0fe → #ffafcc, text #4a4a4a, title #363636, au
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;600&family=Courier+Prime:wght@400;700&display=swap");
 :root {
   --band-start: #bde0fe;
   --band-end: #ffafcc;
@@ -195,7 +196,7 @@ Quick colors: band gradient #bde0fe → #ffafcc, text #4a4a4a, title #363636, au
   --code: #da1039;
   --font-display: 'Google Sans', 'Albert Sans', sans-serif;
   --font-body: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-method: 'American Typewriter', serif;
+  --font-method: 'American Typewriter', 'Courier Prime', serif;
   --container: 960px;
   --nav-h: 52px;
   --radius-button: 4px;

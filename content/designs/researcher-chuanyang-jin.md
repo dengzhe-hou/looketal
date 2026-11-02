@@ -138,6 +138,8 @@ The collapsed news list fades its last 30px with `mask-image: linear-gradient(to
 - **Long publication lists**: keep the text-only rows and add the source's Selected / All segmented control (#f1f3f4 track, 50px radius, pressed segment #d3e3fd with an inset 1px #0b57d0 ring).
 - **Long news**: keep the collapsed log (about six rows visible, 30px mask fade) and the mint pill; insert year dividers (1px #e8eaed, 18px padding-top).
 - **Talks or service**: reuse the log row with the date column; for icon lists use the 40px left indent with a 20px emoji, as the source's misc list does.
+- **No photo**: keep the 290px left column and start the icon dock at y=145, with the two affiliation rows 28px below it. The name stays at x=562 and the bio keeps its 660px width; add no placeholder.
+- **No institution logos**: set each affiliation row as text only, name 15px/600 #202124 over role 13px #5f6368, flush left, with the same 14px between rows. Do not add initials or colored badges.
 
 ## Do's and Don'ts
 
@@ -177,6 +179,7 @@ Quick colors: page #ffffff, ink #202124, ink-2 #3c4043, ink-3 #5f6368, hairline 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap");
 :root {
   --paper: #ffffff;
   --paper-2: #f8f9fa;

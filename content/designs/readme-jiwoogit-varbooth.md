@@ -33,7 +33,7 @@ All four use the static path form with no `style=`, `logo=` or `labelColor=` par
 | HuggingFace | ARBooth | `yellow`, which shields.io currently renders #d8b800 (label #555555) | flat (default) | huggingface.co/wldn0202/ARBooth |
 | Docker | ready | `blue` #007ec6 (label #555555) | flat (default) | hub.docker.com/repository/docker/wldn0202/arbooth/general |
 
-The Project-Page badge is a single colored block because its path `Project--Page-4b8bbe` uses `--` (an escaped hyphen) and has only one text field, so shields.io treats the text as the message with no label. The other three follow the "label, then message" form. The source writes the label as "ArXiv" with a capital A. The METHOD_README table gives `yellow` as #dfb317; the SVG that shields.io returns on 2026-10-28 fills it with #d8b800, which is the value seen in the capture.
+The Project-Page badge is a single colored block because its path `Project--Page-4b8bbe` uses `--` (an escaped hyphen) and has only one text field, so shields.io treats the text as the message with no label. The other three follow the "label, then message" form. The source writes the label as "ArXiv" with a capital A. Older shields.io palettes gave `yellow` as #dfb317; the SVG that shields.io returns on 2026-10-28 fills it with #d8b800, which is the value seen in the capture.
 
 Other colors on the page come from images, not badges: the banner panel #deebf7 and booth body #fef5de, and the red #ff0000 "⟨S*⟩" token in the grid captions. Caption text is black #000000 in `main_white.png` and white #ffffff in `main_black.png`; both grid files have transparent backgrounds.
 

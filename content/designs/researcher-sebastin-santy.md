@@ -49,7 +49,7 @@ Anatomy in DOM order (desktop 1440px). Bootstrap `.container.allstuffp` is 1140p
 |---|---|---|---|
 | Display | League Gothic, sans-serif | League Gothic 400 (self-hosted, swap); set at 700 so it is synthesised bold | Oswald |
 | Text | Roboto, sans-serif | Roboto 300, 400, 500, 700 (self-hosted) | Inter |
-| Serif (italic x) | STIX Two Text | STIX Two Text 400 and 700 italic; renders the 600-weight italic "x" in "Interfaces for x People" | STIX Two |
+| Serif (italic x) | STIX Two Text | STIX Two Text 400 and 700 italic; renders the 600-weight italic "x" in "Interfaces for x People" | STIX Two Text |
 | Icons | Font Awesome 5 Free | Font Awesome 5 Free 900 | — |
 
 | Role | Selector | Size / weight / line-height | Color |
@@ -124,6 +124,8 @@ Anatomy in DOM order (desktop 1440px). Bootstrap `.container.allstuffp` is 1140p
 - **A photo**: if one is added, place it right of the name in the `.teaser` row at about 25% width with a 1px #cccccc border (the declared `.sideimg` style), hidden at ≤768px.
 - **More sections** (Teaching, Service): add another League Gothic 38.4px label with 30px top padding, optionally followed by the coral glyph ornament.
 - **Many link types**: add chips to the right-aligned group (13.6px, dotted underline, ● #444444 separators); they disappear below 1000px, so keep the title linked too.
+- **No themed groups**: leave out the 20.8px/500 #222222 theme headings and run the entries straight on under the coral glyph, 8px apart, each keeping its 7px #f2f0ed bar and right-aligned link chips.
+- **No publications yet**: use the same `.talk` entries for projects, with the name as the 17.6px black title, a 16px #888888 one-line description and role and year in the 15.2px venue line, under the RESEARCH label and coral glyph.
 
 ## Do's and Don'ts
 
@@ -163,6 +165,7 @@ Quick colors: background #fefdfc, display #000000, intro #525252, body #58554f, 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 :root {
   --bg: #fefdfc;
   --ink: #000000;

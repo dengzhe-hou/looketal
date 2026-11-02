@@ -144,6 +144,9 @@ Section dividers: `hr { height: 1px; background: linear-gradient(90deg, transpar
 - **Another results table**: reuse the booktabs recipe (2px #2b2d42 header rules, 1px #e8e4df rows, #f7f3ef group bands, peach "Ours" row) at 88% of a 1060px column.
 - **Long publication or news lists**: put them in a 65% column as rows of 17px #555b6e text with a Space Mono 14px #3d5a80 date, separated by the gradient hairline `hr`.
 - **More sections**: add each to the scroll-spy rail; the rail fits about ten entries between 300px and 600px at 1440×900.
+- **No teaser image**: leave out `#site-teaser` and the legend; the 842px TL;DR column starts under the buttons at about y=407 and the rail stays.
+- **No colour legend**: keep the 360px teaser and drop the legend rows; the TL;DR then starts at about y=797 and no swatches are drawn.
+- **No short method name**: set the title text before its first colon (else its first two words) in the Space Mono wordmark and the full title in the 30px DM Sans subtitle.
 
 ## Do's and Don'ts
 
@@ -183,6 +186,7 @@ Quick colors: page #ffffff, ink #2b2d42, slate #555b6e, author blue #209cee, act
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 :root {
   --primary-dark: #1a1a2e;
   --primary-accent: #e07a5f;

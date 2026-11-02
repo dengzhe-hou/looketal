@@ -152,6 +152,7 @@ Quick colors: text #7b7b7b, nav #7c7c7c, link #1d2dfd, titles #000000, thumbnail
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
 :root {
   --text: #7b7b7b;
   --nav: #7c7c7c;

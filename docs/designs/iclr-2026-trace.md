@@ -49,8 +49,8 @@ Anatomy in DOM order (all centered on x=720 inside `.hero-content`, max-width 90
 
 ## Tokens — Typography
 
-- **Display:** `'Playfair Display', Georgia, serif`; renders Playfair Display 400, 400 italic, 600, 700, 800. Wordmark, subtitle, section titles, card headings, highlight numbers, nav and footer logo. Substitute: Bodoni Moda or DM Serif Display (high-contrast didone with similar width).
-- **Body:** `'Source Sans 3', -apple-system, sans-serif`; renders Source Sans 3 400–700. Substitute: Source Sans Pro or Inter.
+- **Display:** `'Playfair Display', Georgia, serif`; renders Playfair Display 400, 400 italic, 600, 700, 800. Wordmark, subtitle, section titles, card headings, highlight numbers, nav and footer logo. Substitute: Bodoni Moda (high-contrast didone with similar width).
+- **Body:** `'Source Sans 3', -apple-system, sans-serif`; renders Source Sans 3 400–700. Substitute: Inter.
 - **Mono:** `'JetBrains Mono', 'Fira Code', monospace`; renders 400/500. Section numbers, Key Insight label, metric labels, BibTeX. Substitute: IBM Plex Mono.
 - Body size is fluid: `clamp(17px, 0.45vw + 12px, 20px)` renders 18.48px at 1440, line-height 1.7.
 
@@ -143,6 +143,7 @@ Anatomy in DOM order (all centered on x=720 inside `.hero-content`, max-width 90
 - **Teaser image or video:** place it in a figure frame directly under the Key Insight card, never inside the hero, so the hero stays a single typographic screen.
 - **Long publication or news list:** a numbered section with rows on the translucent card wash, dates in mono 12px gold, titles in Source Sans 3 #eae8e4, 1px hairlines between rows.
 - **No acronym:** replace the acronym line with a one-sentence tagline in the same 16px #615d6c style and highlight one key word in gold.
+- **No oral badge:** keep the gold pill at 13px / 600 uppercase with only the venue and year, without the two spinning stars. With no venue, drop the pill and keep the hero vertically centred in 900px, wordmark first.
 
 ## Do's and Don'ts
 
@@ -181,6 +182,7 @@ Quick colors: background #08080d, band #0c0c14, text #eae8e4, secondary #a09caa,
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=JetBrains+Mono:ital,wght@0,400;1,400&display=swap");
 :root {
   --bg-primary: #08080d;
   --bg-secondary: #0c0c14;

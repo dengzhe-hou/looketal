@@ -136,6 +136,9 @@ Arial is the right substitute because it is what renders; supplying Google Sans 
 - **Long publication or news lists**: use an alternating #f5f5f5 band with a centred 32px/600 heading and a 16px list at 917px.
 - **More example videos**: add 100×70 thumbnails to the selector row (10px gaps, wraps centred) rather than a carousel.
 - **A second key message**: reuse the #209cee rounded notification only once per page; for secondary notes use plain 16px text.
+- **No logo**: leave out the 96px badge; the title starts at y=48, the hero ends at 320 and the teaser card begins at 328.
+- **No TL;DR**: write the main result as one centred white 17px/600 sentence in the #209cee pill, 32px under the teaser card.
+- **No clip selector**: drop the thumbnail row, ring and glow; the single 3:1 video fills the #fafafa card with its 20px padding.
 
 ## Do's and Don'ts
 

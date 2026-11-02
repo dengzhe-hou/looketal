@@ -133,6 +133,8 @@ The five-panel comparison and the diagrams also draw on the palette's muted tone
 - **Long publication list**: a references-style list, 13px #767676, line-height 1.75, with titles in #373737 and venues in italics.
 - **News**: a section with the numeral-plus-label opening ("09 NEWS"), then dated rows in 12px with dates in #36669f.
 - **Raising contrast**: if readability matters more than the mood, set prose to #373737 at 17px; keep the paper and the pale accent.
+- **No hero diagram**: put the paper's main figure or video in the right column from x≈820, about 520px wide, on the oat paper with no border, card or shadow. The left column and the summary rule stay unchanged.
+- **No second language**: drop the EN/中文 switch; the 11px #767676 tagline stays right-aligned in the 78px header, and the logo and wordmark stay left.
 
 ## Do's and Don'ts
 

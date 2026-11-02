@@ -178,6 +178,7 @@ Quick colors: gradient #000000 → #9199b1 → #feae6f → #fdf1cc, title #feae6
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --night: #000000;
   --dusk: #9199b1;

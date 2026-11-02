@@ -147,6 +147,8 @@ Anatomy in DOM order (all centred inside the card):
 - **A results table:** put it inside a white `.framed-image`-style card (24px radius, indigo hairline, long blue shadow), headers 16px/600 `#1e3a8a`, body 16px `#0f172a`, best values bold `#4338ca`.
 - **Video galleries:** use 24px-radius framed tiles in a two- or three-column grid inside a `.gallery-hero` white card.
 - **News:** a second outlined `.tldr-card` under the summary, left-aligned, with dates in `#4338ca` 600.
+- **No TL;DR:** leave out `.tldr-card`. The 960px landing card closes at its 40px bottom padding under the pills, and about 80px of gradient then leads to the Abstract heading. Keep the pill glow; add no filler.
+- **No venue badge:** drop `.conference-badge`; the pills follow the affiliations row and keep their 40px height and 14.4px gap. Do not substitute another pill or a new colour.
 
 ## Do's and Don'ts
 
@@ -184,6 +186,7 @@ Nerfies-derived Bulma pages share the skeleton, but this one replaces Bulma's fl
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Noto+Sans:wght@400;500;600&display=swap");
 :root {
   --backdrop: radial-gradient(120% 120% at 20% 0%, #eef2ff 0%, #ffffff 55%, #f5f3ff 100%);
   --card: rgba(255, 255, 255, 0.92);

@@ -122,6 +122,8 @@ Declared but not visible on the home page: `.award-highlight` (#1565c0 on rgba(3
 - **A results table**: mono 14px, 1px #ece9e9 row rules, #282728 text, header 600; no fills.
 - **Long news lists**: keep disc bullets and 1.75 leading; add a bold 600 date at the start of each item rather than a separate column.
 - **More sections**: each gets an emoji-prefixed 24px/600 h2 and an `hr` before it.
+- **No portrait**: start the name at x=269 and keep the bio paragraph at 622px (902 minus the 250px portrait and 30px gap), left aligned; the social row, rule and Updates heading follow with no placeholder circle.
+- **No news**: keep the "📢 Updates" section and fill it with recent papers, talks or releases as dated disc items, so the hr, 24px/600 heading and 16px/1.75 list still follow the masthead.
 
 ## Do's and Don'ts
 
@@ -160,6 +162,7 @@ Quick colors: paper #fdfdfd, text #282728, secondary #555555, link #0066cc, hair
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap");
 :root { --background: #fdfdfd; --text-color: #282728; --text-light: #555555; --link-color: #0066cc; --muted: #e6e6e6; --border: #ece9e9; }
 [data-theme="dark"] { --background: #1a1a2e; --text-color: #eaedf3; --text-light: #a0a3b1; --link-color: #a855f7; --muted: #2d2d44; --border: #3d3d5c; }
 body { background: var(--background); color: var(--text-color); font: 400 16px/1.85 "IBM Plex Mono", monospace; margin: 0; }

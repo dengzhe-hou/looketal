@@ -46,7 +46,7 @@ Anatomy in DOM order (centred in a 960px column):
 ## Tokens — Typography
 
 - **Declared:** `body { font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6 }`; `.publication-title`, `.publication-authors`, `.title.is-3` force `'Inter', sans-serif`. Code uses `'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace`.
-- **Rendered:** Inter 400, 500, 600, 700, 800 loaded; Academicons and the Font Awesome JS kit for icons. BibTeX renders in Cascadia Code on Windows (first available in the mono stack). Substitute for Inter: Geist or Manrope at the same weights.
+- **Rendered:** Inter 400, 500, 600, 700, 800 loaded; Academicons and the Font Awesome JS kit for icons. BibTeX renders in Cascadia Code on Windows (first available in the mono stack). Substitute for Inter: Geist at the same weights.
 
 | Role | Selector | Size | Weight | Line height | Colour |
 |---|---|---|---|---|---|
@@ -128,6 +128,7 @@ Anatomy in DOM order (centred in a 960px column):
 - **Venue:** use the stylesheet's own `.publication-venue` chip (`#f1f5f9` fill, `#64748b` 600 text, padding 8px 16px, 12px radius) under the authors; it is defined but unused.
 - **A results table:** put it inside a white card (1px `#e2e8f0`, 16px radius, 24px padding, md shadow) in a plain section; header 600 `#1e293b` on `#f1f5f9`, rows with 1px `#e2e8f0` rules, best scores in `#2563eb` 600.
 - **News:** a light `#f8fafc` band with a `title is-3` heading and a list of 16px items with dates in `#2563eb` 600.
+- **No teaser image:** omit `section.hero.teaser` and its caption. The `#f8fafc` abstract band with its hairline borders starts at y=574 right under the buttons, while the 48px/800 title and button row still carry the fold. No placeholder poster.
 
 ## Do's and Don'ts
 
@@ -165,6 +166,7 @@ Other pages on Eliahu Horwitz's Academic Project Page Template share the skeleto
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 :root {
   --primary-color: #2563eb;
   --primary-hover: #1d4ed8;

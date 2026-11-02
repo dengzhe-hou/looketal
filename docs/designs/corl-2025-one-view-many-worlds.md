@@ -141,6 +141,8 @@ Card background, quoted literally: `linear-gradient(rgba(10, 25, 47, 0.9), rgba(
 - **A results table**: place it inside a blueprint card at the 896px measure; header row 14px/600 #ffffff on rgba(59,130,246,0.1), body 16px #d1d5db, 1px rgba(59,130,246,0.2) row rules, best values in #00f2fe.
 - **BibTeX**: a card with a #111827 code well, 12px radius, 14px monospace #d1d5db, and the gradient copy button styled like Load More.
 - **Long publication or news lists**: rows inside one card, 16px #d1d5db text, dates in 600 #4facfe, 1px rgba(59,130,246,0.2) separators.
+- **No hero video**: use a teaser image as the full-bleed cover layer under both scrims, still 100vh. With no image, paint the diagonal scrim on #111827 and end the hero at 374px (278px text block plus 48px padding each side).
+- **No demo page**: keep two pills, Paper frosted white and Code with the #3b82f6 to #9333ea gradient, so the row still has exactly one gradient pill; both stay 50px tall with the 12px gap.
 
 ## Do's and Don'ts
 
@@ -180,6 +182,7 @@ Quick colors: page #111827, card navy rgba(10,25,47,0.9), grid rgba(56,182,255,0
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 :root {
   --night: #111827;
   --card: rgba(10, 25, 47, 0.9);

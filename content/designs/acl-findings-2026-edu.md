@@ -147,6 +147,9 @@ Anatomy in DOM order (y = top of element box):
 - **Long publication lists**: rows with a top hairline, a 16px/700 title and a justified grey description, three per row on desktop like the detail list.
 - **More examples**: extend the homework pills and select options; the viewer and meta strip are data-driven and keep their layout.
 - **A BibTeX block**: a white 28px-radius card with 18px padding and a monospace 14px #1e2328 `pre`.
+- **No figure carousel**: keep the 520px card at x 795, y 147 with one 494px-wide figure, 18px radius, the centred 14.7px caption and no dots; the left column does not move.
+- **No stat row**: drop `.hero-metrics` and set the two pill buttons 28px under the authors line at x 80, with no empty row left behind.
+- **No interactive viewer**: show one example as a static pair under the same serif heading, input image in the `.image-frame` on the left, output text on the right; no selector, pills or toggle.
 
 ## Do's and Don'ts
 
@@ -186,6 +189,7 @@ Quick colors: floor #f8efe2 → #f7f2e8 → #f3ede3, ink #1e2328, muted #66655f,
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Source+Serif+4:wght@400;600;700&display=swap");
 :root {
   --bg: #f7f2e8;
   --bg-gradient: linear-gradient(180deg, #f8efe2 0%, #f7f2e8 42%, #f3ede3 100%);

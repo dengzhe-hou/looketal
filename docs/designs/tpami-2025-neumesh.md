@@ -168,6 +168,7 @@ Quick colors: page #ffffff, text #4a4a4a, headings #363636, venue #5a6268, autho
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;1,400&family=Noto+Sans:ital,wght@0,400;1,400&display=swap");
 :root {
   --bg: #ffffff;
   --text: #4a4a4a;

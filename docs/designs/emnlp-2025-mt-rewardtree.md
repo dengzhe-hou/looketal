@@ -41,8 +41,8 @@ Anatomy in DOM order (desktop 1440px; `section.hero > .hero-body` padding 48px 2
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
 | Body | 'Noto Sans', sans-serif (`index_mmmu.css` overrides `index.css`'s Arial) | Noto Sans 400; bold synthesised | Noto Sans |
-| Authors, teaser caption | 'Google Sans', sans-serif | Google Sans 400 | Product Sans-like: Outfit |
-| Title lettering | image | hand-drawn marker lettering in the PNG | Comic Neue Bold or Patrick Hand for live text |
+| Authors, teaser caption | 'Google Sans', sans-serif | Google Sans 400 | Outfit |
+| Title lettering | image | hand-drawn marker lettering in the PNG | Patrick Hand for live text |
 | Icons | Font Awesome 6 (brands, solid), Academicons | Font Awesome 6 Brands 400, Free 900, Academicons 400 | — |
 
 | Role | Selector | Size / weight / line-height | Color |
@@ -150,6 +150,7 @@ Quick colors: page #ffffff, charcoal #363636, text #4a4a4a, author blue #209cee,
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Google+Sans&display=swap");
 :root {
   --bg: #ffffff;
   --charcoal: #363636;

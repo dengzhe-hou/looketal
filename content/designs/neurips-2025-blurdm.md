@@ -118,6 +118,8 @@ Anatomy in DOM order (centred unless noted):
 - **More links:** add more shields.io badges with matching two-tone segments, or use Cayman's own `.btn` (`rgba(255,255,255,0.08)` fill, 1px `rgba(255,255,255,0.2)` border, 0.3rem radius, `rgba(255,255,255,0.7)` text) for a quieter look.
 - **A results table:** use a real Markdown table; Cayman styles `th, td` with 8px 16px padding and 1px `#e9ebec` borders, bold headers, and lets the table scroll horizontally inside the 832px column.
 - **Long publication or news lists:** plain Markdown lists in `#606c71`, dates in bold, under a green `h2`.
+- **No teaser figure:** drop the 832×180 image; the `h2` Abstract moves up to about y=541, right under the 509px gradient header. The masthead stays the only coloured block, and no placeholder fills the gap.
+- **No code link:** keep only the PAPER | PDF badge, 28px tall, centred under the affiliations; add no CODE | GITHUB badge until a repository exists, and do not switch to Cayman `.btn`.
 
 ## Do's and Don'ts
 
@@ -154,6 +156,7 @@ Any GitHub Pages site on the Cayman theme. In this NeurIPS 2025 batch, EgoGazeVQ
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 :root {
   --header-from: #155799;
   --header-to: #159957;

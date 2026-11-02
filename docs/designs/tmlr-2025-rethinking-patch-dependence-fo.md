@@ -121,6 +121,8 @@ The page has no shadows, no borders and no colored fills apart from the citation
 - **A results table**: centre it at 784px (80%), 16px #333333 text, header bold with a 1px #333333 bottom rule, no fills; caption as a left-aligned 16px paragraph with the key claim in bold.
 - **Videos**: use the declared `#main-video` recipe: width 90% (882px), border-radius 15px, 10px below.
 - **News or a publication list**: left-aligned 16px paragraphs (line-height 24px) with bold dates, 20px apart, inside the 980px column.
+- **No project name**: omit the Varela Round wordmark row and set the full title alone in the Open Sans 27px/400 #4d4d4d style at y=20; everything below moves up by the wordmark's 50px line.
+- **No teaser**: move the paper's first main figure (method or result) into the 784px slot at y=395, unframed, with its annotations drawn into the image; do not repeat it further down.
 
 ## Do's and Don'ts
 
@@ -160,6 +162,7 @@ Quick colors: background #ffffff, text #333333, titles #4d4d4d, citation box #ea
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Varela+Round&display=swap");
 :root {
   --bg: #ffffff;
   --text: #333333;

@@ -125,6 +125,7 @@ Anatomy in DOM order (desktop 1440px):
 - **Audio or video demos**: use the declared `.audio-samples` grid (#f9fafb panels, 8px radius, 24px padding) and the 16:9 `.video-container` with 8px radius and --shadow.
 - **News or publication lists**: these belong to the site's Publications page; on a paper page, link back through the navbar rather than adding a list.
 - **A teaser image in the header**: place it as a figure card at the top of the content band (900px column), not inside the gradient header.
+- **No personal site**: keep the fixed 70px white navbar, with the first author's name as the 24px/700 #2563eb logo and only this page's own sections as 16px/500 #1f2937 links; the 80px header offset and the #1f2937 footer stay.
 
 ## Do's and Don'ts
 
@@ -164,6 +165,7 @@ Quick colors: cobalt #2563eb, deep blue #1e40af, slate #1f2937, grey #6b7280, wa
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 :root {
   --primary-color: #2563eb;
   --secondary-color: #1e40af;

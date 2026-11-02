@@ -119,6 +119,8 @@ Anatomy in DOM order (desktop 1440px; `main` 760px at x=340, padding 48px 20px 4
 - **More research threads**: add stage paragraphs, each with one blue 600 verb; keep at most one floated figure per section.
 - **Wide figures**: use a plain `figure` at 100% of the 720px column with 22px vertical margins.
 - **Talks**: reuse the publication entry with venue and date on the grey line.
+- **No concept figure**: leave out `figure.side` and let the research paragraphs run the full 720px; keep the 600-weight key terms and blue stage verbs, and add no empty float or caption box.
+- **No portrait**: keep the header text at 488px (720 minus the 200px photo and 32px gap) so the callout and bio wrap the same and the section heading stays at y=344; leave the right side empty with no placeholder.
 
 ## Do's and Don'ts
 

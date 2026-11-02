@@ -57,7 +57,7 @@ Declared but not visible: `--accent: #1f6feb` in the inline `:root` is not used 
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Title / venue | "Google Sans", system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", sans-serif | Google Sans 400; 600 and 800 synthesized | Product Sans / Outfit |
+| Title / venue | "Google Sans", system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", sans-serif | Google Sans 400; 600 and 800 synthesized | Outfit |
 | Body | "Myriad-Pro", "Open Sans", sans-serif (`myriad_pro.css`, self-hosted) | Myriad-Pro and Open Sans 400 loaded; Myriad Pro renders | Open Sans |
 | Code | monospace; highlight.js GitHub theme | Consolas on Windows | Source Code Pro |
 
@@ -143,6 +143,8 @@ Declared but not visible: `--accent: #1f6feb` in the inline `:root` is not used 
 - **More awards**: add another `.badge-pill` next to the first (same #fff6ee / #fee7db / #c81717 recipe), separated by 8px.
 - **More galleries**: repeat the lead-player-plus-strip pattern; keep outcome dots strictly #28a745 for success and #dc3545 for failure.
 - **Long publication or news lists**: 16px justified paragraphs under a 32px uppercase heading, dates in 700 #363636; no cards.
+- **No oral badge**: set any other presentation status or award in the same `.badge-pill` recipe; with none, leave it out, the authors rise 33px and the green names are the only header color.
+- **No framed teaser**: put the main figure at y=479, 960px wide, with the 1px #dbdbdb border, 6px radius and Bulma shadow. With no figure, the 20px justified abstract section starts at y=479.
 
 ## Do's and Don'ts
 
@@ -182,6 +184,7 @@ Quick colors: page #ffffff, text #222222, title #363636, venue #292929, authors 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Open+Sans&display=swap");
 :root {
   --ink: #222222;
   --title: #363636;

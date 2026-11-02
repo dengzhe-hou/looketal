@@ -142,6 +142,8 @@ Anatomy in DOM order (desktop 1440px, column width min(1180px, 100% âˆ’ 32px) â†
 - **Long publication or news lists**: use comparison-row structure: 1px #d9dee8 top rule, 22px padding, a 17.92px/700 title and a gray 14.08px/800 meta label on the right.
 - **More idea cards**: keep four per row and cycle the tab colors blue, orange, green, red.
 - **Image results**: reuse the filmstrip frame for a hero contact sheet, and the square video-card grid for comparisons.
+- **No four teaser clips**: with two or three, keep 273px square cards in `.hero-teaser-grid` with the 14px gap, centred in the black strip, so it stays 387px tall; add no empty cards.
+- **No four core ideas**: use one card per contribution, up to four, left-aligned at the width they have in a row of four, with tabs cycling blue, orange, green, red; add no empty fourth card.
 
 ## Do's and Don'ts
 

@@ -152,6 +152,8 @@ SVG glow filters in the hero figure: latent points `drop-shadow(0 0 7px var(--vi
 - **Long publication or news lists**: use rows of Space Mono 12.48px dates (#6b7280) and Inter 17px titles (#0e1320) separated by 1px #e6e8ec rules inside a light section, with a kicker on top.
 - **More sections**: alternate white and #f5f6f8; never add borders between them.
 - **A light-only page**: the hero is the identity; if it must go, keep the 3px spectrum hairline and the kicker dashes so the spectrum survives.
+- **No hero illustration**: put your teaser image or looping video in the right column (x=843 to 1206), in a 14px-radius frame with a 1px rgba(255,255,255,0.12) border; the hero stays 100vh. With none, leave the column empty so the glows show.
+- **No award**: keep the mono eyebrow pill with its pink dot and show only the venue, or PREPRINT, in #f4f6fa; the gradient-filled word goes with the award.
 
 ## Do's and Don'ts
 
@@ -191,6 +193,7 @@ Quick colors: space #0b0e14, on-space #f4f6fa, on-space mute #9aa3b2, paper #fff
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:ital,wght@0,400;0,600;1,400;1,600&family=Newsreader:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --space: #0b0e14;
   --on-space: #f4f6fa;

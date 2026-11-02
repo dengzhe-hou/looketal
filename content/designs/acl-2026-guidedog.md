@@ -140,6 +140,8 @@ No shadows anywhere; the only rounding is 2–3px.
 - **Videos**: place them in `figure.medium` at 780px with an italic caption; no rounded frames.
 - **Long publication lists or news**: plain paragraphs with an italic grey date or venue (16.8px #555555) and oxblood title links; separate groups with an h2 and its tick.
 - **More numbers**: the stat strip holds four cells per row at desktop and two on phones; keep labels lowercase italic.
+- **No teaser figure**: put the paper's main figure there as an unframed 780px centred `figure.teaser.medium` with the italic caption; with no figure the gist is followed by the stat strip or the first h2.
+- **No gist paragraph**: use the abstract in its place with the same 2px #7a1f1f left rule, 16px left padding and 18.4px/28.5px #2a2a2a text, no heading, and let the teaser move down with the extra lines.
 
 ## Do's and Don'ts
 
@@ -179,6 +181,7 @@ Quick colors: ink #1a1a1a, paper #fdfdfc, accent #7a1f1f, muted #555555, rules #
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap");
 :root {
   --ink: #1a1a1a;
   --paper: #fdfdfc;

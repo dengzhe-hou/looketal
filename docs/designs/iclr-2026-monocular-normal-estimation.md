@@ -41,7 +41,7 @@ Anatomy in DOM order (centered on x=720; Bulma `.container.is-max-desktop`, 960p
 
 ## Tokens — Typography
 
-- **Headings and authors:** `'Google Sans', sans-serif` (`.publication-title`, `.publication-authors`, `.teaser`); renders Google Sans 400 only, with synthesized bold where 600 is asked. Substitute: Product Sans, or Outfit 500 to approximate the faux-bold title.
+- **Headings and authors:** `'Google Sans', sans-serif` (`.publication-title`, `.publication-authors`, `.teaser`); renders Google Sans 400 only, with synthesized bold where 600 is asked. Substitute: Outfit 500, which approximates the faux-bold title.
 - **Body:** Bulma's stack is replaced by `'Noto Sans', sans-serif`; renders Noto Sans 400 only, synthesized bold for `.title` headings. Substitute: Open Sans.
 - **Code:** browser monospace (Consolas on Windows).
 
@@ -115,6 +115,8 @@ Anatomy in DOM order (centered on x=720; Bulma `.container.is-max-desktop`, 960p
 - **Long publication or news list:** a plain `ul` in the four-fifths column, 16px #4a4a4a, dates bold.
 - **Video teaser:** swap the teaser image for a 912px autoplay loop and keep the 20px caption below.
 - **Real bold:** request the weights in the font link (`Google+Sans:400,600`, `Noto+Sans:400,600`) so headings stop using synthesized bold.
+- **No before/after pairs:** keep the #f5f5f5 Gallery band and its carousel, with one result image per slide on a #000000 base inside a 1px #bbbbbb frame. Do not add slider handles or empty halves.
+- **No venue line:** drop the 32px h3. The authors start at about y=180, 24px under the title, and the rest of the header and the 912px teaser keep their sizes.
 
 ## Do's and Don'ts
 
@@ -153,6 +155,7 @@ Quick colors: text #363636, body #4a4a4a, author links #209cee, band #f5f5f5, fo
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --bg: #ffffff;
   --title: #363636;

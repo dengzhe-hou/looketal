@@ -198,7 +198,11 @@ Quick colors: paper #fbfaf7, band #f4f2ec, surface #ffffff, ink #1a1a1a, ink sof
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 :root {
+  --font-display: 'Fraunces', Charter, Georgia, serif;
+  --font-text: 'Inter', -apple-system, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
   --guide-g: #db6280;
   --guide-u: #4678d2;
   --guide-i: #50ba96;

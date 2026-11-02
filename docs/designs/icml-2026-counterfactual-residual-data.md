@@ -147,6 +147,8 @@ There are no shadows anywhere on the page; separation is by hairlines and pale f
 - **Larger results tables**: reuse `table.compare` inside the scroll wrapper; keep raspberry for the single best value per row and grey #f6f8fa for headers. Do not add zebra striping.
 - **Long publication or news lists**: use the example-callout pattern (3px teal left bar, #fafbfc fill), with a date or venue in bold #14202b as the lead phrase.
 - **Extra highlights**: the stat grid is auto-fit at 220px, so 4–6 cards wrap without new CSS; keep numbers in serif raspberry.
+- **No venue**: keep the raspberry outlined pill and set it to PREPRINT in the same 12.8px/600 uppercase, 0.12em tracking, so the first mark above the title survives and the title stays at y=110.
+- **No headline numbers**: keep the stat grid with whatever countable facts the paper states (datasets, methods, runs), up to six, serif raspberry number over a #5b6772 label. With none, omit it and set the TL;DR as one teal-bar callout.
 
 ## Do's and Don'ts
 
@@ -185,6 +187,7 @@ Quick colors: page #ffffff, text #1f2933, headings #14202b, muted #5b6772, teal 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
 :root {
   --bg: #ffffff;
   --fg: #1f2933;

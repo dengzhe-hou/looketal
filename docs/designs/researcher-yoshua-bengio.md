@@ -130,6 +130,8 @@ Anatomy in DOM order (desktop 1440px; header container x=60, padding 0 40px insi
 - **Awards**: a short list under a 22px uppercase label, each award a 24px light line with the year in 700.
 - **Results tables**: 1px #2393a7 rules, Funnel Sans 18px light cells, header cells 700 uppercase with 1px tracking.
 - **Long statements**: keep the hero to two or three lines at 90px; anything longer belongs in the 24px bio.
+- **No portrait**: leave out the circle and set the 90px statement at x=60, 900px wide, vertically centred in the same 500px block (y=200 to 700) over the haze, so the 110px #2393a7 divider and the bio keep their positions.
+- **No headline statement**: write one line of your own position and field, at most 60 characters so it stays on two lines, in FlechaBronzeaM 90px/99px #0b404d. It still overlaps the portrait's right edge by 60px.
 
 ## Do's and Don'ts
 
@@ -168,6 +170,7 @@ Quick colors: background #e6e6e2, heading teal #0b404d, link teal #2393a7, text 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300;400;500;600;700&family=Instrument+Serif&display=swap");
 :root {
   --bg: #e6e6e2;
   --surface: #f2f2f0;

@@ -48,7 +48,7 @@ Anatomy in DOM order (desktop 1440px, centred inside the 1140px container at x=1
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Text and display | 'Jost' (Google Fonts, weights 300–900) | Jost 400, 500, 700, 900 | Futura PT |
+| Text and display | 'Jost' (Google Fonts, weights 300–900) | Jost 400, 500, 700, 900 | Outfit |
 | Code | SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace | Consolas on Windows | JetBrains Mono |
 | Icons | Font Awesome 4.7 and 6.7 | FontAwesome (4.7) | — |
 | Math | KaTeX 0.13 | not used above the fold | — |
@@ -132,6 +132,8 @@ Anatomy in DOM order (desktop 1440px, centred inside the 1140px container at x=1
 - **Long publication or news lists**: a section with the h3 + rule header and a 20px list, dates in 700; no cards.
 - **More concepts**: give each new concept its own paint and use it in both the title and the captions; keep to at most four hues so the code stays readable.
 - **More results**: add carousel slides (one 16:9 rounded video each) rather than grids.
+- **No acronym**: paint the two or three concept words that the captions repeat in #6589bf, #78aa58 and #c68b5b inside the 45px/900 title, and reuse those paints in captions; the rest of the title stays #212529.
+- **No abstract video**: run the 20px justified paragraph straight under the Abstract heading and its rule, with no caption line; the next section follows with its own `h3` and rule.
 
 ## Do's and Don'ts
 
@@ -171,6 +173,7 @@ Quick colors: band #ebf0f1, ink #212529, paints #6589bf / #78aa58 / #c68b5b, ven
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700;900&display=swap");
 :root {
   --band: #ebf0f1;
   --ink: #212529;
@@ -184,7 +187,7 @@ Quick colors: band #ebf0f1, ink #212529, paints #6589bf / #78aa58 / #c68b5b, ven
   --button-hover: #bec3c7;
   --code-well: #e9eeef;
   --rule: rgba(0, 0, 0, 0.1);
-  --font: "Jost", "Futura PT", sans-serif;
+  --font: "Jost", "Outfit", sans-serif;
   --container: 1140px;
   --radius-media: 10px;
 }

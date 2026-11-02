@@ -140,6 +140,8 @@ Background (body, literal): `radial-gradient(1100px 700px at 14% 8%, rgba(130, 4
 - **Long publication or news lists**: use analysis cards (14px radius, hairline, white gradient) in one column with the date in --muted 13px.
 - **A video**: place it inside a frosted panel with the 3px gradient top edge; give the video itself a 12px radius.
 - **A BibTeX block**: use the prompt-box style (12px radius, white gradient, Copy button) with the mono stack at 13px.
+- **No logo mark**: leave out the 104px cube and its 18px gap; the title moves up to y=115 under the 64px hero padding. The nav brand becomes gradient text only, with no substitute icon.
+- **No teaser**: end the hero 44px under the resource pills (y≈596) and start the first frosted panel there; the radial glows still fill the fold and no empty frame stands in.
 
 ## Do's and Don'ts
 
@@ -178,7 +180,10 @@ Quick colors: ground #f7f6fb, viewer band #f3f0fa, brand #82318e → #a889d6, de
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
 :root {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --bg: #f7f6fb;
   --bgViewer: #f3f0fa;
   --bgLeaderboard: #f6f5fb;

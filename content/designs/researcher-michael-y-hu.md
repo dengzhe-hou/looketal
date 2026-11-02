@@ -113,6 +113,8 @@ Anatomy in DOM order (body `max-width: 820px; margin: 56px auto`, so content run
 - **More research areas**: keep the 2-column grid of 402px cards; add pills rather than paragraphs inside cards.
 - **A results table**: reuse the news-table recipe; header cells in 13px mono uppercase #6b7280, best value 600 #56018d.
 - **Job market or availability**: use the defined badge (rgba(86, 1, 141, 0.08) fill, 1px rgba(86, 1, 141, 0.18) border, 8px radius) above the bio.
+- **No photo**: leave out the 200px photo column and keep the text column at 580px, left aligned, with no placeholder. The text still sets the hero height (y=216 to 535), so the RESEARCH label stays at y=591.
+- **No research statement**: keep the pull-quote. Set the one sentence that says what you work on in `p.lead` (19px/600, 3px #56018d left border, 16px padding) between the two paragraphs, so the plum bar still appears near y=322.
 
 ## Do's and Don'ts
 
@@ -152,6 +154,7 @@ Quick colors: page #fcfcfd, card #ffffff, ink #1f2024, muted #6b7280, accent #56
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 :root {
   --bg: #fcfcfd;
   --surface: #ffffff;

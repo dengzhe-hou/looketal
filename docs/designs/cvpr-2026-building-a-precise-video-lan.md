@@ -194,6 +194,7 @@ Quick colors: page #f7f7f9, ink #1a1a1a, muted #6b6560, link and data #006af3 (h
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=Roboto+Mono:wght@600&display=swap");
 :root {
   --bg: #f7f7f9;
   --bg-alt: #edf0f4;

@@ -128,6 +128,8 @@ Anatomy in DOM order (y = top of element box):
 - **News**: a short list in the white band under the summary sentence, 16px, dates in bold.
 - **Long publication lists**: plain list in the 684px column, titles as #3273dc links.
 - **A shorter name**: the 96px wordmark only works for a short acronym; for long names, set the full title at 48px and drop the wordmark.
+- **No institution logos**: replace the logo row with one centered affiliation line at the same spot, Google Sans 20px/400 #363636. The gradient hero ends sooner; wordmark, venue and the four pills are unchanged.
+- **No teaser chart**: let the 24px summary sentence run straight into the 684px justified abstract, 48px below it. The gradient hero keeps its wordmark, title and pills, so the wordmark still owns the fold.
 
 ## Do's and Don'ts
 
@@ -167,6 +169,7 @@ Quick colors: hero #d2d2ac → #90c7c4, title #363636, authors #209cee, venue #a
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Google+Sans:wght@400;600;700&display=swap");
 :root {
   --hero-from: #d2d2ac;
   --hero-to: #90c7c4;

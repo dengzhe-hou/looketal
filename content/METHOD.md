@@ -1,6 +1,6 @@
 # How a Look et al. DESIGN.md is written (v2, 2026-10-28)
 
-v2 follows a reconstruction test on 5 v1 files (blind matching 5/5 correct; similarity 2–4 of 5). The test showed that most errors came from reading CSS without checking what the page actually renders, and that builders lacked header anatomy and layout metrics. v2 fixes both.
+v2 follows a reconstruction test on 5 v1 files (blind matching 5/5 correct; similarity 2–4 of 5). The test showed that most errors came from reading CSS without checking what the page actually renders, and that builders lacked header anatomy and layout metrics. v2 fixes both. The font, Quick Start and missing-module rules below were added on 2026-11-02 after a usability test (`TESTS.md`).
 
 ## Evidence, in order of authority
 
@@ -14,7 +14,7 @@ When CSS and the render disagree, the render wins. A spot audit of ten v2 files 
 
 - Every token row names the rendered element(s) it applies to, e.g. `#2c3e50 — paper title (h1.title), section titles`.
 - Write "inferred" only when CSS, DOM and render cannot settle the value. Never for values a selector or utility class determines (`py-3` is 1rem, `h1.h4` renders at h4 size).
-- Fonts: report the declared stack and what actually renders (from `fonts_loaded`). Give one substitute, chosen for matching proportions.
+- Fonts: report the declared stack and what actually renders (from `fonts_loaded`). Give one substitute: a single family on Google Fonts, or a system font where the page renders one. Choose it with `tools/font_fit.py`, which compares the rendered width of the display line. Describe the face from the render, not from its name: the 2026-11-02 test lost its wordmark to a file that called a wide face "compressed" and suggested a condensed one.
 - Describe components as recipes (exact colors, size, weight, padding, radius, border, shadow, icon set and side, hover), not adjectives.
 - One property gets one value across the file. The Agent Prompt Guide and Quick Start reuse values from the token tables. Check for contradictions before finishing.
 - Separate "absent from the source" from "present but non-standard" in Page Modules.
@@ -34,7 +34,7 @@ When CSS and the render disagree, the render wins. A spot audit of ten v2 files 
 7. `## Layout Metrics` — container width formula, hero padding, section padding, gaps, figure/video widths, and a breakpoint table (breakpoint → gutter, body size, title size, grid change).
 8. `## Components` — recipes.
 9. `## Page Modules` — table: module | present | how it is styled.
-10. `## Adapting to Other Content` — how this style handles content the source lacks (more authors, a results table, long publication lists, news).
+10. `## Adapting to Other Content` — how this style handles content the source lacks (more authors, a results table, long publication lists, news) and content the user does not have. Add a `**No ...**` rule for what the first viewport is built around (teaser, video, portrait, contribution cards, a kicker) and for the signature component, saying what takes its place and the size that results.
 11. `## Do's and Don'ts`, `## Surfaces`, `## Imagery`, `## Layout`.
 12. `## Agent Prompt Guide` — quick color reference and 3 component prompts using only values from the tables above.
-13. `## Similar Pages`, `## Quick Start` (CSS custom properties), `## Provenance` (URL, venue/award, selection reason, template credit, evidence used, date).
+13. `## Similar Pages`, `## Quick Start` (CSS custom properties, opened by an `@import` of the Google Fonts families the stacks use, with weights that match `fonts_loaded`; a stack whose declared family cannot be loaded names the substitute right after it), `## Provenance` (URL, venue/award, selection reason, template credit, evidence used, date).

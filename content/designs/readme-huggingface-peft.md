@@ -84,6 +84,8 @@ The README has no images. Nothing uses `<img>`, Markdown image syntax, `<picture
 - **A benchmark with scores.** Keep the two-column Submission Name / Accuracy table shape, right-align the score (`| ---: |`) and bold the best value; PEFT leaves both at GitHub defaults.
 - **A repo that needs a teaser.** Insert one image at `width="100%"` (856px) between the tagline and the intro, but keep the first `##` as Quickstart; the code-first order is the point of this style.
 - **A smaller library.** Drop the integrations tour; keep h1, h3, intro, one tip alert, Quickstart, one value table and the citation, which fits in about two screens.
+- **No pip package.** Keep Quickstart as the first `##` and make its install block a `bash` block of `git clone` plus `pip install -r requirements.txt`, two lines at most. The first runnable example still starts just above the fold.
+- **No docs site to link.** Keep the `[!TIP]` alert between the intro and Quickstart and point it at the paper or demo page in one sentence. Its green bar is the only colored block on the first screen.
 
 ## Do's and Don'ts
 

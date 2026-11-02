@@ -46,7 +46,7 @@ Anatomy in DOM order (y = top of element box):
 ## Tokens — Typography
 
 - **Display serif**: declared `"Cormorant Garamond", Georgia, serif` for the wordmark, section headings, theme and work titles, featured essay title. Rendered: Cormorant Garamond 600 only (`fonts_loaded`). Substitute: EB Garamond 600 (a little wider; reduce size by about 5%).
-- **Sans**: declared `"Source Sans 3", -apple-system, BlinkMacSystemFont, sans-serif` for everything else, including the hero name (the `.hero__name` class is not in the serif list). Rendered: Source Sans 3 400, 600, 700. Substitute: Source Sans Pro.
+- **Sans**: declared `"Source Sans 3", -apple-system, BlinkMacSystemFont, sans-serif` for everything else, including the hero name (the `.hero__name` class is not in the serif list). Rendered: Source Sans 3 400, 600, 700. Substitute: Source Sans 3.
 - **Body letter-spacing**: 0.01em on everything; nav and kickers tracked wider.
 
 | Role | Selector | Size / line-height | Weight | Color |
@@ -130,6 +130,7 @@ The desktop page has no shadows and no filled cards.
 - **Awards**: use the numbered theme entry with the award name as the Garamond title and the year as the teal index.
 - **A project page**: Garamond 40px title, teal uppercase venue kicker, grey lead at 17.6px, three pills; figures full width with the 8px portrait radius.
 - **Tags**: the declared `.tag-list` pills (#eef5f5 fill, #1d5c63 text, 14.08px/600, 999px radius).
+- **No portrait**: start the name, eyebrow, lead, summary and buttons at x=144 instead of 368, with no placeholder. The text column alone sets the hero height, so the 1px #e7e2d8 hero rule still falls at about y=456.
 
 ## Do's and Don'ts
 
@@ -169,6 +170,7 @@ Quick colors: paper #f7f5f0, text #171717, muted #5f5f5f, line #e7e2d8, strong l
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Source+Sans+3:wght@400;600&display=swap");
 :root {
   --bg: #f7f5f0;
   --surface: #ffffff;

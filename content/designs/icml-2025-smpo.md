@@ -118,6 +118,8 @@ Anatomy in DOM order (y = top of element box):
 - **News**: a short list inside the #f5f5f5 band above the abstract, date in 600 weight.
 - **Long publication lists**: plain list in the 960px column, titles as #3273dc links.
 - **More links**: stay with the #363636 pills; never invert them to white on the banner.
+- **No banner image**: keep `section.hero.banner` on a flat `background-color: #03000f` under the same rgba(0,0,0,0.5) layer, white text and text shadow; content still sets its height (455px at 1440). Add no gradient or stock photo.
+- **No teaser grid**: leave out the white teaser band so the #f5f5f5 abstract band follows the banner at y=455. Title, authors and pills stay on the dark banner only.
 
 ## Do's and Don'ts
 
@@ -157,6 +159,7 @@ Quick colors: banner overlay rgba(0,0,0,0.5) over the image, banner text #ffffff
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Google+Sans:wght@400;600&display=swap");
 :root {
   --banner-overlay: rgba(0, 0, 0, 0.5);
   --banner-fallback: #03000f;

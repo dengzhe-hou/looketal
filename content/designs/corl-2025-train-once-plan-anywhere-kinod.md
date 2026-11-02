@@ -121,6 +121,8 @@ Arithmetic check: the hero's content block spans y=56–374 (318px) and is verti
 - **More features**: add rows at the same proportions (760px figure, 349px text, about 37px gap) and keep alternating sides.
 - **Long publication or news lists**: left-aligned 16px Roboto paragraphs under an 18.67px Lato h3, dates in 700; no cards.
 - **A different hero image**: keep it top-down or wide-angle with a dark, even centre; the title has no shadow or overlay to rescue it.
+- **No hero image**: fill the 430px hero with flat #135255 and keep the #f9f9f9 centred text, the header and the sand buttons exactly as they are; add no overlay, texture or gradient.
+- **No overview video**: put the teaser figure in the video slot, 562px wide at x=439, y=538, with no border or radius. With no figure, the Abstract section starts at y=514 right under the buttons.
 
 ## Do's and Don'ts
 
@@ -159,6 +161,7 @@ Quick colors: page #ffffff, ink #1c1c1c, hero text #f9f9f9, button #e8a563, teal
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&family=Source+Code+Pro:ital,wght@0,400;1,400&display=swap");
 :root {
   --paper: #ffffff;
   --ink: #1c1c1c;

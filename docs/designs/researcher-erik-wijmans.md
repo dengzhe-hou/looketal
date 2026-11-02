@@ -174,6 +174,7 @@ Quick colors: navbar #2c3e50 with #ecf0f1 text (active #7f8c8d), links #2980b9, 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --navbar: #2c3e50;
   --navbar-text: #ecf0f1;

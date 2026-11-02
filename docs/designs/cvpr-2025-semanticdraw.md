@@ -43,8 +43,8 @@ Anatomy in DOM order (hero `.container.has-text-centered` 1344px max-width with 
 
 ## Tokens — Typography
 
-- **Display:** declared `"Century Gothic", CenturyGothic, AppleGothic, sans-serif` on `.publication-title` and `.publication-authors` (with !important). It is not web-loaded: it renders where Century Gothic is installed (it was on the capture machine; it ships with Microsoft Office), AppleGothic on older Macs, otherwise the default sans. Weights render as regular and bold only. Substitute: URW Gothic (free, same Avant Garde-like proportions).
-- **Text:** declared `'Satoshi-Regular', CenturyGothic, AppleGothic, sans-serif` on `.content` and `.subtitle`; rendered Satoshi-Regular 400, self-hosted via `/css/satoshi.css`. Substitute: General Sans or Inter.
+- **Display:** declared `"Century Gothic", CenturyGothic, AppleGothic, sans-serif` on `.publication-title` and `.publication-authors` (with !important). It is not web-loaded: it renders where Century Gothic is installed (it was on the capture machine; it ships with Microsoft Office), AppleGothic on older Macs, otherwise the default sans. Weights render as regular and bold only. Substitute: Outfit (similar round geometric proportions).
+- **Text:** declared `'Satoshi-Regular', CenturyGothic, AppleGothic, sans-serif` on `.content` and `.subtitle`; rendered Satoshi-Regular 400, self-hosted via `/css/satoshi.css`. Substitute: Albert Sans.
 - **UI:** `body` is `'Noto Sans', sans-serif` (Google Fonts, 400 rendered); used for the navbar, buttons, BibTeX and references.
 - **Declared but not visible:** Jost, Pretendard, Google Sans, Castoro and an Adobe Typekit kit are linked but not applied to visible text.
 - **Icons:** Font Awesome 5, Academicons, Ionicons (`ion-icon`), the Hugging Face logo PNG.
@@ -135,7 +135,7 @@ Anatomy in DOM order (hero `.container.has-text-centered` 1344px max-width with 
 - Do reserve the brown pair for brand moments: #732a14 in the title, #ab4012 for every button.
 - Do give each author name the half-height #fbebca stripe; it is the page's signature detail.
 - Do left-align section heads while keeping the hero centred.
-- Don't rely on Century Gothic being installed; self-host a geometric face (URW Gothic) for the title and authors.
+- Don't rely on Century Gothic being installed; load Outfit for the title and authors.
 - Don't add fills to the buttons at rest; they are outlines that fill on hover.
 - Don't use heavy rules; separators are 1px #c0c0c0.
 
@@ -155,7 +155,7 @@ Centred hero up to 1344px, then a 940px main column with left-aligned heads and 
 
 Quick colors: title #363636 with brand word #732a14, buttons #ab4012 on #ffffff, author highlight #fbebca on #000000 names, body #4a4a4a, bands #fafbfb, rules #c0c0c0, links #3273dc.
 
-1. "Create a centred hero: a 40px bold Century Gothic (or URW Gothic) title in #363636 with the project name and colon in #732a14, then 24px author names in #000000 each with a background of linear-gradient(to top, #fbebca 50%, transparent 50%), hover full #fbebca; affiliation 20px #4a4a4a, then a 24px Satoshi venue line."
+1. "Create a centred hero: a 40px bold Century Gothic (or Outfit) title in #363636 with the project name and colon in #732a14, then 24px author names in #000000 each with a background of linear-gradient(to top, #fbebca 50%, transparent 50%), hover full #fbebca; affiliation 20px #4a4a4a, then a 24px Satoshi venue line."
 2. "Make link buttons: pill radius, #ffffff fill, 1px solid #ab4012 border, #ab4012 16px Noto Sans text, padding 7px 20px, icon left, 4px side margins, two centred flex-wrap rows; hover fill #ab4012, text #ffffff, transparent border."
 3. "Lay out the body in a 940px column: left-aligned 32px Satoshi section heads in #4a4a4a, 16px justified Satoshi text, centred 16px captions with 10px top padding, 1px #c0c0c0 separators with 2rem margins, and full-width #fafbfb bands for demo videos."
 
@@ -167,6 +167,7 @@ Quick colors: title #363636 with brand word #732a14, buttons #ab4012 on #ffffff,
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;700;900&family=Albert+Sans&family=Noto+Sans&display=swap");
 :root {
   --bg: #ffffff;
   --title: #363636;
@@ -177,8 +178,8 @@ Quick colors: title #363636 with brand word #732a14, buttons #ab4012 on #ffffff,
   --band: #fafbfb;
   --rule: #c0c0c0;
   --link: #3273dc;
-  --font-display: 'Century Gothic', 'URW Gothic', sans-serif;
-  --font-text: 'Satoshi', 'General Sans', sans-serif;
+  --font-display: 'Century Gothic', 'Outfit', sans-serif;
+  --font-text: 'Satoshi', 'Albert Sans', sans-serif;
   --font-ui: 'Noto Sans', sans-serif;
   --title-size: 40px;
   --author-size: 24px;

@@ -141,6 +141,8 @@ Anatomy in DOM order (y = top of element box, container x 60–1380):
 - **Videos**: place them like figures at 92% or 86% width with the 6px radius and soft shadow.
 - **Long publication lists or news**: a white card with the gradient bar under its title and a plain list; highlight the newest item in a tinted metric card.
 - **Fixing the title font**: load Playfair Display 600 and 800 so the title and wordmark render as designed rather than in Georgia.
+- **No short name**: leave out the gradient wordmark; the title then starts at y 46 under the top rule, about 76px higher, and the gradient stays in the arXiv pill, the 5px bars and the footer band.
+- **No abstract figure**: leave the tri-tone Abstract card text-only, with the centred 32px title and 16.48px #3f3f3f text, and let the Motivation card follow directly; do not add a filler figure.
 
 ## Do's and Don'ts
 
@@ -180,6 +182,7 @@ Quick colors: gradient #0078d4 → #8661c5 → #ff9349, tint #e6eff7 → #eeebf5
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700;900&family=Playfair+Display:wght@600;800&display=swap");
 :root {
   --grad: linear-gradient(107.54deg, #0078d4 .39%, #8661c5 51.23%, #ff9349 100%);
   --grad-tint: linear-gradient(107.54deg, #e6eff7 .39%, #eeebf5 51.23%, #fcf4ee 100%);
@@ -192,7 +195,7 @@ Quick colors: gradient #0078d4 → #8661c5 → #ff9349, tint #e6eff7 → #eeebf5
   --metric-ink: #423f94;
   --metric-border: #e4e6f0;
   --radius-card: 16px;
-  --font-sans: 'Avenir', 'Avenir Next Cyr', sans-serif;
+  --font-sans: 'Avenir', 'Avenir Next Cyr', 'Nunito Sans', sans-serif;
   --font-title: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 ```

@@ -136,6 +136,9 @@ Anatomy in DOM order (desktop 1440px; card 1240px at x=100, inner content 1164px
 - **More components**: extend the summary grid in threes; keep the sky title colour.
 - **BibTeX or news**: a 980px panel styled like the abstract (sky tint 0.04, 16px radius) with 14px IBM Plex Mono text.
 - **A navbar**: if one is needed, make it a frosted strip in the same glass recipe (rgba(255,255,255,0.74), blur 12px, 1px rgba(15,23,42,0.1)) and keep links #0f172a with sky hover.
+- **No acronym**: omit the `h2`; the author panel starts at y=250 under the title and the gradient stays on the title's lead phrase.
+- **No acceptance status**: keep the `.venue-pill` capsule with its gradient and pulse, set the paper's real status in it (for example Preprint 2026) and drop the ACCEPTED chip.
+- **No teaser figure**: put your first figure in the 980px slot at y=612; with none, the TL;DR line moves up there and the component cards follow.
 
 ## Do's and Don'ts
 
@@ -174,6 +177,7 @@ Quick colors: ink #0f172a, text #1e293b, muted #475569, sky #0ea5e9, teal #0d948
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap");
 :root {
   --bg-primary: #ffffff;
   --text-primary: #0f172a;

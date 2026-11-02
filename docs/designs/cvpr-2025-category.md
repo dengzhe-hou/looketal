@@ -51,7 +51,7 @@ Declared but not visible on the first screen: `.animated-gradient-text` (a four-
 ## Tokens — Typography
 
 - **Display:** `'Google Sans', sans-serif` on `.publication-title`, `.myfont` and the tabs; renders Google Sans 400 (only weight loaded), synthesized bold for the 600 title and `.title` headings. Substitute: Outfit 600 for the title, Outfit 400 elsewhere (close geometric forms with real weights).
-- **Body:** `'Linux Biolium', sans-serif` on `html, body` (a misspelling of Linux Biolinum, not loaded); renders the default sans-serif (Arial on Windows, Helvetica on macOS). Substitute: Arimo, or load Linux Biolinum if the humanist look was the intent.
+- **Body:** `'Linux Biolium', sans-serif` on `html, body` (a misspelling of Linux Biolinum, not loaded); renders the default sans-serif (Arial on Windows, Helvetica on macOS). Substitute: Arimo.
 - **Icons:** Tabler Icons outline font (`ti-*`).
 - **Sizes are viewport-relative** (inline `vw` and `vh`), so every value below scales with the window.
 
@@ -169,6 +169,7 @@ Quick colors: background #000000, text #ffffff, title gradient #ff6ec4 → #7873
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Arimo:wght@400;600&display=swap");
 :root {
   --bg: #000000;
   --text: #ffffff;

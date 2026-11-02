@@ -31,7 +31,7 @@ All four use the static path form with no `style=`, `logo=` or `labelColor=` par
 | 🤗 Hugging Face | Space | `orange`, rendered #ea7233 (label #555555) | flat (default) | huggingface.co/datasets/OfficerChul/DICE-BENCH |
 | Code | GitHub | `brightgreen`, rendered #44bb00 (label #555555) | flat (default) | github.com/snuhcc/DICE-Bench |
 
-The METHOD_README named-color table gives `red` #e05d44, `orange` #fe7d37 and `brightgreen` #4c1 (#44cc11); shields.io's current SVGs use #dd4343, #ea7233 and #44bb00, so a reproduction that wants the captured look should write the hex values. The Hugging Face badge links to a dataset although its message says "Space", and the Code badge links back to the repository itself. The "Project-Page" pair is split across label and message ("Project" | "Page").
+Older shields.io palettes gave `red` #e05d44, `orange` #fe7d37 and `brightgreen` #4c1 (#44cc11); shields.io's current SVGs use #dd4343, #ea7233 and #44bb00, so a reproduction that wants the captured look should write the hex values. The Hugging Face badge links to a dataset although its message says "Space", and the Code badge links back to the repository itself. The "Project-Page" pair is split across label and message ("Project" | "Page").
 
 Other colors on the page come from images, not badges: the banner background #282828, die faces #f2f3f3 and #d1d1d1, and the pip #f1552c. The pipeline figure uses pastel panels and the comparison image uses red crosses and green ticks; neither was measured to a hex value.
 

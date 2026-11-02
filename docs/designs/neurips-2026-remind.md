@@ -44,7 +44,7 @@ Anatomy in DOM order (content x 104–1336):
 
 ## Tokens — Typography
 
-- **Display**: declared `"Applied Sans Display", "Helvetica Neue", Arial, sans-serif`; renders Applied Sans Display 600 and 700 (self-hosted TTF). Substitute: Inter Display.
+- **Display**: declared `"Applied Sans Display", "Helvetica Neue", Arial, sans-serif`; renders Applied Sans Display 600 and 700 (self-hosted TTF). Substitute: Inter Tight.
 - **UI sans**: declared `"Applied Sans Text", "Helvetica Neue", Arial, sans-serif`; renders Applied Sans Text 400 and 600. Substitute: Inter.
 - **Serif (body)**: declared `"XCharter", Georgia, "Times New Roman", serif`; renders XCharter 400. Substitute: Charis SIL (same Charter design).
 - **Mono**: declared `"SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace`; renders Consolas on Windows. Substitute: JetBrains Mono.
@@ -123,6 +123,8 @@ Three families with fixed jobs: display grotesk for titles and labels, serif for
 - **Teaser video**: one `.media-frame` (16:9, 10px radius, dark mat, `--shadow`) under the buttons, full 1232px width.
 - **Long publication list**: rows with the showcase-heading grid (0.6fr / 1.4fr): venue and year as the left label, title and authors in serif on the right, 1px rules between.
 - **News**: an eyebrow "NN · NEWS" and a list of rows, date in mono 13.1px #767676, text in 17px serif.
+- **No subtitle half**: split the title after its colon, or at the word boundary nearest its middle, and set the second half in `span.accent` #006cfa; the first half stays #111111. Never colour the whole title or add a second hue.
+- **No video clips**: build each row from 16:9 result images in the same 4, 5 or 6-up grids with 8px gaps, bold row label left and gray serif description right. Radius at most 5px, no shadows.
 
 ## Do's and Don'ts
 
@@ -163,6 +165,7 @@ Quick colors: white #ffffff, ink #111111, blue #006cfa (hover #0052bd), gray #76
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;600;700&family=Charis+SIL:wght@400;700&display=swap");
 :root {
   --blue: #006cfa;
   --blue-dark: #0052bd;
@@ -173,9 +176,9 @@ Quick colors: white #ffffff, ink #111111, blue #006cfa (hover #0052bd), gray #76
   --gray-soft: #f6f7f9;
   --white: #ffffff;
   --dark-mat: #0d1117;
-  --font-display: "Applied Sans Display", "Helvetica Neue", Arial, sans-serif;
-  --font-sans: "Applied Sans Text", "Helvetica Neue", Arial, sans-serif;
-  --font-serif: "XCharter", Georgia, "Times New Roman", serif;
+  --font-display: "Applied Sans Display", "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Applied Sans Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "XCharter", "Charis SIL", Georgia, "Times New Roman", serif;
   --font-mono: "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
   --fs-body: 1.0625rem;
   --fs-title: clamp(2.05rem, 5vw, 3.6rem);

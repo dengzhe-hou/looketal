@@ -139,6 +139,8 @@ Declared but not visible: `.hero.teaser-section { background: #f5f7fa }` and Bul
 - **A non-panorama comparison**: reuse `.demo-compare` with the image pair's own aspect ratio and keep the corner tags and segmented selectors.
 - **More sections**: every heading uses the same blue-bar `.section-title`; alternate nothing else (no tinted bands).
 - **News or a long list**: plain 16px #4a4a4a list inside the container, dates bold #363636; no cards.
+- **No before/after pair**: keep `.demo-compare` at 960px with the 8px radius, divider and corner tags, using your output and the strongest baseline on the same input as the two sides. With no baseline, show one result with no divider.
+- **No scene or view selectors**: omit both `.buttons.has-addons` rows; the lead sentence stays and the comparison moves up to about y=640, so 260px of it shows above the fold.
 
 ## Do's and Don'ts
 
@@ -177,6 +179,7 @@ Quick colors: title #363636, body #4a4a4a, caption #555555, accent #3273dc, auth
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --title: #363636;
   --text: #4a4a4a;

@@ -152,6 +152,8 @@ Card shadow everywhere is `--archon-shadow` 0 22px 70px rgba(0,0,0,0.45).
 - **More authors**: the flex-wrap author block takes extra rows at 6.7px/18.4px gaps; keep links teal and notes at 12px.
 - **An abstract**: a 960px left-aligned 17.6px #a9b7ca paragraph under a `.archon-section-title`, like the framework caption.
 - **News or publication lists**: rows inside a strong-surface card with 24px radius; date in a teal uppercase `.answer-label` pill (rgba(50,214,211,0.16), 12.5px/900, letter-spacing 0.08em), item text #f4f8ff.
+- **No logotype**: set the project name as gradient text (#5dade2 to #32d6d3, background-clip) filling the same 760×190 slot, so the title stays at y=298. With no project name, the slot closes and everything moves up 226px.
+- **No research-question cards**: build the three numbered cards from the paper's main contributions in amber, teal, coral order; with only two, drop the coral one and keep the tints, numbers and hue-coded titles.
 
 ## Do's and Don'ts
 
@@ -190,6 +192,7 @@ Quick colors: background #03050a, text #f4f8ff, muted #a9b7ca, teal #32d6d3, sky
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --archon-bg: #03050a;
   --archon-text: #f4f8ff;

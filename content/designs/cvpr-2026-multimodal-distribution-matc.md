@@ -46,7 +46,7 @@ Anatomy in DOM order (desktop 1440px; hero container max-width 64rem = 928px at 
 
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
-| Sans (everything) | 'Wanted Sans Variable', 'Wanted Sans', -apple-system, Segoe UI, Roboto, Arial, sans-serif | Wanted Sans Variable 400–1000 | Pretendard |
+| Sans (everything) | 'Wanted Sans Variable', 'Wanted Sans', -apple-system, Segoe UI, Roboto, Arial, sans-serif | Wanted Sans Variable 400–1000 | Inter |
 | Mono | monospace | Consolas | JetBrains Mono |
 | Icons / math | Font Awesome 6.4; MathJax 3 | Font Awesome 6 Free/Brands; MJXTEX fonts | — |
 
@@ -133,6 +133,8 @@ Anatomy in DOM order (desktop 1440px; hero container max-width 64rem = 928px at 
 - **More link buttons**: add outlined pills; reserve a filled dark pill (`.btn`, #1e293b) only if one link must stand out.
 - **Long publication or news lists**: left-aligned 18.125px lines under an indigo `.section-title`, dates in #4f46e5 600, separated by 1px #e2e8f0 rules.
 - **Alternating sections**: alternate white and `.alt-bg` lilac bands; keep at most one lilac band per two sections.
+- **No TL;DR**: keep the `.tldr-box` at y=530 (1044px, #f5f3ff, 2px #6366f1, indigo tag) and put the abstract's main-claim sentence in it at 18.125px/500 #1e293b; the overview figure still follows 29px below.
+- **No overview figure**: put your first method or result figure in `.analysis-image-container` (993px, indigo frame). With no figure at all, set the Abstract on white so the TL;DR box is the only lilac block there.
 
 ## Do's and Don'ts
 
@@ -171,8 +173,9 @@ Quick colors: ink #0f172a, text #1e293b, authors #334155, muted #64748b, indigo 
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 :root {
-  --font-primary: 'Wanted Sans Variable', 'Wanted Sans', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-primary: 'Wanted Sans Variable', 'Wanted Sans', 'Inter', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   --color-primary: #6366f1;
   --color-primary-dark: #4f46e5;
   --color-bg: #ffffff;

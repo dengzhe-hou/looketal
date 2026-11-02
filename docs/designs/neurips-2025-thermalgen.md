@@ -137,6 +137,8 @@ Anatomy in DOM order (centred unless noted):
 - **More tables:** reuse the `.results-table` recipe and the boxed tabs; keep `#3273dc` for header and best values and `#eef3ff` for the proposed method's rows.
 - **Long galleries:** alternate them through grey and white bands, each with a centred `title is-3` heading, so the rhythm stays even.
 - **News:** a second `.notification.is-light` under the TL;DR (for example `is-primary` or `is-info`) with dated items in bold.
+- **No TL;DR sentence:** keep the full-width `.notification.is-info.is-light` under the buttons and fill it with the paper's headline result in one 20px sentence with bold key phrases, under the 32px/600 `#1d72aa` "TL;DR" heading.
+- **No navbar:** leave out `nav.navbar`; the hero starts at the top of the page, so the title sits at y=48 instead of 100. Everything below keeps its order, and no replacement bar is added.
 
 ## Do's and Don'ts
 
@@ -174,6 +176,7 @@ Seeing the Wind (NeurIPS 2025, this batch) alternates bands in butter yellow; Th
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap");
 :root {
   --violet: #4a1fb4;
   --title: #363636;

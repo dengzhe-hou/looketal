@@ -42,7 +42,7 @@ Declared but not visible on the home page: `.circles` (dot pattern), `.hr` #8888
 | Family | Declared | Rendered (fonts_loaded) | Substitute |
 |---|---|---|---|
 | Sans (card) | 'Lato', sans-serif (Google Fonts; also requests Open Sans Condensed 300, Ubuntu, Bitter, unused here) | Lato 400 only; bold is synthesized | Source Sans 3 |
-| Mono (texture) | monospace | system monospace (Consolas on Windows) | DejaVu Sans Mono |
+| Mono (texture) | monospace | system monospace (Consolas on Windows) | Inconsolata |
 
 | Role | Selector | Size / weight / line-height | Color |
 |---|---|---|---|
@@ -101,6 +101,8 @@ Declared but not visible on the home page: `.circles` (dot pattern), `.hr` #8888
 - **A publication list**: use the sub-page pattern from the same stylesheet: a white `.main` column with 10px #77c3d2 side borders on the same stripe field, Lato 16px paper titles and 14px authors at 0.8 opacity.
 - **News**: not suited to the landing card; add it on a sub-page in the `.main` column.
 - **A results table**: not part of this style; on a sub-page use plain Lato 14px with 1px #333333 rules.
+- **No portrait**: keep the 680×360px card and its 10px #77c3d2 border at x=380, y=270, and centre the name, role lines and three links across the full 660px width. Leave out the right half; add no placeholder.
+- **No source code**: fill the five 250px `.back-code` columns with plain monospace text from the researcher's own work (a LaTeX source or an abstract) at 8px, black, 20% opacity, `white-space: pre`, not selectable.
 
 ## Do's and Don'ts
 
@@ -139,6 +141,7 @@ Quick colors: stripe base #84d9ea at 0.2 opacity (renders near #e6f7fb), frame #
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 :root {
   --stripe: #84d9ea;
   --frame: #77c3d2;

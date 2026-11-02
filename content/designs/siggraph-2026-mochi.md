@@ -128,6 +128,8 @@ Anatomy in DOM order (desktop 1440px; `.home-wrapper` 960px at x=240 with 30px p
 - **A results table**: place it in the 900px column under a ruled head; 15px Inter, header 600 #464646, 1px #d0d0d0 rules, best value 600 #2c4a8a.
 - **Long publication or news lists**: use 15px/1.6 rows with a 600 #2c4a8a date, separated by the same 1px #d0d0d0 rule, under an 18.4px head.
 - **More results**: add another carousel with the same gray arrow-and-dot controls rather than a grid; keep videos at full column width.
+- **No acronym in the title**: tint only the first letter of the method name (or of the title if it has no method name) in #4e86c4 with an inline span; the rest of the header stays #111111 or navy.
+- **No teaser image**: leave out the 900×377 image and its caption; the ABSTRACT head then sits at about y=339 under the buttons, with its 1px #d0d0d0 rule. Column width and pill sizes do not change.
 
 ## Do's and Don'ts
 
@@ -167,6 +169,7 @@ Quick colors: page #fdfdfd, ink #111111, text #1e1e21, head #464646, navy #2c4a8
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 :root {
   --bg: #fdfdfd;
   --ink: #111111;

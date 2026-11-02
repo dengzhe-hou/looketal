@@ -132,6 +132,8 @@ Inactive demo thumbnails use `filter: grayscale(1)` and opacity 0.6.
 - **Long publication or news lists**: reuse the `.linklist` row (17.6px/500, 1px #0b0b0b rule, trailing arrow) with a mono 12.48px date on the left.
 - **More sections**: number them sequentially in blue mono and alternate `.sec` and `.sec.is-flip` so the indent swaps sides.
 - **A second accent** is not needed; for states use #0b0b0b fills (labels, copy button) rather than a new hue.
+- **No short name**: set your method acronym, or the first title keyword, as the 184px wordmark; if it is longer than one short word, lower the font size until it fits one line in the 1160px wrap, and keep the blue final period.
+- **No TL;DR or ticks**: set the abstract's first sentence in `p.big` (33.6px/500), keep the full abstract in the `details` toggle, and drop the four-tick grid and its rule; the full-bleed #1f4bff band keeps its 64px padding.
 
 ## Do's and Don'ts
 
@@ -171,6 +173,7 @@ Quick colors: page #ffffff, ink #0b0b0b, accent #1f4bff, muted #6b6b6b, note #33
 ## Quick Start
 
 ```css
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 :root {
   --ink: #0b0b0b;
   --blue: #1f4bff;
