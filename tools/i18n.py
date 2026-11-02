@@ -11,6 +11,9 @@ HTML_LANG = {"en": "en", "ja": "ja", "zh": "zh-Hans"}
 S = {
     # chrome
     "tagline": ("Design research for academic pages", "学術ページのデザイン資料集", "学术网页的设计资料库"),
+    "site_desc": ("Paper project pages, researcher homepages and code READMEs, each with an AI-readable DESIGN.md.",
+                  "論文プロジェクトページ、研究者ページ、コードの README を集め、それぞれに AI が読める DESIGN.md を付けました。",
+                  "收录论文项目页、研究者主页和代码 README，每条都附 AI 可读的 DESIGN.md。"),
     "nav_home": ("Home", "ホーム", "首页"),
     "nav_project": ("Project pages", "論文プロジェクトページ", "论文项目页"),
     "nav_researcher": ("Researcher pages", "研究者ページ", "研究者主页"),

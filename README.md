@@ -77,6 +77,7 @@ Found a wrong value, a broken link or a site bug? [Open an issue](https://github
 | `data/entries.json` | Normalized entry list, written by the build |
 | `tools/computed_style.py` | Reads computed styles, loaded fonts and first-viewport anatomy from the rendered page (headless Chrome) |
 | `tools/snap.py` | Screenshots |
+| `tools/og_card.py` | Renders the link-preview image (`tools/assets/og.jpg`) |
 | `tools/lint_design.py` | Structure and color-consistency check for DESIGN.md files |
 | `tools/check_links.py` | Link check (run weekly by a GitHub Action) |
 | `tools/extract_style.py` | Declaration counts from a page's static HTML and linked CSS |

@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs"
 CATALOG = ROOT / "data" / "catalog.json"  # one record per included page; DESIGN.md text lives in content/designs/
 SITE = "Look et al."
+SITE_URL = "https://looketal.com/"
 ISSUES = "https://github.com/dengzhe-hou/looketal/issues/new?template=removal.yml"
 FEEDBACK = "https://github.com/dengzhe-hou/looketal/issues/new?title=Feedback:+"
 esc = html.escape
@@ -187,10 +188,17 @@ def nav(prefix, active, path):
 
 def page(title, body, prefix, active, path, desc=None, extra_head=""):
     alt = "".join(f'<link rel="alternate" hreflang="{i18n.HTML_LANG[l]}" href="{A(prefix)}{SUBDIR[l]}{path}">' for l in i18n.LANGS)
+    desc = desc or T("site_desc")
+    url = SITE_URL + SUBDIR[LANG] + ("" if path == "index.html" else path)
+    preview = f"""<meta property="og:site_name" content="{SITE}"><meta property="og:type" content="website"><meta property="og:url" content="{url}">
+<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
+<meta property="og:image" content="{SITE_URL}assets/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{SITE}: {esc(T('site_desc'))}"><meta name="twitter:card" content="summary_large_image">
+"""
     return f"""<!doctype html>
 <html lang="{i18n.HTML_LANG[LANG]}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)}</title><meta name="description" content="{esc(desc or T('tagline'))}">{alt}
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>{esc(title)}</title><meta name="description" content="{esc(desc)}">{alt}
+{preview}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
 {extra_head}<link rel="stylesheet" href="{A(prefix)}assets/site.css"></head>
 <body><div class="shell">{nav(prefix, active, path)}<main class="main">{body}</main></div>
@@ -475,7 +483,7 @@ def main():
         shutil.rmtree(OUT)
     (OUT / "designs").mkdir(parents=True)
     (OUT / "assets" / "shots").mkdir(parents=True)
-    for f in ("site.css", "site.js"):
+    for f in ("site.css", "site.js", "og.jpg"):
         shutil.copy(ROOT / "tools" / "assets" / f, OUT / "assets" / f)
     for e, md, *_ in base:
         if e["shot"]:
