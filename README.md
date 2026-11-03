@@ -52,9 +52,12 @@ Keep it a static page that works on GitHub Pages. List which visual decisions ca
 
 More prompts, including researcher homepages and READMEs, are on the [Design prompts](https://looketal.com/prompts.html) page.
 
-## Feedback and removal
+## Contributing
 
-Found a wrong value, a broken link or a site bug? [Open an issue](https://github.com/dengzhe-hou/looketal/issues/new) (every page on the site has a Feedback link). Authors can ask for removal or correction through [this form](https://github.com/dengzhe-hou/looketal/issues/new?template=removal.yml).
+- **Suggest a page.** Know a page whose design is worth studying? [Suggest it](https://github.com/dengzhe-hou/looketal/issues/new?template=suggest-page.yml). Suggestions join the candidate pool for the next update and are judged by visual design, like every other entry.
+- **Report a wrong value.** If a DESIGN.md gets a color, size or rule wrong, [report it](https://github.com/dengzhe-hou/looketal/issues/new?template=correction.yml). For a broken link or a site bug, [open an issue](https://github.com/dengzhe-hou/looketal/issues/new) (every page on the site has a Feedback link).
+- **Translations and code.** Fixes are welcome as pull requests; see [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Removal.** Authors can ask for removal or correction through [this form](https://github.com/dengzhe-hou/looketal/issues/new?template=removal.yml).
 
 ## How entries were chosen
 

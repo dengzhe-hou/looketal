@@ -20,6 +20,9 @@ SITE = "Look et al."
 SITE_URL = "https://looketal.com/"
 ISSUES = "https://github.com/dengzhe-hou/looketal/issues/new?template=removal.yml"
 FEEDBACK = "https://github.com/dengzhe-hou/looketal/issues/new?title=Feedback:+"
+SUGGEST = "https://github.com/dengzhe-hou/looketal/issues/new?template=suggest-page.yml"
+CORRECT = "https://github.com/dengzhe-hou/looketal/issues/new?template=correction.yml"
+CONTRIBUTING = "https://github.com/dengzhe-hou/looketal/blob/main/CONTRIBUTING.md"
 esc = html.escape
 # Cloudflare Web Analytics: cookieless visit counts; the token is the public site tag
 ANALYTICS = """<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "55748c54d6a94a47bafac800c01c5e81"}'></script>"""
@@ -444,8 +447,16 @@ def build_about(entries):
     kinds = Counter(e["kind"] for e in es)
     removal = (f'<a href="{ISSUES}" target="_blank" rel="noopener">' + {"en": "open a removal request</a> (a short GitHub form)",
                "ja": "削除依頼フォーム</a>(GitHub の短いフォーム)", "zh": "删除申请表</a>(GitHub 上的简短表单)"}[LANG])
+    link = lambda url, text: f'<a href="{url}" target="_blank" rel="noopener">{text}</a>'
+    suggest = {"en": link(SUGGEST, "Suggest it here"), "ja": link(SUGGEST, "推薦フォーム") + "から教えてください",
+               "zh": "可以通过" + link(SUGGEST, "推荐表单") + "告诉我们"}[LANG]
+    correct = {"en": link(CORRECT, "report it with this form"), "ja": link(CORRECT, "誤りの報告フォーム") + "からお知らせください",
+               "zh": "请用" + link(CORRECT, "报错表单") + "告诉我们"}[LANG]
+    contrib = {"en": link(CONTRIBUTING, "contributing guide"), "ja": link(CONTRIBUTING, "貢献ガイド") + "(英語)",
+               "zh": link(CONTRIBUTING, "贡献指南") + "(英文)"}[LANG]
     body = i18n.about(LANG, n_proj=kinds["project"], n_res=kinds["researcher"], n_readme=kinds["readme"],
-                      n_rend=sum(e["rendered_check"] for e in es), n_all=len(es), removal=removal, site=SITE)
+                      n_rend=sum(e["rendered_check"] for e in es), n_all=len(es), removal=removal, site=SITE,
+                      suggest=suggest, correct=correct, contrib=contrib)
     return page(f"{T('nav_about')} · {SITE}", body, "", "about", "about.html")
 
 

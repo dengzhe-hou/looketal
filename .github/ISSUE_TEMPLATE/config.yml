@@ -1,1 +1,5 @@
 blank_issues_enabled: true
+contact_links:
+  - name: Contributing guide
+    url: https://github.com/dengzhe-hou/looketal/blob/main/CONTRIBUTING.md
+    about: What kinds of help are welcome and how to send a pull request.

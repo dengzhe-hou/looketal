@@ -15,6 +15,8 @@ ABOUT = {
 <p>Each entry shows an above-the-fold screenshot of the original page, reduced to 1200×750, credited to the authors and linked back to the live page. Screenshots are shown for reference and comparison, the same way design reference libraries do. DESIGN.md files describe visual style; they are not official guides of the authors.</p>
 <h2>License and citation</h2>
 <p>The DESIGN.md files, the selection and the site text are under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>. You can reuse them for non-commercial work with credit to Look et al. (Dengzhe Hou). For commercial use, ask first. The code is MIT. Screenshots belong to the pages' authors and are not covered by either license. To cite the library, use Hou, D. (2026), <i>Look et al.: A Design Library of Academic Web Pages for Humans and AI Agents</i>, Zenodo, <a href="https://doi.org/10.5281/zenodo.23718470" target="_blank" rel="noopener">doi:10.5281/zenodo.23718470</a>.</p>
+<h2>Contribute</h2>
+<p>Know a page whose design is worth studying? {suggest}. Suggestions join the candidate pool for the next update and are judged by visual design only, like every other entry, so not every one will be added. If a DESIGN.md gets a value wrong, {correct}. Fixes to the Japanese and Chinese text and to the code are welcome too; see the {contrib}.</p>
 <h2>Removal</h2>
 <p>If you are an author and want your page or screenshot removed or corrected, {removal} and it will be taken down. Requests are handled by hand, usually within a few days.</p></section>""",
 
@@ -32,6 +34,8 @@ ABOUT = {
 <p>各項目には元ページの最初の画面のスクリーンショットを 1200×750 に縮小して載せ、著者の著作物であることを明記し、元ページにリンクしています。ほかのデザイン参考サイトと同じく、参考と比較のために掲載しています。DESIGN.md は見た目のスタイルを記述したもので、著者による公式のガイドではありません。</p>
 <h2>ライセンスと引用</h2>
 <p>DESIGN.md、選定の結果、サイトの文章は <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a> です。Look et al.(Dengzhe Hou)の名前を示せば、非営利の目的で再利用できます。営利目的で使う場合は事前にご相談ください。コードは MIT です。スクリーンショットは各ページの著者のもので、どちらのライセンスの対象でもありません。引用するときは Hou, D. (2026), <i>Look et al.: A Design Library of Academic Web Pages for Humans and AI Agents</i>, Zenodo, <a href="https://doi.org/10.5281/zenodo.23718470" target="_blank" rel="noopener">doi:10.5281/zenodo.23718470</a> を使ってください。</p>
+<h2>協力する</h2>
+<p>参考になるデザインのページをご存じでしたら、{suggest}。推薦されたページは次回の更新の候補に加わり、ほかの項目と同じく見た目のデザインだけで審査します。そのため、すべてを収録できるとは限りません。DESIGN.md の値に誤りがあれば、{correct}。日本語や中国語の文章、コードの修正も歓迎します。詳しくは{contrib}をご覧ください。</p>
 <h2>削除の依頼</h2>
 <p>著者の方で、ページやスクリーンショットの削除や修正を希望される場合は、{removal}から依頼してください。掲載を取り下げます。依頼は手作業で対応しており、通常は数日以内に処理します。</p></section>""",
 
@@ -49,6 +53,8 @@ ABOUT = {
 <p>每条都展示原页面首屏的截图，缩小到 1200×750，注明版权归作者所有，并链接回原页面。和其他设计参考网站一样，截图只用于参考和比较。DESIGN.md 描述的是视觉风格，不是作者发布的官方指南。</p>
 <h2>许可与引用</h2>
 <p>DESIGN.md 文件、入选名单和网站文字采用 <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a> 许可。注明 Look et al.(Dengzhe Hou)即可用于非商业用途；商业使用请先联系。代码采用 MIT 许可。截图归各页面作者所有，不在这两个许可范围内。引用时请写 Hou, D. (2026), <i>Look et al.: A Design Library of Academic Web Pages for Humans and AI Agents</i>, Zenodo, <a href="https://doi.org/10.5281/zenodo.23718470" target="_blank" rel="noopener">doi:10.5281/zenodo.23718470</a>。</p>
+<h2>参与贡献</h2>
+<p>如果你知道设计值得参考的页面，{suggest}。推荐的页面会进入下一次更新的候选池，和其他页面一样只按视觉设计评选，所以不一定都会收录。如果某个 DESIGN.md 里的数值写错了，{correct}。也欢迎改进日文、中文文字和代码，详见{contrib}。</p>
 <h2>删除</h2>
 <p>如果你是页面作者，希望删除或更正你的页面或截图，请通过{removal}提交，我们会撤下。申请由人工处理，通常几天内完成。</p></section>""",
 }

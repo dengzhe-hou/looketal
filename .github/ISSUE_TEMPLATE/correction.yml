@@ -1,0 +1,30 @@
+name: Report a wrong value
+description: A DESIGN.md gives a color, size, font or rule that the live page does not show.
+title: "Correction: "
+labels: ["correction"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Style page on Look et al.
+      placeholder: https://looketal.com/s/...
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Section and line
+      placeholder: "Tokens — Colors, the Link Blue row"
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What the DESIGN.md says
+    validations:
+      required: true
+  - type: textarea
+    id: right
+    attributes:
+      label: What the live page shows, and how you checked
+      description: A screenshot, the CSS rule, or a value from the browser's developer tools.
+    validations:
+      required: true

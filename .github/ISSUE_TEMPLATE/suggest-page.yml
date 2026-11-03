@@ -1,0 +1,40 @@
+name: Suggest a page
+description: Suggest a paper project page, researcher homepage or code README for the next update.
+title: "Suggestion: "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: Suggestions join the candidate pool for the next update and are judged by visual design only, like every other entry, so not every suggestion will be added.
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of page
+      options:
+        - Paper project page
+        - Researcher homepage
+        - Code README
+    validations:
+      required: true
+  - type: input
+    id: venue
+    attributes:
+      label: Venue and year (project pages and READMEs)
+      placeholder: CVPR 2026
+  - type: textarea
+    id: why
+    attributes:
+      label: What makes the design worth studying? (optional)
+  - type: checkboxes
+    id: author
+    attributes:
+      label: Relation to the page
+      options:
+        - label: I am an author or the owner of this page
