@@ -14644,6 +14644,88 @@
   "tall": true
  },
  {
+  "slug": "alphaxiv-2026-continuous-lm-survey",
+  "kind": "project",
+  "title": "A Survey on Continuous Diffusion and Flow Language Models",
+  "style_name": "Continuous LM Survey Map",
+  "url": "https://continuous-lm.github.io/",
+  "venue": "alphaXiv 2026 (survey preprint)",
+  "conf": "alphaXiv",
+  "year": 2026,
+  "person": "Sophia Tang",
+  "field": "diffusion and flow language models",
+  "mood": "A transit map pinned under a scholarly masthead, with a navy Newsreader title and violet italic words above a wall of pastel model cards strung along an indigo timeline track.",
+  "theme": "both",
+  "template": "Custom (hand-written site.css with CSS custom properties, generated SVG timeline)",
+  "template_group": "Custom",
+  "fonts": [
+   "Newsreader",
+   "Inter",
+   "JetBrains Mono"
+  ],
+  "palette": [
+   {
+    "name": "Paper",
+    "hex": "#ffffff",
+    "role": "page, preview cards, abstract box, timeline panels"
+   },
+   {
+    "name": "Navy",
+    "hex": "#1d1b5e",
+    "role": "title, section headings, survey rows, BibTeX code"
+   },
+   {
+    "name": "Accent",
+    "hex": "#4f4bd6",
+    "role": "title italics, author and contents links, resource labels, icons"
+   },
+   {
+    "name": "Ink",
+    "hex": "#23222e",
+    "role": "body text, news text"
+   },
+   {
+    "name": "Muted",
+    "hex": "#626074",
+    "role": "emails, superscripts, figure caption, notes, footer"
+   },
+   {
+    "name": "Rule",
+    "hex": "#c4c1f3",
+    "role": "section rules, toggle, play and mode borders, tooltip border"
+   },
+   {
+    "name": "Indigo",
+    "hex": "#6b67ee",
+    "role": "year chips, repository card bar, checked mode, news dates"
+   },
+   {
+    "name": "Cite Background",
+    "hex": "#e1f2f6",
+    "role": "BibTeX box, one-hot timeline cards"
+   }
+  ],
+  "modules": [
+   "BibTeX",
+   "News"
+  ],
+  "layout": "One centred 980px column with a two-column directory of contents and resource previews, a 1020px interactive timeline that bleeds past the column, then rule-divided sections for the abstract, survey contents, news and BibTeX, with a fixed contents rail in the left margin at wide widths.",
+  "rendered_check": true,
+  "issues": "At 375px the 34px theme toggle overlaps the end of the title's first line by 7px. The 12px news dates in #6b67ee reach only 4.38:1 contrast on white and 4.34:1 on the dark page.",
+  "selection": {
+   "pool": "suggestion",
+   "rank": null,
+   "why": "Added on the maintainer's suggestion rather than through the design rounds. The page is for a survey preprint on alphaXiv, so it sits outside the venue rules and was not judged in the rounds. It pairs a navy serif masthead and bracketed resource previews with a hoverable timeline of 92 pastel model cards and an abstract whose first sentence resolves from noise as you drag a slider."
+  },
+  "specimen": [
+   "#ffffff",
+   "#1d1b5e",
+   "#4f4bd6"
+  ],
+  "shot": true,
+  "tall": true
+ },
+ {
   "slug": "readme-adobe-research-obj-and-mat-selection",
   "kind": "readme",
   "title": "adobe-research/obj-and-mat-selection",

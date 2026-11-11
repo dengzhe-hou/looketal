@@ -8223,5 +8223,19 @@
   "slug": "iclr-2025-gamabench",
   "existing": false,
   "suggested": true
+ },
+ {
+  "url": "https://continuous-lm.github.io/",
+  "kind": "project",
+  "title": "A Survey on Continuous Diffusion and Flow Language Models",
+  "venue": "alphaXiv 2026 (survey preprint)",
+  "year": 2026,
+  "person": "Sophia Tang",
+  "field": "Diffusion and flow language models (survey)",
+  "arxiv_id": null,
+  "selection_reason": "suggested by the maintainer on 2026-11-12; survey preprint posted on alphaXiv on 2026-11-09 with no venue, so outside the venue rules; added directly as a maintainer-suggested entry",
+  "slug": "alphaxiv-2026-continuous-lm-survey",
+  "existing": false,
+  "suggested": true
  }
 ]
