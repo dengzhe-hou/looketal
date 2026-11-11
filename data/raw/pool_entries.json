@@ -8209,5 +8209,19 @@
   "selection_reason": "Existing verified entry, kept unchanged. Qualifies under this rule as first author of Learning Dynamics of LLM Finetuning, ICLR 2025 Outstanding Paper. https://blog.iclr.cc/2025/04/22/announcing-the-outstanding-paper-awards-at-iclr-2025/",
   "slug": "researcher-yi-ren",
   "existing": true
+ },
+ {
+  "url": "https://cuhk-arise.github.io/GAMABench/",
+  "kind": "project",
+  "title": "How Far Are We on the Decision-Making of LLMs? Evaluating LLMs' Gaming Ability in Multi-Agent Environments",
+  "venue": "ICLR 2025 Poster",
+  "year": 2025,
+  "person": "Jen-tse Huang",
+  "field": "LLM evaluation, game theory",
+  "arxiv_id": "2403.11807",
+  "selection_reason": "suggested by the maintainer on 2026-11-11; arXiv comment states acceptance at ICLR 2025 but does not link the project page, so the comment rule missed it; to be judged by design with the ICLR 2025 pool in the next update",
+  "slug": "iclr-2025-gamabench",
+  "existing": false,
+  "suggested": true
  }
 ]
