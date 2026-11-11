@@ -8627,6 +8627,89 @@
   "tall": true
  },
  {
+  "slug": "iclr-2025-gamabench",
+  "kind": "project",
+  "title": "How Far Are We on the Decision-Making of LLMs? Evaluating LLMs' Gaming Ability in Multi-Agent Environments",
+  "style_name": "GAMA-Bench Scoreboard",
+  "url": "https://cuhk-arise.github.io/GAMABench/",
+  "venue": "ICLR 2025",
+  "conf": "ICLR",
+  "year": 2025,
+  "person": "Jen-tse Huang",
+  "field": "LLM evaluation, game theory",
+  "mood": "A game-night scoreboard taped to a white wall, with two purple controllers flanking a bold system-font title, a strip of shields.io stickers and one blue \"Overall\" tab lit up.",
+  "theme": "light",
+  "template": "Custom (Vite + Vue 3, UnoCSS)",
+  "template_group": "Custom",
+  "fonts": [
+   "Segoe UI",
+   "Arial",
+   "Consolas"
+  ],
+  "palette": [
+   {
+    "name": "Paper",
+    "hex": "#ffffff",
+    "role": "page, inactive tabs, leaderboard card"
+   },
+   {
+    "name": "Title Black",
+    "hex": "#000000",
+    "role": "h1 title, author superscripts and commas"
+   },
+   {
+    "name": "Link Blue",
+    "hex": "#2563eb",
+    "role": "author links, related links, active game tab"
+   },
+   {
+    "name": "Text Grey",
+    "hex": "#374151",
+    "role": "affiliations, intro, notes, section titles, scores, BibTeX"
+   },
+   {
+    "name": "Tab Border",
+    "hex": "#d1d5db",
+    "role": "inactive tab border, header-cell hover"
+   },
+   {
+    "name": "Header Start",
+    "hex": "#f3f4f6",
+    "role": "table header gradient start, BibTeX block, tab hover"
+   },
+   {
+    "name": "Missing Row",
+    "hex": "#fef2f2",
+    "role": "rows of models missing games"
+   },
+   {
+    "name": "arXiv Red",
+    "hex": "#b31b1b",
+    "role": "arXiv shields.io badge"
+   }
+  ],
+  "modules": [
+   "BibTeX",
+   "Results table",
+   "Badges"
+  ],
+  "layout": "One centred 1200px column with no bands, running from the hero through a 748px framework diagram to the tabbed, sortable leaderboard card, then BibTeX and a list of related leaderboards.",
+  "rendered_check": true,
+  "issues": "The Vite starter CSS is left in place, so link and tab hovers turn #747bff/#646cff, borders without a style draw nothing, the BibTeX block overhangs its wrapper by 32px, and below about 930px the page scrolls sideways instead of shrinking.",
+  "selection": {
+   "pool": "suggestion",
+   "rank": null,
+   "why": "Added on the maintainer's suggestion rather than through the design rounds. The page is a working leaderboard: a bold system-font title flanked by game-controller emoji, a row of shields.io badges, a framework diagram, then game tabs over a sortable score table."
+  },
+  "specimen": [
+   "#ffffff",
+   "#000000",
+   "#2563eb"
+  ],
+  "shot": true,
+  "tall": true
+ },
+ {
   "slug": "iclr-2025-ogbench",
   "kind": "project",
   "title": "OGBench: Benchmarking Offline Goal-Conditioned RL",

@@ -21,7 +21,7 @@ Paper project pages, researcher homepages and code READMEs, each with an AI-read
 
 | | Entries | Picked from |
 |---|---:|---|
-| Paper project pages | 180 | 907 pages from NeurIPS, ICML, ICLR, CVPR, ACL, ICCV, ECCV, SIGGRAPH, CoRL, CHI, EMNLP and journals, 2025–2026 |
+| Paper project pages | 181 | 907 pages from NeurIPS, ICML, ICLR, CVPR, ACL, ICCV, ECCV, SIGGRAPH, CoRL, CHI, EMNLP and journals, 2025–2026 |
 | Researcher homepages | 50 | 236 researchers found by fixed rules (awards, prizes, keynotes) |
 | Code READMEs | 40 | 647 official repositories linked from the project pages |
 
@@ -61,7 +61,7 @@ More prompts, including researcher homepages and READMEs, are on the [Design pro
 
 ## How entries were chosen
 
-- **Project pages.** Pool of 907 (NeurIPS, ICML, ICLR, CVPR, ACL 2025 and 2026; ICCV 2025, ECCV 2026, SIGGRAPH 2025 and 2026, CoRL 2025, CHI 2026, EMNLP 2025; TMLR, TPAMI, JMLR and Nature-family journals 2025–2026; arXiv comments that state acceptance and link a project page; workshops excluded). 10 per venue-year, plus 10 journal papers.
+- **Project pages.** Pool of 907 (NeurIPS, ICML, ICLR, CVPR, ACL 2025 and 2026; ICCV 2025, ECCV 2026, SIGGRAPH 2025 and 2026, CoRL 2025, CHI 2026, EMNLP 2025; TMLR, TPAMI, JMLR and Nature-family journals 2025–2026; arXiv comments that state acceptance and link a project page; workshops excluded). 10 per venue-year, plus 10 journal papers, plus one page added on the maintainer's suggestion (GAMA-Bench, ICLR 2025).
 - **Researcher homepages.** Pool of 236 by three fixed rules (ACM Turing laureates 2018–2025 and first or last authors of Best, Outstanding and Test of Time papers at NeurIPS, ICML, ICLR, CVPR and ACL 2023–2025; first and last authors of ACL Outstanding Papers 2023–2025; Rumelhart Prize 2010–2025, Glushko Prize 2018–2025, CogSci Computational Modeling Prize 2020–2025 and CCN keynote speakers 2023–2025). 30 + 10 + 10 selected.
 - **Code READMEs.** The official repositories linked from the project-page pool (647 with a README of at least 2.5 KB), in four groups (vision, learning, language, graphics/robotics/HCI); 10 per group.
 - **Selection** is by visual design only, from screenshots, in two rounds. The reason for each pick is in `data/catalog.json` and on the style page.
