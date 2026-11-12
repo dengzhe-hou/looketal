@@ -13436,6 +13436,78 @@
   }
  },
  {
+  "slug": "readme-liqiiiii-dllm-survey",
+  "url": "https://github.com/LiQiiiii/DLLM-Survey",
+  "kind": "readme",
+  "title": "LiQiiiii/DLLM-Survey",
+  "venue": "TMLR 2026",
+  "year": 2026,
+  "person": "Runpeng Yu",
+  "field": "discrete diffusion language and multimodal models",
+  "mood": "A survey's companion shelf, with the paper's title and a quoted citation card up top, two wide figures from the paper, then a long table of contents and thirty-three narrow two-column lists of papers, each with a way back to the top.",
+  "theme": "light",
+  "template": "Centred h2 paper title and h4 subtitle, a lone teal arXiv badge over a row of four status badges (stars, forks, last commit, PRs Welcome), a left-aligned blockquote citation card with authors, venue and affiliation, two full-width paper figures with bold numbered captions",
+  "fonts": [
+   "GitHub system stack"
+  ],
+  "palette": [
+   {
+    "name": "arXiv teal",
+    "hex": "#009688",
+    "role": "arXiv badge message"
+   },
+   {
+    "name": "Commit green",
+    "hex": "#67ac09",
+    "role": "last commit badge message"
+   },
+   {
+    "name": "Badge blue",
+    "hex": "#007ec6",
+    "role": "PRs Welcome badge message"
+   },
+   {
+    "name": "Label grey",
+    "hex": "#555555",
+    "role": "shields.io badge labels"
+   },
+   {
+    "name": "Social badge white",
+    "hex": "#fcfcfc",
+    "role": "GitHub stars and forks badges"
+   },
+   {
+    "name": "Link blue",
+    "hex": "#0969da",
+    "role": "GitHub links for the title, authors, quick links and papers"
+   },
+   {
+    "name": "Quote grey",
+    "hex": "#d1d9e0",
+    "role": "citation card bar and the two horizontal rules"
+   },
+   {
+    "name": "Figure white",
+    "hex": "#ffffff",
+    "role": "paper figure backgrounds and badge text"
+   }
+  ],
+  "modules": [
+   "Badges",
+   "Paper list",
+   "BibTeX"
+  ],
+  "layout": "Two centred divs for the title and badges give way to a left-aligned citation card and two full-width paper figures, then an h2 Citation block, a contribution note between rules, a nested Quick Links list and 33 two-column topic tables under h3 and h4 headings, closing with two toolkit links.",
+  "rendered_check": true,
+  "md_path": "content/designs/readme-liqiiiii-dllm-survey.md",
+  "issues": "The taxonomy figure points at assets/taxonomy.png, which is not in the repository, so it renders as an empty gap. The stars and forks badges still use the old repository name and only render through GitHub's redirect. One Vision and Multimodal row repeats the title of the row above with different authors, and Quick Links leaves out Reinforcement Learning.",
+  "selection": {
+   "pool": "suggestion",
+   "rank": null,
+   "why": "Added on the maintainer's suggestion rather than through the design rounds, since the survey has no project page for the README pool to follow. It reads like a paper's companion page, with the title and a citation card in a blockquote, two large figures from the paper, and then 128 papers laid out in 33 identical two-column tables behind a long table of contents."
+  }
+ },
+ {
   "slug": "iccv-2025-omegance",
   "url": "https://itsmag11.github.io/Omegance/",
   "kind": "project",
