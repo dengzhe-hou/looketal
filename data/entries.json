@@ -16139,6 +16139,89 @@
   "tall": true
  },
  {
+  "slug": "readme-sophtang-awesome-continuous-language-models",
+  "kind": "readme",
+  "title": "sophtang/Awesome-Continuous-Language-Models",
+  "style_name": "Awesome Continuous Language Models",
+  "url": "https://github.com/sophtang/Awesome-Continuous-Language-Models",
+  "venue": "alphaXiv 2026 (survey preprint)",
+  "conf": "",
+  "year": 2026,
+  "person": "Sophia Tang",
+  "field": "diffusion and flow language models",
+  "mood": "A survey's reading room: a centred masthead with four small tags and a full-width tour of the paper map, then one long comparison table and eight shut drawers of papers sorted by family.",
+  "theme": "both",
+  "template": "Centred plain h1, bold survey subtitle, one row of four flat badges (awesome.re, paper count, alphaXiv, project page), paper-style author, email and affiliation lines, full-width paper-map GIF with a caption, dot-separated anchor link line",
+  "template_group": "README",
+  "fonts": [
+   "GitHub system stack"
+  ],
+  "palette": [
+   {
+    "name": "Badge blue",
+    "hex": "#007ec6",
+    "role": "papers count and Project Page badge messages"
+   },
+   {
+    "name": "alphaXiv red",
+    "hex": "#b31b1b",
+    "role": "alphaXiv Survey badge message"
+   },
+   {
+    "name": "Awesome mauve",
+    "hex": "#cca6c4",
+    "role": "awesome.re badge icon side"
+   },
+   {
+    "name": "Awesome plum",
+    "hex": "#494368",
+    "role": "awesome.re badge wordmark side"
+   },
+   {
+    "name": "Label grey",
+    "hex": "#555555",
+    "role": "shields.io badge labels"
+   },
+   {
+    "name": "Social badge white",
+    "hex": "#fcfcfc",
+    "role": "per-paper Code star badges in the tables"
+   },
+   {
+    "name": "Link blue",
+    "hex": "#0969da",
+    "role": "GitHub links for authors, emails, arXiv and alphaXiv"
+   },
+   {
+    "name": "Teaser white",
+    "hex": "#ffffff",
+    "role": "paper-map GIF background and badge text"
+   }
+  ],
+  "modules": [
+   "Teaser video",
+   "BibTeX",
+   "arXiv / paper",
+   "News",
+   "Badges"
+  ],
+  "layout": "A centred title, badge, author and GIF block with a dot-separated link line gives way to plain h2 sections, an eight-column Start here table of representative models, an empty Recently added table and eight collapsed family tables, closing with BibTeX and a star-history chart.",
+  "rendered_check": true,
+  "issues": "The Start here table is wider than the 856px content column and scrolls sideways; the GIF's map reads 136 papers while the badge says 137; the blog list spells Sander Dieleman as Dielman; the mp4 link and its source comment are an unfinished video embed.",
+  "selection": {
+   "pool": "suggestion",
+   "rank": null,
+   "why": "Added on the maintainer's suggestion rather than through the design rounds, together with the survey's project page. It is an awesome list that opens like a paper title page, with authors, emails and a full-width recording of the paper map, then sorts 137 papers into one taxonomy table and eight collapsed family drawers."
+  },
+  "specimen": [
+   "#007ec6",
+   "#0969da",
+   "#0969da"
+  ],
+  "shot": true,
+  "tall": true
+ },
+ {
   "slug": "readme-unikcc-retas",
   "kind": "readme",
   "title": "unikcc/ReTAS",
