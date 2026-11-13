@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-UA = "Mozilla/5.0 (compatible; looketal-linkcheck; +https://github.com/dengzhe-hou/looketal)"
+UA = "Mozilla/5.0 (compatible; looketal-linkcheck; +https://github.com/dengzhe-hou/Looketal)"
 
 
 def check(item):

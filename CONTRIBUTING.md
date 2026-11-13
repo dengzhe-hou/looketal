@@ -4,13 +4,13 @@ Look et al. is maintained by one person, and every issue and pull request is rea
 
 ## Suggest a page
 
-Know a paper project page, researcher homepage or code README whose design is worth studying? [Suggest it](https://github.com/dengzhe-hou/looketal/issues/new?template=suggest-page.yml). Your own page is welcome too.
+Know a paper project page, researcher homepage or code README whose design is worth studying? [Suggest it](https://github.com/dengzhe-hou/Looketal/issues/new?template=suggest-page.yml). Your own page is welcome too.
 
 Suggestions join the candidate pool for the next update and are judged the same way as every other entry: by visual design only, from screenshots (see "How entries were chosen" in the [README](README.md)). Not every suggestion will be added, and a page that is not added says nothing about the research behind it. Project pages should belong to a paper accepted at a conference or journal; workshop papers are not included.
 
 ## Report a wrong value
 
-If a DESIGN.md gives a color, size, font or rule that the live page does not show, [report it](https://github.com/dengzhe-hou/looketal/issues/new?template=correction.yml) with the style page, the line, and what the page actually shows. A screenshot or the CSS rule helps. Corrections are checked against a fresh render of the page before they go in, since the render is what a DESIGN.md describes.
+If a DESIGN.md gives a color, size, font or rule that the live page does not show, [report it](https://github.com/dengzhe-hou/Looketal/issues/new?template=correction.yml) with the style page, the line, and what the page actually shows. A screenshot or the CSS rule helps. Corrections are checked against a fresh render of the page before they go in, since the render is what a DESIGN.md describes.
 
 ## Translations
 
@@ -29,7 +29,7 @@ Commit the rebuilt `docs/` folder with your change, because GitHub Pages serves 
 
 ## Removal
 
-If you are an author and want your page or screenshot removed or corrected, use the [removal form](https://github.com/dengzhe-hou/looketal/issues/new?template=removal.yml). These requests are handled first.
+If you are an author and want your page or screenshot removed or corrected, use the [removal form](https://github.com/dengzhe-hou/Looketal/issues/new?template=removal.yml). These requests are handled first.
 
 ## License
 

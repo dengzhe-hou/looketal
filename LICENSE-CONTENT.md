@@ -6,6 +6,6 @@ The DESIGN.md files (`content/designs/`, `content/archive/`), the method and tes
 
 You may copy, adapt and share them for non-commercial purposes if you credit "Look et al. (Dengzhe Hou), https://looketal.com/" and link to the license. For commercial use, ask first.
 
-Screenshots in `content/shots/` and `docs/assets/shots/` show pages that belong to their authors. They are shown for reference and are not covered by this license or by the MIT license. Authors can ask for removal at https://github.com/dengzhe-hou/looketal/issues/new?template=removal.yml
+Screenshots in `content/shots/` and `docs/assets/shots/` show pages that belong to their authors. They are shown for reference and are not covered by this license or by the MIT license. Authors can ask for removal at https://github.com/dengzhe-hou/Looketal/issues/new?template=removal.yml
 
 The code is under the MIT license (`LICENSE`).

@@ -18,11 +18,11 @@ OUT = ROOT / "docs"
 CATALOG = ROOT / "data" / "catalog.json"  # one record per included page; DESIGN.md text lives in content/designs/
 SITE = "Look et al."
 SITE_URL = "https://looketal.com/"
-ISSUES = "https://github.com/dengzhe-hou/looketal/issues/new?template=removal.yml"
-FEEDBACK = "https://github.com/dengzhe-hou/looketal/issues/new?title=Feedback:+"
-SUGGEST = "https://github.com/dengzhe-hou/looketal/issues/new?template=suggest-page.yml"
-CORRECT = "https://github.com/dengzhe-hou/looketal/issues/new?template=correction.yml"
-CONTRIBUTING = "https://github.com/dengzhe-hou/looketal/blob/main/CONTRIBUTING.md"
+ISSUES = "https://github.com/dengzhe-hou/Looketal/issues/new?template=removal.yml"
+FEEDBACK = "https://github.com/dengzhe-hou/Looketal/issues/new?title=Feedback:+"
+SUGGEST = "https://github.com/dengzhe-hou/Looketal/issues/new?template=suggest-page.yml"
+CORRECT = "https://github.com/dengzhe-hou/Looketal/issues/new?template=correction.yml"
+CONTRIBUTING = "https://github.com/dengzhe-hou/Looketal/blob/main/CONTRIBUTING.md"
 esc = html.escape
 # Cloudflare Web Analytics: cookieless visit counts; the token is the public site tag
 ANALYTICS = """<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "55748c54d6a94a47bafac800c01c5e81"}'></script>"""
